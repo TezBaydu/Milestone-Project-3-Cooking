@@ -64,7 +64,7 @@ Main requirements are to build a full stack site to help users manage a common d
 6. [Credits and Acknowledgements](#Credits-and-Acknowledgements)
 
 ***
-![Responsiveness](assets/readme-files/responsive-image.JPG)
+![Responsiveness](assets/readme-files/responsive-image.JPG) --- ?!
 ***
 
 ## UX
@@ -457,14 +457,150 @@ This site has several pages for user to easily identify section associated. Menu
         * Technical issue
         * Share idea
         * Other
+
 2. Associated to EmailJS
+
 3. Email to Developer and User Auto Reply with appropriate message and link to site.
 
-### Browse page
-1. 
-### Recipe view from browse page
-### Recipe view from profile page
+4. Menu
+    - Leading non-member to
+        * Home
+        * Login
+        * Registration
+        * Browse
+    - Leading member to
+        * Home
+        * Browse
+        * View profile
+        * Create new recipe
 
+### Browse page
+1. Search function.
+    - Search bar for particular foods
+        * To have ability to find several foods and ignore anything that is not alphabetical
+    - Filter - more than one can be selected
+        * Recipe Types
+            * Breakfast
+            * Lunch
+            * Dinner
+            * Dessert
+            * Snack
+    - Ready in Time slider
+        * Slider to adjust when meals can be cooked and prepared in for user in case they want a quick meal
+    - Search button - once selections have been made
+        * Otherwise suggestions are provided
+    - Favourites
+        * Where a user has bookmarked favourites, these can also be listed by pressing this button
+
+2. Recipe summary cards.
+    - Several recipes listed either based on search, favourites or suggestions.
+    - Details to show:
+        * Image
+        * Name of recipe
+        * Ready time
+    - Amount of recipe summaries shown dependant on screen size.
+
+3. Menu
+    - Leading non-member to
+        * Home
+        * Login
+        * Registration
+        * Contact
+    - Leading member to
+        * Home
+        * Contact
+        * View profile
+        * Create new recipe
+
+### Recipe view from browse page
+1. Search function - This so the user can re-search at current page.
+    - Search bar for particular foods
+        * To have ability to find several foods and ignore anything that is not alphabetical
+    - Filter - more than one can be selected
+        * Recipe Types
+            * Breakfast
+            * Lunch
+            * Dinner
+            * Dessert
+            * Snack
+    - Ready in Time slider
+        * Slider to adjust when meals can be cooked and prepared in for user in case they want a quick meal
+    - Search button - once selections have been made
+        * Otherwise suggestions are provided
+    - Favourites
+        * Where a user has bookmarked favourites, these can also be listed by pressing this button
+
+2. Recipe selection - Details provided by members who have shared publicly or via recipe shared database.
+    - Name
+    - Favourite bookmark
+    - Image
+    - Description
+    - Serves
+    - Ready in Time
+    - Cooking Time
+    - Prep Time
+    - Ingredients
+    - Method
+    - Additional Tips
+
+3. Back to Search links
+
+4. Menu
+    - Menu
+    - Leading non-member to
+        * Home
+        * Login
+        * Registration
+        * Contact
+        * Browse
+    - Leading member to
+        * Home
+        * Contact
+        * View profile
+        * Create new recipe
+        * Browse
+
+### Recipe view from profile page
+1. For members logged in only, non members will not be able to view.
+
+2. Search function - This so the user can re-search at current page.
+    - Search bar for particular foods
+        * To have ability to find several foods and ignore anything that is not alphabetical
+    - Filter - more than one can be selected
+        * Recipe Types
+            * Breakfast
+            * Lunch
+            * Dinner
+            * Dessert
+            * Snack
+    - Ready in Time slider
+        * Slider to adjust when meals can be cooked and prepared in for user in case they want a quick meal
+    - Search button - once selections have been made
+        * Otherwise suggestions are provided
+    - Favourites
+        * Where a user has bookmarked favourites, these can also be listed by pressing this button
+
+3. Recipe selection - Details provided by members who have shared publicly or via recipe shared database.
+    - Name
+    - Favourite bookmark
+    - Image
+    - Description
+    - Serves
+    - Ready in Time
+    - Cooking Time
+    - Prep Time
+    - Ingredients
+    - Method
+    - Additional Tips
+
+4. Back to Profile links
+
+5. Menu
+    * Home
+    * Contact
+    * View profile
+    * Create new recipe
+    * Browse
 
 [Back to top ⇧](#introduction)
 
@@ -483,7 +619,11 @@ This site has several pages for user to easily identify section associated. Menu
 
 - [Coolors - colour collage](https://coolors.co)
 
-- [Pixabay - images](https://pixabay.com)
+- [Picjumbo](https://picjumbo.com)
+
+- [Freeimges](https://www.freeimages.com)
+
+- [Clipartmax](https://www.clipartmax.com)
 
 - [Github](https://github.com)
 
@@ -535,6 +675,7 @@ This site has several pages for user to easily identify section associated. Menu
 - CSS
 - JavaScript
 - JQuery
+- Python
 
 ### Element testing
 - Ensure elements behave as expected
