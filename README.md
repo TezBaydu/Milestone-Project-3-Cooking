@@ -37,6 +37,7 @@ Main requirements are to build a full stack site to help users manage a common d
             - [Structure](#Structure)
     - [Wireframe](#Wireframe)
 2. [Features](#Features)
+    - [Database](#Database)
     - [Consistency](#Consistency)
     - [Home](#Home-page)
     - [Login](#Login-page)
@@ -119,7 +120,7 @@ This user is looking for imagery or influence for another project.
 [Back to top ⇧](#introduction)
 
 ### Development Plan
-Development decisions based on change in design appeal for more creativity in part with interactivity.
+Development decisions based on change in design appeal for more creativity in part with interactivity with a database (MongoDB).
 
 [Back to top ⇧](#introduction)
 
@@ -168,12 +169,12 @@ Below are areas considered for levels of importance and viability
     * Contact portal.
     * Search function.
     * Profile registration and logging.
-    * Recipe creation, edit and delete function.
+    * Recipe creation, read, update and delete function.
 2. Medium
-    * Favourites listing.
     * Links to social sites.
 3. Low
     * Sales
+    * Favourites bookmark
 
 <u>Viability</u>
 1. High
@@ -254,6 +255,11 @@ Hierarchical structure design for simpler user navigation:
 ## Features
 This site has several pages for user to easily identify section associated. Menu dependancy on user being a member or non-member. Front end association to back end database.
 
+### [Database](database.md)
+- MongoDB used to store data under database name "eatinDB"
+    * Collections to store specific data:
+        * members
+        * recipe
 
 ### Consistency
 
@@ -311,20 +317,21 @@ This site has several pages for user to easily identify section associated. Menu
     - Get ready to cook image
 
 2. Input fields.
-    - Username (Email address used to initially register)
+    - Email
     - Password
 
-3. Submit / Login button if details correct.
+3. Login button
+    - Data read by database and if correct allows user access
+    - If incorrect a warning is flashed to state email or password is incorrect
 
-4. Warning if details incorrect.
+4. Password reset option.
+    - To make active member false and produce email providing alternative password to reactivate (make member true) account
 
-5. Password reset option.
+5. If in wrong section, description to direct to registration.
 
-6. If in wrong section, description to direct to registration.
+6. If already logged in this option is to not be available in Menu.
 
-7. If already logged, warning to state already logged in.
-
-8. Menu
+7. Menu
     - Leading non-member to
         * Home
         * Register
@@ -344,18 +351,17 @@ This site has several pages for user to easily identify section associated. Menu
 2. Input fields.
     - First name
     - Surname
-    - Email (to be used as username)
+    - Email (to be used as unique username)
     - Password
 
-3. Submit / Register button if details correct.
+3. Register button if details correct.
+    - Data is passed through to MongoDB and member is made true
 
 4. Warning if detail format incorrect.
 
-5. If already registered, warning to state so.
+5. If already registered, warning to state so and to direct user to Login page.
 
-6. If in wrong section, description to direct to Login.
-
-7. Menu
+6. Menu
     - Leading non-member to
         * Home
         * Login
@@ -373,15 +379,15 @@ This site has several pages for user to easily identify section associated. Menu
 
 2. Welcome flash description.
 
-3. Profile details.
+3. Profile details - associated to database under members collection.
     - Edit function
     - Save function
     - Delete account function
 
-4. Recipes.
+4. Recipes - associated to database under recipe collection.
     - Saved public recipes
     - Saved private recipes
-        - to be used in case user wants to save as a draft prior to pushing into Public Search database
+        - to be used in case member wants to save as a draft prior to pushing into Public Search database
     - Ability to add a new recipe
 
 5. Menu.
@@ -393,7 +399,9 @@ This site has several pages for user to easily identify section associated. Menu
 ### Recipe create or edit page
 1. For members logged in only, non members will not be able to view.
 
-2. Editable Recipe input fields.
+2. Data to be created or edited within the recipe collection
+
+3. Editable Recipe input fields.
     - Name
     - Description
         * Max length requirement
@@ -412,7 +420,7 @@ This site has several pages for user to easily identify section associated. Menu
         * Max length requirement
 
 
-3. Other fields.
+4. Other fields.
     - Ready in Time
         * sum of Preperation and cooking time
     Recipe Types
@@ -423,7 +431,7 @@ This site has several pages for user to easily identify section associated. Menu
         * Dessert
         * Snack
 
-4. Buttons.
+5. Buttons.
     - Add
         * To add fields
     - Delete
@@ -436,13 +444,13 @@ This site has several pages for user to easily identify section associated. Menu
     - Save and keep private
         * To save to profile for own private viewing
         * Can be used for test scenarios
-        * User may want to keep private
+        * Member may want to keep private
 
-5. Links
+6. Links
     - Back to profile link.
         * Warning to save any updates if any have been made
 
-6. Menu.
+7. Menu.
     * Warning to save any updates if any have been made
     - Home
     - New Recipe
@@ -490,7 +498,7 @@ This site has several pages for user to easily identify section associated. Menu
     - Search button - once selections have been made
         * Otherwise suggestions are provided
     - Favourites
-        * Where a user has bookmarked favourites, these can also be listed by pressing this button
+        * Where a user has bookmarked favourites, these can also be listed by pressing this button <--- may not be used ---> ?!
 
 2. Recipe summary cards.
     - Several recipes listed either based on search, favourites or suggestions.
@@ -528,7 +536,7 @@ This site has several pages for user to easily identify section associated. Menu
     - Search button - once selections have been made
         * Otherwise suggestions are provided
     - Favourites
-        * Where a user has bookmarked favourites, these can also be listed by pressing this button
+        * Where a user has bookmarked favourites, these can also be listed by pressing this button <--- may not be used ---> ?!
 
 2. Recipe selection - Details provided by members who have shared publicly or via recipe shared database.
     - Name
@@ -563,7 +571,7 @@ This site has several pages for user to easily identify section associated. Menu
 ### Recipe view from profile page
 1. For members logged in only, non members will not be able to view.
 
-2. Search function - This so the user can re-search at current page.
+2. Search function - This so the member can re-search at current page.
     - Search bar for particular foods
         * To have ability to find several foods and ignore anything that is not alphabetical
     - Filter - more than one can be selected
@@ -574,11 +582,11 @@ This site has several pages for user to easily identify section associated. Menu
             * Dessert
             * Snack
     - Ready in Time slider
-        * Slider to adjust when meals can be cooked and prepared in for user in case they want a quick meal
+        * Slider to adjust when meals can be cooked and prepared in for member in case they want a quick meal
     - Search button - once selections have been made
         * Otherwise suggestions are provided
     - Favourites
-        * Where a user has bookmarked favourites, these can also be listed by pressing this button
+        * Where a member has bookmarked favourites, these can also be listed by pressing this button <--- may not be used ---> ?!
 
 3. Recipe selection - Details provided by members who have shared publicly or via recipe shared database.
     - Name
@@ -615,7 +623,16 @@ This site has several pages for user to easily identify section associated. Menu
 - Javascript
     * Code used to provide more interactive attributes
 
-- [JQuery](https://code.jquery.com/)
+- [JQuery](https://code.jquery.com)
+
+- [Python](https://www.python.org)
+
+- Flask
+    * Mainly for Jinja templating
+
+- [MongoDB](https://www.mongodb.com)
+
+- [Heroku](https://www.heroku.com)
 
 - [Coolors - colour collage](https://coolors.co)
 
@@ -631,6 +648,8 @@ This site has several pages for user to easily identify section associated. Menu
 
 - [Bootstrap](https://getbootstrap.com)
 
+- [Materialize](https://materializecss.com)
+
 - [Google fonts](https://fonts.google.com)
 
 - [Figma]() --- ?!
@@ -643,7 +662,9 @@ This site has several pages for user to easily identify section associated. Menu
 
 - [cdnjs](https://cdnjs.com)
 
-- [Codepen](https://codepen.io/)
+- [EmailJS](https://www.emailjs.com)
+
+- [Codepen](https://codepen.io)
 
 - [Am I responsive](http://ami.responsivedesign.is)
 
