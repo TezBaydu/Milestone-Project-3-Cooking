@@ -292,6 +292,7 @@ This site has several pages for user to easily identify section associated. Menu
 
 *![Etin Palette](assets/readme/readme-images/etin-colours.png)
 
+[Back to top ⇧](#introduction)
 
 ### Home page
 1. Backdrop
@@ -344,6 +345,8 @@ This site has several pages for user to easily identify section associated. Menu
         * View profile
         * Create new recipe
 
+[Back to top ⇧](#introduction)
+
 ### Registration page
 1. Backdrop.
     - ingredients image
@@ -395,6 +398,8 @@ This site has several pages for user to easily identify section associated. Menu
     - New Recipe
     - Browse
     - Contact
+
+[Back to top ⇧](#introduction)
 
 ### Recipe create or edit page
 1. For members logged in only, non members will not be able to view.
@@ -457,6 +462,8 @@ This site has several pages for user to easily identify section associated. Menu
     - Profile
     - Browse
     - Contact
+
+[Back to top ⇧](#introduction)
     
 ### Contact page
 1. Contact fields
@@ -520,6 +527,8 @@ This site has several pages for user to easily identify section associated. Menu
         * View profile
         * Create new recipe
 
+[Back to top ⇧](#introduction)
+
 ### Recipe view from browse page
 1. Search function - This so the user can re-search at current page.
     - Search bar for particular foods
@@ -567,6 +576,8 @@ This site has several pages for user to easily identify section associated. Menu
         * View profile
         * Create new recipe
         * Browse
+
+[Back to top ⇧](#introduction)
 
 ### Recipe view from profile page
 1. For members logged in only, non members will not be able to view.
@@ -626,6 +637,7 @@ This site has several pages for user to easily identify section associated. Menu
 - [JQuery](https://code.jquery.com)
 
 - [Python](https://www.python.org)
+    * When coding to ensure script is PEP8 compliant
 
 - Flask
     * Mainly for Jinja templating
@@ -655,6 +667,8 @@ This site has several pages for user to easily identify section associated. Menu
 - [Figma]() --- ?!
     * [project wireframe]
 
+- [Random Key Generator](https://randomkeygen.com)
+
 - [Font Awesome](https://fontawesome.com/v4.7.0)
     * version 4.7
 
@@ -683,6 +697,7 @@ This site has several pages for user to easily identify section associated. Menu
 - [Eye Dropper extension]
 
 [Back to top ⇧](#introduction)
+
 
 ## Testing 
 -   ### View [TEST.md file]() --- ?!
@@ -745,7 +760,10 @@ Once you are able to view the repository in Gitpod this is done by:
     * ![git-commits]() --- ?!
     
 
-### Deploying via GitHub Pages
+### Deploying via GitHub Pages / Heroku
+
+#### DEBUG
+- Ensure within app.py change "debug=True" to "debug=False"
 
 1. Log into GitHub and look for [https://github.com/TezBaydu/Milestone-Project-3-Cooking] or create an account.
 2. Click on settings and ensure repository name is selected to Milestone-Project-3-Cooking.

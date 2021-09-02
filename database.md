@@ -1,4 +1,4 @@
-<h1 align="center" id = "introduction">
+<h1 align="center" id = "database-introduction">
      Project Eatin Database
 </h1>
 
@@ -11,10 +11,15 @@
 This section is to help developers understand database utilisation
 </div>
 
+[Back to README](README.md)
+
 ## Contents
 1. [Platform](#Platform)
     - [Access](#Access)
     - [Connecting to gitpod](#Connecting-to-gitpod)
+        * [Terminal Test](#Terminal-Test)
+        * [Python-Mongo library test](Python-Mongo-library-test)
+    - [Flask](#Flask)
     - [Developer](#Developer)
     - [Collections](#collections)
 
@@ -28,11 +33,40 @@ When registering to MongoDB there are several options to select for various data
 You can utilise two factor authentication in MongoDB for further secure data access. This can be done via the Account section of MongoDB.
 
 ### Connecting to gitpod
-- Connecting MongoDB datbase to gitpod by using connection string
-    1. In Databases section select Connect
+
+#### Terminal Test
+- To test if database is connected to gitpod you can do this by using a connection string:
+    1. In Databases section of MongoDB select Connect
     2. Select "Connect with the MongoDB Shell"
     3. If you don;t have MongoDB Shell, ensure the section "I do not have the MongoDB shell installed" is highlighted
-    4. In section 3, copy  connection string which is <-- UPDATE -->
+    4. In section 3(Run your connection string in your command line), copy  connection string which holds the cluster name and the username.
+    5. Paste the string into the command terminal replacing the Database name (after it states mongodb.net/) in this case eatinDB.
+    6. You may also need to replace mongosh with mongo as this refers to shell which you may not have.
+    7. At this point it will request the MongoDB users password.(I'm not going to share this here!)
+    8. There will be no string appearing when typing password, this is normal, you just need to ensure it's typed correctly.
+    9. You should see a long message in the terminal including a line "Welcome to the MongoDB shell". This means you've successfully connected to the database.
+
+
+### Python-Mongo library test
+- To connect Pymongo library
+    1. In terminal type "pip3 install dnspython" and press enter
+    2. Now to install pymongo by typing "pip3 install pymongo" and press enter
+    3. In Databases section of MongoDB select Connect
+    4. Select Connect your application
+    5. Select "Python" for the driver
+    6. Select the appropriate version for the environment, in this case 3.6 or later.
+    7. Next copy the URI string and go back to code terminal in gitpod
+    8. IMPORTANT - make sure when connecting data secure details are not pushed to GitHub, this is done by ensuring certain files are included in the .gitignore file
+    9. File env.py (which is in the .gitignore file) is updated with connection string with the mongoDB user password. hence to ensure this is not shared in GitHub !!
+
+## Flask
+- The Flask library is an API of Python used to buiold web applications. 
+    1. To set up functionality to import Flask, in terminal type "pip3 install Flask".
+    2. Once done ensure details are updated within a python file that is NOT pushed into GitHub, i.e. it is included within the .gitignore file.
+    <br>
+    In this instance it is the env.py file and will hold a SECRET KEY hence for it to not be pushed to GitHub or it could be manipulated unwantingly.
+    3. Within the applications python file (app.py) ensure Flask is imported, i.e. "from Flask import Flask"
+
 
 
 ### Developer
@@ -64,11 +98,13 @@ You can utilise two factor authentication in MongoDB for further secure data acc
     * Members last name
     * Can be editable
 
-#### recipe
+#### recipe <-- to be updated -->
 - Public
     * Recipes to be shared with Public and is browseable
         * Where field "public" is "true"
 - Private
     * Recipes to not be shared and is non browseable but can only be viewed in members profile section.
         * Where field "public" is "false"
+
+
 
