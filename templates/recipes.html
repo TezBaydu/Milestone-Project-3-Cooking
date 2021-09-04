@@ -8,11 +8,13 @@
 </head>
 <body>
     {% for recipe in recipes %}
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.recipe_date }}<br>
-        {{ recipe.recipe_description }}<br>
+        {{ recipe.name }}<br>
+        {{ recipe.description }}<br>
+        {{ recipe.type }}<br>
+        {{ recipe.serves }}<br>
+        {{ recipe.prep_time }}<br>
+        {{ recipe.cook_time }}<br>
+        {{ recipe.ready_time }}<br>
     {% endfor %}
-
-    <h1> test </h1>
 </body>
 </html>
