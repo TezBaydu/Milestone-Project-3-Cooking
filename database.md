@@ -67,7 +67,11 @@ You can utilise two factor authentication in MongoDB for further secure data acc
     In this instance it is the env.py file and will hold a SECRET KEY hence for it to not be pushed to GitHub or it could be manipulated unwantingly.
     3. Within the applications python file (app.py) ensure Flask is imported, i.e. "from Flask import Flask"
 
-
+### Connect database to Flask
+- Required to ensure Flask library communicates effectively to the database. Note when library's are connected ensure requirements.txt file is update so deployment sites know to run the app.
+    1. Connect library flask-pymongo via the code terminal
+    2. Connect dnspython via the code terminal
+    3. Update app.py file to capture associated imports.
 
 ### Developer
 - Tez Baydu

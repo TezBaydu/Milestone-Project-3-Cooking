@@ -791,10 +791,6 @@ Once you are able to view the repository in Gitpod this is done by:
     16.  Select "View" button to launch the app.
     17. As this is connected to GitHub, Heroku will obtain changes when these are pushed to the GitHub repository.
 
-
-
-
-
 #### DEBUG
 - Ensure within app.py change "debug=True" to "debug=False"
 
