@@ -762,6 +762,39 @@ Once you are able to view the repository in Gitpod this is done by:
 
 ### Deploying via GitHub Pages / Heroku
 
+#### Heroku dependancies
+
+- In order to deploy to Heroku initial files need to be set up to run the app.
+    1. Applications
+        * requirements.txt-  Lists the requirements to deploy to Flask
+        * Procfile (capital P)
+
+#### Heroku deployment
+
+- An account will need to be registered with Heroku to deploy projects and create applications.To begin deployment:
+    1. Once registered you can select "Create new app".
+    2. Provide a unique app name in all lowercase letters but individual words are to be separated with a "-" and no spaces.
+    3. Select region closest to you, in this case Europe.
+    4. Automatic deployment can be done via the GitHub repository where this project is stored.
+    5. Select connect to GitHub button and when pressed make sure your GitHub profile is displayed and then add your repository name in "repo-name" field and click search.
+    6. Once the repository is found, click "Connect" to connect to this app.
+    7. For thie project DO NOT PRESS "ENABLE AUTOMATIC DEPLOYS" YET !!
+        - This is because there are sections in files not deployed to GITHUB that need to be manually enabled first.
+    8. Select "Settings".
+    9. Select "Reveal Config Vars".
+    10. Sections within env.py file are added to this section.
+    11. WARNING: Ensure requirements.txt & Procfile are added to repository prior to Heroku deployment or Heroku will not see these when connecting.
+    12. Within Heroku you should now be able to safely press the "Enable Automatic Deploys" button. Select Deploy section to view.
+    13. Select "ENABLE AUTOMATIC DEPLOYS".
+    14. Select "Deploy Branch" after selecting which version you wish to deploy. Then Wait for Heroku to load all files.
+    15. Once done you should see "Your app was successfully deployed" and a "View" button.
+    16.  Select "View" button to launch the app.
+    17. As this is connected to GitHub, Heroku will obtain changes when these are pushed to the GitHub repository.
+
+
+
+
+
 #### DEBUG
 - Ensure within app.py change "debug=True" to "debug=False"
 
