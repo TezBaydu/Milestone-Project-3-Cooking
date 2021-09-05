@@ -28,8 +28,8 @@ body {
     transition: all .4s ease;
     border: 1ps solid black;
     box-shadow: 0 0 20px -10px black;
-    margin-top: -130px;
-    margin-left: -130px;
+    margin-top: -17%;
+    margin-left: -20%;
 }
 
 .feature-container-inside.active {
@@ -39,15 +39,12 @@ body {
     border-color: #568259;
     width: 350px;
     height: 350px;
-    margin-left: -40px;
-    margin-top: -100px;
+    margin-left: -2em;
+    margin-top: -5em;
+    text-align-last: center;
 }
 
 .feature-container-inside-text {
-    width: 40vw;
-    min-width: 260px;
-    line-height: 3rem;
-    margin: 8vw auto;
     font-weight: 500;
 }
 
@@ -96,7 +93,7 @@ body {
 }
 
 .list-group-flush {
-    margin-top: 100px;
+    margin-top: 9em;
     margin-left: 130px;
 }
 
@@ -112,4 +109,21 @@ body {
 
 .p-3 {
     padding: 0.5rem !important;
+}
+
+.mr-4 {
+    margin-right: 0 !important;
+    margin-left: 7px;
+}
+
+.mb-0, .my-0 {
+    margin-bottom: 10px !important;
+}
+
+.text-light {
+    color:#568259 !important;
+}
+
+.btn-success {
+    background-color: #ccfccb !important;
 }
