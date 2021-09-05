@@ -5,22 +5,17 @@ body {
 
 /*-- nav menu --*/
 
-.feature-section {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
 .feature-container {
-    position: relative;
+    position: fixed;
+    z-index: 5;
+    margin-top: 5em;
 }
 
 .feature-container-inside {
     position: absolute;
     top: -2vw;
-    height: 60vw;
-    width: 60vw;
+    height: 50vw;
+    width: 50vw;
     background: #f1fffa;
     transform: scale(.01);
     opacity: 0;
@@ -42,6 +37,7 @@ body {
     margin-top: -5em;
     text-align-last: center;
     border-radius: 5%;
+    position: fixed;
 }
 
 .feature-container-inside-text {
@@ -94,10 +90,10 @@ body {
 }
 
 .list-group-flush {
-    margin-top: 9em;
+    margin-top: 8em;
     margin-left: 130px;
     text-align-last: initial;
-    margin-left: 175px;
+    margin-left: 190px;
 }
 
 .list-group-item {
@@ -119,7 +115,7 @@ body {
 }
 
 .mb-0, .my-0 {
-    margin-bottom: 10px !important;
+    margin-bottom: 15px !important;
     margin-right: 10px;
 }
 
@@ -135,7 +131,7 @@ body {
 
 @media (max-width: 767px) {
     .feature-trigger-outline {
-        margin-top: 2px;
+        margin-top: 20px;
         margin-left: 16px;
         width: 80px;
         height: 80px;
@@ -145,6 +141,10 @@ body {
         margin-left: 23px;
         margin-top: -20px;
         font-size: 14px;
+    }
+
+    .feature-container-inside {
+        height: 90vw;
     }
 
     .feature-container-inside.active {
@@ -160,7 +160,7 @@ body {
         display: flex;
         flex-wrap: wrap;
         margin-top: 7em;
-        margin-left: 130px;
+        margin-left: 120px;
         justify-content: space-evenly;
     }
 
@@ -246,4 +246,12 @@ footer.page-footer .footer-copyright {
         margin: 3%;
         border-radius: 5%;
     }
+}
+
+/*-- recipe page --*/
+
+.test-block {
+    height: 80em;
+    background-color: lightcoral;
+    text-align: center;
 }

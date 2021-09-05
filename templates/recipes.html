@@ -1,15 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 
+{% for recipe in recipes %}
+<section>
+    <div>
+        <div class="row">
+            <div class="col-12">
+                <p class="test-block">
+                    This is a test block to bring footer down and see stick menu
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    {% for recipe in recipes %}
-        {{ recipe.name }}<br>
-        {{ recipe.description }}<br>
-        {{ recipe.type }}<br>
-        {{ recipe.serves }}<br>
-        {{ recipe.prep_time }}<br>
-        {{ recipe.cook_time }}<br>
-        {{ recipe.ready_time }}<br>
-    {% endfor %}
+{{ recipe.name }}<br>
+{{ recipe.description }}<br>
+{{ recipe.type }}<br>
+{{ recipe.serves }}<br>
+{{ recipe.prep_time }}<br>
+{{ recipe.cook_time }}<br>
+{{ recipe.ready_time }}<br>
+
+{% endfor %}
 
 {% endblock %}
