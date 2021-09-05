@@ -3,4 +3,4 @@ $('#featureDiscovery').click(function () {
   
     $('.feature-trigger-outline').toggleClass('active');
   });
-  new WOW().init();
+  
