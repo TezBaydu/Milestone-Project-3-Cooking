@@ -55,6 +55,7 @@ body {
     margin-top: 50px;
     margin-left: 50px;
     background-color: #464e478a;
+    box-shadow: inset 0 0 30px 5px black;
     border-radius: 5%;
 }
 
@@ -66,7 +67,7 @@ body {
     height: 100px;
     border-radius: 5%;
     opacity: 0;
-    box-shadow: 0 0 20px -10px black;
+    box-shadow: 0 0 30px -10px black;
     transition: all .4s ease;
     z-index: 2;
 }
@@ -130,6 +131,8 @@ body {
     background-color: #ccfccb !important;
 }
 
+/*-- navbar mobile device --*/
+
 @media (max-width: 767px) {
     .feature-trigger-outline {
         margin-top: 2px;
@@ -149,7 +152,7 @@ body {
         width: 400px;
         height: 14em;
         margin-left: -10%;
-        margin-top: -26%;
+        margin-top: -22%;
         text-align-last: justify;
     }
 
@@ -173,5 +176,74 @@ body {
 
     .text-light {
         margin-top: 1em;
+    }
+}
+
+/*-- footer --*/
+
+.page-footer {
+    background-color: #464e47;
+    box-shadow: 0 0 30px -10px black;
+}
+
+.pb-5, .py-5 {
+    padding-bottom: 0 !important;
+}
+
+.fa-lg {
+    font-size: 1.5em;
+}
+
+.logo {
+    font-family: "Pacifico";
+    color: #ccfccb !important;
+}
+
+.footer-logo {
+    font-size: 36px;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.fab:hover {
+    color:#96e6b3 !important;
+}
+
+.pt-3, .py-3 {
+    padding-top: 1rem !important;
+}
+
+.pt-5, .py-5 {
+    padding-top: 2rem !important;
+}
+
+.mb-5, .my-5 {
+    margin-bottom: 2rem !important;
+}
+
+.d-flex {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer.page-footer a {
+    padding-bottom: 10px;
+}
+
+.mb-5, .my-5 {
+    margin-bottom: 2rem !important;
+}
+
+footer.page-footer .footer-copyright {
+    align-self: center;
+}
+
+/*-- footer mobile device --*/
+
+@media (max-width: 767px) {
+    footer.page-footer {
+        margin: 3%;
+        border-radius: 5%;
     }
 }
