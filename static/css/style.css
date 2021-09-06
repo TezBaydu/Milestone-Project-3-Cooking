@@ -91,9 +91,8 @@ body {
 
 .list-group-flush {
     margin-top: 8em;
-    margin-left: 130px;
+    margin-left: 150px;
     text-align-last: initial;
-    margin-left: 190px;
 }
 
 .list-group-item {
@@ -112,6 +111,7 @@ body {
 
 .mr-4 {
     margin-right: 2px !important;
+    margin-bottom: 8px;
 }
 
 .mb-0, .my-0 {
@@ -121,6 +121,10 @@ body {
 
 .text-light {
     color:#568259 !important;
+}
+
+a.text-light:hover {
+    color: #96e6b3 !important;
 }
 
 .btn-success {
@@ -159,8 +163,8 @@ body {
     .list-group-flush {
         display: flex;
         flex-wrap: wrap;
-        margin-top: 7em;
-        margin-left: 120px;
+        margin-top: 5.8em;
+        margin-left: 78px;
         justify-content: space-evenly;
     }
 
@@ -206,6 +210,10 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.footer-logo .logo:hover {
+    color: #96e6b3 !important;
+}
+
 .fab:hover {
     color:#96e6b3 !important;
 }
@@ -229,10 +237,6 @@ body {
 
 footer.page-footer a {
     padding-bottom: 10px;
-}
-
-.mb-5, .my-5 {
-    margin-bottom: 2rem !important;
 }
 
 footer.page-footer .footer-copyright {
