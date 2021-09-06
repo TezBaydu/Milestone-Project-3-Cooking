@@ -660,7 +660,9 @@ This site has several pages for user to easily identify section associated. Menu
 
 - [Bootstrap](https://getbootstrap.com)
 
-- [Materialize](https://materializecss.com)
+- [MDBootstrap version 4](https://mdbootstrap.com)
+
+- [Materialize](https://materializecss.com) ---?!
 
 - [Google fonts](https://fonts.google.com)
 
@@ -669,10 +671,11 @@ This site has several pages for user to easily identify section associated. Menu
 
 - [Random Key Generator](https://randomkeygen.com)
 
-- [Font Awesome](https://fontawesome.com/v4.7.0)
-    * version 4.7
+- [Font Awesome](https://fontawesome.com)
 
 - [Bootstrapcdn](https://www.bootstrapcdn.com)
+
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x)
 
 - [cdnjs](https://cdnjs.com)
 
