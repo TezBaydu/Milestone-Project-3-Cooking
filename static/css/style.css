@@ -186,6 +186,10 @@ a.text-light:hover {
 
 /*-- footer --*/
 
+footer {
+    margin-top: 16em;
+}
+
 .page-footer {
     background-color: #464e47;
     box-shadow: 0 0 30px -10px black;
@@ -264,10 +268,11 @@ footer.page-footer .footer-copyright {
 /*-- register page --*/
 
 .card {
-    display: inline-block;
     margin-top: 1em;
-    margin-bottom: 13em;
-    width: 66%
+    margin-bottom: 6em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 label {
@@ -284,5 +289,20 @@ label {
 }
 
 h3 {
-    margin-top: 12rem;
+    padding-top: 11rem;
+    font-weight: 400;
+}
+
+/*-- flash messages --*/
+
+.alert {
+    border-radius: 0.5rem;
+    margin-top: 7em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15em;
+}
+
+.alert-heading {
+    text-align: center;
 }
