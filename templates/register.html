@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h2 class="logo">Eatin</h2>
+
 <h3 class="text-center">Registration</h3>
 
 <div class="card row">
@@ -15,6 +17,7 @@
                         maxlength="15" required>
                 </div>
                 <div class="col s-12 input-with-pre-icon">
+                    <i class="fas fa-user input-prefix"></i>
                     <label for="lastName">Last Name </label>
                     <input type="text" id="lastName" name="lastName" class="form-control validate" minlength="2"
                         maxlength="15" required>
@@ -25,8 +28,7 @@
                 <div class="col s-12 input-with-pre-icon">
                     <i class="fas fa-envelope prefix"></i>
                     <label for="email" data-error="wrong" data-success="right">Email </label>
-                    <input type="email" id="email" name="email" class="form-control validate" minlength="5"
-                        required>
+                    <input type="email" id="email" name="email" class="form-control validate" minlength="5" required>
                 </div>
             </div>
             <!-- password  -->
@@ -34,8 +36,8 @@
                 <div class="col s-12 input-with-pre-icon">
                     <i class="fas fa-lock prefix prefix"></i>
                     <label for="password" data-error="wrong" data-success="right">Password </label>
-                    <input type="password" id="password" name="password" class="form-control validate"
-                        minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
+                    <input type="password" id="password" name="password" class="form-control validate" minlength="5"
+                        maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
                 </div>
             </div>
             <!-- register -->
@@ -46,5 +48,4 @@
         </div>
     </form>
 </div>
-
 {% endblock %}
