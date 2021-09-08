@@ -33,7 +33,7 @@ def register():
             {"email": request.form.get("email").lower()})
 
         if existing_member:
-            flash("Member already exists")
+            flash("Looks like you're already registered with us !")
             return redirect(url_for("register"))
 
         register = {
