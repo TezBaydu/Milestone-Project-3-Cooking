@@ -92,6 +92,9 @@ body {
     margin-top: 8em;
     margin-left: 150px;
     text-align-last: initial;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .list-group-item {

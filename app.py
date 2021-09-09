@@ -85,7 +85,19 @@ def profile(first_name):
     # Obtain members first name from the database
     first_name = mongo.db.members.find_one(
         {"email": session["member"]})["firstName"]
-    return render_template("profile.html", first_name=first_name)
+
+    if session["member"]:
+        return render_template("profile.html", first_name=first_name)
+
+    return redirect(url_for("login"))
+
+
+@app.route("/logout")
+def logout():
+    # remove member from session cookies
+    flash("You are now logged out")
+    session.pop("member")
+    return redirect(url_for("login"))
 
 
 if __name__ == "__main__":
