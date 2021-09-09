@@ -1,37 +1,84 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for recipe in recipes %}
-<section>
-    <div>
-        <div class="row">
-            <div class="col-12">
-                <p class="test-block">
-                    This is a test block to bring footer down and see stick menu
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+<h2 class="logo">Eatin</h2>
 
-<div>
-    <div class="container">
-        <div class="row">
-            <div id="image" class="col">
-                <img src="/assets/images/cooking-spices.jpg"/>
-            </div>
-        </div>
+<div class="row">
+    <div class="col-4 text-center text-end">
+        <a href="{{ url_for('profile', first_name=session['member']) }}" class="back-to">Back to Profile</a>
+    </div>
+    <div class="col-8">
+        <h3 class="header">Create your Recipe</h3>
     </div>
 </div>
 
-{{ recipe.name }}<br>
-{{ recipe.description }}<br>
-{{ recipe.type }}<br>
-{{ recipe.serves }}<br>
-{{ recipe.prep_time }}<br>
-{{ recipe.cook_time }}<br>
-{{ recipe.ready_time }}<br>
+<div class="card row">
+    <form class="card-body" method="POST" action="">
+        <div class="card-title card-panel">
+            <!-- recipe name and description -->
+            <div class="row">
+                <div class="col">
+                    <i class="fas fa-user input-prefix"></i>
+                    <label for="recipename">Name </label>
+                    <input type="text" id="recipename" name="recipename" class="form-control" minlength="2"
+                        maxlength="15" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="recipedescription">Description </label>
+                    <input type="text" id="recipedescription" name="recipedescription" class="form-control description" minlength="5"
+                        maxlength="150" required>
+                </div>
+            </div>
+            <!-- image and recipe type -->
+            <div class="card-body row">
+                <div class="col-4">
+                    
+                </div>
+                <div class="col-8 card-panel">
+                    <h4>Recipe Type</h4>
+                    <div class="col s-12 input-with-pre-icon custom-control custom-radio">
+                        <label class="custom-control-label" for="breakfast">Breakfast </label>
+                        <input type="radio" id="breakfast" name="recipetype" class="custom-control-input" required>
+                    </div>
+                    <div class="col s-12 input-with-pre-icon custom-control custom-radio">
+                        <label class="custom-control-label" for="lunch">Lunch </label>
+                        <input type="radio" id="lunch" name="recipetype" class="custom-control-input" required>
+                    </div>
+                    <div class="col s-12 input-with-pre-icon custom-control custom-radio">
+                        <label class="custom-control-label" for="dinner">Dinner </label>
+                        <input type="radio" id="dinner" name="recipetype" class="custom-control-input" required checked>
+                    </div>
+                    <div class="col s-12 input-with-pre-icon custom-control custom-radio">
+                        <label class="custom-control-label" for="snack">Snack </label>
+                        <input type="radio" id="snack" name="recipetype" class="custom-control-input" required checked>
+                    </div>
+                    <div class="col s-12 input-with-pre-icon custom-control custom-radio">
+                        <label class="custom-control-label" for="dessert">Dessert </label>
+                        <input type="radio" id="dessert" name="recipetype" class="custom-control-input" required checked>
+                    </div>
+                <div
+            </div>
+            <!-- register -->
+            <div class="row justify-content-center">
+                <button type="submit" class="btn btn-lg">Register <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
 
-{% endfor %}
+
+    {% for recipe in recipes %}
+        {{ recipe.name }}<br>
+        {{ recipe.description }}<br>
+        {{ recipe.type }}<br>
+        {{ recipe.serves }}<br>
+        {{ recipe.prep_time }}<br>
+        {{ recipe.cook_time }}<br>
+        {{ recipe.ready_time }}<br>
+
+    {% endfor %}
 
 {% endblock %}

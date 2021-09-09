@@ -293,11 +293,20 @@ footer.page-footer .footer-copyright {
 
 /*-- recipe page --*/
 
-.test-block {
-    height: 8em;
-    background-color: lightcoral;
-    text-align: center;
+.back-to {
+    padding-top: 6rem;
+    color: #568259;
+    text-decoration: underline;
 }
+
+.text-end {
+    place-self: end;
+}
+
+.description {
+    height: 300px
+}
+
 
 /*-- register page --*/
 
@@ -380,6 +389,15 @@ h3 {
     text-align: center;
 }
 
+/*-- profile page --*/
+
+.profile-name {
+    text-decoration: underline;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
 /*-- image test -- */
 
 #image {
@@ -388,3 +406,4 @@ h3 {
     background-position: center;
     height: 200px;
 }
+
