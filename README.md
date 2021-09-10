@@ -861,7 +861,9 @@ For further help and info you can select [Cloning and Forking repositories](http
 
 - Col classes have padding right 15px and will not fill page
 - iphone 5 nav menu items not listed correctly
-- background image not showing 
+- background image not showing
+- last_name variable to be defined in profile
+- email variable to be defined in profile
 
 
 

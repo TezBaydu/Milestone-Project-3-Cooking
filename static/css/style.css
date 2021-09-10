@@ -304,7 +304,8 @@ footer.page-footer .footer-copyright {
 }
 
 .description {
-    min-height: 100px;
+    min-height: 10rem;
+    resize: none;
 }
 
 .recipe-type {
@@ -408,6 +409,15 @@ h3 {
     text-transform: capitalize;
     letter-spacing: 1px;
     font-weight: 500;
+}
+
+.profile-card-name {
+    text-transform: capitalize;
+    font-size: 24px;
+}
+
+.mt-3 {
+    text-align: center;
 }
 
 /*-- image test -- */
