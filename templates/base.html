@@ -37,11 +37,6 @@
                             <div class="feature-container-inside-text text-light">
                                 <ul class="list-group-flush">
                                     <li class="list-group-item">
-                                        <a href="{{ url_for('get_recipes') }}" class="mb-0 text-light"><i
-                                                class="far fa-image fa-2x mr-4 blue-gradient p-3 white-text rounded-circle "
-                                                aria-hidden="true"></i>Home</a>
-                                    </li>
-                                    <li class="list-group-item">
                                         <a href="" class="mb-0 text-light"><i
                                                 class="fas fa-anchor fa-2x mr-4 aqua-gradient p-3 white-text rounded-circle"
                                                 aria-hidden="true"></i>Browse</a>
@@ -56,6 +51,11 @@
                                             <a href="{{ url_for('profile', first_name=session['member']) }}" class="mb-0 text-light"><i
                                                     class="fas fa-anchor fa-2x mr-4 purple-gradient p-3 white-text rounded-circle"
                                                     aria-hidden="true"></i>Profile</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="{{ url_for('recipes') }}" class="mb-0 text-light"><i
+                                                    class="far fa-image fa-2x mr-4 blue-gradient p-3 white-text rounded-circle "
+                                                    aria-hidden="true"></i>Create Recipe</a>
                                         </li>
                                         <li class="list-group-item">
                                             <a href="{{ url_for('logout') }}" class="mb-0 text-light"><i
@@ -122,12 +122,12 @@
             <div class="row">
 
                 <div class="col-md-4 py-5 footer-logo">
-                    <a href="{{ url_for('get_recipes') }}" class="logo">Eatin</a>
+                    <a href="{{ url_for('recipes') }}" class="logo">Eatin</a>
                 </div>
 
                 <!-- Copyright -->
                 <div class="col-md-4 footer-copyright text-center py-3">© 2021 Copyright:
-                    <a href="{{ url_for('get_recipes') }}"> Eatin</a>
+                    <a href="{{ url_for('recipes') }}"> Eatin</a>
                 </div>
 
                 <div class="col-md-4 py-5">

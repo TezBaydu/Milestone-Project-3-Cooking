@@ -304,7 +304,19 @@ footer.page-footer .footer-copyright {
 }
 
 .description {
-    height: 300px
+    min-height: 100px;
+}
+
+.recipe-type {
+    background-color: #96e6b3;
+    border-style: solid;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.recipe-header {
+    margin-bottom: -20px;
 }
 
 

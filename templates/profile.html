@@ -13,6 +13,15 @@
     </div>
 </div>
 
+{% for recipe in recipes %}
+    {{ recipe.name }}<br>
+    {{ recipe.description }}<br>
+    {{ recipe.type }}<br>
+    {{ recipe.serves }}<br>
+    {{ recipe.prep_time }}<br>
+    {{ recipe.cook_time }}<br>
+    {{ recipe.ready_time }}<br>
 
+{% endfor %}
 
 {% endblock %}
