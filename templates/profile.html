@@ -20,7 +20,7 @@
                 <div class="col s-12 input-with-pre-icon">
                     <i class="fas fa-user input-prefix"></i>
                     <label for="lastName">Last Name </label>
-                    <p class="profile-card-name">{{ first_name }}</p>
+                    <p class="profile-card-name">{{ last_name }}</p>
                 </div>
             </div>
             <!-- email -->
@@ -28,8 +28,20 @@
                 <div class="col s-12 input-with-pre-icon">
                     <i class="fas fa-envelope prefix"></i>
                     <label for="email" data-error="wrong" data-success="right">Email </label>
-                    <p class="profile-card-name">{{ first_name }}</p>
+                    <p class="profile-card-name">{{ email }}</p>
                 </div>
+            </div>
+            <div class="row">
+              <div class="col s-12 reg-text">
+                <button class="btn btn-grn btn-lg" type="button">
+                  Edit account
+                  <i class="fas fa-edit"></i>
+                </button>
+                <button class="btn btn-rd btn-lg" type="button">
+                  Delete account
+                  <i class="fas fa-user-times"></i>
+                </button>
+              </div>
             </div>
         </div>
     </div>
@@ -37,12 +49,11 @@
 
 <!-- Collapse buttons -->
 <div class="reg-text">
-    <button class="btn btn-lg" type="button" data-toggle="collapse" data-target="#collapsePublic"
+    <button class="btn btn-grn btn-lg" type="button" data-toggle="collapse" data-target="#collapsePublic"
         aria-expanded="false" aria-controls="collapseExample">
         Public Recipes
     </button>
 </div>
-<!-- / Collapse buttons -->
 
 <!-- Collapsible element -->
 <div class="collapse" id="collapsePublic">
@@ -141,7 +152,7 @@
 <!-- / Collapsible element -->
 
 <div class="reg-text">
-    <button class="btn btn-lg" type="button" data-toggle="collapse" data-target="#collapsePrivate"
+    <button class="btn btn-grn btn-lg" type="button" data-toggle="collapse" data-target="#collapsePrivate"
         aria-expanded="false" aria-controls="collapseExample">
         Private Recipes
     </button>

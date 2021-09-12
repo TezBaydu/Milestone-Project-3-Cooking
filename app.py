@@ -80,14 +80,20 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<first_name>", methods=["GET", "POST"])
-def profile(first_name):
-    # Obtain members first name from the database
+@app.route("/profile/", methods=["GET", "POST"])
+def profile():
+    # Obtain members details from the database
     first_name = mongo.db.members.find_one(
         {"email": session["member"]})["firstName"]
+    last_name = mongo.db.members.find_one(
+        {"email": session["member"]})["lastName"]
+    email = mongo.db.members.find_one(
+        {"email": session["member"]})["email"]
 
     if session["member"]:
-        return render_template("profile.html", first_name=first_name)
+        return render_template(
+            "profile.html", first_name=first_name,
+            last_name=last_name, email=email)
 
     return redirect(url_for("login"))
 

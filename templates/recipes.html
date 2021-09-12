@@ -25,9 +25,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="exampleFormControlTextarea3">Description</label>
-                <textarea class="form-control description" id="exampleFormControlTextarea3" maxlength="400"></textarea>
-              </div>
+                <label for="description">Description</label>
+                <textarea class="form-control description" id="description" name="description" maxlength="400"></textarea>
+            </div>
             <!-- image and recipe type -->
             <div class="card-body row">
                 <div class="col-6">
@@ -35,39 +35,42 @@
                 </div>
                 <div class="col-6 card-panel recipe-type">
                     <h4 class="recipe-header">Recipe Type</h4>
-                    <!-- Default inline 1-->
+                    <!-- Breakfast checkbox -->
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="defaultInline1">
-                        <label class="custom-control-label" for="defaultInline1">Breakfast</label>
+                        <input type="checkbox" class="custom-control-input" id="recipe_type1" name="breakfast">
+                        <label class="custom-control-label" for="recipe_type1">Breakfast</label>
                     </div>
                     
-                    <!-- Default inline 2-->
+                    <!-- Lunch checkbox -->
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="defaultInline2">
-                        <label class="custom-control-label" for="defaultInline2">Lunch</label>
+                        <input type="checkbox" class="custom-control-input" id="recipe_type2" name="lunch">
+                        <label class="custom-control-label" for="recipe_type2">Lunch</label>
                     </div>
                     
-                    <!-- Default inline 3-->
+                    <!-- Dinner checkbox -->
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="defaultInline3">
-                        <label class="custom-control-label" for="defaultInline3">Dinner</label>
+                        <input type="checkbox" class="custom-control-input" id="recipe_type3" name="dinner">
+                        <label class="custom-control-label" for="recipe_type3">Dinner</label>
                     </div>
-                    <!-- Default inline 3-->
+                    <!-- Dessert checkbox -->
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="defaultInline4">
-                        <label class="custom-control-label" for="defaultInline4">Dessert</label>
+                        <input type="checkbox" class="custom-control-input" id="recipe_type4" name="dessert">
+                        <label class="custom-control-label" for="recipe_type4">Dessert</label>
                     </div>
-                    <!-- Default inline 3-->
+                    <!-- Snack checkbox -->
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="defaultInline5">
-                        <label class="custom-control-label" for="defaultInline5">Snack</label>
+                        <input type="checkbox" class="custom-control-input" id="recipe_type5" name="snack">
+                        <label class="custom-control-label" for="recipe_type5">Snack</label>
                     </div>
                 </div>
             </div>
             <!-- register -->
             <div class="row justify-content-center">
-                <button type="submit" class="btn btn-lg">Create
+                <button type="submit" class="btn btn-grn btn-lg">Create
                     <i class="fas fa-sign-in-alt"></i>
+                </button>
+                <button type="submit" class="btn btn-rd btn-lg">Cancel
+                    <i class="fas fa-trash"></i>
                 </button>
             </div>
         </div>

@@ -341,13 +341,22 @@ label {
     margin-top: 2rem;
 }
 
-.btn-lg {
+.btn-grn {
     margin-top: 2rem;
-    background-color: #96e6b3
+    background-color: #96e6b3;
 }
 
-.btn-lg:hover {
+.btn-grn:hover {
     background-color: #ccfccb;
+}
+
+.btn-rd {
+    margin-top: 2rem;
+    background-color: #ff5d5d;
+}
+
+.btn-rd:hover {
+    background-color: #ffa7a7;
 }
 
 h3 {
@@ -396,6 +405,8 @@ h3 {
     background-color: #464e47;
     color: #f1fffa;
     border-color: #f1fffa;
+    margin-top: 5em;
+    margin-bottom: -5em;
 }
 
 .alert-heading {
@@ -414,6 +425,10 @@ h3 {
 .profile-card-name {
     text-transform: capitalize;
     font-size: 24px;
+    background-color: #464e47;
+    color: #f1fffa;
+    border-radius: 0.25rem;
+    padding-left: 10px;
 }
 
 .mt-3 {

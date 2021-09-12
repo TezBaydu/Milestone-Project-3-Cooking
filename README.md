@@ -864,6 +864,8 @@ For further help and info you can select [Cloning and Forking repositories](http
 - background image not showing
 - last_name variable to be defined in profile
 - email variable to be defined in profile
+- collapsible jquery not copied, yet collapse is working, is this ok?
+
 
 
 
