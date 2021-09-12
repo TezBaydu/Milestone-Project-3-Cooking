@@ -865,6 +865,9 @@ For further help and info you can select [Cloning and Forking repositories](http
 - last_name variable to be defined in profile
 - email variable to be defined in profile
 - collapsible jquery not copied, yet collapse is working, is this ok?
+- recipe creation to database success but unable to display details in profile
+- Profile image card sizing, due to it being a URL as email from Code advised...
+- Menu nav blocking other actions due to it being fixed and extends whole width
 
 
 

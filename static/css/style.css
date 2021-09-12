@@ -435,6 +435,10 @@ h3 {
     text-align: center;
 }
 
+.custom-file-label {
+    margin-top: 0;
+}
+
 /*-- image test -- */
 
 #image {

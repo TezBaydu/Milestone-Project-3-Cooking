@@ -19,9 +19,24 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/recipes")
+@app.route("/recipes", methods=["GET", "POST"])
 def recipes():
-    recipes = mongo.db.recipes.find()
+    if request.method == "POST":
+        recipe = {
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_description": request.form.get("recipe_description"),
+            "breakfast": request.form.get("breakfast"),
+            "lunch": request.form.get("lunch"),
+            "dinner": request.form.get("dinner"),
+            "dessert": request.form.get("dessert"),
+            "snack": request.form.get("snack"),
+            "recipe_image": request.form.get("recipe_image")
+        }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Recipe Successfully Added")
+        return redirect(url_for("profile"))
+
+    recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -90,12 +105,11 @@ def profile():
     email = mongo.db.members.find_one(
         {"email": session["member"]})["email"]
     recipe_name = mongo.db.recipes.find_one(
-        {"email": session["member"]})["name"]
+        {"email": session["member"]})["recipe_name"]
     recipe_description = mongo.db.recipes.find_one(
-        {"email": session["member"]})["description"]
+        {"email": session["member"]})["recipe_description"]
     recipe_image = mongo.db.recipes.find_one(
-        {"email": session["member"]})["url"]
-    
+        {"email": session["member"]})["recipe_image"]
 
     if session["member"]:
         return render_template(

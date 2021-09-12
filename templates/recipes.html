@@ -14,7 +14,7 @@
 </div>
 
 <div class="card row">
-    <form class="card-body" method="POST" action="">
+    <form class="card-body" method="POST" action="{{ url_for('recipes') }}">
         <div class="card-title card-panel">
             <!-- recipe name and description -->
             <div class="row">
@@ -31,7 +31,17 @@
             <!-- image and recipe type -->
             <div class="card-body row">
                 <div class="col-6">
-
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="url">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="url" name="url"
+                            aria-describedby="inputGroupFileAddon01">
+                          <label class="custom-file-label" for="url">
+                              Choose file</label>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-6 card-panel recipe-type">
                     <h4 class="recipe-header">Recipe Type</h4>
@@ -69,7 +79,7 @@
                 <button type="submit" class="btn btn-grn btn-lg">Create
                     <i class="fas fa-sign-in-alt"></i>
                 </button>
-                <button type="submit" class="btn btn-rd btn-lg">Cancel
+                <button type="button" class="btn btn-rd btn-lg">Cancel
                     <i class="fas fa-trash"></i>
                 </button>
             </div>
