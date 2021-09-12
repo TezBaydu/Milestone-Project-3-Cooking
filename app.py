@@ -89,11 +89,19 @@ def profile():
         {"email": session["member"]})["lastName"]
     email = mongo.db.members.find_one(
         {"email": session["member"]})["email"]
+    recipe_name = mongo.db.recipes.find_one(
+        {"email": session["member"]})["name"]
+    recipe_description = mongo.db.recipes.find_one(
+        {"email": session["member"]})["description"]
+    recipe_image = mongo.db.recipes.find_one(
+        {"email": session["member"]})["url"]
+    
 
     if session["member"]:
         return render_template(
             "profile.html", first_name=first_name,
-            last_name=last_name, email=email)
+            last_name=last_name, email=email, recipe_name=recipe_name,
+            recipe_description=recipe_description, recipe_image=recipe_image)
 
     return redirect(url_for("login"))
 
