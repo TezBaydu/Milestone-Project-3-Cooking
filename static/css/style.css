@@ -305,7 +305,6 @@ footer.page-footer .footer-copyright {
 
 .description {
     min-height: 10rem;
-    resize: none;
 }
 
 .recipe-type {
@@ -320,6 +319,109 @@ footer.page-footer .footer-copyright {
     margin-bottom: -20px;
 }
 
+.time {
+    width: 5em;
+    text-align: center;
+}
+
+.md-form .form-control {
+    border-color: #568259 !important;
+    border-radius: 0.5rem !important;
+    border-style: solid !important;
+    color: #464e47;
+}
+
+.md-form label {
+    position: relative;
+    margin-top: 0;
+    color: #464e47;
+    font-weight: 400 !important;
+}
+
+.md-form {
+    padding-left: 3em;
+    margin-right: inherit;
+}
+
+.add-btn {
+    padding: 1em;
+}
+
+.add-btn-col{
+    align-self: flex-end;
+}
+
+.pt-3-half { 
+    padding-top: 1.4rem; 
+}
+
+.food:empty {
+    position: relative;
+}
+
+.food:empty:before {
+    color: #808080;
+    content: "e.g. Chicken";
+    display: block;
+}
+
+.count:empty {
+    position: relative;
+}
+
+.count:empty:before {
+    color: #808080;
+    content: "How many (if applicable)";
+    display: block;
+}
+
+.size:empty {
+    position: relative;
+}
+
+.size:empty:before {
+    color: #808080;
+    content: "Small, Medium, Large, etc (if applicable)";
+    display: block;
+}
+
+.weight:empty {
+    position: relative;
+}
+
+.weight:empty:before {
+    color: #808080;
+    content: "Weight in kg (if applicable)";
+    display: block;
+}
+
+.volume:empty {
+    position: relative;
+}
+
+.volume:empty:before {
+    color: #808080;
+    content: "Volume in lb (if applicable)";
+    display: block;
+}
+
+input[type=number].no-spinner::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+.number-padding {
+    width:73px;
+}
+
+.grid {
+    display: grid;
+}
+
+.optional {
+    font-size: 10px;
+}
 
 /*-- register page --*/
 
@@ -380,8 +482,9 @@ h3 {
 }
 
 .form-control {
-    background-color: #464e47;
+    background-color: #568259;
     color: #f1fffa;
+    resize: none;
 }
 
 @media (max-width: 767px) {
