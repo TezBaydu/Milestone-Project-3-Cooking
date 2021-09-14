@@ -869,7 +869,10 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Profile image card sizing, due to it being a URL as email from Code advised...
 - Menu nav blocking other actions due to it being fixed and extends whole width
 - Input number in recipe form accepts --9879798798 even when limiting maxlengths...?
-- Recipe card body to be adjusted so is responsive
+- Recipe card body to be adjusted so is responsive including image size
+- Recipe repeat field showing but value is null
+- steps section js not activated - should it match table above for ingredients?
+
 
 
 

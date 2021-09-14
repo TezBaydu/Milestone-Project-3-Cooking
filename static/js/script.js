@@ -14,30 +14,38 @@ const $EXPORT = $('#export');
 const newTr = `
 <tr class="hide">
 <td class="pt-3-half">
-  <span class="table-up"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a></span>
-  <span class="table-down"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a></span>
+    <span class="table-up"><a href="#!" class="indigo-text"><i
+                class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a></span>
+    <span class="table-down"><a href="#!" class="indigo-text"><i
+                class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a></span>
 </td>
-<td class="pt-3-half food" contenteditable="true"></td>
-<td class="pt-3-half count" contenteditable="true">
-  <input name="count" class="no-spinner number-padding" type="tel" min="0" maxlength="3" placeholder="Quantity">
+<td class="pt-3-half food">
+    <textarea name="food1" class="ingredient-text" minlength="2" maxlength="40"
+    required></textarea>
 </td>
-<td class="pt-3-half size" contenteditable="true"></td>
-<td class="pt-3-half weight" contenteditable="true">
-  <input name="weight" class="no-spinner number-padding" type="tel" min="0" maxlength="3" placeholder="(kg)">
+<td class="pt-3-half count">
+    <input name="count1" class="no-spinner number-padding" type="number" min="0" maxlength="3" placeholder="Quantity"
+    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
 </td>
-<td class="pt-3-half volume" contenteditable="true">
-  <input name="volume" class="no-spinner number-padding" type="tel" min="0" maxlength="3" placeholder="(lb)">
+<td class="pt-3-half size">
+    <textarea name="size1" class="ingredient-text" minlength="2" maxlength="30" placeholder="e.g. Small, Medium, Large"
+    ></textarea>
 </td>
-  <td>
-    <span class="table-remove"
-      ><button
-        type="button"
-        class="btn btn-danger btn-rounded btn-sm my-0 waves-effect waves-light"
-      >
-        Remove
-      </button></span
-    >
-  </td>
+<td class="pt-3-half weight">
+    <input name="weight1" class="no-spinner number-padding" type="number" min="0" maxlength="6" step="0.01" placeholder="(kg)"
+    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+</td>
+<td class="pt-3-half volume">
+    <input name="volume1" class="no-spinner number-padding" type="number" min="0" maxlength="6" step="0.01" placeholder="(lb)"
+    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+</td>
+
+<td>
+    <span class="table-remove"><button type="button"
+            class="btn btn-danger btn-rounded btn-sm my-0">
+            Remove
+        </button></span>
+</td>
 </tr>
 `;
 $('.table-add').on('click', 'i', () => {
@@ -72,3 +80,7 @@ $BTN.on('click', () => {
   const data = [];
 }); // Turn all existing rows into a loopable array 
 $EXPORT.text(JSON.stringify(data));
+
+
+// Steps create
+

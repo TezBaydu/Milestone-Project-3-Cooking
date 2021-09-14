@@ -19,17 +19,17 @@
             <!-- recipe name and description -->
             <div class="row">
                 <div class="col">
-                    <label for="name">Name </label>
-                    <textarea id="name" name="name" class="form-control" minlength="2" maxlength="100"
+                    <label for="recipe_name">Name</label>
+                    <textarea id="recipe_name" name="recipe_name" class="form-control" minlength="2" maxlength="100"
                         required></textarea>
                 </div>
             </div>
             <div class="form-group">
-                <label for="description">Description</label>
-                <textarea class="form-control description" id="description" name="description"
+                <label for="recipe_description">Description</label>
+                <textarea class="form-control description" id="recipe_description" name="recipe_description"
                     maxlength="400"></textarea>
             </div>
-            <!-- image and recipe type -->
+            <!-- image upload and recipe type -->
             <div class="card-body row">
                 <div class="col-6">
                     <div class="input-group">
@@ -37,9 +37,9 @@
                             <span class="input-group-text" id="url">Upload</span>
                         </div>
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="url" name="url"
+                            <input type="file" class="custom-file-input" id="recipe_image" name="recipe_image"
                                 aria-describedby="inputGroupFileAddon01">
-                            <label class="custom-file-label" for="url">
+                            <label class="custom-file-label" for="recipe_image">
                                 Choose file</label>
                         </div>
                     </div>
@@ -122,23 +122,70 @@
                                 <span class="table-down"><a href="#!" class="indigo-text"><i
                                             class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a></span>
                             </td>
-                            <td class="pt-3-half food" contenteditable="true"></td>
-                            <td class="pt-3-half count" contenteditable="true">
+                            <td class="pt-3-half food">
+                                <textarea name="food" class="ingredient-text" minlength="2" maxlength="40"
+                                required></textarea>
+                            </td>
+                            <td class="pt-3-half count">
                                 <input name="count" class="no-spinner number-padding" type="number" min="0" maxlength="3" placeholder="Quantity"
                                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                             </td>
-                            <td class="pt-3-half size" contenteditable="true"></td>
-                            <td class="pt-3-half weight" contenteditable="true">
-                                <input name="weight" class="no-spinner number-padding" type="number" min="0" maxlength="6" placeholder="(kg)"
+                            <td class="pt-3-half size">
+                                <textarea name="size" class="ingredient-text" minlength="2" maxlength="30" placeholder="e.g. Small, Medium, Large"
+                                ></textarea>
+                            </td>
+                            <td class="pt-3-half weight">
+                                <input name="weight" class="no-spinner number-padding" type="number" min="0" maxlength="6" step="0.01" placeholder="(kg)"
                                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                             </td>
-                            <td class="pt-3-half volume" contenteditable="true">
-                                <input name="volume" class="no-spinner number-padding" type="number" min="0" maxlength="6" placeholder="(lb)"
+                            <td class="pt-3-half volume">
+                                <input name="volume" class="no-spinner number-padding" type="number" min="0" maxlength="6" step="0.01" placeholder="(lb)"
                                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                             </td>
                             
                             <td>
                                 <span class="table-remove"><button type="button"
+                                        class="btn btn-danger btn-rounded btn-sm my-0">
+                                        Remove
+                                    </button></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- step by step header -->
+            <div class="col header reg-text">
+                <h3>Step by Step Instructions</h3>
+            </div>
+
+            <!-- step by step instructions -->
+            <div id="table_steps" class="table-editable_steps">
+                <span class="table-add_steps float-right mb-3 mr-2"><a href="#!" class="text-success"><i
+                            class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
+                <table class="table table-bordered table-responsive-md table-striped text-center">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Move up <br>/ Move down</th>
+                            <th class="text-center">Step</th>
+                            <th class="text-center">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="pt-3-half width-minish">
+                                <span class="table-up_steps"><a href="#!" class="indigo-text"><i
+                                            class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a></span>
+                                <span class="table-down_steps"><a href="#!" class="indigo-text"><i
+                                            class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a></span>
+                            </td>
+                            <td class="pt-3-half step_number width-min" contenteditable="false"></td>
+                            <td class="pt-3-half count ">
+                                <textarea name="recipe_step" class="ingredient-text-max" minlength="2" maxlength="300"
+                                ></textarea>
+                            </td>                            
+                            <td class="width-min">
+                                <span class="table-remove_steps"><button type="button"
                                         class="btn btn-danger btn-rounded btn-sm my-0">
                                         Remove
                                     </button></span>

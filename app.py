@@ -30,7 +30,21 @@ def recipes():
             "dinner": request.form.get("dinner"),
             "dessert": request.form.get("dessert"),
             "snack": request.form.get("snack"),
-            "recipe_image": request.form.get("recipe_image")
+            "recipe_image": request.form.get("recipe_image"),
+            "serves": request.form.get("serves"),
+            "prep_time": request.form.get("prep_time"),
+            "cook_time": request.form.get("cook_time"),
+            "ready_time": request.form.get("ready_time"),
+            "food": request.form.get("food"),
+            "count": request.form.get("count"),
+            "size": request.form.get("size"),
+            "weight": request.form.get("weight"),
+            "volume": request.form.get("volume"),
+            "food1": request.form.get("food1"),
+            "count1": request.form.get("count1"),
+            "size1": request.form.get("size1"),
+            "weight1": request.form.get("weight1"),
+            "volume1": request.form.get("volume1")
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")

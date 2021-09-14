@@ -320,7 +320,7 @@ footer.page-footer .footer-copyright {
 }
 
 .time {
-    width: 5em;
+    width: 6em;
     text-align: center;
 }
 
@@ -355,53 +355,13 @@ footer.page-footer .footer-copyright {
     padding-top: 1.4rem; 
 }
 
-.food:empty {
+.step_number:empty {
     position: relative;
 }
 
-.food:empty:before {
+.step_number:empty:before {
     color: #808080;
-    content: "e.g. Chicken";
-    display: block;
-}
-
-.count:empty {
-    position: relative;
-}
-
-.count:empty:before {
-    color: #808080;
-    content: "How many (if applicable)";
-    display: block;
-}
-
-.size:empty {
-    position: relative;
-}
-
-.size:empty:before {
-    color: #808080;
-    content: "Small, Medium, Large, etc (if applicable)";
-    display: block;
-}
-
-.weight:empty {
-    position: relative;
-}
-
-.weight:empty:before {
-    color: #808080;
-    content: "Weight in kg (if applicable)";
-    display: block;
-}
-
-.volume:empty {
-    position: relative;
-}
-
-.volume:empty:before {
-    color: #808080;
-    content: "Volume in lb (if applicable)";
+    content: "1";
     display: block;
 }
 
@@ -421,6 +381,23 @@ input[type=number]::-webkit-outer-spin-button {
 
 .optional {
     font-size: 10px;
+}
+
+.ingredient-text {
+    resize: none;
+}
+
+.ingredient-text-max {
+    resize: none;
+    width: 100%;
+    height:fit-content;
+}
+.width-min {
+    width: 5%;
+}
+
+.width-minish {
+    width: 7%;
 }
 
 /*-- register page --*/
