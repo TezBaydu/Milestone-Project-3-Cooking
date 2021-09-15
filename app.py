@@ -44,7 +44,8 @@ def recipes():
             "count1": request.form.get("count1"),
             "size1": request.form.get("size1"),
             "weight1": request.form.get("weight1"),
-            "volume1": request.form.get("volume1")
+            "volume1": request.form.get("volume1"),
+            "email": session["member"]
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
@@ -112,24 +113,18 @@ def login():
 @app.route("/profile/", methods=["GET", "POST"])
 def profile():
     # Obtain members details from the database
-    first_name = mongo.db.members.find_one(
-        {"email": session["member"]})["firstName"]
-    last_name = mongo.db.members.find_one(
-        {"email": session["member"]})["lastName"]
-    email = mongo.db.members.find_one(
-        {"email": session["member"]})["email"]
-    recipe_name = mongo.db.recipes.find_one(
-        {"email": session["member"]})["recipe_name"]
-    recipe_description = mongo.db.recipes.find_one(
-        {"email": session["member"]})["recipe_description"]
-    recipe_image = mongo.db.recipes.find_one(
-        {"email": session["member"]})["recipe_image"]
+    member = mongo.db.members.find_one(
+        {"email": session["member"]})
+    first_name = member["firstName"]
+    last_name = member["lastName"]
+    email = member["email"]
+    member_recipes = mongo.db.recipes.find(
+        {"email": session["member"]})
 
     if session["member"]:
         return render_template(
             "profile.html", first_name=first_name,
-            last_name=last_name, email=email, recipe_name=recipe_name,
-            recipe_description=recipe_description, recipe_image=recipe_image)
+            last_name=last_name, email=email, member_recipes=member_recipes)
 
     return redirect(url_for("login"))
 

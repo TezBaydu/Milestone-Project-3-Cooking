@@ -873,6 +873,12 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Recipe repeat field showing but value is null
 - steps section js not activated - should it match table above for ingredients?
 
+- Profile UX adjustment, profile card on left, recipes on right
+- Profile: button to take user to create recipe
+- Edit and delete buttons on recipe cards
+- Create recipe: change upload to accept URL as source
+- Create recipe: Ready in sum | Event listeners in prep and cook to publish sum in ready time
+- Create recipe: add button underneath
 
 
 
