@@ -448,6 +448,10 @@ h3 {
     font-size: 24px;
 }
 
+.center-align {
+    text-align: center;
+}
+
 .login {
     color: #568259;
     text-decoration: underline;
@@ -462,6 +466,47 @@ h3 {
     background-color: #568259;
     color: #f1fffa;
     resize: none;
+    padding-right: 0;
+    padding-left: .25rem;
+}
+
+.ingredients {
+    align-items: flex-end;
+}
+
+.ingredient-field label {
+    display: block;
+    text-align: center;
+}
+
+.ingredients a {
+    color: #568259;
+}
+
+.ingredients a:hover {
+    color: #96e6b3;
+}
+
+.fa-trash-alt {
+    color:#ff5d5d
+}
+
+.fa-trash-alt:hover {
+    color:#a06969
+}
+
+.ingredient-field ::placeholder {
+    color: #f1fffa;
+    opacity: 1;
+    font-size: 12px;
+    padding: 0;
+}
+
+.ingredients ::placeholder {
+    color: #f1fffa;
+    opacity: 1;
+    font-size: 12px;
+    padding: 0;
 }
 
 @media (max-width: 767px) {

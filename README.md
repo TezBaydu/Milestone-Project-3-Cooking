@@ -862,8 +862,8 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Col classes have padding right 15px and will not fill page
 - iphone 5 nav menu items not listed correctly
 - background image not showing
-- last_name variable to be defined in profile
-- email variable to be defined in profile
+- last_name variable to be defined in profile - done
+- email variable to be defined in profile - done
 - collapsible jquery not copied, yet collapse is working, is this ok?
 - recipe creation to database success but unable to display details in profile
 - Profile image card sizing, due to it being a URL as email from Code advised...
@@ -878,7 +878,9 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Edit and delete buttons on recipe cards
 - Create recipe: change upload to accept URL as source
 - Create recipe: Ready in sum | Event listeners in prep and cook to publish sum in ready time
-- Create recipe: add button underneath
+- Create recipe: add button underneath - done
+- Create recipe: delete on ingredients deleting parent but sibling deletion not working...
+- Create recipe: method step adding and deleting but placeholder not showing and unable to resize added fields
 
 
 

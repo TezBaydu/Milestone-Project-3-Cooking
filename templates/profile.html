@@ -62,6 +62,7 @@
 <div class="card-deck">
   <!-- Card -->
     <div class="card mb-4">
+      {% for member in member_recipes %}
       <!--Card image-->
       <div class="view overlay">
         <img class="card-img-top" src="{{ recipe_image }}"
@@ -86,6 +87,7 @@
           <label class="custom-control-label" for="customSwitch1">Make Public</label>
         </div>
       </div>
+      {% endfor %}
     </div>
     <!-- Card -->
   

@@ -8,79 +8,38 @@ $('#featureDiscovery').click(function () {
 
 // Create recipe form table
 
-const $tableID = $('#table');
-const $BTN = $('#export-btn');
-const $EXPORT = $('#export');
-const newTr = `
-<tr class="hide">
-<td class="pt-3-half">
-    <span class="table-up"><a href="#!" class="indigo-text"><i
-                class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a></span>
-    <span class="table-down"><a href="#!" class="indigo-text"><i
-                class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a></span>
-</td>
-<td class="pt-3-half food">
-    <textarea name="food1" class="ingredient-text" minlength="2" maxlength="40"
-    required></textarea>
-</td>
-<td class="pt-3-half count">
-    <input name="count1" class="no-spinner number-padding" type="number" min="0" maxlength="3" placeholder="Quantity"
-    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-</td>
-<td class="pt-3-half size">
-    <textarea name="size1" class="ingredient-text" minlength="2" maxlength="30" placeholder="e.g. Small, Medium, Large"
-    ></textarea>
-</td>
-<td class="pt-3-half weight">
-    <input name="weight1" class="no-spinner number-padding" type="number" min="0" maxlength="6" step="0.01" placeholder="(kg)"
-    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-</td>
-<td class="pt-3-half volume">
-    <input name="volume1" class="no-spinner number-padding" type="number" min="0" maxlength="6" step="0.01" placeholder="(lb)"
-    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-</td>
+$(document).ready(function() {
+	var max_add      		= 20;
+	var ingredient_wrapper   		= $(".input_ingredient_wrap");
+	var add_button      = $(".add_ingredient_button");
+	
+	var add = 1;
+	$(add_button).click(function(e){
+		e.preventDefault();
+		if(add < max_add) { 
+			add++; 
+			$(ingredient_wrapper).append('<div class="ingredient-field col-md-5"><input class ="form-control" id="food" name="food" type="text" class="validate" placeholder="Food" required></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input class ="form-control" id="count" name="count" type="text" class="validate" placeholder="Quantity" required></div><div class="ingredient-field col-lg-3 input_ing_wrap"><input class ="form-control" id="size" name="size" type="text" class="validate" placeholder="Size" required></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input class ="form-control" id="weight" name="weight" type="text" class="validate" placeholder="Weight" required></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input class ="form-control" id="volume" name="volume" type="text" class="validate" placeholder="Volume" required></div><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div>');
+		}
+	});
+	
+	$(ingredient_wrapper).on("click",".remove_field", function(e){ 
+		e.preventDefault(); $(this).parent('div').remove(); add--;
+	});
 
-<td>
-    <span class="table-remove"><button type="button"
-            class="btn btn-danger btn-rounded btn-sm my-0">
-            Remove
-        </button></span>
-</td>
-</tr>
-`;
-$('.table-add').on('click', 'i', () => {
-  const $clone= $tableID.find('tbody tr').last().clone(true).removeClass('hide table-line');
-  if ($tableID.find('tbody tr').length ===
-    0) {
-    $('tbody').append(newTr);
-  }
-  $tableID.find('table').append($clone);
+	var max_meth      		= 10; 
+	var wrapper_meth   		= $(".input_meth_wrap"); 
+	var add_meth_button      = $(".add_meth_button");
+	
+	var meth = 1; 
+	$(add_meth_button).click(function(e){ 
+		e.preventDefault();
+		if(meth < max_meth) {
+			meth++; 
+			$(wrapper_meth).append('<div class="input-field col input_meth_wrap"><textarea id="recipe_method" name="recipe_method" class="form-control placeholder="Method Step 1"></textarea><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div>'); 
+		}
+	});
+	
+	$(wrapper_meth).on("click",".remove_field", function(e){
+		e.preventDefault(); $(this).parent('div').remove(); meth--;
+	});
 });
-$tableID.on('click', '.table-remove', function () {
-  $(this).parents('tr').detach();
-});
-$tableID.on('click', '.table-up', function () {
-  const $row = $(this).parents('tr');
-  if ($row.index() === 0) {
-    return;
-  }
-  $row.prev().before($row.get(0));
-});
-$tableID.on('click',
-  '.table-down',
-  function () {
-    const $row = $(this).parents('tr');
-    $row.next().after($row.get(0));
-  });
-jQuery.fn.shift = [].shift;
-$BTN.on('click', () => {
-  const $rows =
-    $tableID.find('tr:not(:hidden)');
-  const headers = [];
-  const data = [];
-}); // Turn all existing rows into a loopable array 
-$EXPORT.text(JSON.stringify(data));
-
-
-// Steps create
-

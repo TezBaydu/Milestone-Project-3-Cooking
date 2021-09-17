@@ -13,7 +13,7 @@
     </div>
 </div>
 
-<div class="card row">
+<div class="card row container">
     <form class="card-body" method="POST" action="{{ url_for('recipes') }}">
         <div class="card-title card-panel">
             <!-- recipe name and description -->
@@ -27,22 +27,14 @@
             <div class="form-group">
                 <label for="recipe_description">Description</label>
                 <textarea class="form-control description" id="recipe_description" name="recipe_description"
-                    maxlength="400"></textarea>
+                    maxlength="400" required></textarea>
             </div>
             <!-- image upload and recipe type -->
             <div class="card-body row">
                 <div class="col-6">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="url">Upload</span>
-                        </div>
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="recipe_image" name="recipe_image"
-                                aria-describedby="inputGroupFileAddon01">
-                            <label class="custom-file-label" for="recipe_image">
-                                Choose file</label>
-                        </div>
-                    </div>
+                    <label for="recipe_image">Place image url here <span class="optional">(Optional)</span></label>
+                    <textarea class="form-control" type="text" class="recipe_image" id="recipe_image" name="recipe_image">
+                    </textarea>
                 </div>
                 <div class="col-6 card-panel recipe-type">
                     <h4 class="recipe-header">Recipe Type</h4>
@@ -99,102 +91,48 @@
             </div>
 
             <!-- ingredients form -->
-            <div id="table" class="table-editable">
-                <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
-                            class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
-                <table class="table table-bordered table-responsive-md table-striped text-center">
-                    <thead>
-                        <tr>
-                            <th class="text-center">Move up <br>/ Move down</th>
-                            <th class="text-center">Food</th>
-                            <th class="text-center">Quantity<br><span class="optional">(Optional)</span></th>
-                            <th class="text-center">Size<br><span class="optional">(Optional)</span></th>
-                            <th class="text-center">Weight(kg)<br><span class="optional">(Optional)</span></th>
-                            <th class="text-center">Volume(lb)<br><span class="optional">(Optional)</span></th>
-                            <th class="text-center">Remove</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="pt-3-half">
-                                <span class="table-up"><a href="#!" class="indigo-text"><i
-                                            class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a></span>
-                                <span class="table-down"><a href="#!" class="indigo-text"><i
-                                            class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a></span>
-                            </td>
-                            <td class="pt-3-half food">
-                                <textarea name="food" class="ingredient-text" minlength="2" maxlength="40"
-                                required></textarea>
-                            </td>
-                            <td class="pt-3-half count">
-                                <input name="count" class="no-spinner number-padding" type="number" min="0" maxlength="3" placeholder="Quantity"
-                                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-                            </td>
-                            <td class="pt-3-half size">
-                                <textarea name="size" class="ingredient-text" minlength="2" maxlength="30" placeholder="e.g. Small, Medium, Large"
-                                ></textarea>
-                            </td>
-                            <td class="pt-3-half weight">
-                                <input name="weight" class="no-spinner number-padding" type="number" min="0" maxlength="6" step="0.01" placeholder="(kg)"
-                                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-                            </td>
-                            <td class="pt-3-half volume">
-                                <input name="volume" class="no-spinner number-padding" type="number" min="0" maxlength="6" step="0.01" placeholder="(lb)"
-                                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-                            </td>
-                            
-                            <td>
-                                <span class="table-remove"><button type="button"
-                                        class="btn btn-danger btn-rounded btn-sm my-0">
-                                        Remove
-                                    </button></span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="row ingredients input_ingredient_wrap">                
+                <!-- ingredient fields -->
+                <div class="ingredient-field col-md-5">
+                    <input class ="form-control" id="food" name="food" type="text" class="validate" placeholder="Food" required>
+                </div>
+                <div class="ingredient-field col-sm-1">
+                    <input class ="form-control" id="count" name="count" type="text" class="validate" placeholder="Quantity" required>
+                </div>
+                <div class="ingredient-field col-lg-3">
+                    <input class ="form-control" id="size" name="size" type="text" class="validate" placeholder="Size" required>
+                </div>
+                <div class="ingredient-field col-sm-1">
+                    <input class ="form-control" id="weight" name="weight" type="text" class="validate" placeholder="Weight" required>
+                </div>
+                <div class="ingredient-field col-sm-1">
+                    <input class ="form-control" id="volume" name="volume" type="text" class="validate" placeholder="Volume" required>
+                </div>
             </div>
-
-            <!-- step by step header -->
+            <div class="row">
+                <!-- add button for ingredients -->
+                <div class="col">
+                    <a href="#" class="add_ingredient_button"><i class="fas fa-plus-square"></i></a>
+                </div>
+            </div>
+            <!-- method header -->
             <div class="col header reg-text">
-                <h3>Step by Step Instructions</h3>
+                <h3>Step by Step Method</h3>
             </div>
-
-            <!-- step by step instructions -->
-            <div id="table_steps" class="table-editable_steps">
-                <span class="table-add_steps float-right mb-3 mr-2"><a href="#!" class="text-success"><i
-                            class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
-                <table class="table table-bordered table-responsive-md table-striped text-center">
-                    <thead>
-                        <tr>
-                            <th class="text-center">Move up <br>/ Move down</th>
-                            <th class="text-center">Step</th>
-                            <th class="text-center">Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="pt-3-half width-minish">
-                                <span class="table-up_steps"><a href="#!" class="indigo-text"><i
-                                            class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a></span>
-                                <span class="table-down_steps"><a href="#!" class="indigo-text"><i
-                                            class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a></span>
-                            </td>
-                            <td class="pt-3-half step_number width-min" contenteditable="false"></td>
-                            <td class="pt-3-half count ">
-                                <textarea name="recipe_step" class="ingredient-text-max" minlength="2" maxlength="300"
-                                ></textarea>
-                            </td>                            
-                            <td class="width-min">
-                                <span class="table-remove_steps"><button type="button"
-                                        class="btn btn-danger btn-rounded btn-sm my-0">
-                                        Remove
-                                    </button></span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!--add recipe method textarea-->
+            <div class="row ingredients">
+                <div class="input-field col input_meth_wrap">
+                    <textarea id="recipe_method" name="recipe_method" class="form-control validate" placeholder="Method Step 1"
+                        required></textarea>
+                </div>
             </div>
-
+            <!-- add method step button -->
+            <div class="row"
+                <div class="col">
+                    <a href="#" class="add_meth_button"><i class="fas fa-plus-square"></i></i></a>
+                </div>
+            </div>
+            
             <!-- submit / cancel buttons -->
             <div class="row justify-content-center">
                 <button type="submit" class="btn btn-grn btn-lg">Create
@@ -207,16 +145,5 @@
         </div>
     </form>
 </div>
-
-{% for recipe in recipes %}
-{{ recipe.name }}<br>
-{{ recipe.description }}<br>
-{{ recipe.type }}<br>
-{{ recipe.serves }}<br>
-{{ recipe.prep_time }}<br>
-{{ recipe.cook_time }}<br>
-{{ recipe.ready_time }}<br>
-
-{% endfor %}
 
 {% endblock %}
