@@ -479,11 +479,11 @@ h3 {
     text-align: center;
 }
 
-.ingredients a {
+.fa-plus-square {
     color: #568259;
 }
 
-.ingredients a:hover {
+.fa-plus-square:hover {
     color: #96e6b3;
 }
 
