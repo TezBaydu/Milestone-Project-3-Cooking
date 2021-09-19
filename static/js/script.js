@@ -18,7 +18,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		if(add < max_add) { 
 			add++; 
-			$(ingredient_wrapper).append('<div class="ingredient-field col-md-5"><input class ="form-control" id="food" name="food" type="text" class="validate" placeholder="Food" required></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input class ="form-control" id="count" name="count" type="text" class="validate" placeholder="Quantity" required></div><div class="ingredient-field col-lg-3 input_ing_wrap"><input class ="form-control" id="size" name="size" type="text" class="validate" placeholder="Size" required></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input class ="form-control" id="weight" name="weight" type="text" class="validate" placeholder="Weight" required></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input class ="form-control" id="volume" name="volume" type="text" class="validate" placeholder="Volume" required></div><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div>');
+			$(ingredient_wrapper).append('<div class="row ingredients"><div class="ingredient-field col-md-5"><input class ="form-control" id="food" name="food" type="text" class="validate" placeholder="Food" required></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input class ="form-control" id="count" name="count" type="text" class="validate" placeholder="Quantity" required></div><div class="ingredient-field col-lg-3 input_ing_wrap"><input class ="form-control" id="size" name="size" type="text" class="validate" placeholder="Size" required></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input class ="form-control" id="weight" name="weight" type="text" class="validate" placeholder="Weight" required></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input class ="form-control" id="volume" name="volume" type="text" class="validate" placeholder="Volume" required></div><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div></div>');
 		}
 	});
 	
@@ -35,7 +35,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		if(meth < max_meth) {
 			meth++; 
-			$(wrapper_meth).append('<div class="input-field col input_meth_wrap"><textarea id="recipe_method" name="recipe_method" class="form-control placeholder="Method Step 1"></textarea><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div>'); 
+			$(wrapper_meth).append('<div class="row ingredients"><div class="input-field col input_meth_wrap"><textarea id="recipe_method" name="recipe_method" class="form-control" placeholder="Method Step 1"></textarea><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div></div>'); 
 		}
 	});
 	

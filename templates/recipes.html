@@ -91,22 +91,24 @@
             </div>
 
             <!-- ingredients form -->
-            <div class="row ingredients input_ingredient_wrap">                
-                <!-- ingredient fields -->
-                <div class="ingredient-field col-md-5">
-                    <input class ="form-control" id="food" name="food" type="text" class="validate" placeholder="Food" required>
-                </div>
-                <div class="ingredient-field col-sm-1">
-                    <input class ="form-control" id="count" name="count" type="text" class="validate" placeholder="Quantity" required>
-                </div>
-                <div class="ingredient-field col-lg-3">
-                    <input class ="form-control" id="size" name="size" type="text" class="validate" placeholder="Size" required>
-                </div>
-                <div class="ingredient-field col-sm-1">
-                    <input class ="form-control" id="weight" name="weight" type="text" class="validate" placeholder="Weight" required>
-                </div>
-                <div class="ingredient-field col-sm-1">
-                    <input class ="form-control" id="volume" name="volume" type="text" class="validate" placeholder="Volume" required>
+            <div class="container input_ingredient_wrap">
+                <div class="row ingredients">            
+                    <!-- ingredient fields -->
+                    <div class="ingredient-field col-md-5">
+                        <input class ="form-control" id="food" name="food" type="text" class="validate" placeholder="Food" required>
+                    </div>
+                    <div class="ingredient-field col-sm-1">
+                        <input class ="form-control" id="count" name="count" type="text" class="validate" placeholder="Quantity" required>
+                    </div>
+                    <div class="ingredient-field col-lg-3">
+                        <input class ="form-control" id="size" name="size" type="text" class="validate" placeholder="Size" required>
+                    </div>
+                    <div class="ingredient-field col-sm-1">
+                        <input class ="form-control" id="weight" name="weight" type="text" class="validate" placeholder="Weight" required>
+                    </div>
+                    <div class="ingredient-field col-sm-1">
+                        <input class ="form-control" id="volume" name="volume" type="text" class="validate" placeholder="Volume" required>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -120,10 +122,12 @@
                 <h3>Step by Step Method</h3>
             </div>
             <!--add recipe method textarea-->
-            <div class="row ingredients">
-                <div class="input-field col input_meth_wrap">
-                    <textarea id="recipe_method" name="recipe_method" class="form-control validate" placeholder="Method Step 1"
-                        required></textarea>
+            <div class="container">
+                <div class="row ingredients">
+                    <div class="input-field col input_meth_wrap">
+                        <textarea id="recipe_method" name="recipe_method" class="form-control validate" placeholder="Method Step 1"
+                            required></textarea>
+                    </div>
                 </div>
             </div>
             <!-- add method step button -->
