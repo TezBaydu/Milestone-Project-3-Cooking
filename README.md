@@ -866,17 +866,18 @@ For further help and info you can select [Cloning and Forking repositories](http
 - email variable to be defined in profile - done
 - collapsible jquery not copied, yet collapse is working, is this ok?
 - recipe creation to database success but unable to display details in profile - done, did not call the name "member_recipe"
-- Profile image card sizing, due to it being a URL as email from Code advised... how to limit or max image size?
+- Profile image card sizing, due to it being a URL as email from Code advised... how to limit or max image size? - done but card body quite big when less than 3 d=cards...?
 - Menu nav blocking other actions due to it being fixed and extends whole width
 - Input number in recipe form accepts --9879798798 even when limiting maxlengths...?
 - Recipe card body to be adjusted so is responsive including image size
 - Recipe repeat field showing but value is null
 - steps section js not activated - should it match table above for ingredients? - No - Updated to self styles row inputs
 
-- Profile UX adjustment, profile card on left, recipes on right
-- Profile: button to take user to create recipe
+- Profile UX adjustment, profile card on left, recipes on right - done
+- Profile: button to take user to create recipe - done
+- Profile: Public and Private recipes to alternaelty show upon selection
 - Edit and delete buttons on recipe cards
-- Create recipe: change upload to accept URL as source - Almost done but has content within...need to investigte !!
+- Create recipe: change upload to accept URL as source - Almost done but has content within...need to investigate !!
 - Create recipe: Ready in sum | Event listeners in prep and cook to publish sum in ready time
 - Create recipe: add button underneath - done
 - Create recipe: delete on ingredients deleting parent but sibling deletion not working... - done, added container div

@@ -1,4 +1,4 @@
-// Menu nav click toggle
+// menu nav click toggle
 
 $('#featureDiscovery').click(function () {
   $('.feature-container-inside').toggleClass('active');
@@ -6,7 +6,7 @@ $('#featureDiscovery').click(function () {
   $('.feature-trigger-outline').toggleClass('active');
 });
 
-// Create recipe form table
+// recipe: add and remove recipe ingredients rows
 
 $(document).ready(function() {
 	var max_add      		= 20;
@@ -26,6 +26,8 @@ $(document).ready(function() {
 		e.preventDefault(); $(this).parent('div').remove(); add--;
 	});
 
+// recipe: add and remove recipe method rows
+
 	var max_meth      		= 10; 
 	var wrapper_meth   		= $(".input_meth_wrap"); 
 	var add_meth_button      = $(".add_meth_button");
@@ -43,3 +45,6 @@ $(document).ready(function() {
 		e.preventDefault(); $(this).parent('div').remove(); meth--;
 	});
 });
+
+
+// profile: replace public and private recipes
