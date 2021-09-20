@@ -409,8 +409,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 .card {
     margin-top: 1em;
-    margin-bottom: 6em;
-    width: 60%;
     margin-left: auto;
     margin-right: auto;
     background: none;
@@ -418,6 +416,14 @@ input[type=number]::-webkit-outer-spin-button {
 
 label {
     margin-top: 2rem;
+}
+
+.info-color-dark {
+    margin-top: 2rem;
+}
+
+.info-color-dark:hover {
+    background-color: #33b5e5 !important;
 }
 
 .btn-grn {
@@ -562,6 +568,8 @@ h3 {
 
 .profile-card {
     margin-left: 0;
+    max-height: 600px;
+    height: 600px;
 }
 
 .mt-3 {
@@ -573,18 +581,18 @@ h3 {
     margin-top: 0;
 }
 
-.view {
-    max-height: 50%;
-    padding: 2%;
-}
-
 .view img {
-    object-fit: cover;
-    height: 100%;
+    object-fit: contain;
+    height: 180px;
 }
 
 .card-deck .card {
     max-width: 30%;
+    flex: 1 0 auto;
+}
+
+.accordion>.card>.card-header {
+    margin-bottom: 0;
 }
 
 /*-- image test -- */

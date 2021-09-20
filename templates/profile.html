@@ -3,202 +3,265 @@
 
 <h2 class="logo">Eatin</h2>
 
-<h3 class="text-center profile-name">
-  {{ first_name }}'s Profile
-</h3>
+<div class="row">
+  <div class="col reg-text">
+    <h3 class="text-center profile-name">
+      {{ first_name }}'s Profile
+    </h3>
+  </div>
+</div>
 
 <div class="row">
-  <div class="col-3 reg-text">
-    <a href="{{ url_for('recipes') }}" class="btn btn-grn btn-lg">Create
-      Recipe
-    </a>
+<!-- Profile details -->
+  <div class="card profile-card col-3">
+    <div class="card-body">
+      <div class="card-title card-panel">
+        <div class="row">
+          <div class="col s-12 input-with-pre-icon">
+            <i class="fas fa-user input-prefix"></i>
+            <label for="firstName">First Name </label>
+            <p class="profile-card-name">{{ first_name }}</p>
+          </div>
+
+          <div class="col s-12 input-with-pre-icon">
+            <i class="fas fa-user input-prefix"></i>
+            <label for="lastName">Last Name </label>
+            <p class="profile-card-name">{{ last_name }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s-12 input-with-pre-icon">
+            <i class="fas fa-envelope prefix"></i>
+            <label for="email" data-error="wrong" data-success="right">Email </label>
+            <p class="profile-card-name">{{ email }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <button class="btn info-color-dark btn-md" type="button">
+              Edit account
+              <i class="fas fa-edit"></i>
+            </button>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-rd btn-md" type="button">
+              Delete account
+              <i class="fas fa-user-times"></i>
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col reg-text">
+            <a href="{{ url_for('recipes') }}" class="btn btn-grn btn-lg">Create
+              Recipe
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- Public/Private card buttons -->
+
+    <!-- Public/Private card buttons -->
   <div class="col-9">
-    <div class="row justify-content-around btn-group" data-toggle="buttons">
-      <div class="col-4">
-        <label for="toggle1" class="btn btn-grn btn-lg form-check-label active">
-          <input onclick="toggle('collapsePublic')" id="toggle1" class="form-check-input" type="radio" name="options" autocomplete="off"
-            data-toggle="collapse" data-target="#collapsePublic" aria-expanded="false"> Public Recipes
-        </label>
+    <div class="accordion" id="accordionExample275">
+      <div class="card z-depth-0 bordered">
+        <div class="card-header reg-text" id="headingOne2">
+          <h5 class="mb-0">
+            <button class="btn btn-grn" type="button" data-toggle="collapse" data-target="#collapseOne2"
+              aria-expanded="true" aria-controls="collapseOne2">
+              Public Recipes
+            </button>
+          </h5>
+        </div>
+        <div id="collapseOne2" class="collapse" aria-labelledby="headingOne2" data-parent="#accordionExample275">
+          <div class="card-body">
+            <div class="mt-3">
+              <div class="card-deck">
+                {% for member_recipe in member_recipes %}
+                <div class="card mb-4">
+                  <div class="view overlay">
+                    <img class="card-img-top" src="{{ member_recipe.recipe_image }}" alt="Recipe image">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>
+                    <p class="card-text">{{ member_recipe.recipe_description }}</p>
+                    <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-4">
-        <label for="toggle2" class="btn btn-grn btn-lg form-check-label">
-          <input onclick="toggle('collapsePrivate')" id="toggle2" class="form-check-input" type="radio" name="options" autocomplete="off"
-          data-toggle="collapse" data-target="#collapsePrivate" aria-expanded="false"> Private Recipes
-        </label>
+      <div class="card z-depth-0 bordered">
+        <div class="card-header reg-text" id="headingTwo2">
+          <h5 class="mb-0">
+            <button class="btn btn-grn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo2"
+              aria-expanded="false" aria-controls="collapseTwo2">
+              Private Recipes
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordionExample275">
+          <div class="card-body">
+            <div class="mt-3">
+              <!-- Card deck -->
+              <div class="card-deck">
+
+                <!-- Card -->
+                <div class="card mb-4">
+
+                  <!--Card image-->
+                  <div class="view overlay">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+                      alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+
+                  <!--Card content-->
+                  <div class="card-body">
+
+                    <!--Title-->
+                    <h4 class="card-title">Card title</h4>
+                    <!--Text-->
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's
+                      content.</p>
+                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                    <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+
+                  </div>
+
+                </div>
+                <!-- Card -->
+
+                <!-- Card -->
+                <div class="card mb-4">
+
+                  <!--Card image-->
+                  <div class="view overlay">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
+                      alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+
+                  <!--Card content-->
+                  <div class="card-body">
+
+                    <!--Title-->
+                    <h4 class="card-title">Card title</h4>
+                    <!--Text-->
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's
+                      content.</p>
+                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                    <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+
+                  </div>
+
+                </div>
+                <!-- Card -->
+
+                <!-- Card -->
+                <div class="card mb-4">
+
+                  <!--Card image-->
+                  <div class="view overlay">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"
+                      alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+
+                  <!--Card content-->
+                  <div class="card-body">
+
+                    <!--Title-->
+                    <h4 class="card-title">Card title</h4>
+                    <!--Text-->
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's
+                      content.</p>
+                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                    <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+
+                  </div>
+
+                </div>
+                <!-- Card -->
+                <div class="card mb-4">
+
+                  <!--Card image-->
+                  <div class="view overlay">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
+                      alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+
+                  <!--Card content-->
+                  <div class="card-body">
+
+                    <!--Title-->
+                    <h4 class="card-title">Card title</h4>
+                    <!--Text-->
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's
+                      content.</p>
+                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                    <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+
+                  </div>
+
+                </div>
+                <!-- Card -->
+
+                <!-- Card -->
+                <div class="card mb-4">
+
+                  <!--Card image-->
+                  <div class="view overlay">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"
+                      alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+
+                  <!--Card content-->
+                  <div class="card-body">
+
+                    <!--Title-->
+                    <h4 class="card-title">Card title</h4>
+                    <!--Text-->
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's
+                      content.</p>
+                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                    <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+
+                  </div>
+
+                </div>
+                <!-- Card -->
+              </div>
+              <!-- Card deck -->
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-<div class="container-fluid">
-  <div class="row">
-    <!-- Profile details -->
-    <div class="card profile-card col-3">
-      <div class="card-body">
-        <div class="card-title card-panel">
-          <div class="row">
-            <div class="col s-12 input-with-pre-icon">
-              <i class="fas fa-user input-prefix"></i>
-              <label for="firstName">First Name </label>
-              <p class="profile-card-name">{{ first_name }}</p>
-            </div>
-
-            <div class="col s-12 input-with-pre-icon">
-              <i class="fas fa-user input-prefix"></i>
-              <label for="lastName">Last Name </label>
-              <p class="profile-card-name">{{ last_name }}</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col s-12 input-with-pre-icon">
-              <i class="fas fa-envelope prefix"></i>
-              <label for="email" data-error="wrong" data-success="right">Email </label>
-              <p class="profile-card-name">{{ email }}</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <button class="btn btn-grn btn-md" type="button">
-                Edit account
-                <i class="fas fa-edit"></i>
-              </button>
-            </div>
-            <div class="col-6">
-              <button class="btn btn-rd btn-md" type="button">
-                Delete account
-                <i class="fas fa-user-times"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Public recipes -->
-    <div class="collapse col-9" id="collapsePublic">
-      <div class="mt-3">
-        <div class="card-deck">
-          {% for member_recipe in member_recipes %}
-          <div class="card mb-4">
-            <div class="view overlay">
-              <img class="card-img-top" src="{{ member_recipe.recipe_image }}" alt="Recipe image">
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-            <div class="card-body">
-              <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>
-              <p class="card-text">{{ member_recipe.recipe_description }}</p>
-              <button type="button" class="btn btn-light-blue btn-md">Read more</button>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-
-    <!-- Private Recipes -->
-    <div class="collapse col-9" id="collapsePrivate">
-      <div class="mt-3">
-        <!-- Card deck -->
-        <div class="card-deck">
-
-          <!-- Card -->
-          <div class="card mb-4">
-
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
-                alt="Card image cap">
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-
-            <!--Card content-->
-            <div class="card-body">
-
-              <!--Title-->
-              <h4 class="card-title">Card title</h4>
-              <!--Text-->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's
-                content.</p>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <button type="button" class="btn btn-light-blue btn-md">Read more</button>
-
-            </div>
-
-          </div>
-          <!-- Card -->
-
-          <!-- Card -->
-          <div class="card mb-4">
-
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
-                alt="Card image cap">
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-
-            <!--Card content-->
-            <div class="card-body">
-
-              <!--Title-->
-              <h4 class="card-title">Card title</h4>
-              <!--Text-->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's
-                content.</p>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <button type="button" class="btn btn-light-blue btn-md">Read more</button>
-
-            </div>
-
-          </div>
-          <!-- Card -->
-
-          <!-- Card -->
-          <div class="card mb-4">
-
-            <!--Card image-->
-            <div class="view overlay">
-              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"
-                alt="Card image cap">
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-
-            <!--Card content-->
-            <div class="card-body">
-
-              <!--Title-->
-              <h4 class="card-title">Card title</h4>
-              <!--Text-->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's
-                content.</p>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <button type="button" class="btn btn-light-blue btn-md">Read more</button>
-
-            </div>
-
-          </div>
-          <!-- Card -->
-
-        </div>
-        <!-- Card deck -->
-      </div>
-    </div>
-    <!-- / Collapsible element -->
-  </div>
-</div>
-
 
 {% endblock %}
