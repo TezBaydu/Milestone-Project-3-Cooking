@@ -876,6 +876,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Profile UX adjustment, profile card on left, recipes on right - done
 - Profile: button to take user to create recipe - done
 - Profile: Public and Private recipes to alternaelty show upon selection - done through using accordion collapse
+- Profile: New member - Accordion to have a Create Recipe button in Accordion which gets replaced when a recips is created
 - Edit and delete buttons on recipe cards
 - Create recipe: change upload to accept URL as source - Almost done but has content within...need to investigate !!
 - Create recipe: Ready in sum | Event listeners in prep and cook to publish sum in ready time

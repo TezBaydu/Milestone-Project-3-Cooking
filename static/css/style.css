@@ -414,6 +414,11 @@ input[type=number]::-webkit-outer-spin-button {
     background: none;
 }
 
+.card-width {
+    width: 60%;
+    margin-bottom: 6em;
+}
+
 label {
     margin-top: 2rem;
 }
@@ -589,6 +594,10 @@ h3 {
 .card-deck .card {
     max-width: 30%;
     flex: 1 0 auto;
+}
+
+.accordion {
+    margin-right: 2%;
 }
 
 .accordion>.card>.card-header {
