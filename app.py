@@ -45,6 +45,8 @@ def recipes():
             "size1": request.form.get("size1"),
             "weight1": request.form.get("weight1"),
             "volume1": request.form.get("volume1"),
+            "recipe_method": request.form.get("recipe_method"),
+            "private-switch": request.form.get("private-switch"),
             "email": session["member"]
         }
         mongo.db.recipes.insert_one(recipe)
@@ -118,13 +120,14 @@ def profile():
     first_name = member["firstName"]
     last_name = member["lastName"]
     email = member["email"]
-    member_recipes = mongo.db.recipes.find(
-        {"email": session["member"]})
+    member_recipes = list(mongo.db.recipes.find(
+        {"email": session["member"]}))
 
     if session["member"]:
         return render_template(
             "profile.html", first_name=first_name,
-            last_name=last_name, email=email, member_recipes=member_recipes)
+            last_name=last_name, email=email,
+            member_recipes=member_recipes)
 
     return redirect(url_for("login"))
 

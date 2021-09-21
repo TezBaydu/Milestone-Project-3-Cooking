@@ -33,8 +33,7 @@
             <div class="card-body row">
                 <div class="col-6">
                     <label for="recipe_image">Place image url here <span class="optional">(Optional)</span></label>
-                    <textarea class="form-control" type="text" class="recipe_image" id="recipe_image" name="recipe_image">
-                    </textarea>
+                    <textarea class="form-control" id="recipe_image" name="recipe_image" maxlength="200"></textarea>
                 </div>
                 <div class="col-6 card-panel recipe-type">
                     <h4 class="recipe-header">Recipe Type</h4>
@@ -92,25 +91,43 @@
 
             <!-- ingredients form -->
             <div class="container input_ingredient_wrap">
+                <div class="row">
+                    <div class="col-md-6 center-align rec-head">
+                        <p>Food (Not too descriptive)</p>
+                    </div>
+                    <div class="col-sm-1 rec-head">
+                        <p>Quantity</p>
+                    </div>
+                    <div class="col-lg-2 rec-head">
+                        <p>Size (Large, Small, etc)</p>
+                    </div>
+                    <div class="col-sm-1 rec-head">
+                        <p>Weight<br>(kg)</p>
+                    </div>
+                    <div class="col-sm-1 rec-head">
+                        <p>Volume<br>(lb)</p>
+                    </div>
+                </div>
+
                 <div class="row ingredients">            
                     <!-- ingredient fields -->
                     <div class="col-1">
                         <p id="ing-number"><i class="fas fa-haykal"></i></p>
                     </div>
                     <div class="ingredient-field col-md-5">
-                        <input id="food" name="food" type="text" class="form-control validate" placeholder="Food" required>
+                        <input id="food" name="food" type="text" class="form-control validate"  maxlength="30" placeholder="Food" required>
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        <input id="count" name="count" type="text" class="form-control validate" placeholder="Quantity">
+                        <input id="count" name="count" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]" placeholder="Quantity">
                     </div>
                     <div class="ingredient-field col-lg-2">
-                        <input id="size" name="size" type="text" class="form-control validate" placeholder="Size">
+                        <input id="size" name="size" type="text" class="form-control validate" maxlength="20" placeholder="Size">
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        <input id="weight" name="weight" type="text" class="form-control validate" placeholder="Weight">
+                        <input id="weight" name="weight" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]" placeholder="Weight">
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        <input id="volume" name="volume" type="text" class="form-control validate" placeholder="Volume">
+                        <input id="volume" name="volume" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]" placeholder="Volume">
                     </div>
                 </div>
             </div>
@@ -143,6 +160,14 @@
                 </div>
             </div>
             
+            <!-- make public / keep private switch -->
+            <div class="row justify-content-center public-text"><span>Make Public  </span>
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="private-switch"  name="private-switch" checked>
+                    <label class="custom-control-label" for="private-switch">Keep Private</label>
+                  </div>
+            </div>
+
             <!-- submit / cancel buttons -->
             <div class="row justify-content-center">
                 <button type="submit" class="btn btn-grn btn-lg">Create

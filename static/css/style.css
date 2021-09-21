@@ -537,6 +537,21 @@ h3 {
     padding: 0;
 }
 
+.rec-head {
+    font-size: 12px;
+    padding: 0;
+    text-decoration: underline;
+    align-self: end;
+}
+
+.public-text {
+    align-items: end;
+}
+
+.custom-switch {
+    padding-left: 2.75rem;
+}
+
 
 @media (max-width: 767px) {
     label {

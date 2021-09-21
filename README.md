@@ -859,23 +859,26 @@ For further help and info you can select [Cloning and Forking repositories](http
 
 ## Potential issues
 
-- Col classes have padding right 15px and will not fill page
-- iphone 5 nav menu items not listed correctly
-- background image not showing
+
 - last_name variable to be defined in profile - done
 - email variable to be defined in profile - done
-- collapsible jquery not copied, yet collapse is working, is this ok?
 - recipe creation to database success but unable to display details in profile - done, did not call the name "member_recipe"
-- Profile image card sizing, due to it being a URL as email from Code advised... how to limit or max image size? - done but card body quite big when less than 3 d=cards...?
-- Menu nav blocking other actions due to it being fixed and extends whole width
-- Input number in recipe form accepts --9879798798 even when limiting maxlengths...?
-- Recipe card body to be adjusted so is responsive including image size
-- Recipe repeat field showing but value is null
-- steps section js not activated - should it match table above for ingredients? - No - Updated to self styles row inputs
-
+- Profile image card sizing, due to it being a URL as email from Code advised... how to limit or max image size? - done
+- Input number in recipe form accepts --9879798798 even when limiting maxlengths...? - done
+- Steps section js not activated - should it match table above for ingredients? - No - Updated to self styles row inputs
 - Profile UX adjustment, profile card on left, recipes on right - done
 - Profile: button to take user to create recipe - done
 - Profile: Public and Private recipes to alternaelty show upon selection - done through using accordion collapse
+- Recipe: recipe image text box had 1.02 container - Done - had to move end textarea to same line....?!
+
+- Profile: Line 81: {% if member_recipe.private-switch == "off" %} section not recognised?!
+
+- Col classes have padding right 15px and will not fill page
+- iphone 5 nav menu items not listed correctly
+- background image not showing
+- Recipe card body to be adjusted so is responsive including image size
+- Recipe repeat field showing but value is null
+- Menu nav blocking other actions due to it being fixed and extends whole width
 - Profile: New member - Accordion to have a Create Recipe button in Accordion which gets replaced when a recips is created
 - Edit and delete buttons on recipe cards
 - Create recipe: change upload to accept URL as source - Almost done but has content within...need to investigate !!
