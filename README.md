@@ -870,8 +870,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Profile: button to take user to create recipe - done
 - Profile: Public and Private recipes to alternaelty show upon selection - done through using accordion collapse
 - Recipe: recipe image text box had 1.02 container - Done - had to move end textarea to same line....?!
-
-- Profile: Line 81: {% if member_recipe.private-switch == "off" %} section not recognised?!
+- Profile: Line 81: {% if member_recipe.private-switch == "off" %} section not recognised?! - Done Python does not like "-" hyphens !!!
 
 - Col classes have padding right 15px and will not fill page
 - iphone 5 nav menu items not listed correctly

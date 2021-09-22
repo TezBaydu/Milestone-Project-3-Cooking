@@ -46,7 +46,7 @@ def recipes():
             "weight1": request.form.get("weight1"),
             "volume1": request.form.get("volume1"),
             "recipe_method": request.form.get("recipe_method"),
-            "private-switch": request.form.get("private-switch"),
+            "private_switch": request.form.get("private_switch"),
             "email": session["member"]
         }
         mongo.db.recipes.insert_one(recipe)
