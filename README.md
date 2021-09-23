@@ -871,8 +871,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Profile: Public and Private recipes to alternaelty show upon selection - done through using accordion collapse
 - Recipe: recipe image text box had 1.02 container - Done - had to move end textarea to same line....?!
 - Profile: Line 81: {% if member_recipe.private-switch == "off" %} section not recognised?! - Done Python does not like "-" hyphens !!!
-
-- Recipe: Dict applied and Array in MongoDB but is not listing
+- Recipe: Dict applied and Array in MongoDB but is not listing - Done Getlist applied after Slack search
 
 - Col classes have padding right 15px and will not fill page
 - iphone 5 nav menu items not listed correctly
@@ -880,7 +879,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Recipe card body to be adjusted so is responsive including image size
 - Recipe repeat field showing but value is null
 - Menu nav blocking other actions due to it being fixed and extends whole width
-- Profile: New member - Accordion to have a Create Recipe button in Accordion which gets replaced when a recips is created
+- Profile: New member - Accordion to have a Create Recipe button in Accordion which gets replaced when a recipe is created
 - Edit and delete buttons on recipe cards
 - Create recipe: change upload to accept URL as source - Almost done but has content within...need to investigate !!
 - Create recipe: Ready in sum | Event listeners in prep and cook to publish sum in ready time

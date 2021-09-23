@@ -564,6 +564,16 @@ h3 {
     }
 }
 
+/*-- login page --*/
+
+#login-image img {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+
 /*-- flash messages --*/
 
 .alert {
@@ -631,14 +641,5 @@ h3 {
 
 .accordion>.card>.card-header {
     margin-bottom: 0;
-}
-
-/*-- image test -- */
-
-#image {
-    background-image: url(..../images/cooking-spices.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 200px;
 }
 

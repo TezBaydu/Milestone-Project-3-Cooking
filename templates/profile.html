@@ -89,7 +89,14 @@
                       <div class="card-body">
                         <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>
                         <p class="card-text">{{ member_recipe.recipe_description }}</p>
-                        <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+                        <a class="btn info-color-dark btn-md" type="button" href="{{ url_for('edit_recipes', member_recipe_id=member_recipe._id)}}">
+                          Edit Recipe
+                          <i class="fas fa-edit"></i>
+                        </a>
+                        <a class="btn btn-rd btn-md" type="button">
+                          Delete Recipe
+                          <i class="fas fa-user-times"></i>
+                        </a>
                       </div>
                     </div>
                     {% endif %}
@@ -124,7 +131,14 @@
                       <div class="card-body">
                         <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>
                         <p class="card-text">{{ member_recipe.recipe_description }}</p>
-                        <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+                        <a class="btn info-color-dark btn-md" type="button" href="{{ url_for('edit_recipes', member_recipe_id=member_recipe._id)}}">
+                          Edit Recipe
+                          <i class="fas fa-edit"></i>
+                        </a>
+                        <a class="btn btn-rd btn-md" type="button">
+                          Delete Recipe
+                          <i class="fas fa-user-times"></i>
+                        </a>
                       </div>
                     </div>
                   {% endif %}

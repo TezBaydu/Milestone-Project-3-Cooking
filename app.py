@@ -24,12 +24,12 @@ def recipes():
     if request.method == "POST":
         recipe = mongo.db.recipes
         recipe_dict = request.form.to_dict()
-        recipe_dict["food"] = request.form.get("food"),
-        recipe_dict["count"] = request.form.get("count"),
-        recipe_dict["size"] = request.form.get("size"),
-        recipe_dict["weight"] = request.form.get("weight"),
-        recipe_dict["volume"] = request.form.get("volume"),
-        recipe_dict["recipe_method"] = request.form.get("recipe_method"),
+        recipe_dict["food"] = request.form.getlist("food"),
+        recipe_dict["count"] = request.form.getlist("count"),
+        recipe_dict["size"] = request.form.getlist("size"),
+        recipe_dict["weight"] = request.form.getlist("weight"),
+        recipe_dict["volume"] = request.form.getlist("volume"),
+        recipe_dict["recipe_method"] = request.form.getlist("recipe_method"),
         recipe_dict["email"] = session["member"]
 
         recipe.insert_one(recipe_dict)
@@ -38,6 +38,14 @@ def recipes():
 
     recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
+
+
+@app.route("/edit_recipes/<member_recipe_id>", methods=["GET", "POST"])
+def edit_recipes(member_recipe_id):
+    member_recipe = mongo.db.recipes.find_one({"_id": ObjectId(member_recipe_id)})
+
+    recipes = list(mongo.db.recipes.find())
+    return render_template("edit_recipe.html", member_recipe=member_recipe, recipes=recipes)
 
 
 @app.route("/register", methods=["GET", "POST"])
