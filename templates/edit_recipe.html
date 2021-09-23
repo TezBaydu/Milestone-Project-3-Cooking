@@ -21,47 +21,67 @@
                 <div class="col">
                     <label for="recipe_name">Name</label>
                     <textarea id="recipe_name" name="recipe_name" class="form-control" minlength="2" maxlength="25"
-                        required></textarea>
+                        required>{{ member_recipe.recipe_name }}</textarea>
                 </div>
             </div>
             <div class="form-group">
                 <label for="recipe_description">Description</label>
                 <textarea class="form-control description" id="recipe_description" name="recipe_description"
-                    maxlength="100" required></textarea>
+                    maxlength="100" required>{{ member_recipe.recipe_description }}</textarea>
             </div>
             <!-- image upload and recipe type -->
             <div class="card-body row">
                 <div class="col-6">
                     <label for="recipe_image">Place image address url here <span class="optional">(Optional)</span><em> not the link address!</em></label>
-                    <textarea class="form-control" id="recipe_image" name="recipe_image"></textarea>
+                    <textarea class="form-control" id="recipe_image" name="recipe_image">{{ member_recipe.recipe_image }}</textarea>
                 </div>
                 <div class="col-6 card-panel recipe-type">
                     <h4 class="recipe-header">Recipe Type</h4>
                     <!-- Breakfast checkbox -->
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="recipe_type1" name="breakfast">
+                        {% if member_recipe.breakfast == "on" %}
+                            <input type="checkbox" class="custom-control-input" id="recipe_type1" name="breakfast" checked>
+                        {% else %}
+                            <input type="checkbox" class="custom-control-input" id="recipe_type1" name="breakfast">
+                        {% endif %}
                         <label class="custom-control-label" for="recipe_type1">Breakfast</label>
                     </div>
 
                     <!-- Lunch checkbox -->
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="recipe_type2" name="lunch">
+                        {% if member_recipe.lunch == "on" %}
+                        <input value="{{ member_recipe.lunch }}" type="checkbox" class="custom-control-input" id="recipe_type2" name="lunch" checked>
+                        {% else %}
+                        <input value="{{ member_recipe.lunch }}" type="checkbox" class="custom-control-input" id="recipe_type2" name="lunch">
+                        {% endif %}
                         <label class="custom-control-label" for="recipe_type2">Lunch</label>
                     </div>
 
                     <!-- Dinner checkbox -->
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="recipe_type3" name="dinner">
+                        {% if member_recipe.dinner == "on" %}
+                        <input value="{{ member_recipe.dinner }}" type="checkbox" class="custom-control-input" id="recipe_type3" name="dinner" checked>
+                        {% else %}
+                        <input value="{{ member_recipe.dinner }}" type="checkbox" class="custom-control-input" id="recipe_type3" name="dinner">
+                        {% endif %}
                         <label class="custom-control-label" for="recipe_type3">Dinner</label>
                     </div>
                     <!-- Dessert checkbox -->
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="recipe_type4" name="dessert">
+                        {% if member_recipe.dessert == "on" %}
+                        <input value="{{ member_recipe.dessert }}" type="checkbox" class="custom-control-input" id="recipe_type4" name="dessert" checked>
+                        {% else %}
+                        <input value="{{ member_recipe.dessert }}" type="checkbox" class="custom-control-input" id="recipe_type4" name="dessert">
+                        {% endif %}
                         <label class="custom-control-label" for="recipe_type4">Dessert</label>
                     </div>
                     <!-- Snack checkbox -->
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="recipe_type5" name="snack">
+                        {% if member_recipe.snack == "on" %}
+                        <input value="{{ member_recipe.snack }}" type="checkbox" class="custom-control-input" id="recipe_type5" name="snack" checked>
+                        {% else %}
+                        <input value="{{ member_recipe.snack }}" type="checkbox" class="custom-control-input" id="recipe_type5" name="snack">
+                        {% endif %}
                         <label class="custom-control-label" for="recipe_type5">Snack</label>
                     </div>
                 </div>
@@ -69,19 +89,19 @@
             <div class="row">
                 <div class="col-3 md-form">
                     <label for="serves">Serves</label>
-                    <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control time no-spinner" id="serves" name="serves" minlength="0" maxlength="2" pattern="[0-9]" required>
+                    <input value="{{ member_recipe.serves }}" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control time no-spinner" id="serves" name="serves" minlength="0" maxlength="2" pattern="[0-9]" required>
                 </div>
                 <div class="col-3 md-form">
                     <label for="prep_time">Prep time</label>
-                    <input type="time" class="form-control time" id="prep_time" name="prep_time" min="0" required>
+                    <input value="{{ member_recipe.prep_time }}" type="time" class="form-control time" id="prep_time" name="prep_time" min="0" required>
                 </div>
                 <div class="col-3 md-form">
                     <label for="cook_time">Cook time</label>
-                    <input type="time" class="form-control time" id="cook_time" name="cook_time" min="0" required>
+                    <input value="{{ member_recipe.cook_time }}" type="time" class="form-control time" id="cook_time" name="cook_time" min="0" required>
                 </div>
                 <div class="col-3 md-form">
                     <label for="ready_time">Ready in</label>
-                    <input type="time" class="form-control time" id="ready_time" name="ready_time" min="0" required>
+                    <input value="{{ member_recipe.ready_time }}" type="time" class="form-control time" id="ready_time" name="ready_time" min="0" required>
                 </div>
             </div>
             <!-- ingredients header -->
@@ -115,19 +135,19 @@
                         <p id="ing-number"><i class="fas fa-haykal"></i></p>
                     </div>
                     <div class="ingredient-field col-md-5">
-                        <input id="food" name="food" type="text" class="form-control validate"  maxlength="30" placeholder="Food" required>
+                        <input value="{{ member_recipe.food }}" id="food" name="food" type="text" class="form-control validate"  maxlength="30" placeholder="Food" required>
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        <input id="count" name="count" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]" placeholder="Quantity">
+                        <input value="{{ member_recipe.count }}" id="count" name="count" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]" placeholder="Quantity">
                     </div>
                     <div class="ingredient-field col-lg-2">
-                        <input id="size" name="size" type="text" class="form-control validate" maxlength="20" placeholder="Size">
+                        <input value="{{ member_recipe.size }}" id="size" name="size" type="text" class="form-control validate" maxlength="20" placeholder="Size">
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        <input id="weight" name="weight" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]" placeholder="Weight">
+                        <input value="{{ member_recipe.weight }}" id="weight" name="weight" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]" placeholder="Weight">
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        <input id="volume" name="volume" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]" placeholder="Volume">
+                        <input value="{{ member_recipe.volume }}" id="volume" name="volume" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]" placeholder="Volume">
                     </div>
                 </div>
             </div>
@@ -149,7 +169,8 @@
                         <p id="meth-number"><i class="fas fa-haykal"></i></p>
                     </div>
                     <div class="input-field col-10">
-                    <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate" placeholder="Method Step" required></textarea>
+                    <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
+                        placeholder="Method Step" required>{{ member_recipe.recipe_method }}</textarea>
                     </div>
                 </div>
             </div>
@@ -163,7 +184,11 @@
             <!-- make public / keep private switch -->
             <div class="row justify-content-center public-text"><span>Make Public  </span>
                 <div class="custom-control custom-switch">
+                    {% if member_recipe.private_switch == "on" %}
                     <input type="checkbox" class="custom-control-input" id="private_switch"  name="private_switch" checked>
+                    {% else %}
+                    <input type="checkbox" class="custom-control-input" id="private_switch"  name="private_switch">
+                    {% endif %}
                     <label class="custom-control-label" for="private_switch">Keep Private</label>
                 </div>
             </div>

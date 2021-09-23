@@ -873,6 +873,10 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Profile: Line 81: {% if member_recipe.private-switch == "off" %} section not recognised?! - Done Python does not like "-" hyphens !!!
 - Recipe: Dict applied and Array in MongoDB but is not listing - Done Getlist applied after Slack search
 
+- Edit recipe: array values to populate separate divs rows
+- Edit recipe: quantity values not populateing value, however is an issue with array still
+
+
 - Col classes have padding right 15px and will not fill page
 - iphone 5 nav menu items not listed correctly
 - background image not showing
