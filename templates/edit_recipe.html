@@ -206,4 +206,9 @@
     </form>
 </div>
 
+<div class="col-4 text-center">
+    <a href="{{ url_for('profile', first_name=session['member']) }}" class="back-to">Back to Profile
+    </a>
+</div>
+
 {% endblock %}

@@ -859,7 +859,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 
 ## Potential issues
 
-
+### Done
 - last_name variable to be defined in profile - done
 - email variable to be defined in profile - done
 - recipe creation to database success but unable to display details in profile - done, did not call the name "member_recipe"
@@ -872,24 +872,24 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Recipe: recipe image text box had 1.02 container - Done - had to move end textarea to same line....?!
 - Profile: Line 81: {% if member_recipe.private-switch == "off" %} section not recognised?! - Done Python does not like "-" hyphens !!!
 - Recipe: Dict applied and Array in MongoDB but is not listing - Done Getlist applied after Slack search
-
-- Edit recipe: array values to populate separate divs rows
-- Edit recipe: quantity values not populateing value, however is an issue with array still
-
-
-- Col classes have padding right 15px and will not fill page
-- iphone 5 nav menu items not listed correctly
-- background image not showing
-- Recipe card body to be adjusted so is responsive including image size
-- Recipe repeat field showing but value is null
-- Menu nav blocking other actions due to it being fixed and extends whole width
-- Profile: New member - Accordion to have a Create Recipe button in Accordion which gets replaced when a recipe is created
-- Edit and delete buttons on recipe cards
-- Create recipe: change upload to accept URL as source - Almost done but has content within...need to investigate !!
-- Create recipe: Ready in sum | Event listeners in prep and cook to publish sum in ready time
+- Menu nav blocking other actions due to it being fixed and extends whole width - Done - Row positoin made absolute and adjusted position of feature
+- Profile: Recipe card body to be adjusted so is responsive including image size - Done
+- Recipe: repeat field showing but value is null - Done
+- Profile: Edit and delete buttons on recipe cards - Done and Edit action working
+- Create recipe: change upload to accept URL as source - Almost done but has content within... - Done
 - Create recipe: add button underneath - done
 - Create recipe: delete on ingredients deleting parent but sibling deletion not working... - done, added container div
 - Create recipe: method step adding and deleting but placeholder not showing and unable to resize added fields - done missing closing '"' in JS script
+
+### To Do
+- Edit recipe: array values to populate separate divs rows
+- Edit recipe: quantity values not populateing value, however is an issue with array still
+- Col classes have padding right 15px and will not fill page
+- iphone 5 nav menu items not listed correctly
+- background image not showing
+- Profile: New member - Accordion to have a Create Recipe button in Accordion which gets replaced when a recipe is created
+- Create recipe: Ready in sum | Event listeners in prep and cook to publish sum in ready time
+
 
 
 

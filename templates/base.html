@@ -38,28 +38,28 @@
                                 <ul class="list-group-flush">
                                     <li class="list-group-item">
                                         <a href="" class="mb-0 text-light"><i
-                                                class="fas fa-anchor fa-2x mr-4 aqua-gradient p-3 white-text rounded-circle"
+                                                class="fas fa-search fa-2x mr-4 peach-gradient p-3 white-text rounded-circle"
                                                 aria-hidden="true"></i>Browse</a>
                                     </li>
                                     <li class="list-group-item">
                                         <a href="" class="mb-0 text-light"><i
-                                                class="fas fa-anchor fa-2x mr-4 aqua-gradient p-3 white-text rounded-circle"
+                                                class="fas fa-envelope fa-2x mr-4 aqua-gradient p-3 white-text rounded-circle"
                                                 aria-hidden="true"></i>Contact</a>
                                     </li>
                                     {% if session.member %}
                                         <li class="list-group-item">
                                             <a href="{{ url_for('profile', first_name=session['member']) }}" class="mb-0 text-light"><i
-                                                    class="fas fa-anchor fa-2x mr-4 purple-gradient p-3 white-text rounded-circle"
+                                                    class="far fa-user fa-2x mr-4 purple-gradient p-3 white-text rounded-circle"
                                                     aria-hidden="true"></i>Profile</a>
                                         </li>
                                         <li class="list-group-item">
                                             <a href="{{ url_for('recipes') }}" class="mb-0 text-light"><i
-                                                    class="far fa-image fa-2x mr-4 blue-gradient p-3 white-text rounded-circle "
+                                                    class="fas fa-calendar-plus fa-2x mr-4 blue-gradient p-3 white-text rounded-circle "
                                                     aria-hidden="true"></i>Create Recipe</a>
                                         </li>
                                         <li class="list-group-item">
                                             <a href="{{ url_for('logout') }}" class="mb-0 text-light"><i
-                                                    class="fas fa-anchor fa-2x mr-4 purple-gradient p-3 white-text rounded-circle"
+                                                    class="fas fa-sign-out-alt fa-2x mr-4 danger-color p-3 white-text rounded-circle"
                                                     aria-hidden="true"></i>Logout</a>
                                         </li>
                                     {% else %}
@@ -78,19 +78,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row h-100 mx-0">
+                    <div class="row h-100 mx-0 nav-row">
 
                         <div class="feature-trigger-outline">
 
                             <a class="btn-floating btn-lg btn-success d-block feature-trigger mx-0 my-0 "
                                 id="featureDiscovery"><i class="fas fa-utensils"></i></a>
                         </div>
-
-                    </div>
-
-                    <div class="col-12">
+                        <div class="col-12">
                         <h2 class="menu-text">MENU</h2>
+                        </div>
+
                     </div>
+
+                    
                 </div>
             </div>
         </nav>

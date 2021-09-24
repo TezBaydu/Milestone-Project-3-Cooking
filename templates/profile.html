@@ -89,14 +89,23 @@
                       <div class="card-body">
                         <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>
                         <p class="card-text">{{ member_recipe.recipe_description }}</p>
-                        <a class="btn info-color-dark btn-md" type="button" href="{{ url_for('edit_recipes', member_recipe_id=member_recipe._id)}}">
-                          Edit Recipe
-                          <i class="fas fa-edit"></i>
-                        </a>
-                        <a class="btn btn-rd btn-md" type="button">
-                          Delete Recipe
-                          <i class="fas fa-user-times"></i>
-                        </a>
+                          <div>
+                          <div>
+                            <a class="btn peach-gradient" type="button">
+                              View Recipe
+                              <i class="fas fa-clipboard-list"></i>
+                            </a>
+                          </div>
+                            <a class="btn info-color-dark btn-md" type="button" href="{{ url_for('edit_recipes', member_recipe_id=member_recipe._id)}}">
+                              Edit Recipe
+                              <i class="fas fa-edit"></i>
+                            </a>
+                            <a class="btn btn-rd btn-md" type="button">
+                              Delete Recipe
+                              <i class="fas fa-user-times"></i>
+                            </a>
+                            
+                          </div>
                       </div>
                     </div>
                     {% endif %}
@@ -131,6 +140,12 @@
                       <div class="card-body">
                         <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>
                         <p class="card-text">{{ member_recipe.recipe_description }}</p>
+                        <div>
+                          <a class="btn peach-gradient" type="button">
+                            View Recipe
+                            <i class="fas fa-clipboard-list"></i>
+                          </a>
+                        </div>
                         <a class="btn info-color-dark btn-md" type="button" href="{{ url_for('edit_recipes', member_recipe_id=member_recipe._id)}}">
                           Edit Recipe
                           <i class="fas fa-edit"></i>
