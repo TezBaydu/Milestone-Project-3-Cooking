@@ -882,6 +882,9 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Create recipe: method step adding and deleting but placeholder not showing and unable to resize added fields - done missing closing '"' in JS script
 
 ### To Do
+- Browse: App.py update to pull in public recipes only from all members
+- Browse: Search bar started but needs refining
+- Recipe: current date applied but doesn't applt to MongoDB
 - Edit recipe: array values to populate separate divs rows
 - Edit recipe: quantity values not populateing value, however is an issue with array still
 - Col classes have padding right 15px and will not fill page

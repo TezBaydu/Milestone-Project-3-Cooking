@@ -16,6 +16,10 @@
 <div class="card row container">
     <form class="card-body" method="POST" action="{{ url_for('recipes') }}">
         <div class="card-title card-panel">
+            <div class="date-end">
+                <label for="date">Date: </label>
+                <option id="date" name="date"></option>
+            </div>
             <!-- recipe name and description -->
             <div class="row">
                 <div class="col">

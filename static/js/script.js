@@ -45,3 +45,11 @@ $(document).ready(function() {
 		e.preventDefault(); $(this).parent('div').remove(); meth--;
 	});
 });
+
+// Date in recipes
+
+n =  new Date();
+y = n.getFullYear();
+m = n.getMonth() + 1;
+d = n.getDate();
+document.getElementById("date").innerHTML = d + "/" + m + "/" + y;

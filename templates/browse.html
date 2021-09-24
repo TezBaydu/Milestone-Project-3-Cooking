@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="logo">Eatin</h2>
+
+
+<div class="card z-depth-0 bordered">
+  <div class="card-body">
+    <div class="container">
+      <div class="row">
+        <form class="form-inline mr-auto">
+          <div class="row">
+            <div class="col-md-10">
+              <input type="text" placeholder="Search" aria-label="Search" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col card-panel recipe-type">
+              <h4 class="recipe-header">Recipe Type</h4>
+              <!-- Breakfast checkbox -->
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="recipe_type1" name="breakfast">
+                <label class="custom-control-label" for="recipe_type1">Breakfast</label>
+              </div>
+
+              <!-- Lunch checkbox -->
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="recipe_type2" name="lunch">
+                <label class="custom-control-label" for="recipe_type2">Lunch</label>
+              </div>
+
+              <!-- Dinner checkbox -->
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="recipe_type3" name="dinner">
+                <label class="custom-control-label" for="recipe_type3">Dinner</label>
+              </div>
+              <!-- Dessert checkbox -->
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="recipe_type4" name="dessert">
+                <label class="custom-control-label" for="recipe_type4">Dessert</label>
+              </div>
+              <!-- Snack checkbox -->
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="recipe_type5" name="snack">
+                <label class="custom-control-label" for="recipe_type5">Snack</label>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <button class="btn btn-mdb-color btn-rounded btn-sm my-0 ml-sm-2" type="submit">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="card z-depth-0 bordered">
+        <div class="card-body">
+          <div class="mt-3">
+            <div class="card-deck">
+              <div class="card mb-4">
+                <div class="view overlay">
+                  <img class="card-img-top" src="{{ recipe_image }}" alt="Recipe image">
+                  <a href="#!">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">{{ recipe_name }}</h4>
+                  <p class="card-text">{{ recipe_description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
