@@ -81,10 +81,17 @@
                   {% if member_recipe.private_switch == null %}
                     <div class="card mb-4">
                       <div class="view overlay">
+                        {% if member_recipe.recipe_image == "" %}
+                        <img class="card-img-top" src="https://www.moregreenenergy.com.au/MoreGreen/Client-Admin/uploads/NoImage.jpg" alt="No Recipe image uploaded"/>
+                        <a href="#!">
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                        {% else %}
                         <img class="card-img-top" src="{{ member_recipe.recipe_image }}" alt="Recipe image">
                         <a href="#!">
                           <div class="mask rgba-white-slight"></div>
                         </a>
+                        {% endif %}
                       </div>
                       <div class="card-body">
                         <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>
@@ -132,10 +139,17 @@
                   {% if member_recipe.private_switch == "on" %}
                     <div class="card mb-4">
                       <div class="view overlay">
-                        <img class="card-img-top" src="{{ member_recipe.recipe_image }}" alt="Recipe image">
+                        {% if member_recipe.recipe_image == "" %}
+                        <img class="card-img-top" src="https://www.moregreenenergy.com.au/MoreGreen/Client-Admin/uploads/NoImage.jpg" alt="No Recipe image uploaded"/>
                         <a href="#!">
                           <div class="mask rgba-white-slight"></div>
                         </a>
+                        {% else %}
+                        <img class="card-img-top" src="{{ member_recipe.recipe_image }}" alt="Recipe image"/>
+                        <a href="#!">
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                        {% endif %}
                       </div>
                       <div class="card-body">
                         <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>

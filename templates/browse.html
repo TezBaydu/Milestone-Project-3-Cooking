@@ -46,6 +46,7 @@
                 <label class="custom-control-label" for="recipe_type5">Snack</label>
               </div>
             </div>
+            <!-- Recipe ready in time selections -->
             <div class="row">
             <div class="col-3 browse-recipe">
               <select class="browser-default custom-select">
@@ -67,26 +68,38 @@
       </div>
     </div>
   </div>
+  <!-- Recipe cards -->
   <div class="container-fluid">
     <div class="row">
       <div class="col">
         <div class="card z-depth-0 bordered">
           <div class="card-body">
-            <div class="mt-3">
+            <div class="mt-3 recipe-browse-cards">
               <div class="card-deck">
+                {% for recipe in recipes %}
+                {% if recipe.private_switch == null %}
                 <div class="card mb-4">
                   <div class="view overlay">
-                    <img class="card-img-top" src="{{ recipe_image }}" alt="Recipe image">
+                    {% if recipe.recipe_image == "" %}
+                    <img class="card-img-top" src="https://www.moregreenenergy.com.au/MoreGreen/Client-Admin/uploads/NoImage.jpg" alt="No Recipe image uploaded"/>
                     <a href="#!">
                       <div class="mask rgba-white-slight"></div>
                     </a>
+                    {% else %}
+                    <img class="card-img-top" src="{{ recipe.recipe_image }}" alt="Recipe image"/>
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                    {% endif %}
                   </div>
                   <div class="card-body">
-                    <h4 class="card-title">{{ recipe_name }}</h4>
-                    <p class="card-text">{{ recipe_description }}</p>
-                    <span>{{ ready_time }} mins</span>
+                    <h4 class="card-title">{{ recipe.recipe_name }}</h4>
+                    <p class="card-text">{{ recipe.recipe_description }}</p>
+                    <span>{{ recipe.ready_time }} h/mins</span>
                   </div>
                 </div>
+                {% endif %}
+                {% endfor %}
               </div>
             </div>
           </div>

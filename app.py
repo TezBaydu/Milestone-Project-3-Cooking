@@ -50,20 +50,10 @@ def edit_recipes(member_recipe_id):
 
 @app.route("/browse", methods=["GET", "POST"])
 def browse():
-    recipe = mongo.db.recipes.find_one(
-        {"email": session["member"]})
-    recipe_name = recipe["recipe_name"]
-    recipe_description = recipe["recipe_description"]
-    recipe_image = recipe["recipe_image"]
-    ready_time = recipe["ready_time"]
-
-    member_recipes = list(mongo.db.recipes.find(
-        {"email": session["member"]}))
+    recipes = list(mongo.db.recipes.find())
 
     return render_template(
-        "browse.html", recipe_name=recipe_name,
-        recipe_description=recipe_description, recipe_image=recipe_image,
-        ready_time=ready_time, member_recipes=member_recipes)
+        "browse.html", recipes=recipes)
 
 
 @app.route("/register", methods=["GET", "POST"])

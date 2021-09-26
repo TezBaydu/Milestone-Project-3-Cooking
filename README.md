@@ -881,17 +881,21 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Create recipe: delete on ingredients deleting parent but sibling deletion not working... - done, added container div
 - Create recipe: method step adding and deleting but placeholder not showing and unable to resize added fields - done missing closing '"' in JS script
 - Browse: Search bar started but needs refining - Done
+- Browse: App.py update to pull in public recipes only from all members, currently pulling in recipes from members - Done and pulling in only PUBLIC shared recipes
 
 ### To Do
-- Browse: App.py update to pull in public recipes only from all members, currently pulling in recipes from members
-- Recipe: current date applied but doesn't applt to MongoDB
+- Recipe: current date applied but doesn't apply to MongoDB
 - Edit recipe: array values to populate separate divs rows
-- Edit recipe: quantity values not populateing value, however is an issue with array still
+- Edit recipe: quantity values not populating value, however is an issue with array still
 - Col classes have padding right 15px and will not fill page
 - iphone 5 nav menu items not listed correctly
 - background image not showing
 - Profile: New member - Accordion to have a Create Recipe button in Accordion which gets replaced when a recipe is created
 - Create recipe: Ready in sum | Event listeners in prep and cook to publish sum in ready time
+
+### Notes to consider
+- Message in GitPod stating Python extension loading and is constant. Info found in Slack and Gitpod community advising of installing an older version. Had changed from pymongo 3.12.0 to 3.5.1 but the Python extension loading message still appeared and I was unable to run app.py so have changed back to 3.12.0.
+
 
 
 
