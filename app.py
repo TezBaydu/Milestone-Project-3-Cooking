@@ -131,6 +131,14 @@ def profile():
     return redirect(url_for("login"))
 
 
+@app.route("/delete_recipes/<member_recipe_id>")
+def delete_recipes(member_recipe_id):
+    mongo.db.recipes.remove({"_id": ObjectId(member_recipe_id)})
+    flash("Recipe Successfully deleted")
+
+    return redirect(url_for("profile"))
+
+
 @app.route("/logout")
 def logout():
     # remove member from session cookies

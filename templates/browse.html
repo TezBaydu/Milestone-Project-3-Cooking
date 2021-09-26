@@ -16,7 +16,7 @@
             </div>
           </div>
           <div class="row margin-width-auto justify-content-between">
-            <div class="col-9 card-panel browse-recipe">
+            <div class="col card-panel browse-recipe">
               <h4 class="recipe-header">Search by Recipe Type</h4>
               <!-- Breakfast checkbox -->
               <div class="custom-control custom-checkbox custom-control-inline">
@@ -48,25 +48,26 @@
             </div>
             <!-- Recipe ready in time selections -->
             <div class="row">
-            <div class="col-3 browse-recipe">
-              <select class="browser-default custom-select">
-                <option selected>How much time?</option>
-                <option value="1" name="uptoTen">upto 10mins</option>
-                <option value="2" name="uptoThirty">upto 30 mins</option>
-                <option value="3" name="uptoHour">upto 1 hour</option>
-                <option value="4" name="overHour">over 1 hour</option>
-              </select>
+              <div class="col browse-recipe">
+                <select class="browser-default custom-select">
+                  <option selected>How much time?</option>
+                  <option value="1" name="uptoTen">upto 10mins</option>
+                  <option value="2" name="uptoThirty">upto 30 mins</option>
+                  <option value="3" name="uptoHour">upto 1 hour</option>
+                  <option value="4" name="overHour">over 1 hour</option>
+                </select>
+              </div>
             </div>
-            </div>
           </div>
-          <div class="row">
-          <div class="col browse-button">
-            <button class="btn btn-grn btn-rounded btn-md my-0 ml-sm-2" type="submit">Search</button>
-          </div>
-          </div>
-        </form>
       </div>
+      <div class="row center-align">
+        <div class="col browse-button">
+          <button class="btn btn-grn btn-rounded btn-md my-0 ml-sm-2" type="submit">Search</button>
+        </div>
+      </div>
+      </form>
     </div>
+  </div>
   </div>
   <!-- Recipe cards -->
   <div class="container-fluid">
@@ -81,12 +82,14 @@
                 <div class="card mb-4">
                   <div class="view overlay">
                     {% if recipe.recipe_image == "" %}
-                    <img class="card-img-top" src="https://www.moregreenenergy.com.au/MoreGreen/Client-Admin/uploads/NoImage.jpg" alt="No Recipe image uploaded"/>
+                    <img class="card-img-top"
+                      src="https://www.moregreenenergy.com.au/MoreGreen/Client-Admin/uploads/NoImage.jpg"
+                      alt="No Recipe image uploaded" />
                     <a href="#!">
                       <div class="mask rgba-white-slight"></div>
                     </a>
                     {% else %}
-                    <img class="card-img-top" src="{{ recipe.recipe_image }}" alt="Recipe image"/>
+                    <img class="card-img-top" src="{{ recipe.recipe_image }}" alt="Recipe image" />
                     <a href="#!">
                       <div class="mask rgba-white-slight"></div>
                     </a>
