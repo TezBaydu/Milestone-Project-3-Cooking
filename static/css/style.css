@@ -660,3 +660,54 @@ h3 {
 .width-max {
     width: 100%;
 }
+
+/*-- browse page --*/
+
+.browse-card {
+    border-style: solid;
+    border-radius: .75em;
+    background-color: #fff;
+}
+
+.form-inline .input-group {
+    width: 100%
+}
+
+.py-1 {
+    width: 90%;
+}
+
+.input-group.md-form.form-sm.form-2 input.search-border {
+    border: 1px solid #464e47;
+    border-radius: .25em 0 0 .25em;
+    background-color: #96e6b3;
+    margin-left: auto;
+}
+
+.input-group-append {
+    margin-right: auto;
+}
+
+.md-form.input-group .input-group-text {
+    background-color: #568259 !important;
+    border-style: solid;
+    border-color: #464e47;
+    color: #f1fffa;
+}
+
+.margin-width-auto {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.browse-recipe {
+    background-color: #fff;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 10px;
+    align-self: center;
+}
+
+.browse-button {
+    align-self: center;
+}
