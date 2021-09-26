@@ -50,22 +50,20 @@ def edit_recipes(member_recipe_id):
 
 @app.route("/browse", methods=["GET", "POST"])
 def browse():
-    # Obtain members details from the database
-    member = mongo.db.members.find_one(
+    recipe = mongo.db.recipes.find_one(
         {"email": session["member"]})
-    first_name = member["firstName"]
-    last_name = member["lastName"]
-    email = member["email"]
+    recipe_name = recipe["recipe_name"]
+    recipe_description = recipe["recipe_description"]
+    recipe_image = recipe["recipe_image"]
+    ready_time = recipe["ready_time"]
+
     member_recipes = list(mongo.db.recipes.find(
         {"email": session["member"]}))
 
-    if session["member"]:
-        return render_template(
-            "browse.html", first_name=first_name,
-            last_name=last_name, email=email,
-            member_recipes=member_recipes)
-
-    return redirect(url_for("login"))
+    return render_template(
+        "browse.html", recipe_name=recipe_name,
+        recipe_description=recipe_description, recipe_image=recipe_image,
+        ready_time=ready_time, member_recipes=member_recipes)
 
 
 @app.route("/register", methods=["GET", "POST"])

@@ -883,7 +883,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Browse: Search bar started but needs refining - Done
 
 ### To Do
-- Browse: App.py update to pull in public recipes only from all members
+- Browse: App.py update to pull in public recipes only from all members, currently pulling in recipes from members
 - Recipe: current date applied but doesn't applt to MongoDB
 - Edit recipe: array values to populate separate divs rows
 - Edit recipe: quantity values not populateing value, however is an issue with array still
