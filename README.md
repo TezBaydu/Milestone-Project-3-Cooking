@@ -883,8 +883,10 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Browse: Search bar started but needs refining - Done
 - Browse: App.py update to pull in public recipes only from all members, currently pulling in recipes from members - Done and pulling in only PUBLIC shared recipes
 - Profile: Delete recipe option: Done
+- Create recipe: Ready in sum | Event listeners in prep and cook to publish sum in ready time - Done with max time not over 24 hours
 
 ### To Do
+- Edit recipe: ready in sum | Event listener not working in ready time
 - Profile: on delete a warning to open to confirm
 - Recipe: current date applied but doesn't apply to MongoDB
 - Edit recipe: array values to populate separate divs rows
@@ -893,7 +895,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 - iphone 5 nav menu items not listed correctly
 - background image not showing
 - Profile: New member - Accordion to have a Create Recipe button in Accordion which gets replaced when a recipe is created
-- Create recipe: Ready in sum | Event listeners in prep and cook to publish sum in ready time
+
 
 ### Notes to consider
 - Message in GitPod stating Python extension loading and is constant. Info found in Slack and Gitpod community advising of installing an older version. Had changed from pymongo 3.12.0 to 3.5.1 but the Python extension loading message still appeared and I was unable to run app.py so have changed back to 3.12.0.

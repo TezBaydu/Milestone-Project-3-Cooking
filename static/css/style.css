@@ -323,6 +323,12 @@ footer.page-footer .footer-copyright {
     margin-bottom: -20px;
 }
 
+.ready-header {
+    text-decoration: underline;
+    margin-bottom: -30px;
+    margin-top: 20px;
+}
+
 .time {
     width: 6em;
     text-align: center;

@@ -25,7 +25,7 @@
                 <div class="col">
                     <label for="recipe_name">Name</label>
                     <textarea id="recipe_name" name="recipe_name" class="form-control" minlength="2" maxlength="25"
-                        required></textarea>
+                        spellcheck="true" required></textarea>
                 </div>
             </div>
             <div class="form-group">
@@ -70,6 +70,9 @@
                     </div>
                 </div>
             </div>
+            <div class="row justify-content-center ready-header">
+                <h5>Ready in time must not be longer then 23:59</h5>
+            </div>
             <div class="row">
                 <div class="col-3 md-form">
                     <label for="serves">Serves</label>
@@ -85,7 +88,7 @@
                 </div>
                 <div class="col-3 md-form">
                     <label for="ready_time">Ready in</label>
-                    <input type="time" class="form-control time" id="ready_time" name="ready_time" min="0" required>
+                    <input type="time" class="form-control time" id="ready_time" name="ready_time" min="0" disabled>
                 </div>
             </div>
             <!-- ingredients header -->

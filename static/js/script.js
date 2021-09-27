@@ -53,3 +53,35 @@ y = n.getFullYear();
 m = n.getMonth() + 1;
 d = n.getDate();
 document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
+
+// sum ready in recipe time
+
+var prep_time = document.getElementById('prep_time');
+var cook_time = document.getElementById('cook_time');
+var ready_time = document.getElementById('ready_time');
+
+prep_time.addEventListener('change', () =>
+cook_time.addEventListener('change', () =>  {
+    let prep_hours = parseInt(prep_time.value.split(':')[0]);
+    let prep_minutes = parseInt(prep_time.value.split(':')[1]);
+    // if an hour is exceeded, add it to hours instead
+    if (prep_minutes >= 60) {
+        prep_hours = prep_hours % 24;
+        prep_minutes -= 60;
+    }
+	let cook_hours = parseInt(cook_time.value.split(':')[0]);
+    let cook_minutes = parseInt(cook_time.value.split(':')[1]);
+    // if an hour is exceeded, add it to hours instead
+    if (cook_minutes >= 60) {
+        cook_hours = cook_hours % 24;
+        cook_minutes -= 60;
+    }
+
+	hours = prep_hours += cook_hours
+	minutes = prep_minutes += cook_minutes
+
+    hours = (hours < 10 ? `0${hours}` : `${hours}`);
+    minutes = (minutes < 10 ? `0${minutes}` : `${minutes}`);
+
+    ready_time.value = `${hours}:${minutes}`;
+}));
