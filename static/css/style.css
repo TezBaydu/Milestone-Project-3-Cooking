@@ -656,6 +656,7 @@ h3 {
 
 .card-deck .card {
     max-width: 25em;
+    min-width: 15em;
     flex: 1 0 auto;
     background-color: #fff;
 }
@@ -730,6 +731,7 @@ h3 {
 .recipe-browse-cards .card-deck .card {
     background-color: #fff;
     max-width: 20em;
+    min-width: 20em;
 }
 
 

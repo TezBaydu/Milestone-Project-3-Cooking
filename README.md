@@ -886,7 +886,9 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Create recipe: Ready in sum | Event listeners in prep and cook to publish sum in ready time - Done with max time not over 24 hours
 
 ### To Do
+- Search on Browse works but only for name, to update for other search features
 - Edit recipe: ready in sum | Event listener not working in ready time
+- Profile: Text to add create in accordion but fails on both when 1 recipe is applied to one or the other
 - Profile: on delete a warning to open to confirm
 - Recipe: current date applied but doesn't apply to MongoDB
 - Edit recipe: array values to populate separate divs rows
