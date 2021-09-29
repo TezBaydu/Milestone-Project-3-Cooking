@@ -43,24 +43,33 @@ def recipes():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
-    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    recipes = list(mongo.db.recipes.find(
+        {"$text": {"$search": query}}))
     return render_template("browse.html", recipes=recipes)
 
 
 @app.route("/edit_recipes/<member_recipe_id>", methods=["GET", "POST"])
 def edit_recipes(member_recipe_id):
-    member_recipe = mongo.db.recipes.find_one({"_id": ObjectId(member_recipe_id)})
+    member_recipe = mongo.db.recipes.find_one(
+        {"_id": ObjectId(member_recipe_id)})
 
     recipes = list(mongo.db.recipes.find())
-    return render_template("edit_recipe.html", member_recipe=member_recipe, recipes=recipes)
+    return render_template(
+        "edit_recipe.html", member_recipe=member_recipe, recipes=recipes)
 
 
 @app.route("/browse", methods=["GET", "POST"])
 def browse():
     recipes = list(mongo.db.recipes.find())
-
     return render_template(
         "browse.html", recipes=recipes)
+
+
+@app.route("/view_recipe/", methods=["GET", "POST"])
+def view_recipe():
+    recipes = list(mongo.db.recipes.find())
+    return render_template(
+        "view_recipe.html", recipes=recipes)
 
 
 @app.route("/register", methods=["GET", "POST"])

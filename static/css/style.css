@@ -707,6 +707,10 @@ h3 {
     color: #f1fffa;
 }
 
+.md-form.form-sm .validate {
+    margin-bottom: 0;
+}
+
 .margin-width-auto {
     margin-right: auto;
     margin-left: auto;

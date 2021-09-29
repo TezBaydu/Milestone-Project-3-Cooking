@@ -74,70 +74,70 @@
           </h5>
         </div>
         <div id="collapseOne2" class="collapse" aria-labelledby="headingOne2" data-parent="#accordionExample275">
-          {% if member_recipes|length > 0 %}
-            <div class="card-body">
-              <div class="mt-3">
-                <div class="card-deck">
-                  {% for member_recipe in member_recipes %}
-                  {% if member_recipe.private_switch == null %}
-                  <div class="card mb-4">
-                    <div class="view overlay">
-                      {% if member_recipe.recipe_image == "" %}
-                      <img class="card-img-top"
-                        src="https://www.moregreenenergy.com.au/MoreGreen/Client-Admin/uploads/NoImage.jpg"
-                        alt="No Recipe image uploaded" />
-                      <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                      </a>
-                      {% else %}
-                      <img class="card-img-top" src="{{ member_recipe.recipe_image }}" alt="Recipe image">
-                      <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                      </a>
-                      {% endif %}
-                    </div>
-                    <div class="card-body">
-                      <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>
-                      <p class="card-text">{{ member_recipe.recipe_description }}</p>
+          <div class="card-body">
+            {% if member_recipes|length > 0 %}
+            <div class="mt-3">
+              <div class="card-deck">
+                {% for member_recipe in member_recipes %}
+                {% if member_recipe.private_switch == null %}
+                <div class="card mb-4">
+                  <div class="view overlay">
+                    {% if member_recipe.recipe_image == "" %}
+                    <img class="card-img-top"
+                      src="https://www.moregreenenergy.com.au/MoreGreen/Client-Admin/uploads/NoImage.jpg"
+                      alt="No Recipe image uploaded" />
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                    {% else %}
+                    <img class="card-img-top" src="{{ member_recipe.recipe_image }}" alt="Recipe image">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                    {% endif %}
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>
+                    <p class="card-text">{{ member_recipe.recipe_description }}</p>
+                    <div>
                       <div>
-                        <div>
-                          <a class="btn peach-gradient" type="button">
-                            View Recipe
-                            <i class="fas fa-clipboard-list"></i>
-                          </a>
-                        </div>
-                        <div>
-                          <a class="btn info-color-dark btn-md" type="button"
-                            href="{{ url_for('edit_recipes', member_recipe_id=member_recipe._id)}}">
-                            Edit Recipe
-                            <i class="fas fa-edit"></i>
-                          </a>
-                          <a class="btn btn-rd btn-md" type="button"
-                            href="{{ url_for('delete_recipes', member_recipe_id=member_recipe._id)}}">
-                            Delete Recipe
-                            <i class="far fa-calendar-times"></i>
-                          </a>
-                        </div>
+                        <a class="btn peach-gradient" type="button">
+                          View Recipe
+                          <i class="fas fa-clipboard-list"></i>
+                        </a>
+                      </div>
+                      <div>
+                        <a class="btn info-color-dark btn-md" type="button"
+                          href="{{ url_for('edit_recipes', member_recipe_id=member_recipe._id)}}">
+                          Edit Recipe
+                          <i class="fas fa-edit"></i>
+                        </a>
+                        <a class="btn btn-rd btn-md" type="button"
+                          href="{{ url_for('delete_recipes', member_recipe_id=member_recipe._id)}}">
+                          Delete Recipe
+                          <i class="far fa-calendar-times"></i>
+                        </a>
                       </div>
                     </div>
                   </div>
-                  {% endif %}
-                  {% endfor %}
                 </div>
-              </div>
-          {% else %}
-              <h3 class="center-align">No Public Recipes, why not create one or make it Public if one is in Private?</h3>
-              <div class="row">
-                <div class="col reg-text">
-                  <a href="{{ url_for('recipes') }}" class="btn btn-grn btn-lg">Create
-                    Recipe
-                  </a>
-                </div>
+                {% endif %}
+                {% endfor %}
               </div>
             </div>
+            {% else %}
+            <h3 class="center-align">No Recipes, why not create one?</h3>
+            <div class="row">
+              <div class="col reg-text">
+                <a href="{{ url_for('recipes') }}" class="btn btn-grn btn-lg">Create
+                  Recipe
+                </a>
+              </div>
+            </div>
+            {% endif %}
           </div>
-        {% endif %}
-      </div>  
+        </div>
+      </div>
       <div class="card z-depth-0 bordered">
         <div class="card-header reg-text" id="headingTwo2">
           <h5 class="mb-0">
@@ -148,64 +148,64 @@
           </h5>
         </div>
         <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordionExample275">
-          {% if member_recipes|length > 0 %}
-            <div class="card-body">
-              <div class="mt-3">
-                <div class="card-deck">
-                  {% for member_recipe in member_recipes %}
-                  {% if member_recipe.private_switch == "on" %}
-                  <div class="card mb-4">
-                    <div class="view overlay">
-                      {% if member_recipe.recipe_image == "" %}
-                      <img class="card-img-top"
-                        src="https://www.moregreenenergy.com.au/MoreGreen/Client-Admin/uploads/NoImage.jpg"
-                        alt="No Recipe image uploaded" />
-                      <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                      </a>
-                      {% else %}
-                      <img class="card-img-top" src="{{ member_recipe.recipe_image }}" alt="Recipe image" />
-                      <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                      </a>
-                      {% endif %}
-                    </div>
-                    <div class="card-body">
-                      <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>
-                      <p class="card-text">{{ member_recipe.recipe_description }}</p>
-                      <div>
-                        <a class="btn peach-gradient" type="button">
-                          View Recipe
-                          <i class="fas fa-clipboard-list"></i>
-                        </a>
-                      </div>
-                      <a class="btn info-color-dark btn-md" type="button"
-                        href="{{ url_for('edit_recipes', member_recipe_id=member_recipe._id)}}">
-                        Edit Recipe
-                        <i class="fas fa-edit"></i>
-                      </a>
-                      <a class="btn btn-rd btn-md" type="button"
-                        href="{{ url_for('delete_recipes', member_recipe_id=member_recipe._id)}}">
-                        Delete Recipe
-                        <i class="far fa-calendar-times"></i>
-                      </a>
-                    </div>
+          <div class="card-body">
+            <div class="mt-3">
+              {% if member_recipes|length > 0 %}
+              <div class="card-deck">
+                {% for member_recipe in member_recipes %}
+                {% if member_recipe.private_switch == "on" %}
+                <div class="card mb-4">
+                  <div class="view overlay">
+                    {% if member_recipe.recipe_image == "" %}
+                    <img class="card-img-top"
+                      src="https://www.moregreenenergy.com.au/MoreGreen/Client-Admin/uploads/NoImage.jpg"
+                      alt="No Recipe image uploaded" />
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                    {% else %}
+                    <img class="card-img-top" src="{{ member_recipe.recipe_image }}" alt="Recipe image" />
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                    {% endif %}
                   </div>
-                  {% endif %}
-                  {% endfor %}
+                  <div class="card-body">
+                    <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>
+                    <p class="card-text">{{ member_recipe.recipe_description }}</p>
+                    <div>
+                      <a class="btn peach-gradient" type="button">
+                        View Recipe
+                        <i class="fas fa-clipboard-list"></i>
+                      </a>
+                    </div>
+                    <a class="btn info-color-dark btn-md" type="button"
+                      href="{{ url_for('edit_recipes', member_recipe_id=member_recipe._id)}}">
+                      Edit Recipe
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a class="btn btn-rd btn-md" type="button"
+                      href="{{ url_for('delete_recipes', member_recipe_id=member_recipe._id)}}">
+                      Delete Recipe
+                      <i class="far fa-calendar-times"></i>
+                    </a>
+                  </div>
                 </div>
+                {% endif %}
+                {% endfor %}
               </div>
-            {% else %}
-              <h3 class="center-align">No Private Recipes, why not create one or make it Private if one is in Public?</h3>
-              <div class="row">
-                <div class="col reg-text">
-                  <a href="{{ url_for('recipes') }}" class="btn btn-grn btn-lg">Create
-                    Recipe
-                  </a>
-                </div>
-              </div>
+              {% else %}
             </div>
-            {% endif %}
+            <h3 class="center-align">No Recipes, why not create one?</h3>
+            <div class="row">
+              <div class="col reg-text">
+                <a href="{{ url_for('recipes') }}" class="btn btn-grn btn-lg">Create
+                  Recipe
+                </a>
+              </div>
+              {% endif %}
+            </div>
+          </div>
         </div>
       </div>
     </div>
