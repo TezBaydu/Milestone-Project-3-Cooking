@@ -738,4 +738,50 @@ h3 {
     min-width: 20em;
 }
 
+/*-- view recipe page --*/
 
+.view-recipe-header {
+    text-align: center;
+    margin-top: 2em;
+    text-decoration: underline;
+}
+
+.recipe_view {
+    background-color: #fff;
+}
+
+.bordered {
+    border-style: solid;
+    border-radius: .25rem;
+    border-color: #568259;
+}
+
+.view-recipe-description {
+    height: 100px;
+    padding: 30px;
+    font-size: x-large !important;
+}
+
+.recipe_view .row {
+    place-content: center;
+}
+
+.padding {
+    padding: 20px;
+}
+
+.view-recipe-image {
+    border-radius: calc(.25rem - 1px);
+}
+
+.serves {
+    color: orange;
+}
+
+.margin-bottom-zero {
+    margin-bottom: 0;
+}
+
+.cook_prep-time {
+    color: #568259;
+}

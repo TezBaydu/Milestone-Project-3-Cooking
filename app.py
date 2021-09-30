@@ -65,11 +65,14 @@ def browse():
         "browse.html", recipes=recipes)
 
 
-@app.route("/view_recipe/", methods=["GET", "POST"])
-def view_recipe():
+@app.route("/view_recipe/<recipe_id>", methods=["GET", "POST"])
+def view_recipe(recipe_id):
+    recipe_card = mongo.db.recipes.find(
+        {"_id": ObjectId(recipe_id)})
+
     recipes = list(mongo.db.recipes.find())
     return render_template(
-        "view_recipe.html", recipes=recipes)
+        "view_recipe.html", recipe_card=recipe_card, recipes=recipes)
 
 
 @app.route("/register", methods=["GET", "POST"])

@@ -20,7 +20,8 @@
           </div>
           <div class="row center-align">
             <div class="col browse-button">
-              <a href="{{ url_for('view_recipe') }}" class="red btn btn-red btn-rounded btn-md my-0 ml-sm-2">Reset</a>
+              <a href="{{ url_for('view_recipe', recipe_id=recipe_card._id) }}"
+                class="red btn btn-red btn-rounded btn-md my-0 ml-sm-2">Reset</a>
               <button class="btn btn-grn btn-rounded btn-md my-0 ml-sm-2" type="submit">Search</button>
             </div>
           </div>
@@ -70,45 +71,65 @@
   </div>
   <!-- Recipe cards -->
 
-  <a href="{{ url_for('browse') }}"
+  {% for recipe in recipe_card %}
+  {% if recipe.private_switch == null %}
+  <h1 class="view-recipe-header">{{ recipe.recipe_name }}</h1>
 
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col">
         <div class="card z-depth-0 bordered">
           <div class="card-body">
-                {% for recipe in recipes %}
-                {% if recipe.private_switch == null %}
-                <div class="card mb-4">
-                  <div class="view overlay">
-                    {% if recipe.recipe_image == "" %}
-                    <img class="card-img-top"
-                      src="https://www.moregreenenergy.com.au/MoreGreen/Client-Admin/uploads/NoImage.jpg"
-                      alt="No Recipe image uploaded" />
-                    <a href="#!">
-                      <div class="mask rgba-white-slight"></div>
-                    </a>
-                    {% else %}
-                    <img class="card-img-top" src="{{ recipe.recipe_image }}" alt="Recipe image" />
-                    <a href="#!">
-                      <div class="mask rgba-white-slight"></div>
-                    </a>
-                    {% endif %}
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">{{ recipe.recipe_name }}</h4>
-                    <p class="card-text">{{ recipe.recipe_description }}</p>
-                    <span>{{ recipe.ready_time }} h/mins</span>
-                  </div>
-                  <div>
-                    <a class="btn peach-gradient" type="button">
-                      View Recipe
-                      <i class="fas fa-clipboard-list"></i>
-                    </a>
-                  </div>
+            <div class="card mb-4">
+              <div class="recipe_view overlay row">
+                <div class="col-2">
+                  <a href="{{ url_for('browse') }}" class="back-to">Back to Search</a>
+                </div>
+                {% if recipe.recipe_image == "" %}
+                <div class="col-6">
+                  <img class="card-img-top"
+                    src="https://www.moregreenenergy.com.au/MoreGreen/Client-Admin/uploads/NoImage.jpg"
+                    alt="No Recipe image uploaded" />
+                  <a href="#!">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+                {% else %}
+                <div class="col-5 padding center-align">
+                  <img class="card-img-top view-recipe-image" src="{{ recipe.recipe_image }}" alt="Recipe image" />
+                  <a href="#!">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
                 </div>
                 {% endif %}
-                {% endfor %}
+                <div class="col-5 card-body">
+                  <div class="row">
+                    <p class="card-text center-align bordered view-recipe-description">{{ recipe.recipe_description }}
+                    </p>
+                  </div>
+                  <div class="container padding">
+                    <div class="row center-align">
+                      <div class="col">
+                        <p class="serves margin-bottom-zero">Serves</p>
+                        <p>{{ recipe.serves }}</p>
+                      </div>
+                      <div class="col">
+                        <p class="margin-bottom-zero">Ready In</p>
+                        <p>{{ recipe.ready_time }} h/mins</p>
+                      </div>
+                    </div>
+                    <div class="row center-align">
+                      <div class="col">
+                        <p class="cook_prep-time margin-bottom-zero">Cooking Time</p>
+                        <p>{{ recipe.cook_time }} h/mins</p>
+                      </div>
+                      <div class="col">
+                        <p class="cook_prep-time margin-bottom-zero">Preperation Time</p>
+                        <p>{{ recipe.prep_time }} h/mins</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -116,6 +137,11 @@
       </div>
     </div>
   </div>
+  </div>
+  </div>
+
+  {% endif %}
+  {% endfor %}
 </section>
 
 
