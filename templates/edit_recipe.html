@@ -155,48 +155,48 @@
                 <!-- ingredient fields -->
                 <div class="row ingredients">
                     <div class="col-sm-1">
-                        {% if member_recipe.food[0][0] != null %}
+                        {% if member_recipe.food[0] != null %}
                         <p id="ing-number"><i class="fas fa-haykal"></i></p>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-md-5">
-                        {% if member_recipe.food[0][0] != null %}
-                        <input value="{{ member_recipe.food[0][0] }}" id="food" name="food" type="text"
+                        {% if member_recipe.food[0] != null %}
+                        <input value="{{ member_recipe.food[0] }}" id="food" name="food" type="text"
                             class="form-control validate" maxlength="30" placeholder="Food" required>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.count[0][0] != null %}
-                        <input value="{{ member_recipe.count[0][0] }}" id="count" name="count" type="number"
+                        {% if member_recipe.count[0] != null %}
+                        <input value="{{ member_recipe.count[0] }}" id="count" name="count" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Quantity">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-lg-2">
-                        {% if member_recipe.size[0][0] != null %}
-                        <input value="{{ member_recipe.size[0][0] }}" id="size" name="size" type="text"
+                        {% if member_recipe.size[0] != null %}
+                        <input value="{{ member_recipe.size[0] }}" id="size" name="size" type="text"
                             class="form-control validate" maxlength="20" placeholder="Size">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.weight[0][0] != null %}
-                        <input value="{{ member_recipe.weight[0][0] }}" id="weight" name="weight" type="number"
+                        {% if member_recipe.weight[0] != null %}
+                        <input value="{{ member_recipe.weight[0] }}" id="weight" name="weight" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Weight">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.volume[0][0] != null %}
-                        <input value="{{ member_recipe.volume[0][0] }}" id="volume" name="volume" type="number"
+                        {% if member_recipe.volume[0] != null %}
+                        <input value="{{ member_recipe.volume[0] }}" id="volume" name="volume" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Volume">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.food[0][0] != null %}
+                        {% if member_recipe.food[0] != null %}
                         <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                         {% endif %}
                     </div>
@@ -204,40 +204,40 @@
 
                 <div class="row ingredients">
                     <div class="col-sm-1">
-                        {% if member_recipe.food[0][1] != null %}
+                        {% if member_recipe.food[1] != null %}
                         <p id="ing-number"><i class="fas fa-haykal"></i></p>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-md-5">
-                        {% if member_recipe.food[0][1] != null %}
-                        <input value="{{ member_recipe.food[0][1] }}" id="food" name="food" type="text"
+                        {% if member_recipe.food[1] != null %}
+                        <input value="{{ member_recipe.food[1] }}" id="food" name="food" type="text"
                             class="form-control validate" maxlength="30" placeholder="Food" required>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.count[0][1] != null %}
-                        <input value="{{ member_recipe.count[0][1] }}" id="count" name="count" type="number"
+                        {% if member_recipe.count[1] != null %}
+                        <input value="{{ member_recipe.count[1] }}" id="count" name="count" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Quantity">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-lg-2">
-                        {% if member_recipe.size[0][1] != null %}
-                        <input value="{{ member_recipe.size[0][1] }}" id="size" name="size" type="text"
+                        {% if member_recipe.size[1] != null %}
+                        <input value="{{ member_recipe.size[1] }}" id="size" name="size" type="text"
                             class="form-control validate" maxlength="20" placeholder="Size">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.weight[0][1] != null %}
-                        <input value="{{ member_recipe.weight[0][1] }}" id="weight" name="weight" type="number"
+                        {% if member_recipe.weight[1] != null %}
+                        <input value="{{ member_recipe.weight[1] }}" id="weight" name="weight" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Weight">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.volume[0][1] != null %}
+                        {% if member_recipe.volume[1] != null %}
                         <input value="{{ member_recipe.volume[0][1] }}" id="volume" name="volume" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
@@ -253,48 +253,48 @@
 
                 <div class="row ingredients">
                     <div class="col-sm-1">
-                        {% if member_recipe.food[0][2] != null %}
+                        {% if member_recipe.food[2] != null %}
                         <p id="ing-number"><i class="fas fa-haykal"></i></p>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-md-5">
-                        {% if member_recipe.food[0][2] != null %}
-                        <input value="{{ member_recipe.food[0][2] }}" id="food" name="food" type="text"
+                        {% if member_recipe.food[2] != null %}
+                        <input value="{{ member_recipe.food[2] }}" id="food" name="food" type="text"
                             class="form-control validate" maxlength="30" placeholder="Food" required>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.count[0][2] != null %}
-                        <input value="{{ member_recipe.count[0][2] }}" id="count" name="count" type="number"
+                        {% if member_recipe.count[2] != null %}
+                        <input value="{{ member_recipe.count[2] }}" id="count" name="count" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Quantity">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-lg-2">
-                        {% if member_recipe.size[0][2] != null %}
-                        <input value="{{ member_recipe.size[0][2] }}" id="size" name="size" type="text"
+                        {% if member_recipe.size[2] != null %}
+                        <input value="{{ member_recipe.size[2] }}" id="size" name="size" type="text"
                             class="form-control validate" maxlength="20" placeholder="Size">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.weight[0][2] != null %}
-                        <input value="{{ member_recipe.weight[0][2] }}" id="weight" name="weight" type="number"
+                        {% if member_recipe.weight[2] != null %}
+                        <input value="{{ member_recipe.weight[2] }}" id="weight" name="weight" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Weight">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.volume[0][2] != null %}
-                        <input value="{{ member_recipe.volume[0][2] }}" id="volume" name="volume" type="number"
+                        {% if member_recipe.volume[2] != null %}
+                        <input value="{{ member_recipe.volume[2] }}" id="volume" name="volume" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Volume">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.food[0][2] != null %}
+                        {% if member_recipe.food[2] != null %}
                         <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                         {% endif %}
                     </div>
@@ -302,48 +302,48 @@
 
                 <div class="row ingredients">
                     <div class="col-sm-1">
-                        {% if member_recipe.food[0][3] != null %}
+                        {% if member_recipe.food[3] != null %}
                         <p id="ing-number"><i class="fas fa-haykal"></i></p>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-md-5">
-                        {% if member_recipe.food[0][3] != null %}
+                        {% if member_recipe.food[3] != null %}
                         <input value="{{ member_recipe.food[0][3] }}" id="food" name="food" type="text"
                             class="form-control validate" maxlength="30" placeholder="Food" required>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.count[0][3] != null %}
-                        <input value="{{ member_recipe.count[0][3] }}" id="count" name="count" type="number"
+                        {% if member_recipe.count[3] != null %}
+                        <input value="{{ member_recipe.count[3] }}" id="count" name="count" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Quantity">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-lg-2">
-                        {% if member_recipe.size[0][3] != null %}
-                        <input value="{{ member_recipe.size[0][3] }}" id="size" name="size" type="text"
+                        {% if member_recipe.size[3] != null %}
+                        <input value="{{ member_recipe.size[3] }}" id="size" name="size" type="text"
                             class="form-control validate" maxlength="20" placeholder="Size">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.weight[0][3] != null %}
-                        <input value="{{ member_recipe.weight[0][3] }}" id="weight" name="weight" type="number"
+                        {% if member_recipe.weight[3] != null %}
+                        <input value="{{ member_recipe.weight[3] }}" id="weight" name="weight" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Weight">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.volume[0][3] != null %}
-                        <input value="{{ member_recipe.volume[0][3] }}" id="volume" name="volume" type="number"
+                        {% if member_recipe.volume[3] != null %}
+                        <input value="{{ member_recipe.volume[3] }}" id="volume" name="volume" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Volume">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.food[0][3] != null %}
+                        {% if member_recipe.food[3] != null %}
                         <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                         {% endif %}
                     </div>
@@ -351,48 +351,48 @@
 
                 <div class="row ingredients">
                     <div class="col-sm-1">
-                        {% if member_recipe.food[0][4] != null %}
+                        {% if member_recipe.food[4] != null %}
                         <p id="ing-number"><i class="fas fa-haykal"></i></p>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-md-5">
-                        {% if member_recipe.food[0][4] != null %}
-                        <input value="{{ member_recipe.food[0][4] }}" id="food" name="food" type="text"
+                        {% if member_recipe.food[4] != null %}
+                        <input value="{{ member_recipe.food[4] }}" id="food" name="food" type="text"
                             class="form-control validate" maxlength="30" placeholder="Food" required>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.count[0][4] != null %}
-                        <input value="{{ member_recipe.count[0][4] }}" id="count" name="count" type="number"
+                        {% if member_recipe.count[4] != null %}
+                        <input value="{{ member_recipe.count[4] }}" id="count" name="count" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Quantity">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-lg-2">
-                        {% if member_recipe.size[0][4] != null %}
-                        <input value="{{ member_recipe.size[0][4] }}" id="size" name="size" type="text"
+                        {% if member_recipe.size[4] != null %}
+                        <input value="{{ member_recipe.size[4] }}" id="size" name="size" type="text"
                             class="form-control validate" maxlength="20" placeholder="Size">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.weight[0][4] != null %}
-                        <input value="{{ member_recipe.weight[0][4] }}" id="weight" name="weight" type="number"
+                        {% if member_recipe.weight[4] != null %}
+                        <input value="{{ member_recipe.weight[4] }}" id="weight" name="weight" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Weight">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.volume[0][4] != null %}
-                        <input value="{{ member_recipe.volume[0][4] }}" id="volume" name="volume" type="number"
+                        {% if member_recipe.volume[4] != null %}
+                        <input value="{{ member_recipe.volume[4] }}" id="volume" name="volume" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Volume">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.food[0][4] != null %}
+                        {% if member_recipe.food[4] != null %}
                         <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                         {% endif %}
                     </div>
@@ -400,48 +400,48 @@
 
                 <div class="row ingredients">
                     <div class="col-sm-1">
-                        {% if member_recipe.food[0][5] != null %}
+                        {% if member_recipe.food[5] != null %}
                         <p id="ing-number"><i class="fas fa-haykal"></i></p>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-md-5">
-                        {% if member_recipe.food[0][5] != null %}
-                        <input value="{{ member_recipe.food[0][5] }}" id="food" name="food" type="text"
+                        {% if member_recipe.food[5] != null %}
+                        <input value="{{ member_recipe.food[5] }}" id="food" name="food" type="text"
                             class="form-control validate" maxlength="30" placeholder="Food" required>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.count[0][5] != null %}
-                        <input value="{{ member_recipe.count[0][5] }}" id="count" name="count" type="number"
+                        {% if member_recipe.count[5] != null %}
+                        <input value="{{ member_recipe.count[5] }}" id="count" name="count" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Quantity">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-lg-2">
-                        {% if member_recipe.size[0][5] != null %}
-                        <input value="{{ member_recipe.size[0][5] }}" id="size" name="size" type="text"
+                        {% if member_recipe.size[5] != null %}
+                        <input value="{{ member_recipe.size[5] }}" id="size" name="size" type="text"
                             class="form-control validate" maxlength="20" placeholder="Size">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.weight[0][5] != null %}
-                        <input value="{{ member_recipe.weight[0][5] }}" id="weight" name="weight" type="number"
+                        {% if member_recipe.weight[5] != null %}
+                        <input value="{{ member_recipe.weight[5] }}" id="weight" name="weight" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Weight">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.volume[0][5] != null %}
-                        <input value="{{ member_recipe.volume[0][5] }}" id="volume" name="volume" type="number"
+                        {% if member_recipe.volume[5] != null %}
+                        <input value="{{ member_recipe.volume[5] }}" id="volume" name="volume" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Volume">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.food[0][5] != null %}
+                        {% if member_recipe.food[5] != null %}
                         <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                         {% endif %}
                     </div>
@@ -449,48 +449,48 @@
 
                 <div class="row ingredients">
                     <div class="col-sm-1">
-                        {% if member_recipe.food[0][6] != null %}
+                        {% if member_recipe.food[6] != null %}
                         <p id="ing-number"><i class="fas fa-haykal"></i></p>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-md-5">
-                        {% if member_recipe.food[0][6] != null %}
-                        <input value="{{ member_recipe.food[0][6] }}" id="food" name="food" type="text"
+                        {% if member_recipe.food[6] != null %}
+                        <input value="{{ member_recipe.food[6] }}" id="food" name="food" type="text"
                             class="form-control validate" maxlength="30" placeholder="Food" required>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.count[0][6] != null %}
-                        <input value="{{ member_recipe.count[0][6] }}" id="count" name="count" type="number"
+                        {% if member_recipe.count[6] != null %}
+                        <input value="{{ member_recipe.count[6] }}" id="count" name="count" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Quantity">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-lg-2">
-                        {% if member_recipe.size[0][6] != null %}
-                        <input value="{{ member_recipe.size[0][6] }}" id="size" name="size" type="text"
+                        {% if member_recipe.size[6] != null %}
+                        <input value="{{ member_recipe.size[6] }}" id="size" name="size" type="text"
                             class="form-control validate" maxlength="20" placeholder="Size">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.weight[0][6] != null %}
-                        <input value="{{ member_recipe.weight[0][6] }}" id="weight" name="weight" type="number"
+                        {% if member_recipe.weight[6] != null %}
+                        <input value="{{ member_recipe.weight[6] }}" id="weight" name="weight" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Weight">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.volume[0][6] != null %}
-                        <input value="{{ member_recipe.volume[0][6] }}" id="volume" name="volume" type="number"
+                        {% if member_recipe.volume[6] != null %}
+                        <input value="{{ member_recipe.volume[6] }}" id="volume" name="volume" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Volume">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.food[0][6] != null %}
+                        {% if member_recipe.food[6] != null %}
                         <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                         {% endif %}
                     </div>
@@ -498,48 +498,48 @@
 
                 <div class="row ingredients">
                     <div class="col-sm-1">
-                        {% if member_recipe.food[0][7] != null %}
+                        {% if member_recipe.food[7] != null %}
                         <p id="ing-number"><i class="fas fa-haykal"></i></p>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-md-5">
-                        {% if member_recipe.food[0][7] != null %}
-                        <input value="{{ member_recipe.food[0][7] }}" id="food" name="food" type="text"
+                        {% if member_recipe.food[7] != null %}
+                        <input value="{{ member_recipe.food[7] }}" id="food" name="food" type="text"
                             class="form-control validate" maxlength="30" placeholder="Food" required>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.count[0][7] != null %}
-                        <input value="{{ member_recipe.count[0][7] }}" id="count" name="count" type="number"
+                        {% if member_recipe.count[7] != null %}
+                        <input value="{{ member_recipe.count[7] }}" id="count" name="count" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Quantity">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-lg-2">
-                        {% if member_recipe.size[0][7] != null %}
-                        <input value="{{ member_recipe.size[0][7] }}" id="size" name="size" type="text"
+                        {% if member_recipe.size[7] != null %}
+                        <input value="{{ member_recipe.size[7] }}" id="size" name="size" type="text"
                             class="form-control validate" maxlength="20" placeholder="Size">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.weight[0][7] != null %}
-                        <input value="{{ member_recipe.weight[0][7] }}" id="weight" name="weight" type="number"
+                        {% if member_recipe.weight[7] != null %}
+                        <input value="{{ member_recipe.weight[7] }}" id="weight" name="weight" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Weight">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.volume[0][7] != null %}
-                        <input value="{{ member_recipe.volume[0][7] }}" id="volume" name="volume" type="number"
+                        {% if member_recipe.volume[7] != null %}
+                        <input value="{{ member_recipe.volume[7] }}" id="volume" name="volume" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Volume">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.food[0][7] != null %}
+                        {% if member_recipe.food[7] != null %}
                         <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                         {% endif %}
                     </div>
@@ -547,48 +547,48 @@
 
                 <div class="row ingredients">
                     <div class="col-sm-1">
-                        {% if member_recipe.food[0][8] != null %}
+                        {% if member_recipe.food[8] != null %}
                         <p id="ing-number"><i class="fas fa-haykal"></i></p>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-md-5">
-                        {% if member_recipe.food[0][8] != null %}
-                        <input value="{{ member_recipe.food[0][8] }}" id="food" name="food" type="text"
+                        {% if member_recipe.food[8] != null %}
+                        <input value="{{ member_recipe.food[8] }}" id="food" name="food" type="text"
                             class="form-control validate" maxlength="30" placeholder="Food" required>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.count[0][8] != null %}
-                        <input value="{{ member_recipe.count[0][8] }}" id="count" name="count" type="number"
+                        {% if member_recipe.count[8] != null %}
+                        <input value="{{ member_recipe.count[8] }}" id="count" name="count" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Quantity">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-lg-2">
-                        {% if member_recipe.size[0][8] != null %}
-                        <input value="{{ member_recipe.size[0][8] }}" id="size" name="size" type="text"
+                        {% if member_recipe.size[8] != null %}
+                        <input value="{{ member_recipe.size[8] }}" id="size" name="size" type="text"
                             class="form-control validate" maxlength="20" placeholder="Size">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.weight[0][8] != null %}
-                        <input value="{{ member_recipe.weight[0][8] }}" id="weight" name="weight" type="number"
+                        {% if member_recipe.weight[8] != null %}
+                        <input value="{{ member_recipe.weight[8] }}" id="weight" name="weight" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Weight">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.volume[0][8] != null %}
-                        <input value="{{ member_recipe.volume[0][8] }}" id="volume" name="volume" type="number"
+                        {% if member_recipe.volume[8] != null %}
+                        <input value="{{ member_recipe.volume[8] }}" id="volume" name="volume" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Volume">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.food[0][8] != null %}
+                        {% if member_recipe.food[8] != null %}
                         <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                         {% endif %}
                     </div>
@@ -596,48 +596,48 @@
 
                 <div class="row ingredients">
                     <div class="col-sm-1">
-                        {% if member_recipe.food[0][9] != null %}
+                        {% if member_recipe.food[9] != null %}
                         <p id="ing-number"><i class="fas fa-haykal"></i></p>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-md-5">
-                        {% if member_recipe.food[0][9] != null %}
-                        <input value="{{ member_recipe.food[0][9] }}" id="food" name="food" type="text"
+                        {% if member_recipe.food[9] != null %}
+                        <input value="{{ member_recipe.food[9] }}" id="food" name="food" type="text"
                             class="form-control validate" maxlength="30" placeholder="Food" required>
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.count[0][9] != null %}
-                        <input value="{{ member_recipe.count[0][9] }}" id="count" name="count" type="number"
+                        {% if member_recipe.count[9] != null %}
+                        <input value="{{ member_recipe.count[9] }}" id="count" name="count" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Quantity">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-lg-2">
-                        {% if member_recipe.size[0][9] != null %}
-                        <input value="{{ member_recipe.size[0][9] }}" id="size" name="size" type="text"
+                        {% if member_recipe.size[9] != null %}
+                        <input value="{{ member_recipe.size[9] }}" id="size" name="size" type="text"
                             class="form-control validate" maxlength="20" placeholder="Size">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.weight[0][9] != null %}
-                        <input value="{{ member_recipe.weight[0][9] }}" id="weight" name="weight" type="number"
+                        {% if member_recipe.weight[9] != null %}
+                        <input value="{{ member_recipe.weight[9] }}" id="weight" name="weight" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Weight">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.volume[0][9] != null %}
-                        <input value="{{ member_recipe.volume[0][9] }}" id="volume" name="volume" type="number"
+                        {% if member_recipe.volume[9] != null %}
+                        <input value="{{ member_recipe.volume[9] }}" id="volume" name="volume" type="number"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]"
                             placeholder="Volume">
                         {% endif %}
                     </div>
                     <div class="ingredient-field col-sm-1">
-                        {% if member_recipe.food[0][9] != null %}
+                        {% if member_recipe.food[9] != null %}
                         <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                         {% endif %}
                     </div>
@@ -651,76 +651,144 @@
             </div>
 
 
-                <!-- method header -->
-                <div class="col header reg-text">
-                    <h3>Step by Step Method</h3>
-                </div>
-                <!--add recipe method textarea-->
-                <div class="container input_meth_wrap">
-
-                    <div class="row ingredients">
+            <!-- method header -->
+            <div class="col header reg-text">
+                <h3>Step by Step Method</h3>
+            </div>
+            <!--add recipe method textarea-->
+            <div class="container input_meth_wrap">
+                
+                <div class="row ingredients">
                         <div class="col-1">
+                    {% if member_recipe.recipe_method[0] != null %}
                             <p id="meth-number"><i class="fas fa-haykal"></i></p>
+                    {% endif %}
                         </div>
                         <div class="input-field col-10">
-                            {% if member_recipe.recipe_method[0][0] != null %}
-                            <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
-                                placeholder="Method Step" required>{{ member_recipe.recipe_method[0][0] }}
+                    {% if member_recipe.recipe_method[0] != null %}
+                        <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
+                            placeholder="Method Step" required>{{ member_recipe.recipe_method[0] }}
                         </textarea>
-                            {% endif %}
-                            {% if member_recipe.recipe_method[0][1] != null %}
-                            <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
-                                placeholder="Method Step" required>{{ member_recipe.recipe_method[0][1] }}
-                        </textarea>
-                            {% endif %}
-                            {% if member_recipe.recipe_method[0][2] != null %}
-                            <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
-                                placeholder="Method Step" required>{{ member_recipe.recipe_method[0][2] }}
-                        </textarea>
-                            {% endif %}
-                            {% if member_recipe.recipe_method[0][3] != null %}
-                            <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
-                                placeholder="Method Step" required>{{ member_recipe.recipe_method[0][3] }}
-                        </textarea>
-                            {% endif %}
-                            {% if member_recipe.recipe_method[0][4] != null %}
-                            <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
-                                placeholder="Method Step" required>{{ member_recipe.recipe_method[0][4] }}
-                        </textarea>
-                            {% endif %}
+                    {% endif %}
                         </div>
-                    </div>
+                        <div>
+                    {% if member_recipe.recipe_method[0] != null %}
+                            <a href="#" class="remove_method"><i class="fas fa-trash-alt"></i></a>
+                    {% endif %}
+                        </div>
                 </div>
-                <!-- add method step button -->
-                <div class="row">
-                    <div class="col">
-                        <a href="#" class="add_meth_button"><i class="fas fa-plus-square"></i></i></a>
+
+                <div class="row ingredients">
+                    <div class="col-1">
+                {% if member_recipe.recipe_method[1] != null %}
+                        <p id="meth-number"><i class="fas fa-haykal"></i></p>
+                {% endif %}
+                    </div>
+                    <div class="input-field col-10">
+                {% if member_recipe.recipe_method[1] != null %}
+                    <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
+                        placeholder="Method Step" required>{{ member_recipe.recipe_method[1] }}
+                    </textarea>
+                {% endif %}
+                    </div>
+                    <div>
+                {% if member_recipe.recipe_method[1] != null %}
+                        <a href="#" class="remove_method"><i class="fas fa-trash-alt"></i></a>
+                {% endif %}
                     </div>
                 </div>
 
-                <!-- make public / keep private switch -->
-                <div class="row justify-content-center public-text"><span>Make Public </span>
-                    <div class="custom-control custom-switch">
-                        {% if member_recipe.private_switch == "on" %}
-                        <input type="checkbox" class="custom-control-input" id="private_switch" name="private_switch"
-                            checked>
-                        {% else %}
-                        <input type="checkbox" class="custom-control-input" id="private_switch" name="private_switch">
-                        {% endif %}
-                        <label class="custom-control-label" for="private_switch">Keep Private</label>
+                <div class="row ingredients">
+                    <div class="col-1">
+                {% if member_recipe.recipe_method[2] != null %}
+                        <p id="meth-number"><i class="fas fa-haykal"></i></p>
+                {% endif %}
+                    </div>
+                    <div class="input-field col-10">
+                {% if member_recipe.recipe_method[2] != null %}
+                    <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
+                        placeholder="Method Step" required>{{ member_recipe.recipe_method[2] }}
+                    </textarea>
+                {% endif %}
+                    </div>
+                    <div>
+                {% if member_recipe.recipe_method[2] != null %}
+                        <a href="#" class="remove_method"><i class="fas fa-trash-alt"></i></a>
+                {% endif %}
                     </div>
                 </div>
 
-                <!-- submit / cancel buttons -->
-                <div class="row justify-content-center">
-                    <button type="submit" class="btn btn-grn btn-lg">Save Changes
-                        <i class="fas fa-sign-in-alt"></i>
-                    </button>
-                    <button type="button" class="btn btn-rd btn-lg">Delete
-                        <i class="fas fa-trash"></i>
-                    </button>
+                <div class="row ingredients">
+                    <div class="col-1">
+                {% if member_recipe.recipe_method[3] != null %}
+                        <p id="meth-number"><i class="fas fa-haykal"></i></p>
+                {% endif %}
+                    </div>
+                    <div class="input-field col-10">
+                {% if member_recipe.recipe_method[3] != null %}
+                    <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
+                        placeholder="Method Step" required>{{ member_recipe.recipe_method[3] }}
+                    </textarea>
+                {% endif %}
+                    </div>
+                    <div>
+                {% if member_recipe.recipe_method[3] != null %}
+                        <a href="#" class="remove_method"><i class="fas fa-trash-alt"></i></a>
+                {% endif %}
+                    </div>
+                </div>
+
+                <div class="row ingredients">
+                    <div class="col-1">
+                {% if member_recipe.recipe_method[4] != null %}
+                        <p id="meth-number"><i class="fas fa-haykal"></i></p>
+                {% endif %}
+                    </div>
+                    <div class="input-field col-10">
+                {% if member_recipe.recipe_method[4] != null %}
+                    <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
+                        placeholder="Method Step" required>{{ member_recipe.recipe_method[4] }}
+                    </textarea>
+                {% endif %}
+                    </div>
+                    <div>
+                {% if member_recipe.recipe_method[4] != null %}
+                        <a href="#" class="remove_method"><i class="fas fa-trash-alt"></i></a>
+                {% endif %}
+                    </div>
+                </div>
+                
+            </div>
+            <!-- add method step button -->
+            <div class="row">
+                <div class="col">
+                    <a href="#" class="add_meth_button"><i class="fas fa-plus-square"></i></i></a>
                 </div>
             </div>
+
+            <!-- make public / keep private switch -->
+            <div class="row justify-content-center public-text"><span>Make Public </span>
+                <div class="custom-control custom-switch">
+                    {% if member_recipe.private_switch == "on" %}
+                    <input type="checkbox" class="custom-control-input" id="private_switch" name="private_switch"
+                        checked>
+                    {% else %}
+                    <input type="checkbox" class="custom-control-input" id="private_switch" name="private_switch">
+                    {% endif %}
+                    <label class="custom-control-label" for="private_switch">Keep Private</label>
+                </div>
+            </div>
+
+            <!-- submit / cancel buttons -->
+            <div class="row justify-content-center">
+                <button type="submit" class="btn btn-grn btn-lg">Save Changes
+                    <i class="fas fa-sign-in-alt"></i>
+                </button>
+                <button type="button" class="btn btn-rd btn-lg">Delete
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+        </div>
     </form>
 </div>
 

@@ -22,22 +22,36 @@ mongo = PyMongo(app)
 @app.route("/recipes", methods=["GET", "POST"])
 def recipes():
     if request.method == "POST":
-        recipe = mongo.db.recipes
-        recipe_dict = request.form.to_dict()
-        recipe_dict["food"] = request.form.getlist("food"),
-        recipe_dict["count"] = request.form.getlist("count"),
-        recipe_dict["size"] = request.form.getlist("size"),
-        recipe_dict["weight"] = request.form.getlist("weight"),
-        recipe_dict["volume"] = request.form.getlist("volume"),
-        recipe_dict["recipe_method"] = request.form.getlist("recipe_method"),
-        recipe_dict["email"] = session["member"]
+        recipe = {
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_description": request.form.get("recipe_description"),
+            "recipe_image": request.form.get("recipe_image"),
+            "breakfast": request.form.get("breakfast"),
+            "lunch": request.form.get("lunch"),
+            "dinner": request.form.get("dinner"),
+            "dessert": request.form.get("dessert"),
+            "snack": request.form.get("snack"),
+            "serves": request.form.get("serves"),
+            "prep_time": request.form.get("prep_time"),
+            "cook_time": request.form.get("cook_time"),
+            "ready_time": request.form.get("ready_time"),
+            "food": request.form.getlist("food"),
+            "count": request.form.getlist("count"),
+            "size": request.form.getlist("size"),
+            "weight": request.form.getlist("weight"),
+            "volume": request.form.getlist("volume"),
+            "recipe_method": request.form.getlist("recipe_method"),
+            "private_switch": request.form.get("private_switch"),
+            "email": session["member"]
+        }
 
-        recipe.insert_one(recipe_dict)
+        mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
         return redirect(url_for("profile"))
 
     recipes = list(mongo.db.recipes.find())
-    return render_template("recipes.html", recipes=recipes)
+    return render_template(
+        "recipes.html", recipes=recipes)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -50,12 +64,38 @@ def search():
 
 @app.route("/edit_recipes/<member_recipe_id>", methods=["GET", "POST"])
 def edit_recipes(member_recipe_id):
-    member_recipe = mongo.db.recipes.find_one(
-        {"_id": ObjectId(member_recipe_id)})
+    if request.method == "POST":
+        submit = {
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_description": request.form.get("recipe_description"),
+            "recipe_image": request.form.get("recipe_image"),
+            "breakfast": request.form.get("breakfast"),
+            "lunch": request.form.get("lunch"),
+            "dinner": request.form.get("dinner"),
+            "dessert": request.form.get("dessert"),
+            "snack": request.form.get("snack"),
+            "serves": request.form.get("serves"),
+            "prep_time": request.form.get("prep_time"),
+            "cook_time": request.form.get("cook_time"),
+            "ready_time": request.form.get("ready_time"),
+            "food": request.form.getlist("food"),
+            "count": request.form.getlist("count"),
+            "size": request.form.getlist("size"),
+            "weight": request.form.getlist("weight"),
+            "volume": request.form.getlist("volume"),
+            "recipe_method": request.form.getlist("recipe_method"),
+            "private_switch": request.form.get("private_switch"),
+            "email": session["member"]
+        }
 
-    recipes = list(mongo.db.recipes.find())
+        mongo.db.recipes.update({
+            "_id": ObjectId(member_recipe_id)}, submit)
+        flash("Recipe Successfully Updated")
+
+    member_recipe = mongo.db.recipes.find_one({
+        "_id": ObjectId(member_recipe_id)})
     return render_template(
-        "edit_recipe.html", member_recipe=member_recipe, recipes=recipes)
+        "edit_recipe.html", member_recipe=member_recipe)
 
 
 @app.route("/browse", methods=["GET", "POST"])

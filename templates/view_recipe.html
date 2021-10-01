@@ -20,7 +20,7 @@
           </div>
           <div class="row center-align">
             <div class="col browse-button">
-              <a href="{{ url_for('view_recipe', recipe_id=recipe_card._id) }}"
+              <a href="{{ url_for('browse') }}"
                 class="red btn btn-red btn-rounded btn-md my-0 ml-sm-2">Reset</a>
               <button class="btn btn-grn btn-rounded btn-md my-0 ml-sm-2" type="submit">Search</button>
             </div>
@@ -72,7 +72,7 @@
   <!-- Recipe cards -->
 
   {% for recipe in recipe_card %}
-  {% if recipe.private_switch == null %}
+  {% if recipe.private_switch is none %}
   <h1 class="view-recipe-header">{{ recipe.recipe_name }}</h1>
 
   <div class="container">
@@ -135,25 +135,62 @@
                     <div class="col-5">
                       <h3>Ingredients <i class="fas fa-shopping-basket"></i></h3>
                       <ul>
-                        <li>{{ recipe.count[0][0] }} {{ recipe.size[0][0] }} {{ recipe.weight[0][0] }}kg {{ recipe.weight[0][0] }}lb  {{ recipe.food[0][0] }}</li>
-                        <li>{{ recipe.count[0][1] }} {{ recipe.size[0][1] }} {{ recipe.weight[0][1] }}kg {{ recipe.weight[0][1] }}lb  {{ recipe.food[0][1] }}</li>
-                        <li>{{ recipe.count[0][2] }} {{ recipe.size[0][2] }} {{ recipe.weight[0][2] }}kg {{ recipe.weight[0][2] }}lb  {{ recipe.food[0][2] }}</li>
-                        <li>{{ recipe.count[0][3] }} {{ recipe.size[0][3] }} {{ recipe.weight[0][3] }}kg {{ recipe.weight[0][3] }}lb  {{ recipe.food[0][3] }}</li>
-                        <li>{{ recipe.count[0][4] }} {{ recipe.size[0][4] }} {{ recipe.weight[0][4] }}kg {{ recipe.weight[0][4] }}lb  {{ recipe.food[0][4] }}</li>
-                        <li>{{ recipe.count[0][5] }} {{ recipe.size[0][5] }} {{ recipe.weight[0][5] }}kg {{ recipe.weight[0][5] }}lb  {{ recipe.food[0][5] }}</li>
-                        <li>{{ recipe.count[0][6] }} {{ recipe.size[0][6] }} {{ recipe.weight[0][6] }}kg {{ recipe.weight[0][6] }}lb  {{ recipe.food[0][6] }}</li>
+                        {% if recipe.food[0] != null %}
+                        <li>{{ recipe.count[0] }} {{ recipe.size[0] }} {{ recipe.weight[0] }}kg {{ recipe.weight[0] }}lb  {{ recipe.food[0] }}</li>
+                        {% endif %}
+                        {% if recipe.food[1] != null %}
+                        <li>{{ recipe.count[1] }} {{ recipe.size[1] }} {{ recipe.weight[1] }}kg {{ recipe.weight[1] }}lb  {{ recipe.food[1] }}</li>
+                        {% endif %}
+                        {% if recipe.food[2] != null %}
+                        <li>{{ recipe.count[2] }} {{ recipe.size[2] }} {{ recipe.weight[2] }}kg {{ recipe.weight[2] }}lb  {{ recipe.food[2] }}</li>
+                        {% endif %}
+                        {% if recipe.food[3] != null %}
+                        <li>{{ recipe.count[3] }} {{ recipe.size[3] }} {{ recipe.weight[3] }}kg {{ recipe.weight[3] }}lb  {{ recipe.food[3] }}</li>
+                        {% endif %}
+                        {% if recipe.food[4] != null %}
+                        <li>{{ recipe.count[4] }} {{ recipe.size[4] }} {{ recipe.weight[4] }}kg {{ recipe.weight[4] }}lb  {{ recipe.food[4] }}</li>
+                        {% endif %}
+                        {% if recipe.food[5] != null %}
+                        <li>{{ recipe.count[5] }} {{ recipe.size[5] }} {{ recipe.weight[5] }}kg {{ recipe.weight[5] }}lb  {{ recipe.food[5] }}</li>
+                        {% endif %}
+                        {% if recipe.food[6] != null %}
+                        <li>{{ recipe.count[6] }} {{ recipe.size[6] }} {{ recipe.weight[6] }}kg {{ recipe.weight[6] }}lb  {{ recipe.food[6] }}</li>
+                        {% endif %}
+                        {% if recipe.food[7] != null %}
+                        <li>{{ recipe.count[7] }} {{ recipe.size[7] }} {{ recipe.weight[7] }}kg {{ recipe.weight[7] }}lb  {{ recipe.food[7] }}</li>
+                        {% endif %}
+                        {% if recipe.food[8] != null %}
+                        <li>{{ recipe.count[8] }} {{ recipe.size[8] }} {{ recipe.weight[8] }}kg {{ recipe.weight[8] }}lb  {{ recipe.food[8] }}</li>
+                        {% endif %}
+                        {% if recipe.food[9] != null %}
+                        <li>{{ recipe.count[9] }} {{ recipe.size[9] }} {{ recipe.weight[9] }}kg {{ recipe.weight[9] }}lb  {{ recipe.food[9] }}</li>
+                        {% endif %}
                       </ul>
                     </div>
                     <div class="col-7">
                       <h3>Method <i class="fas fa-bread-slice"></i></h3>
                       <ol>
-                        <li class="padding">{{ recipe.recipe_method[0][1] }}</li>
-                        <li class="padding">{{ recipe.recipe_method[0][2] }}</li>
-                        <li class="padding">{{ recipe.recipe_method[0][3] }}</li>
-                        <li class="padding">{{ recipe.recipe_method[0][4] }}</li>
-                        <li class="padding">{{ recipe.recipe_method[0][5] }}</li>
-                        <li class="padding">{{ recipe.recipe_method[0][6] }}</li>
-                        <li class="padding">{{ recipe.recipe_method[0][7] }}</li>
+                        {% if recipe.recipe_method[0] != null %}
+                        <li class="padding">{{ recipe.recipe_method[0] }}</li>
+                        {% endif %}
+                        {% if recipe.recipe_method[1] != null %}
+                        <li class="padding">{{ recipe.recipe_method[1] }}</li>
+                        {% endif %}
+                        {% if recipe.recipe_method[2] != null %}
+                        <li class="padding">{{ recipe.recipe_method[2] }}</li>
+                        {% endif %}
+                        {% if recipe.recipe_method[3] != null %}
+                        <li class="padding">{{ recipe.recipe_method[3] }}</li>
+                        {% endif %}
+                        {% if recipe.recipe_method[4] != null %}
+                        <li class="padding">{{ recipe.recipe_method[4] }}</li>
+                        {% endif %}
+                        {% if recipe.recipe_method[5] != null %}
+                        <li class="padding">{{ recipe.recipe_method[5] }}</li>
+                        {% endif %}
+                        {% if recipe.recipe_method[6] != null %}
+                        <li class="padding">{{ recipe.recipe_method[5] }}</li>
+                        {% endif %}
                       </ol>
                     </div>
                   </div>

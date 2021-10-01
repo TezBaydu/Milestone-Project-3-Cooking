@@ -79,7 +79,7 @@
             <div class="mt-3">
               <div class="card-deck">
                 {% for member_recipe in member_recipes %}
-                {% if member_recipe.private_switch == null %}
+                {% if member_recipe.private_switch is none %}
                 <div class="card mb-4">
                   <div class="view overlay">
                     {% if member_recipe.recipe_image == "" %}

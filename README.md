@@ -885,21 +885,22 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Profile: Delete recipe option: Done
 - Create recipe: Ready in sum | Event listeners in prep and cook to publish sum in ready time - Done with max time not over 24 hours
 - Edit recipe: ready in sum | Event listener not working in ready time - Done, changed from var to let
+- View Recipe page created - Done and jinja applied so only associated data applied
+- Edit recipe: array values to populate separate divs rows - Done
+- Edit recipe: quantity values not populating value, however is an issue with array still - Done
 
 ### To Do
-- View Recipe page created - to associated This to button and design view recipe
+- Ready In Time: this field not pulling into MongoDB
 - Search on Browse works but only for name, to update for other search features
     * Have tried searches on several sites and tutor support, searches found wereall voted down and didn not provide the correct concept. Tutor support tried to advise in several scenarios including a $match but after spending 2 days on trying to resolve I've sadly decided to abandon this option for now. 
 - Profile: Text to add create in accordion but fails on both when 1 recipe is applied to one or the other
 - Profile: on delete a warning to open to confirm
 - Profile: add logout button in profile card
 - Recipe: current date applied but doesn't apply to MongoDB
-- Edit recipe: array values to populate separate divs rows
-- Edit recipe: quantity values not populating value, however is an issue with array still
 - Col classes have padding right 15px and will not fill page
 - iphone 5 nav menu items not listed correctly
 - background image not showing
-- Profile: New member - Accordion to have a Create Recipe button in Accordion which gets replaced when a recipe is created
+- Profile: view recipe button applied but link required to recipe card
 
 
 ### Notes to consider

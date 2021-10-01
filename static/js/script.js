@@ -48,6 +48,10 @@ $(document).ready(function() {
 	$(wrapper_meth).on("click",".remove_field", function(e){
 		e.preventDefault(); $(this).parent('div').remove(); meth--;
 	});
+
+	$(wrapper_meth).on("click",".remove_method", function(e){
+		e.preventDefault(); $(this).parent('div').parent('div').remove(); meth--;
+	});
 });
 
 // Date in recipes
