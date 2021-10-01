@@ -9,7 +9,7 @@ $('#featureDiscovery').click(function () {
 // recipe: add and remove recipe ingredients rows
 
 $(document).ready(function() {
-	var max_add      		= 20;
+	var max_add      		= 10;
 	var ingredient_wrapper   		= $(".input_ingredient_wrap");
 	var add_button      = $(".add_ingredient_button");
 	
@@ -26,9 +26,13 @@ $(document).ready(function() {
 		e.preventDefault(); $(this).parent('div').remove(); add--;
 	});
 
+	$(ingredient_wrapper).on("click",".remove_ingredient", function(e){ 
+		e.preventDefault(); $(this).parent('div').parent('div').remove(); add--;
+	});
+
 // recipe: add and remove recipe method rows
 
-	var max_meth      		= 10; 
+	var max_meth      		= 5; 
 	var wrapper_meth   		= $(".input_meth_wrap"); 
 	var add_meth_button      = $(".add_meth_button");
 	
@@ -56,9 +60,9 @@ document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
 
 // sum ready in recipe time
 
-var prep_time = document.getElementById('prep_time');
-var cook_time = document.getElementById('cook_time');
-var ready_time = document.getElementById('ready_time');
+let prep_time = document.getElementById('prep_time');
+let cook_time = document.getElementById('cook_time');
+let ready_time = document.getElementById('ready_time');
 
 prep_time.addEventListener('change', () =>
 cook_time.addEventListener('change', () =>  {

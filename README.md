@@ -884,12 +884,12 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Browse: App.py update to pull in public recipes only from all members, currently pulling in recipes from members - Done and pulling in only PUBLIC shared recipes
 - Profile: Delete recipe option: Done
 - Create recipe: Ready in sum | Event listeners in prep and cook to publish sum in ready time - Done with max time not over 24 hours
+- Edit recipe: ready in sum | Event listener not working in ready time - Done, changed from var to let
 
 ### To Do
 - View Recipe page created - to associated This to button and design view recipe
 - Search on Browse works but only for name, to update for other search features
     * Have tried searches on several sites and tutor support, searches found wereall voted down and didn not provide the correct concept. Tutor support tried to advise in several scenarios including a $match but after spending 2 days on trying to resolve I've sadly decided to abandon this option for now. 
-- Edit recipe: ready in sum | Event listener not working in ready time
 - Profile: Text to add create in accordion but fails on both when 1 recipe is applied to one or the other
 - Profile: on delete a warning to open to confirm
 - Profile: add logout button in profile card
