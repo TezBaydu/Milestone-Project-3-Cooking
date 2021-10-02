@@ -97,11 +97,12 @@
                     {% endif %}
                   </div>
                   <div class="card-body">
+                    <h6>Created Date: {{ member_recipe.date }}</h6>
                     <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>
                     <p class="card-text">{{ member_recipe.recipe_description }}</p>
                     <div>
                       <div>
-                        <a class="btn peach-gradient" type="button">
+                        <a href="{{ url_for('view_member_recipe', recipe_id=member_recipe._id) }}" class="btn peach-gradient" type="button">
                           View Recipe
                           <i class="fas fa-clipboard-list"></i>
                         </a>
@@ -171,10 +172,11 @@
                     {% endif %}
                   </div>
                   <div class="card-body">
+                    <h6>Created Date: {{ member_recipe.date }}</h6>
                     <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>
                     <p class="card-text">{{ member_recipe.recipe_description }}</p>
                     <div>
-                      <a class="btn peach-gradient" type="button">
+                      <a href="{{ url_for('view_member_recipe', recipe_id=member_recipe._id) }}" class="btn peach-gradient" type="button">
                         View Recipe
                         <i class="fas fa-clipboard-list"></i>
                       </a>

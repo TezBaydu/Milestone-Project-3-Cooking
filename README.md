@@ -890,6 +890,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Edit recipe: quantity values not populating value, however is an issue with array still - Done
 - Ready In Time: this field not pulling into MongoDB - Done, changed from disabled to readonly
 - Recipe: current date applied but doesn't apply to MongoDB - Done changed to input and readonly
+- Profile: view recipe button applied but link required to recipe card - Done and new template created associated to member so private recipes can be viewed too
 
 ### To Do
 - Ready In Time: issue with calc when adding more than 30 mins
@@ -901,10 +902,8 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Col classes have padding right 15px and will not fill page
 - iphone 5 nav menu items not listed correctly
 - background image not showing
-- Profile: view recipe button applied but link required to recipe card
 - Home page
 - Contact page
-- View Recipe for Members: displays all cards not just Public
 
 
 ### Notes to consider

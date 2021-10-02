@@ -72,7 +72,6 @@
   <!-- Recipe cards -->
 
   {% for recipe in recipe_card %}
-  {% if recipe.private_switch is none %}
   <h1 class="view-recipe-header">{{ recipe.recipe_name }}</h1>
 
   <div class="container">
@@ -84,7 +83,7 @@
               <div class="recipe_view overlay row">
                 <div class="col-2 middle">
                   <h6>Created Date: {{ recipe.date }}</h6>
-                  <a href="{{ url_for('browse') }}" class="back-to">Back to Search</a>
+                  <a href="{{ url_for('profile') }}" class="back-to">Back to Profile</a>
                 </div>
                 {% if recipe.recipe_image == "" %}
                 <div class="col-5">
@@ -205,8 +204,6 @@
   </div>
   </div>
   </div>
-
-  {% endif %}
   {% endfor %}
 </section>
 

@@ -192,6 +192,17 @@ def profile():
     return redirect(url_for("login"))
 
 
+@app.route("/view_member_recipe/<recipe_id>", methods=["GET", "POST"])
+def view_member_recipe(recipe_id):
+    recipe_card = mongo.db.recipes.find(
+        {"_id": ObjectId(recipe_id)})
+
+    member_recipes = list(mongo.db.recipes.find())
+    return render_template(
+        "view_member_recipe.html",
+        recipe_card=recipe_card, member_recipes=member_recipes)
+
+
 @app.route("/delete_recipes/<member_recipe_id>")
 def delete_recipes(member_recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(member_recipe_id)})
