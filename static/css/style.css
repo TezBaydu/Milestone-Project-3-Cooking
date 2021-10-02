@@ -311,6 +311,10 @@ footer.page-footer .footer-copyright {
     min-height: 10rem;
 }
 
+.recipe-name-label {
+    margin-top: 0;
+}
+
 .recipe-type {
     background-color: #96e6b3;
     border-style: solid;
@@ -415,13 +419,21 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .date-end {
-    text-align: end;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.date-label {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: initial;
 }
 
 #date {
     border:none;
     background-color: #f1fffa;
     display: inline-flex;
+    resize: none;
 }
 
 /*-- register page --*/
@@ -758,8 +770,9 @@ h3 {
 
 .view-recipe-description {
     height: 100px;
-    padding: 30px;
+    padding: 5px;
     font-size: x-large !important;
+    height: fit-content;
 }
 
 .recipe_view .row {
@@ -792,4 +805,8 @@ h3 {
 
 .fa-bread-slice {
     color: #568259;
+}
+
+.middle {
+    align-self: center;
 }

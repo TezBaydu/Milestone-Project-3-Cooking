@@ -17,13 +17,13 @@
     <form class="card-body" method="POST" action="{{ url_for('edit_recipes', member_recipe_id=member_recipe._id) }}">
         <div class="card-title card-panel">
             <div class="date-end">
-                <label for="date">Date: </label>
-                <option id="date" name="date"></option>
+                <label for="date" class="date-label"> Date:  </label>
+                <textarea id="date" name="date" readonly></textarea>
             </div>
             <!-- recipe name and description -->
             <div class="row">
                 <div class="col">
-                    <label for="recipe_name">Name</label>
+                    <label for="recipe_name" class="recipe-name-label">Name</label>
                     <textarea id="recipe_name" name="recipe_name" class="form-control" minlength="2" maxlength="25"
                         required>{{ member_recipe.recipe_name }}</textarea>
                 </div>
@@ -124,7 +124,7 @@
                 <div class="col-3 md-form">
                     <label for="ready_time">Ready in</label>
                     <input value="{{ member_recipe.ready_time }}" type="time" class="form-control time" id="ready_time"
-                        name="ready_time" min="0" disabled>
+                        name="ready_time" min="0" readonly>
                 </div>
             </div>
             <!-- ingredients header -->

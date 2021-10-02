@@ -23,6 +23,7 @@ mongo = PyMongo(app)
 def recipes():
     if request.method == "POST":
         recipe = {
+            "date": request.form.get("date"),
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
             "recipe_image": request.form.get("recipe_image"),
@@ -66,6 +67,7 @@ def search():
 def edit_recipes(member_recipe_id):
     if request.method == "POST":
         submit = {
+            "date": request.form.get("date"),
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
             "recipe_image": request.form.get("recipe_image"),

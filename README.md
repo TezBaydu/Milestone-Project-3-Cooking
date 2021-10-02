@@ -888,23 +888,28 @@ For further help and info you can select [Cloning and Forking repositories](http
 - View Recipe page created - Done and jinja applied so only associated data applied
 - Edit recipe: array values to populate separate divs rows - Done
 - Edit recipe: quantity values not populating value, however is an issue with array still - Done
+- Ready In Time: this field not pulling into MongoDB - Done, changed from disabled to readonly
+- Recipe: current date applied but doesn't apply to MongoDB - Done changed to input and readonly
 
 ### To Do
-- Ready In Time: this field not pulling into MongoDB
+- Ready In Time: issue with calc when adding more than 30 mins
 - Search on Browse works but only for name, to update for other search features
-    * Have tried searches on several sites and tutor support, searches found wereall voted down and didn not provide the correct concept. Tutor support tried to advise in several scenarios including a $match but after spending 2 days on trying to resolve I've sadly decided to abandon this option for now. 
+    * Have tried searches on several sites and tutor support, searches found wereall voted down and didn not provide the correct concept. Tutor support tried to advise in several scenarios including a $match but after spending 2 days on trying to resolve I've sadly decided to abandon this option for now.   
 - Profile: Text to add create in accordion but fails on both when 1 recipe is applied to one or the other
 - Profile: on delete a warning to open to confirm
 - Profile: add logout button in profile card
-- Recipe: current date applied but doesn't apply to MongoDB
 - Col classes have padding right 15px and will not fill page
 - iphone 5 nav menu items not listed correctly
 - background image not showing
 - Profile: view recipe button applied but link required to recipe card
+- Home page
+- Contact page
+- View Recipe for Members: displays all cards not just Public
 
 
 ### Notes to consider
 - Message in GitPod stating Python extension loading and is constant. Info found in Slack and Gitpod community advising of installing an older version. Had changed from pymongo 3.12.0 to 3.5.1 but the Python extension loading message still appeared and I was unable to run app.py so have changed back to 3.12.0.
+- Search: "[dict]" elements in app.py removed as mongoDB had applied double Arrays causing confusion between create and Edit - is good now
 
 
 
