@@ -891,14 +891,15 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Ready In Time: this field not pulling into MongoDB - Done, changed from disabled to readonly
 - Recipe: current date applied but doesn't apply to MongoDB - Done changed to input and readonly
 - Profile: view recipe button applied but link required to recipe card - Done and new template created associated to member so private recipes can be viewed too
+- Profile: add logout button in profile card
 
 ### To Do
-- Ready In Time: issue with calc when adding more than 30 mins
+- Edit profile url not connecting to edit profile page
+- Ready In Time: issue with calc when adding more than 30 mins - Mentor
 - Search on Browse works but only for name, to update for other search features
     * Have tried searches on several sites and tutor support, searches found wereall voted down and didn not provide the correct concept. Tutor support tried to advise in several scenarios including a $match but after spending 2 days on trying to resolve I've sadly decided to abandon this option for now.   
 - Profile: Text to add create in accordion but fails on both when 1 recipe is applied to one or the other
 - Profile: on delete a warning to open to confirm
-- Profile: add logout button in profile card
 - Col classes have padding right 15px and will not fill page
 - iphone 5 nav menu items not listed correctly
 - background image not showing

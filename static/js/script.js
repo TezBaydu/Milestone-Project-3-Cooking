@@ -85,11 +85,11 @@ cook_time.addEventListener('change', () =>  {
         cook_minutes -= 60;
     }
 
-	hours = prep_hours += cook_hours
-	minutes = prep_minutes += cook_minutes
+	hours = prep_hours + cook_hours
+	minutes = prep_minutes + cook_minutes
 
     hours = (hours < 10 ? `0${hours}` : `${hours}`);
     minutes = (minutes < 10 ? `0${minutes}` : `${minutes}`);
 
     ready_time.value = `${hours}:${minutes}`;
-}));
+}))

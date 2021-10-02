@@ -100,6 +100,26 @@ def edit_recipes(member_recipe_id):
         "edit_recipe.html", member_recipe=member_recipe)
 
 
+@app.route("/edit_profile/<member>", methods=["GET", "POST"])
+def edit_profile(member):
+    if request.method == "POST":
+        profile_edit = {
+            "firstName": request.form.get("firstName"),
+            "lastName": request.form.get("lastName"),
+            "password": request.form.get("password"),
+            "email": session["member"]
+        }
+
+        mongo.db.members.update({
+            "_id": ObjectId(member)}, profile_edit)
+        flash("Profile Successfully Updated")
+
+    members = mongo.db.members.find_one({
+        "_id": ObjectId(member)})
+    return render_template(
+        "edit_profile.html", members=members)
+
+
 @app.route("/browse", methods=["GET", "POST"])
 def browse():
     recipes = list(mongo.db.recipes.find())
