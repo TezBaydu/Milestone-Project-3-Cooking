@@ -895,6 +895,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 
 ### To Do
 - Edit profile url not connecting to edit profile page
+- Recipe pages: number fields to accept decimals
 - Ready In Time: issue with calc when adding more than 30 mins - Mentor
 - Search on Browse works but only for name, to update for other search features
     * Have tried searches on several sites and tutor support, searches found wereall voted down and didn not provide the correct concept. Tutor support tried to advise in several scenarios including a $match but after spending 2 days on trying to resolve I've sadly decided to abandon this option for now.   

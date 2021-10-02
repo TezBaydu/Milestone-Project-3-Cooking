@@ -3,194 +3,199 @@
 
 <h2 class="logo">Eatin</h2>
 
-<div class="row">
-    <div class="col-4 text-center text-end">
-        <a href="{{ url_for('profile', first_name=session['member']) }}" class="back-to">Back to Profile
-        </a>
-    </div>
-    <div class="col-8">
-        <h3 class="header">Create your Recipe</h3>
-    </div>
-</div>
-
-<div class="card row container">
-    <form class="card-body" method="POST" action="{{ url_for('recipes') }}">
-        <div class="card-title card-panel">
-            <div class="date-end">
-                <label for="date" class="date-label"> Date:  </label>
-                <textarea id="date" name="date" readonly></textarea>
-            </div>
-            <!-- recipe name and description -->
-            <div class="row">
-                <div class="col">
-                    <label for="recipe_name" class="recipe-name-label">Name</label>
-                    <textarea id="recipe_name" name="recipe_name" class="form-control" minlength="2" maxlength="25"
-                        spellcheck="true" required></textarea>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="recipe_description">Description</label>
-                <textarea class="form-control description" id="recipe_description" name="recipe_description"
-                    maxlength="100" required></textarea>
-            </div>
-            <!-- image upload and recipe type -->
-            <div class="card-body row">
-                <div class="col-6">
-                    <label for="recipe_image">Place image address url here <span class="optional">(Optional)</span><em> not the link address!</em></label>
-                    <textarea class="form-control" id="recipe_image" name="recipe_image"></textarea>
-                </div>
-                <div class="col-6 card-panel recipe-type">
-                    <h4 class="recipe-header">Recipe Type</h4>
-                    <!-- Breakfast checkbox -->
-                    <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="recipe_type1" name="breakfast">
-                        <label class="custom-control-label" for="recipe_type1">Breakfast</label>
-                    </div>
-
-                    <!-- Lunch checkbox -->
-                    <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="recipe_type2" name="lunch">
-                        <label class="custom-control-label" for="recipe_type2">Lunch</label>
-                    </div>
-
-                    <!-- Dinner checkbox -->
-                    <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="recipe_type3" name="dinner">
-                        <label class="custom-control-label" for="recipe_type3">Dinner</label>
-                    </div>
-                    <!-- Dessert checkbox -->
-                    <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="recipe_type4" name="dessert">
-                        <label class="custom-control-label" for="recipe_type4">Dessert</label>
-                    </div>
-                    <!-- Snack checkbox -->
-                    <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="recipe_type5" name="snack">
-                        <label class="custom-control-label" for="recipe_type5">Snack</label>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center ready-header">
-                <h5>Ready in time must not be longer then 23:59</h5>
-            </div>
-            <div class="row">
-                <div class="col-3 md-form">
-                    <label for="serves">Serves</label>
-                    <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control time no-spinner" id="serves" name="serves" minlength="0" maxlength="2" pattern="[0-9]" required>
-                </div>
-                <div class="col-3 md-form">
-                    <label for="prep_time">Prep time</label>
-                    <input type="time" class="form-control time" id="prep_time" name="prep_time" min="0" required>
-                </div>
-                <div class="col-3 md-form">
-                    <label for="cook_time">Cook time</label>
-                    <input type="time" class="form-control time" id="cook_time" name="cook_time" min="0" required>
-                </div>
-                <div class="col-3 md-form">
-                    <label for="ready_time">Ready in</label>
-                    <input type="time" class="form-control time" id="ready_time" name="ready_time" min="0" readonly>
-                </div>
-            </div>
-            <!-- ingredients header -->
-            <div class="col header reg-text">
-                <h3>Ingredients</h3>
-            </div>
-
-            <!-- ingredients form -->
-            <div class="container input_ingredient_wrap">
-                <div class="row">
-                    <div class="col-md-6 center-align rec-head">
-                        <p>Food (Not too descriptive)</p>
-                    </div>
-                    <div class="col-sm-1 rec-head">
-                        <p>Quantity</p>
-                    </div>
-                    <div class="col-lg-2 rec-head">
-                        <p>Size (Large, Small, etc)</p>
-                    </div>
-                    <div class="col-sm-1 rec-head">
-                        <p>Weight<br>(kg)</p>
-                    </div>
-                    <div class="col-sm-1 rec-head">
-                        <p>Volume<br>(lb)</p>
-                    </div>
-                </div>
-
-                <div class="row ingredients">            
-                    <!-- ingredient fields -->
-                    <div class="col-1">
-                        <p id="ing-number"><i class="fas fa-haykal"></i></p>
-                    </div>
-                    <div class="ingredient-field col-md-5">
-                        <input id="food" name="food" type="text" class="form-control validate"  maxlength="30" placeholder="Food" required>
-                    </div>
-                    <div class="ingredient-field col-sm-1">
-                        <input id="count" name="count" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]" placeholder="Quantity">
-                    </div>
-                    <div class="ingredient-field col-lg-2">
-                        <input id="size" name="size" type="text" class="form-control validate" maxlength="20" placeholder="Size">
-                    </div>
-                    <div class="ingredient-field col-sm-1">
-                        <input id="weight" name="weight" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]" placeholder="Weight">
-                    </div>
-                    <div class="ingredient-field col-sm-1">
-                        <input id="volume" name="volume" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]" placeholder="Volume">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <!-- add button for ingredients -->
-                <div class="col">
-                    <a href="#" class="add_ingredient_button"><i class="fas fa-plus-square"></i></a>
-                </div>
-            </div>
-            <!-- method header -->
-            <div class="col header reg-text">
-                <h3>Step by Step Method</h3>
-            </div>
-            <!--add recipe method textarea-->
-            <div class="container input_meth_wrap">
-                
-                <div class="row ingredients">
-                    <div class="col-1">
-                        <p id="meth-number"><i class="fas fa-haykal"></i></p>
-                    </div>
-                    <div class="input-field col-10">
-                    <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate" placeholder="Method Step" required></textarea>
-                    </div>
-                </div>
-            </div>
-            <!-- add method step button -->
-            <div class="row">
-                <div class="col">
-                    <a href="#" class="add_meth_button"><i class="fas fa-plus-square"></i></i></a>
-                </div>
-            </div>
-            
-            <!-- make public / keep private switch -->
-            <div class="row justify-content-center public-text"><span>Make Public  </span>
-                <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" id="private_switch"  name="private_switch" checked>
-                    <label class="custom-control-label" for="private_switch">Keep Private</label>
-                </div>
-            </div>
-
-            <!-- submit / cancel buttons -->
-            <div class="row justify-content-center">
-                <button type="submit" class="btn btn-grn btn-lg">Create
-                    <i class="fas fa-sign-in-alt"></i>
-                </button>
-                <button type="button" class="btn btn-rd btn-lg">Cancel
-                    <i class="fas fa-trash"></i>
-                </button>
-            </div>
+<div class="container recipe-margin-top-mob">
+    <div class="row back-to-row">
+        <div class="col-2 text-center text-end back-to-col-mob">
+            <a href="{{ url_for('profile', first_name=session['member']) }}" class="back-to">Back to Profile
+            </a>
         </div>
-    </form>
-</div>
+    </div>
+    <div class="row center-align">
+        <div class="col">
+            <h3 class="create-edit-header">Create your Recipe</h3>
+        </div>
+    </div>
 
-<div class="col-4 text-center">
-    <a href="{{ url_for('profile', first_name=session['member']) }}" class="back-to">Back to Profile
-    </a>
-</div>
+    <div class="card row">
+        <form class="card-body" method="POST" action="{{ url_for('recipes') }}">
+            <div class="card-title card-panel">
+                <div class="date-end">
+                    <label for="date" class="date-label"> Date:  </label>
+                    <textarea id="date" name="date" readonly></textarea>
+                </div>
+                <!-- recipe name and description -->
+                <div class="row">
+                    <div class="col">
+                        <label for="recipe_name" class="recipe-name-label">Name</label>
+                        <textarea id="recipe_name" name="recipe_name" class="form-control" minlength="2" maxlength="25"
+                            spellcheck="true" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="recipe_description">Description</label>
+                    <textarea class="form-control description" id="recipe_description" name="recipe_description"
+                        maxlength="100" required></textarea>
+                </div>
+                <!-- image upload and recipe type -->
+                <div class="card-body row">
+                    <div class="col-6">
+                        <label for="recipe_image">Place image address url here <span class="optional">(Optional)</span><em> not the link address!</em></label>
+                        <textarea class="form-control" id="recipe_image" name="recipe_image"></textarea>
+                    </div>
+                    <div class="col-6 card-panel recipe-type">
+                        <h4 class="recipe-header">Recipe Type</h4>
+                        <!-- Breakfast checkbox -->
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="recipe_type1" name="breakfast">
+                            <label class="custom-control-label" for="recipe_type1">Breakfast</label>
+                        </div>
 
+                        <!-- Lunch checkbox -->
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="recipe_type2" name="lunch">
+                            <label class="custom-control-label" for="recipe_type2">Lunch</label>
+                        </div>
+
+                        <!-- Dinner checkbox -->
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="recipe_type3" name="dinner">
+                            <label class="custom-control-label" for="recipe_type3">Dinner</label>
+                        </div>
+                        <!-- Dessert checkbox -->
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="recipe_type4" name="dessert">
+                            <label class="custom-control-label" for="recipe_type4">Dessert</label>
+                        </div>
+                        <!-- Snack checkbox -->
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="recipe_type5" name="snack">
+                            <label class="custom-control-label" for="recipe_type5">Snack</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center ready-header">
+                    <h5>Ready in time must not be longer then 23:59</h5>
+                </div>
+                <div class="row">
+                    <div class="col-3 md-form">
+                        <label for="serves">Serves</label>
+                        <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control time no-spinner" id="serves" name="serves" minlength="0" maxlength="2" pattern="[0-9]" required>
+                    </div>
+                    <div class="col-3 md-form">
+                        <label for="prep_time">Prep time</label>
+                        <input type="time" class="form-control time" id="prep_time" name="prep_time" min="0" required>
+                    </div>
+                    <div class="col-3 md-form">
+                        <label for="cook_time">Cook time</label>
+                        <input type="time" class="form-control time" id="cook_time" name="cook_time" min="0" required>
+                    </div>
+                    <div class="col-3 md-form">
+                        <label for="ready_time">Ready in</label>
+                        <input type="time" class="form-control time" id="ready_time" name="ready_time" min="0" readonly>
+                    </div>
+                </div>
+                <!-- ingredients header -->
+                <div class="col header reg-text">
+                    <h3>Ingredients <span class="optional">(Maximum of 10)</span></h3>
+                </div>
+
+                <!-- ingredients form -->
+                <div class="container input_ingredient_wrap">
+                    <div class="row ingredients-row">
+                        <div class="col-md-6 center-align rec-head">
+                            <p>Food (Not too descriptive)</p>
+                        </div>
+                        <div class="col-sm-1 rec-head">
+                            <p>Quantity</p>
+                        </div>
+                        <div class="col-lg-2 rec-head">
+                            <p>Size (Large, Small, etc)</p>
+                        </div>
+                        <div class="col-sm-1 rec-head">
+                            <p>Weight<br>(kg)</p>
+                        </div>
+                        <div class="col-sm-1 rec-head">
+                            <p>Volume<br>(lb)</p>
+                        </div>
+                    </div>
+
+                    <div class="row ingredients">            
+                        <!-- ingredient fields -->
+                        <div class="col-sm-1">
+                            <p id="ing-number"><i class="fas fa-haykal"></i></p>
+                        </div>
+                        <div class="ingredient-field col-md-5">
+                            <input id="food" name="food" type="text" class="form-control validate"  maxlength="30" placeholder="Food" required>
+                        </div>
+                        <div class="ingredient-field col-sm-1">
+                            <input id="count" name="count" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" placeholder="Quantity">
+                        </div>
+                        <div class="ingredient-field col-lg-2">
+                            <input id="size" name="size" type="text" class="form-control validate" maxlength="20" placeholder="Size">
+                        </div>
+                        <div class="ingredient-field col-sm-1">
+                            <input id="weight" name="weight" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" placeholder="Weight">
+                        </div>
+                        <div class="ingredient-field col-sm-1">
+                            <input id="volume" name="volume" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" placeholder="Volume">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- add button for ingredients -->
+                    <div class="col">
+                        <a href="#" class="add_ingredient_button"><i class="fas fa-plus-square"></i></a>
+                    </div>
+                </div>
+                <!-- method header -->
+                <div class="col header reg-text">
+                    <h3>Step by Step Method <span class="optional">(Maximum of 5)</span></h3>
+                </div>
+                <!--add recipe method textarea-->
+                <div class="container input_meth_wrap">
+                    
+                    <div class="row ingredients">
+                        <div class="col-1">
+                            <p id="meth-number"><i class="fas fa-haykal"></i></p>
+                        </div>
+                        <div class="input-field col-10">
+                        <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate" placeholder="Method Step" required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!-- add method step button -->
+                <div class="row">
+                    <div class="col">
+                        <a href="#" class="add_meth_button"><i class="fas fa-plus-square"></i></i></a>
+                    </div>
+                </div>
+                
+                <!-- make public / keep private switch -->
+                <div class="row justify-content-center public-text"><span>Make Public  </span>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="private_switch"  name="private_switch" checked>
+                        <label class="custom-control-label" for="private_switch">Keep Private</label>
+                    </div>
+                </div>
+
+                <!-- submit / cancel buttons -->
+                <div class="row justify-content-center">
+                    <button type="submit" class="btn btn-grn btn-lg">Create
+                        <i class="fas fa-sign-in-alt"></i>
+                    </button>
+                    <button type="button" class="btn btn-rd btn-lg">Cancel
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row>">
+        <div class="col-4 text-center text-end back-to-margin-top">
+            <a href="{{ url_for('profile', first_name=session['member']) }}" class="back-to">Back to Profile
+            </a>
+        </div>
+    </div>
+</div>
 {% endblock %}
