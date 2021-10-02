@@ -4,10 +4,16 @@
 <h2 class="logo">Eatin</h2>
 
 <div class="row">
-  <div class="col reg-text">
+  <div class="col-3 reg-text">
     <h3 class="text-center profile-name">
       {{ first_name }}'s Profile
     </h3>
+  </div>
+  <div class="col-9 reg-text">
+    <a href="{{ url_for('recipes') }}" class="btn btn-grn btn-lg">Create
+      Recipe
+      <i class="fas fa-utensil-spoon"></i>
+    </a>
   </div>
 </div>
 
@@ -51,9 +57,10 @@
           </div>
         </div>
         <div class="row">
-          <div class="col reg-text">
-            <a href="{{ url_for('recipes') }}" class="btn btn-grn btn-lg">Create
-              Recipe
+          <div class="col profile-logout">
+            <a href="{{ url_for('logout') }}" class="mb-0 text-light">
+              <i class="fas fa-sign-out-alt fa-2x mr-4 danger-color p-3 white-text rounded-circle"
+              aria-hidden="true"></i>Logout
             </a>
           </div>
         </div>
@@ -70,6 +77,7 @@
             <button class="btn btn-grn width-max" type="button" data-toggle="collapse" data-target="#collapseOne2"
               aria-expanded="true" aria-controls="collapseOne2">
               Public Recipes
+              <i class="fas fa-wifi"></i>
             </button>
           </h5>
         </div>
@@ -145,6 +153,7 @@
             <button class="btn btn-grn width-max" type="button" data-toggle="collapse" data-target="#collapseTwo2"
               aria-expanded="false" aria-controls="collapseTwo2">
               Private Recipes
+              <i class="fas fa-user-lock"></i>
             </button>
           </h5>
         </div>

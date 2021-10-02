@@ -904,6 +904,8 @@ For further help and info you can select [Cloning and Forking repositories](http
 - background image not showing
 - Home page
 - Contact page
+- Search function on members page only resets to browse - needs to go to browse and also search
+- Responsive DESIGN !!
 
 
 ### Notes to consider
