@@ -1136,6 +1136,10 @@ h3 {
     text-align: center;
 }
 
+.view-recipe-mobile {
+    display: none;
+}
+
 @media (max-width: 1199px) {
     .view-recipe-description {
         width: 80%;
@@ -1157,5 +1161,19 @@ h3 {
 
     .recipe_view .back-to {
         padding-top: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .view-recipe-mobile {
+        display: inherit;
+    }
+
+    .view-recipe-nonmobile {
+        display: none
+    }
+
+    .view-recipe-header {
+        font-size: 1rem;
     }
 }
