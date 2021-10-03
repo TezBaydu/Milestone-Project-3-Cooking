@@ -17,7 +17,7 @@
     </div>
 
     <div class="card row">
-        <form class="card-body" method="POST" action="{{ url_for('recipes') }}">
+        <form class="card-body recipe-card" method="POST" action="{{ url_for('recipes') }}">
             <div class="card-title card-panel">
                 <div class="date-end">
                     <label for="date" class="date-label"> Date:  </label>
@@ -39,7 +39,7 @@
                 <!-- image upload and recipe type -->
                 <div class="card-body row">
                     <div class="col-6">
-                        <label for="recipe_image">Place image address url here <span class="optional">(Optional)</span><em> not the link address!</em></label>
+                        <label for="recipe_image">Paste image address url here <span class="optional">(Optional)</span><em> not the link address!</em></label>
                         <textarea class="form-control" id="recipe_image" name="recipe_image"></textarea>
                     </div>
                     <div class="col-6 card-panel recipe-type">
@@ -74,9 +74,9 @@
                     </div>
                 </div>
                 <div class="row justify-content-center ready-header">
-                    <h5>Ready in time must not be longer then 23:59</h5>
+                    <h5 class="ready-header-text">Ready in time must not be longer then 23:59</h5>
                 </div>
-                <div class="row">
+                <div class="row recipe-time-row">
                     <div class="col-3 md-form">
                         <label for="serves">Serves</label>
                         <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control time no-spinner" id="serves" name="serves" minlength="0" maxlength="2" pattern="[0-9]" required>
@@ -96,7 +96,7 @@
                 </div>
                 <!-- ingredients header -->
                 <div class="col header reg-text">
-                    <h3>Ingredients <span class="optional">(Maximum of 10)</span></h3>
+                    <h3 class="ingredients-header">Ingredients <span class="optional">(Maximum of 10)</span></h3>
                 </div>
 
                 <!-- ingredients form -->
@@ -121,16 +121,16 @@
 
                     <div class="row ingredients">            
                         <!-- ingredient fields -->
-                        <div class="col-sm-1">
+                        <div class="col-sm-1 haykal">
                             <p id="ing-number"><i class="fas fa-haykal"></i></p>
                         </div>
-                        <div class="ingredient-field col-md-5">
+                        <div class="ingredient-field col-md-5 food-field">
                             <input id="food" name="food" type="text" class="form-control validate"  maxlength="30" placeholder="Food" required>
                         </div>
                         <div class="ingredient-field col-sm-1">
                             <input id="count" name="count" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" placeholder="Quantity">
                         </div>
-                        <div class="ingredient-field col-lg-2">
+                        <div class="ingredient-field col-lg-2 size-field">
                             <input id="size" name="size" type="text" class="form-control validate" maxlength="20" placeholder="Size">
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -138,6 +138,9 @@
                         </div>
                         <div class="ingredient-field col-sm-1">
                             <input id="volume" name="volume" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" placeholder="Volume">
+                        </div>
+                        <div class="ingredient-field col-sm-1 center-align">
+
                         </div>
                     </div>
                 </div>
@@ -149,16 +152,16 @@
                 </div>
                 <!-- method header -->
                 <div class="col header reg-text">
-                    <h3>Step by Step Method <span class="optional">(Maximum of 5)</span></h3>
+                    <h3 class="step-header">Step by Step Method <span class="optional">(Maximum of 5)</span></h3>
                 </div>
                 <!--add recipe method textarea-->
                 <div class="container input_meth_wrap">
                     
                     <div class="row ingredients">
-                        <div class="col-1">
+                        <div class="col-1 haykal">
                             <p id="meth-number"><i class="fas fa-haykal"></i></p>
                         </div>
-                        <div class="input-field col-10">
+                        <div class="input-field col-10 method-input">
                         <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate" placeholder="Method Step" required></textarea>
                         </div>
                     </div>
@@ -179,7 +182,7 @@
                 </div>
 
                 <!-- submit / cancel buttons -->
-                <div class="row justify-content-center">
+                <div class="row justify-content-center create-edit-buttons">
                     <button type="submit" class="btn btn-grn btn-lg">Create
                         <i class="fas fa-sign-in-alt"></i>
                     </button>

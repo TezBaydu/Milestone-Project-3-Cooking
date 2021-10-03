@@ -303,6 +303,10 @@ footer.page-footer .footer-copyright {
 
 /*-- recipe page --*/
 
+.recipe-card {
+    background-color: #fff;
+}
+
 .back-to {
     padding-top: 8rem;
     color: #568259;
@@ -374,6 +378,10 @@ footer.page-footer .footer-copyright {
     margin-top: 0;
     color: #464e47;
     font-weight: 400 !important;
+}
+
+.md-form label.active {
+    transform: translateY(10px);
 }
 
 .md-form {
@@ -481,7 +489,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 #date {
     border:none;
-    background-color: #f1fffa;
     display: inline-flex;
     resize: none;
 }
@@ -535,6 +542,89 @@ input[type=number]::-webkit-outer-spin-button {
 
     .card-body {
         padding: 1rem;
+    }
+
+    .form-control {
+        font-size: 0.75rem;
+    }
+
+    .description {
+        min-height: 5rem;
+    }
+
+    .recipe-header {
+        font-size: 1.1rem;
+        text-decoration: underline;
+    }
+
+    .card-panel {
+        display: grid;
+    }
+
+    .ready-header-text {
+        font-size: 0.7rem;
+    }
+
+    .recipe-time-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .md-form label {
+        overflow: visible;
+        margin-bottom: 10px;
+        font-size: 0.8rem;
+        margin-left: 5px;
+    }
+
+    .md-form {
+        margin-top: 0;
+        margin-bottom: -17px;
+        flex: 0 0 42%;
+        max-width: 42%;
+    }
+
+    .ingredients-header {
+        padding-top: 0;
+        font-size: 20px;
+    }
+
+    #recipe_image {
+        height: 120px;
+    }
+
+    .ingredients-row {
+        display: none;
+    }
+
+    .haykal {
+        display: none;
+    }
+
+    .method-input {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .food-field {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    .size-field {
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+
+    .step-header {
+        font-size: 20px;
+        padding-top: 2rem;
+    }
+
+    .create-edit-buttons .btn-lg {
+        padding: .7rem 1.6rem;
+        font-size: .7rem;
     }
 }
 
@@ -674,7 +764,7 @@ h3 {
     .ingredient-field ::placeholder {
         color: #f1fffa;
         opacity: 1;
-        font-size: 12px;
+        font-size: 6px;
         padding: 0;
     }
 
@@ -713,6 +803,17 @@ h3 {
 
 .alert-heading {
     text-align: center;
+}
+
+@media (max-width: 767px) {
+    .alert {
+        width: 10em;
+        margin-top: 0;
+    }
+
+    .alert-heading {
+        font-size: 1em;
+    }
 }
 
 /*-- profile page --*/

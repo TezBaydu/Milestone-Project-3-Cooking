@@ -17,7 +17,7 @@
     </div>
 
     <div class="card row">
-        <form class="card-body" method="POST" action="{{ url_for('edit_recipes', member_recipe_id=member_recipe._id) }}">
+        <form class="card-body recipe-card" method="POST" action="{{ url_for('edit_recipes', member_recipe_id=member_recipe._id) }}">
             <div class="card-title card-panel">
                 <div class="date-end">
                     <label for="date" class="date-label"> Date:  </label>
@@ -39,7 +39,7 @@
                 <!-- image upload and recipe type -->
                 <div class="card-body row">
                     <div class="col-6">
-                        <label for="recipe_image">Place image address url here <span class="optional">(Optional)</span><em>not the link address!</em></label>
+                        <label for="recipe_image">Paste image address url here <span class="optional">(Optional)</span><em>not the link address!</em></label>
                         <textarea class="form-control" id="recipe_image"name="recipe_image">{{ member_recipe.recipe_image }}</textarea>
                     </div>
                     <div class="col-6 card-panel recipe-type">
@@ -102,9 +102,9 @@
                     </div>
                 </div>
                 <div class="row justify-content-center ready-header">
-                    <h5>Ready in time must not be longer then 23:59</h5>
+                    <h5 class="ready-header-text">Ready in time must not be longer then 23:59</h5>
                 </div>
-                <div class="row">
+                <div class="row recipe-time-row">
                     <div class="col-3 md-form">
                         <label for="serves">Serves</label>
                         <input value="{{ member_recipe.serves }}" type="number"
@@ -130,7 +130,7 @@
                 </div>
                 <!-- ingredients header -->
                 <div class="col header reg-text">
-                    <h3>Ingredients <span class="optional">(Maximum of 10)</span></h3>
+                    <h3 class="ingredients-header">Ingredients <span class="optional">(Maximum of 10)</span></h3>
                 </div>
 
                 <!-- ingredients form -->
@@ -155,12 +155,12 @@
 
                     <!-- ingredient fields -->
                     <div class="row ingredients">
-                        <div class="col-sm-1">
+                        <div class="col-sm-1 haykal">
                             {% if member_recipe.food[0] != null %}
                             <p id="ing-number"><i class="fas fa-haykal"></i></p>
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-md-5">
+                        <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[0] != null %}
                             <input value="{{ member_recipe.food[0] }}" id="food" name="food" type="text"
                                 class="form-control validate" maxlength="30" placeholder="Food" required>
@@ -174,7 +174,7 @@
                                 placeholder="Quantity">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-lg-2">
+                        <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[0] != null %}
                             <input value="{{ member_recipe.size[0] }}" id="size" name="size" type="text"
                                 class="form-control validate" maxlength="20" placeholder="Size">
@@ -196,7 +196,7 @@
                                 placeholder="Volume">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-sm-1">
+                        <div class="ingredient-field col-sm-1 center-align">
                             {% if member_recipe.food[0] != null %}
                             <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                             {% endif %}
@@ -204,12 +204,12 @@
                     </div>
 
                     <div class="row ingredients">
-                        <div class="col-sm-1">
+                        <div class="col-sm-1 haykal">
                             {% if member_recipe.food[1] != null %}
                             <p id="ing-number"><i class="fas fa-haykal"></i></p>
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-md-5">
+                        <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[1] != null %}
                             <input value="{{ member_recipe.food[1] }}" id="food" name="food" type="text"
                                 class="form-control validate" maxlength="30" placeholder="Food" required>
@@ -223,7 +223,7 @@
                                 placeholder="Quantity">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-lg-2">
+                        <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[1] != null %}
                             <input value="{{ member_recipe.size[1] }}" id="size" name="size" type="text"
                                 class="form-control validate" maxlength="20" placeholder="Size">
@@ -245,7 +245,7 @@
                                 placeholder="Volume">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-sm-1">
+                        <div class="ingredient-field col-sm-1 center-align">
                             {% if member_recipe.food[0][1] != null %}
                             <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                             {% endif %}
@@ -253,12 +253,12 @@
                     </div>
 
                     <div class="row ingredients">
-                        <div class="col-sm-1">
+                        <div class="col-sm-1 haykal">
                             {% if member_recipe.food[2] != null %}
                             <p id="ing-number"><i class="fas fa-haykal"></i></p>
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-md-5">
+                        <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[2] != null %}
                             <input value="{{ member_recipe.food[2] }}" id="food" name="food" type="text"
                                 class="form-control validate" maxlength="30" placeholder="Food" required>
@@ -272,7 +272,7 @@
                                 placeholder="Quantity">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-lg-2">
+                        <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[2] != null %}
                             <input value="{{ member_recipe.size[2] }}" id="size" name="size" type="text"
                                 class="form-control validate" maxlength="20" placeholder="Size">
@@ -294,7 +294,7 @@
                                 placeholder="Volume">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-sm-1">
+                        <div class="ingredient-field col-sm-1 center-align">
                             {% if member_recipe.food[2] != null %}
                             <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                             {% endif %}
@@ -302,12 +302,12 @@
                     </div>
 
                     <div class="row ingredients">
-                        <div class="col-sm-1">
+                        <div class="col-sm-1 haykal">
                             {% if member_recipe.food[3] != null %}
                             <p id="ing-number"><i class="fas fa-haykal"></i></p>
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-md-5">
+                        <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[3] != null %}
                             <input value="{{ member_recipe.food[0][3] }}" id="food" name="food" type="text"
                                 class="form-control validate" maxlength="30" placeholder="Food" required>
@@ -321,7 +321,7 @@
                                 placeholder="Quantity">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-lg-2">
+                        <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[3] != null %}
                             <input value="{{ member_recipe.size[3] }}" id="size" name="size" type="text"
                                 class="form-control validate" maxlength="20" placeholder="Size">
@@ -343,7 +343,7 @@
                                 placeholder="Volume">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-sm-1">
+                        <div class="ingredient-field col-sm-1 center-align">
                             {% if member_recipe.food[3] != null %}
                             <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                             {% endif %}
@@ -351,12 +351,12 @@
                     </div>
 
                     <div class="row ingredients">
-                        <div class="col-sm-1">
+                        <div class="col-sm-1 haykal">
                             {% if member_recipe.food[4] != null %}
                             <p id="ing-number"><i class="fas fa-haykal"></i></p>
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-md-5">
+                        <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[4] != null %}
                             <input value="{{ member_recipe.food[4] }}" id="food" name="food" type="text"
                                 class="form-control validate" maxlength="30" placeholder="Food" required>
@@ -370,7 +370,7 @@
                                 placeholder="Quantity">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-lg-2">
+                        <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[4] != null %}
                             <input value="{{ member_recipe.size[4] }}" id="size" name="size" type="text"
                                 class="form-control validate" maxlength="20" placeholder="Size">
@@ -392,7 +392,7 @@
                                 placeholder="Volume">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-sm-1">
+                        <div class="ingredient-field col-sm-1 center-align">
                             {% if member_recipe.food[4] != null %}
                             <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                             {% endif %}
@@ -400,12 +400,12 @@
                     </div>
 
                     <div class="row ingredients">
-                        <div class="col-sm-1">
+                        <div class="col-sm-1 haykal">
                             {% if member_recipe.food[5] != null %}
                             <p id="ing-number"><i class="fas fa-haykal"></i></p>
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-md-5">
+                        <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[5] != null %}
                             <input value="{{ member_recipe.food[5] }}" id="food" name="food" type="text"
                                 class="form-control validate" maxlength="30" placeholder="Food" required>
@@ -419,7 +419,7 @@
                                 placeholder="Quantity">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-lg-2">
+                        <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[5] != null %}
                             <input value="{{ member_recipe.size[5] }}" id="size" name="size" type="text"
                                 class="form-control validate" maxlength="20" placeholder="Size">
@@ -441,7 +441,7 @@
                                 placeholder="Volume">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-sm-1">
+                        <div class="ingredient-field col-sm-1 center-align">
                             {% if member_recipe.food[5] != null %}
                             <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                             {% endif %}
@@ -449,12 +449,12 @@
                     </div>
 
                     <div class="row ingredients">
-                        <div class="col-sm-1">
+                        <div class="col-sm-1 haykal">
                             {% if member_recipe.food[6] != null %}
                             <p id="ing-number"><i class="fas fa-haykal"></i></p>
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-md-5">
+                        <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[6] != null %}
                             <input value="{{ member_recipe.food[6] }}" id="food" name="food" type="text"
                                 class="form-control validate" maxlength="30" placeholder="Food" required>
@@ -468,7 +468,7 @@
                                 placeholder="Quantity">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-lg-2">
+                        <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[6] != null %}
                             <input value="{{ member_recipe.size[6] }}" id="size" name="size" type="text"
                                 class="form-control validate" maxlength="20" placeholder="Size">
@@ -490,7 +490,7 @@
                                 placeholder="Volume">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-sm-1">
+                        <div class="ingredient-field col-sm-1 center-align">
                             {% if member_recipe.food[6] != null %}
                             <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                             {% endif %}
@@ -498,12 +498,12 @@
                     </div>
 
                     <div class="row ingredients">
-                        <div class="col-sm-1">
+                        <div class="col-sm-1 haykal">
                             {% if member_recipe.food[7] != null %}
                             <p id="ing-number"><i class="fas fa-haykal"></i></p>
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-md-5">
+                        <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[7] != null %}
                             <input value="{{ member_recipe.food[7] }}" id="food" name="food" type="text"
                                 class="form-control validate" maxlength="30" placeholder="Food" required>
@@ -517,7 +517,7 @@
                                 placeholder="Quantity">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-lg-2">
+                        <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[7] != null %}
                             <input value="{{ member_recipe.size[7] }}" id="size" name="size" type="text"
                                 class="form-control validate" maxlength="20" placeholder="Size">
@@ -539,7 +539,7 @@
                                 placeholder="Volume">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-sm-1">
+                        <div class="ingredient-field col-sm-1 center-align">
                             {% if member_recipe.food[7] != null %}
                             <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                             {% endif %}
@@ -547,12 +547,12 @@
                     </div>
 
                     <div class="row ingredients">
-                        <div class="col-sm-1">
+                        <div class="col-sm-1 haykal">
                             {% if member_recipe.food[8] != null %}
                             <p id="ing-number"><i class="fas fa-haykal"></i></p>
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-md-5">
+                        <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[8] != null %}
                             <input value="{{ member_recipe.food[8] }}" id="food" name="food" type="text"
                                 class="form-control validate" maxlength="30" placeholder="Food" required>
@@ -566,7 +566,7 @@
                                 placeholder="Quantity">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-lg-2">
+                        <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[8] != null %}
                             <input value="{{ member_recipe.size[8] }}" id="size" name="size" type="text"
                                 class="form-control validate" maxlength="20" placeholder="Size">
@@ -588,7 +588,7 @@
                                 placeholder="Volume">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-sm-1">
+                        <div class="ingredient-field col-sm-1 center-align">
                             {% if member_recipe.food[8] != null %}
                             <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                             {% endif %}
@@ -596,12 +596,12 @@
                     </div>
 
                     <div class="row ingredients">
-                        <div class="col-sm-1">
+                        <div class="col-sm-1 haykal">
                             {% if member_recipe.food[9] != null %}
                             <p id="ing-number"><i class="fas fa-haykal"></i></p>
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-md-5">
+                        <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[9] != null %}
                             <input value="{{ member_recipe.food[9] }}" id="food" name="food" type="text"
                                 class="form-control validate" maxlength="30" placeholder="Food" required>
@@ -615,7 +615,7 @@
                                 placeholder="Quantity">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-lg-2">
+                        <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[9] != null %}
                             <input value="{{ member_recipe.size[9] }}" id="size" name="size" type="text"
                                 class="form-control validate" maxlength="20" placeholder="Size">
@@ -637,7 +637,7 @@
                                 placeholder="Volume">
                             {% endif %}
                         </div>
-                        <div class="ingredient-field col-sm-1">
+                        <div class="ingredient-field col-sm-1 center-align">
                             {% if member_recipe.food[9] != null %}
                             <a href="#" class="remove_ingredient"><i class="fas fa-trash-alt"></i></a>
                             {% endif %}
@@ -654,18 +654,18 @@
 
                 <!-- method header -->
                 <div class="col header reg-text">
-                    <h3>Step by Step Method <span class="optional">(Maximum of 5)</span></h3>
+                    <h3 class="step-header">Step by Step Method <span class="optional">(Maximum of 5)</span></h3>
                 </div>
                 <!--add recipe method textarea-->
                 <div class="container input_meth_wrap">
                     
                     <div class="row ingredients">
-                            <div class="col-1">
+                            <div class="col-1 haykal">
                         {% if member_recipe.recipe_method[0] != null %}
                                 <p id="meth-number"><i class="fas fa-haykal"></i></p>
                         {% endif %}
                             </div>
-                            <div class="input-field col-10">
+                            <div class="input-field col-10 method-input">
                         {% if member_recipe.recipe_method[0] != null %}
                             <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
                                 placeholder="Method Step" required>{{ member_recipe.recipe_method[0] }}
@@ -680,12 +680,12 @@
                     </div>
 
                     <div class="row ingredients">
-                        <div class="col-1">
+                        <div class="col-1 haykal">
                     {% if member_recipe.recipe_method[1] != null %}
                             <p id="meth-number"><i class="fas fa-haykal"></i></p>
                     {% endif %}
                         </div>
-                        <div class="input-field col-10">
+                        <div class="input-field col-10 method-input">
                     {% if member_recipe.recipe_method[1] != null %}
                         <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
                             placeholder="Method Step" required>{{ member_recipe.recipe_method[1] }}
@@ -700,12 +700,12 @@
                     </div>
 
                     <div class="row ingredients">
-                        <div class="col-1">
+                        <div class="col-1 haykal">
                     {% if member_recipe.recipe_method[2] != null %}
                             <p id="meth-number"><i class="fas fa-haykal"></i></p>
                     {% endif %}
                         </div>
-                        <div class="input-field col-10">
+                        <div class="input-field col-10 method-input">
                     {% if member_recipe.recipe_method[2] != null %}
                         <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
                             placeholder="Method Step" required>{{ member_recipe.recipe_method[2] }}
@@ -720,12 +720,12 @@
                     </div>
 
                     <div class="row ingredients">
-                        <div class="col-1">
+                        <div class="col-1 haykal">
                     {% if member_recipe.recipe_method[3] != null %}
                             <p id="meth-number"><i class="fas fa-haykal"></i></p>
                     {% endif %}
                         </div>
-                        <div class="input-field col-10">
+                        <div class="input-field col-10 method-input">
                     {% if member_recipe.recipe_method[3] != null %}
                         <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
                             placeholder="Method Step" required>{{ member_recipe.recipe_method[3] }}
@@ -740,12 +740,12 @@
                     </div>
 
                     <div class="row ingredients">
-                        <div class="col-1">
+                        <div class="col-1 haykal">
                     {% if member_recipe.recipe_method[4] != null %}
                             <p id="meth-number"><i class="fas fa-haykal"></i></p>
                     {% endif %}
                         </div>
-                        <div class="input-field col-10">
+                        <div class="input-field col-10 method-input">
                     {% if member_recipe.recipe_method[4] != null %}
                         <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
                             placeholder="Method Step" required>{{ member_recipe.recipe_method[4] }}
@@ -781,7 +781,7 @@
                 </div>
 
                 <!-- submit / cancel buttons -->
-                <div class="row justify-content-center">
+                <div class="row justify-content-center create-edit-buttons">
                     <button type="submit" class="btn btn-grn btn-lg">Save Changes
                         <i class="fas fa-sign-in-alt"></i>
                     </button>
