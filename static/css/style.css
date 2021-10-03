@@ -1026,6 +1026,51 @@ h3 {
     min-width: 20em;
 }
 
+@media (max-width: 1199px) {
+    .recipe-browse-cards .card-deck .card {
+        max-width: 17em;
+        min-width: 16em;
+    }
+}
+
+@media (max-width: 991px) {
+    .recipe-browse-cards .card-deck .card {
+        max-width: 13em;
+        min-width: 13em;
+    }
+
+    .recipe-browse-cards .view img {
+        height: 118px;
+    }
+}
+
+@media (max-width: 767px) {
+    .search-section .md-form {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        max-width: 100%;
+        flex: inherit;
+    }
+
+    .input-group-append {
+        margin-left: -34px;
+    }
+
+    .browse-recipe {
+        display: contents;
+    }
+
+    .browse-recipe .recipe-header {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .recipe-browse-cards .card-deck .card {
+        max-width: 15em;
+        min-width: 15em;
+    }
+}
+
 /*-- view recipe page --*/
 
 .view-recipe-header {
