@@ -3,198 +3,214 @@
 
 <h2 class="logo">Eatin</h2>
 
-<section>
-  <!-- search text bar -->
-  <div class="container justify-content-center">
-    <div class="card z-depth-0 bordered browse-card">
-      <div class="card-body">
-        <h4 class="recipe-header center-align">Search for Recipes here !</h4>
-        <form class="form-inline mr-auto justify-content-center" action="{{ url_for('search') }}" method="post">
-          <div class="input-group md-form form-sm form-2 pl-0">
-            <input class="py-1 search-border validate" type="text" name="query" id="query"
-              placeholder="Search for recipes..." aria-label="Search" spellcheck="true">
-            <div class="input-group-append">
-              <span class="input-group-text" id="basic-text1"><i class="fas fa-search text-grey"
-                  aria-hidden="true"></i></span>
+
+<!-- search text bar -->
+<div class="container justify-content-center">
+  <div class="card z-depth-0 bordered browse-card">
+    <div class="card-body">
+      <div class="row center-align">
+        <div class="col">
+          <h4 class="recipe-header center-align">Search for Recipes here !</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col search-section">
+          <form class="form-inline mr-auto justify-content-center" action="{{ url_for('search') }}" method="post">
+            <div class="input-group md-form form-sm form-2 pl-0">
+              <input class="py-1 search-border validate" type="text" name="query" id="query"
+                placeholder="Search for recipes..." aria-label="Search" spellcheck="true">
+              <div class="input-group-append">
+                <span class="input-group-text" id="basic-text1"><i class="fas fa-search text-grey"
+                    aria-hidden="true"></i></span>
+              </div>
             </div>
-          </div>
-          <div class="row center-align">
-            <div class="col browse-button">
-              <a href="{{ url_for('browse') }}"
-                class="red btn btn-red btn-rounded btn-md my-0 ml-sm-2">
-                Reset</a>
-              <a href="{{ url_for('browse') }}" class="btn btn-grn btn-rounded btn-md my-0 ml-sm-2" type="submit">
-                Search</a>
+            <div class="row center-align">
+              <div class="col browse-button">
+                <a href="{{ url_for('browse') }}" class="red btn btn-red btn-rounded btn-md my-0 ml-sm-2">
+                  Reset</a>
+                <a href="{{ url_for('browse') }}" class="btn btn-grn btn-rounded btn-md my-0 ml-sm-2" type="submit">
+                  Search</a>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- search recipe-type bar -->
-  <div class="container justify-content-center">
-    <div class="card z-depth-0 bordered browse-card">
-      <div class="card-body">
-        <div class="row margin-width-auto justify-content-between">
-          <div class="col card-panel browse-recipe">
-            <h5 class="recipe-header"><em>Or Browse by Recipe Type (Potential to remove card)</em></h5>
-            <!-- Breakfast checkbox -->
-            <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="custom-control-input" id="recipe_type1" name="query" value="breakfast">
-              <label class="custom-control-label" for="recipe_type1">Breakfast</label>
-            </div>
+<!-- search recipe-type bar -->
+<div class="container justify-content-center">
+  <div class="card z-depth-0 bordered browse-card">
+    <div class="card-body">
+      <div class="row margin-width-auto justify-content-between">
+        <div class="col card-panel browse-recipe">
+          <h5 class="recipe-header"><em>Or Browse by Recipe Type (Potential to remove card)</em></h5>
+          <!-- Breakfast checkbox -->
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="recipe_type1" name="query" value="breakfast">
+            <label class="custom-control-label" for="recipe_type1">Breakfast</label>
+          </div>
 
-            <!-- Lunch checkbox -->
-            <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="custom-control-input" id="recipe_type2" name="lunch">
-              <label class="custom-control-label" for="recipe_type2">Lunch</label>
-            </div>
+          <!-- Lunch checkbox -->
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="recipe_type2" name="lunch">
+            <label class="custom-control-label" for="recipe_type2">Lunch</label>
+          </div>
 
-            <!-- Dinner checkbox -->
-            <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="custom-control-input" id="recipe_type3" name="dinner">
-              <label class="custom-control-label" for="recipe_type3">Dinner</label>
-            </div>
-            <!-- Dessert checkbox -->
-            <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="custom-control-input" id="recipe_type4" name="dessert">
-              <label class="custom-control-label" for="recipe_type4">Dessert</label>
-            </div>
-            <!-- Snack checkbox -->
-            <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="custom-control-input" id="recipe_type5" name="snack">
-              <label class="custom-control-label" for="recipe_type5">Snack</label>
-            </div>
+          <!-- Dinner checkbox -->
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="recipe_type3" name="dinner">
+            <label class="custom-control-label" for="recipe_type3">Dinner</label>
+          </div>
+          <!-- Dessert checkbox -->
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="recipe_type4" name="dessert">
+            <label class="custom-control-label" for="recipe_type4">Dessert</label>
+          </div>
+          <!-- Snack checkbox -->
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="recipe_type5" name="snack">
+            <label class="custom-control-label" for="recipe_type5">Snack</label>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Recipe cards -->
+</div>
+<!-- Recipe cards -->
 
-  {% for recipe in recipe_card %}
-  <h1 class="view-recipe-header">{{ recipe.recipe_name }}</h1>
+{% for recipe in recipe_card %}
+<h1 class="view-recipe-header">{{ recipe.recipe_name }}</h1>
 
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="card z-depth-0 bordered">
-          <div class="card-body">
-            <div class="card mb-4">
-              <div class="recipe_view overlay row">
-                <div class="col-2 middle">
-                  <h6>Created Date: {{ recipe.date }}</h6>
-                  <a href="{{ url_for('profile') }}" class="back-to">Back to Profile</a>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card z-depth-0 bordered">
+        <div class="card-body">
+          <div class="card mb-4">
+            <div class="recipe_view overlay row">
+              <div class="col-2 middle">
+                <h6>Created: {{ recipe.date }}</h6>
+                <a href="{{ url_for('profile') }}" class="back-to">Back to Profile</a>
+              </div>
+              {% if recipe.recipe_image == "" %}
+              <div class="col-5">
+                <img class="card-img-top"
+                  src="https://www.moregreenenergy.com.au/MoreGreen/Client-Admin/uploads/NoImage.jpg"
+                  alt="No Recipe image uploaded" />
+                <a href="#!">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+              {% else %}
+              <div class="col-5 padding center-align">
+                <img class="card-img-top view-recipe-image" src="{{ recipe.recipe_image }}" alt="Recipe image" />
+                <a href="#!">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+              {% endif %}
+              <div class="col-5 card-body">
+                <div class="row">
+                  <p class="card-text center-align bordered view-recipe-description">{{ recipe.recipe_description }}
+                  </p>
                 </div>
-                {% if recipe.recipe_image == "" %}
-                <div class="col-5">
-                  <img class="card-img-top"
-                    src="https://www.moregreenenergy.com.au/MoreGreen/Client-Admin/uploads/NoImage.jpg"
-                    alt="No Recipe image uploaded" />
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-                {% else %}
-                <div class="col-5 padding center-align">
-                  <img class="card-img-top view-recipe-image" src="{{ recipe.recipe_image }}" alt="Recipe image" />
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-                {% endif %}
-                <div class="col-5 card-body">
-                  <div class="row">
-                    <p class="card-text center-align bordered view-recipe-description">{{ recipe.recipe_description }}
-                    </p>
-                  </div>
-                  <div class="container padding">
-                    <div class="row center-align">
-                      <div class="col">
-                        <p class="serves margin-bottom-zero">Serves</p>
-                        <p>{{ recipe.serves }}</p>
-                      </div>
-                      <div class="col">
-                        <p class="margin-bottom-zero">Ready In</p>
-                        <p>{{ recipe.ready_time }} h/mins</p>
-                      </div>
+                <div class="container padding">
+                  <div class="row center-align">
+                    <div class="col">
+                      <p class="serves margin-bottom-zero">Serves</p>
+                      <p>{{ recipe.serves }}</p>
                     </div>
-                    <div class="row center-align">
-                      <div class="col">
-                        <p class="cook_prep-time margin-bottom-zero">Cooking Time</p>
-                        <p>{{ recipe.cook_time }} h/mins</p>
-                      </div>
-                      <div class="col">
-                        <p class="cook_prep-time margin-bottom-zero">Preperation Time</p>
-                        <p>{{ recipe.prep_time }} h/mins</p>
-                      </div>
+                    <div class="col">
+                      <p class="margin-bottom-zero">Ready In</p>
+                      <p>{{ recipe.ready_time }} h/mins</p>
                     </div>
                   </div>
+                  <div class="row center-align">
+                    <div class="col">
+                      <p class="cook_prep-time margin-bottom-zero">Cook Time</p>
+                      <p>{{ recipe.cook_time }} h/mins</p>
+                    </div>
+                    <div class="col">
+                      <p class="cook_prep-time margin-bottom-zero">Prep. Time</p>
+                      <p>{{ recipe.prep_time }} h/mins</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-5">
-                      <h3>Ingredients <i class="fas fa-shopping-basket"></i></h3>
-                      <ul>
-                        {% if recipe.food[0] != null %}
-                        <li>{{ recipe.count[0] }} {{ recipe.size[0] }} {{ recipe.weight[0] }}kg {{ recipe.weight[0] }}lb  {{ recipe.food[0] }}</li>
-                        {% endif %}
-                        {% if recipe.food[1] != null %}
-                        <li>{{ recipe.count[1] }} {{ recipe.size[1] }} {{ recipe.weight[1] }}kg {{ recipe.weight[1] }}lb  {{ recipe.food[1] }}</li>
-                        {% endif %}
-                        {% if recipe.food[2] != null %}
-                        <li>{{ recipe.count[2] }} {{ recipe.size[2] }} {{ recipe.weight[2] }}kg {{ recipe.weight[2] }}lb  {{ recipe.food[2] }}</li>
-                        {% endif %}
-                        {% if recipe.food[3] != null %}
-                        <li>{{ recipe.count[3] }} {{ recipe.size[3] }} {{ recipe.weight[3] }}kg {{ recipe.weight[3] }}lb  {{ recipe.food[3] }}</li>
-                        {% endif %}
-                        {% if recipe.food[4] != null %}
-                        <li>{{ recipe.count[4] }} {{ recipe.size[4] }} {{ recipe.weight[4] }}kg {{ recipe.weight[4] }}lb  {{ recipe.food[4] }}</li>
-                        {% endif %}
-                        {% if recipe.food[5] != null %}
-                        <li>{{ recipe.count[5] }} {{ recipe.size[5] }} {{ recipe.weight[5] }}kg {{ recipe.weight[5] }}lb  {{ recipe.food[5] }}</li>
-                        {% endif %}
-                        {% if recipe.food[6] != null %}
-                        <li>{{ recipe.count[6] }} {{ recipe.size[6] }} {{ recipe.weight[6] }}kg {{ recipe.weight[6] }}lb  {{ recipe.food[6] }}</li>
-                        {% endif %}
-                        {% if recipe.food[7] != null %}
-                        <li>{{ recipe.count[7] }} {{ recipe.size[7] }} {{ recipe.weight[7] }}kg {{ recipe.weight[7] }}lb  {{ recipe.food[7] }}</li>
-                        {% endif %}
-                        {% if recipe.food[8] != null %}
-                        <li>{{ recipe.count[8] }} {{ recipe.size[8] }} {{ recipe.weight[8] }}kg {{ recipe.weight[8] }}lb  {{ recipe.food[8] }}</li>
-                        {% endif %}
-                        {% if recipe.food[9] != null %}
-                        <li>{{ recipe.count[9] }} {{ recipe.size[9] }} {{ recipe.weight[9] }}kg {{ recipe.weight[9] }}lb  {{ recipe.food[9] }}</li>
-                        {% endif %}
-                      </ul>
-                    </div>
-                    <div class="col-7">
-                      <h3>Method <i class="fas fa-bread-slice"></i></h3>
-                      <ol>
-                        {% if recipe.recipe_method[0] != null %}
-                        <li class="padding">{{ recipe.recipe_method[0] }}</li>
-                        {% endif %}
-                        {% if recipe.recipe_method[1] != null %}
-                        <li class="padding">{{ recipe.recipe_method[1] }}</li>
-                        {% endif %}
-                        {% if recipe.recipe_method[2] != null %}
-                        <li class="padding">{{ recipe.recipe_method[2] }}</li>
-                        {% endif %}
-                        {% if recipe.recipe_method[3] != null %}
-                        <li class="padding">{{ recipe.recipe_method[3] }}</li>
-                        {% endif %}
-                        {% if recipe.recipe_method[4] != null %}
-                        <li class="padding">{{ recipe.recipe_method[4] }}</li>
-                        {% endif %}
-                        {% if recipe.recipe_method[5] != null %}
-                        <li class="padding">{{ recipe.recipe_method[5] }}</li>
-                        {% endif %}
-                        {% if recipe.recipe_method[6] != null %}
-                        <li class="padding">{{ recipe.recipe_method[5] }}</li>
-                        {% endif %}
-                      </ol>
-                    </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-5">
+                    <h3>Ingredients <i class="fas fa-shopping-basket"></i></h3>
+                    <ul>
+                      {% if recipe.food[0] != null %}
+                      <li>{{ recipe.count[0] }} {{ recipe.size[0] }} {{ recipe.weight[0] }}kg {{ recipe.weight[0] }}lb
+                        {{ recipe.food[0] }}</li>
+                      {% endif %}
+                      {% if recipe.food[1] != null %}
+                      <li>{{ recipe.count[1] }} {{ recipe.size[1] }} {{ recipe.weight[1] }}kg {{ recipe.weight[1] }}lb
+                        {{ recipe.food[1] }}</li>
+                      {% endif %}
+                      {% if recipe.food[2] != null %}
+                      <li>{{ recipe.count[2] }} {{ recipe.size[2] }} {{ recipe.weight[2] }}kg {{ recipe.weight[2] }}lb
+                        {{ recipe.food[2] }}</li>
+                      {% endif %}
+                      {% if recipe.food[3] != null %}
+                      <li>{{ recipe.count[3] }} {{ recipe.size[3] }} {{ recipe.weight[3] }}kg {{ recipe.weight[3] }}lb
+                        {{ recipe.food[3] }}</li>
+                      {% endif %}
+                      {% if recipe.food[4] != null %}
+                      <li>{{ recipe.count[4] }} {{ recipe.size[4] }} {{ recipe.weight[4] }}kg {{ recipe.weight[4] }}lb
+                        {{ recipe.food[4] }}</li>
+                      {% endif %}
+                      {% if recipe.food[5] != null %}
+                      <li>{{ recipe.count[5] }} {{ recipe.size[5] }} {{ recipe.weight[5] }}kg {{ recipe.weight[5] }}lb
+                        {{ recipe.food[5] }}</li>
+                      {% endif %}
+                      {% if recipe.food[6] != null %}
+                      <li>{{ recipe.count[6] }} {{ recipe.size[6] }} {{ recipe.weight[6] }}kg {{ recipe.weight[6] }}lb
+                        {{ recipe.food[6] }}</li>
+                      {% endif %}
+                      {% if recipe.food[7] != null %}
+                      <li>{{ recipe.count[7] }} {{ recipe.size[7] }} {{ recipe.weight[7] }}kg {{ recipe.weight[7] }}lb
+                        {{ recipe.food[7] }}</li>
+                      {% endif %}
+                      {% if recipe.food[8] != null %}
+                      <li>{{ recipe.count[8] }} {{ recipe.size[8] }} {{ recipe.weight[8] }}kg {{ recipe.weight[8] }}lb
+                        {{ recipe.food[8] }}</li>
+                      {% endif %}
+                      {% if recipe.food[9] != null %}
+                      <li>{{ recipe.count[9] }} {{ recipe.size[9] }} {{ recipe.weight[9] }}kg {{ recipe.weight[9] }}lb
+                        {{ recipe.food[9] }}</li>
+                      {% endif %}
+                    </ul>
+                  </div>
+                  <div class="col-7">
+                    <h3>Method <i class="fas fa-bread-slice"></i></h3>
+                    <ol>
+                      {% if recipe.recipe_method[0] != null %}
+                      <li class="padding">{{ recipe.recipe_method[0] }}</li>
+                      {% endif %}
+                      {% if recipe.recipe_method[1] != null %}
+                      <li class="padding">{{ recipe.recipe_method[1] }}</li>
+                      {% endif %}
+                      {% if recipe.recipe_method[2] != null %}
+                      <li class="padding">{{ recipe.recipe_method[2] }}</li>
+                      {% endif %}
+                      {% if recipe.recipe_method[3] != null %}
+                      <li class="padding">{{ recipe.recipe_method[3] }}</li>
+                      {% endif %}
+                      {% if recipe.recipe_method[4] != null %}
+                      <li class="padding">{{ recipe.recipe_method[4] }}</li>
+                      {% endif %}
+                      {% if recipe.recipe_method[5] != null %}
+                      <li class="padding">{{ recipe.recipe_method[5] }}</li>
+                      {% endif %}
+                      {% if recipe.recipe_method[6] != null %}
+                      <li class="padding">{{ recipe.recipe_method[5] }}</li>
+                      {% endif %}
+                    </ol>
                   </div>
                 </div>
               </div>
@@ -204,10 +220,9 @@
       </div>
     </div>
   </div>
-  </div>
-  </div>
-  {% endfor %}
-</section>
+</div>
+{% endfor %}
+
 
 
 {% endblock %}
