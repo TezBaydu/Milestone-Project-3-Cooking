@@ -225,21 +225,21 @@
 </section>
 
 <section class="view-recipe-mobile">
-  <h1 class="view-recipe-header">{{ recipe.recipe_name }}</h1>
-
+  
   <div class="container">
     <div class="row">
       <div class="col">
         <div class="card z-depth-0 bordered">
-          <div class="card-body">
-            <div class="card mb-4">
-              <div class="recipe_view overlay row">
-                <div class="col-2 middle">
+          <div class="card-body recipe-mobile-body">
+            <div class="card mb-4 recipe_view ">
+              <div class="row recipe-row-space-between">
+                <div class="col-12 recipe-date-col">
                   <h6>Created: {{ recipe.date }}</h6>
-                  <a href="{{ url_for('browse') }}" class="back-to">Back to Search</a>
                 </div>
+              </div>
+              <div class="row">
                 {% if recipe.recipe_image == "" %}
-                <div class="col-5">
+                <div class="col-10">
                   <img class="card-img-top"
                     src="https://www.moregreenenergy.com.au/MoreGreen/Client-Admin/uploads/NoImage.jpg"
                     alt="No Recipe image uploaded" />
@@ -248,21 +248,28 @@
                   </a>
                 </div>
                 {% else %}
-                <div class="col-5 padding center-align">
+                <div class="col-10 padding center-align">
                   <img class="card-img-top view-recipe-image" src="{{ recipe.recipe_image }}" alt="Recipe image" />
                   <a href="#!">
                     <div class="mask rgba-white-slight"></div>
                   </a>
                 </div>
                 {% endif %}
-                <div class="col-5 card-body">
+              </div>
+              <div class="row">
+                <div class="col card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h1 class="view-recipe-header">{{ recipe.recipe_name }}</h1>
+                    </div>
+                  </div>
                   <div class="row">
                     <p class="card-text center-align bordered view-recipe-description">{{ recipe.recipe_description }}
                     </p>
                   </div>
-                  <div class="container padding">
+                  <div class="container">
                     <div class="row center-align">
-                      <div class="col">
+                      <div class="col serves-col">
                         <p class="serves margin-bottom-zero">Serves</p>
                         <p>{{ recipe.serves }}</p>
                       </div>
@@ -285,8 +292,8 @@
                 </div>
                 <div class="container">
                   <div class="row">
-                    <div class="col-5">
-                      <h3>Ingredients <i class="fas fa-shopping-basket"></i></h3>
+                    <div class="col">
+                      <h3 class="center-align view-recipe-ingred-header">Ingredients <i class="fas fa-shopping-basket"></i></h3>
                       <ul>
                         {% if recipe.food[0] != null %}
                         <li>{{ recipe.count[0] }} {{ recipe.size[0] }} {{ recipe.weight[0] }}kg {{ recipe.weight[0] }}lb
@@ -330,8 +337,10 @@
                         {% endif %}
                       </ul>
                     </div>
-                    <div class="col-7">
-                      <h3>Method <i class="fas fa-bread-slice"></i></h3>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <h3 class="center-align view-recipe-method-header">Method <i class="fas fa-bread-slice"></i></h3>
                       <ol>
                         {% if recipe.recipe_method[0] != null %}
                         <li class="padding">{{ recipe.recipe_method[0] }}</li>
@@ -356,6 +365,11 @@
                         {% endif %}
                       </ol>
                     </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-8 recipe-back-col">
+                    <a href="{{ url_for('profile') }}" class="back-to">Back to Profile</a>
                   </div>
                 </div>
               </div>

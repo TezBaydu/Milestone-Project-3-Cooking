@@ -649,6 +649,11 @@ input[type=number]::-webkit-outer-spin-button {
     margin-bottom: 6em;
 }
 
+.register-card-width {
+    width: 60%;
+    margin-bottom: 6em;
+}
+
 label {
     margin-top: 2rem;
 }
@@ -689,6 +694,11 @@ h3 {
 }
 
 .reg-text {
+    text-align: center;
+    font-size: 24px;
+}
+
+.register-reg-text {
     text-align: center;
     font-size: 24px;
 }
@@ -775,6 +785,16 @@ h3 {
     .create-edit-header {
         font-size: 20px;
     }
+
+    .register-card-width {
+        width: 80%;
+        margin-bottom: 1em;
+    }
+
+    .register-reg-text {
+        text-align: center;
+        font-size: 18px;
+    }
 }
 
 /*-- login page --*/
@@ -785,6 +805,31 @@ h3 {
     height: 100%;
     display: block;
     position: absolute;
+}
+
+.login-card-width {
+    width: 60%;
+    margin-bottom: 6em;
+}
+
+.login-reg-text {
+    text-align: center;
+    font-size: 24px;
+}
+
+@media (max-width: 767px) {
+    .login-card-width {
+        width: 80%;
+    }
+
+    .login-reg-text {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .login-card-width {
+        margin-bottom: 1em;
+    }
 }
 
 /*-- flash messages --*/
@@ -1174,6 +1219,42 @@ h3 {
     }
 
     .view-recipe-header {
-        font-size: 1rem;
+        font-size: 1.25rem;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .recipe-date-col {
+        text-align: center;
+    }
+
+    .recipe-back-col {
+        display: contents;
+    }
+
+    .recipe-row-space-between {
+        justify-content: stretch !important;
+    }
+
+    .recipe-mobile-body {
+        padding: 0;
+    }
+
+    .view-recipe-description {
+        width: 80%;
+    }
+
+    .view-recipe-method-header {
+        padding-top: 0;
+        text-decoration: underline;
+    }
+
+    .view-recipe-ingred-header {
+        padding-top: 0;
+        text-decoration: underline;
+    }
+
+    .serves-col {
+        align-self: center;
     }
 }
