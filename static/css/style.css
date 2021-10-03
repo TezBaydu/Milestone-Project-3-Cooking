@@ -926,6 +926,40 @@ h3 {
     }
 }
 
+@media (max-width: 767px) {
+    .profile-logout {
+        margin-top: 0;
+    }
+
+    .margin-top-zero {
+        margin-top: 0;
+    }
+
+    .profile-card {
+        height: 330px;
+    }
+
+    .profile-recipe-button-flex .btn-md {
+        padding: .7rem 1rem;
+        font-size: 0.5rem;
+    }
+
+    .profile-card-deck h6 {
+        font-size: 0.75rem;
+    }
+
+    .profile-card-deck .card-title {
+        font-size: 1rem;
+    }
+
+    .profile-card-deck .card .card-body .card-text {
+        font-size: 0.75rem;
+    }
+
+    .profile-card-deck .view img {
+        height: 110px;
+    }
+}
 
 /*-- browse page --*/
 

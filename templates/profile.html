@@ -106,7 +106,7 @@
                       {% endif %}
                     </div>
                     <div class="card-body">
-                      <h6>Created Date: {{ member_recipe.date }}</h6>
+                      <h6>Created: {{ member_recipe.date }}</h6>
                       <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>
                       <p class="card-text">{{ member_recipe.recipe_description }}</p>
                       <div>
@@ -183,7 +183,7 @@
                       {% endif %}
                     </div>
                     <div class="card-body">
-                      <h6>Created Date: {{ member_recipe.date }}</h6>
+                      <h6>Created: {{ member_recipe.date }}</h6>
                       <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>
                       <p class="card-text">{{ member_recipe.recipe_description }}</p>
                       <div>
@@ -239,51 +239,52 @@
       </h3>
     </div>
   </div>
+  <div class="container">
+    <div class="row">
+      <div class="card profile-card col">
+        <div class="card-body">
+          <div class="card-title card-panel">
+            <div class="row">
+              <div class="col s-12 input-with-pre-icon">
+                <i class="fas fa-user input-prefix"></i>
+                <label class="profile-label" for="firstName">First Name </label>
+                <p class="profile-card-name">{{ first_name }}</p>
+              </div>
 
-  <div class="row">
-    <div class="card profile-card col">
-      <div class="card-body">
-        <div class="card-title card-panel">
-          <div class="row">
-            <div class="col s-12 input-with-pre-icon">
-              <i class="fas fa-user input-prefix"></i>
-              <label class="profile-label" for="firstName">First Name </label>
-              <p class="profile-card-name">{{ first_name }}</p>
+              <div class="col s-12 input-with-pre-icon">
+                <i class="fas fa-user input-prefix"></i>
+                <label class="profile-label" for="lastName">Last Name </label>
+                <p class="profile-card-name">{{ last_name }}</p>
+              </div>
             </div>
-
-            <div class="col s-12 input-with-pre-icon">
-              <i class="fas fa-user input-prefix"></i>
-              <label class="profile-label" for="lastName">Last Name </label>
-              <p class="profile-card-name">{{ last_name }}</p>
+            <div class="row">
+              <div class="col s-12 input-with-pre-icon">
+                <i class="fas fa-envelope prefix"></i>
+                <label for="email" data-error="wrong" data-success="right">Email </label>
+                <p class="profile-card-name">{{ email }}</p>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col s-12 input-with-pre-icon">
-              <i class="fas fa-envelope prefix"></i>
-              <label for="email" data-error="wrong" data-success="right">Email </label>
-              <p class="profile-card-name">{{ email }}</p>
+            <div class="row profile-buttons">
+              <div class="col-6 center-align">
+                <a href="" class="btn info-color-dark btn-md margin-top-zero" type="button">
+                  Edit account
+                  <i class="fas fa-edit"></i>
+                </a>
+              </div>
+              <div class="col-6 center-align">
+                <button class="btn btn-rd btn-md margin-top-zero" type="button">
+                  Delete account
+                  <i class="fas fa-user-times"></i>
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="row profile-buttons">
-            <div class="col-6 center-align">
-              <a href="" class="btn info-color-dark btn-md" type="button">
-                Edit account
-                <i class="fas fa-edit"></i>
-              </a>
-            </div>
-            <div class="col-6 center-align">
-              <button class="btn btn-rd btn-md" type="button">
-                Delete account
-                <i class="fas fa-user-times"></i>
-              </button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col profile-logout">
-              <a href="{{ url_for('logout') }}" class="mb-0 text-light">
-                <i class="fas fa-sign-out-alt fa-2x mr-4 danger-color p-3 white-text rounded-circle"
-                  aria-hidden="true"></i>Logout
-              </a>
+            <div class="row">
+              <div class="col profile-logout">
+                <a href="{{ url_for('logout') }}" class="mb-0 text-light">
+                  <i class="fas fa-sign-out-alt fa-2x mr-4 danger-color p-3 white-text rounded-circle"
+                    aria-hidden="true"></i>Logout
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -339,7 +340,7 @@
                       {% endif %}
                     </div>
                     <div class="card-body">
-                      <h6>Created Date: {{ member_recipe.date }}</h6>
+                      <h6>Created: {{ member_recipe.date }}</h6>
                       <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>
                       <p class="card-text">{{ member_recipe.recipe_description }}</p>
                       <div>
@@ -416,7 +417,7 @@
                       {% endif %}
                     </div>
                     <div class="card-body">
-                      <h6>Created Date: {{ member_recipe.date }}</h6>
+                      <h6>Created: {{ member_recipe.date }}</h6>
                       <h4 class="card-title">{{ member_recipe.recipe_name }}</h4>
                       <p class="card-text">{{ member_recipe.recipe_description }}</p>
                       <div>
