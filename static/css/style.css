@@ -886,6 +886,47 @@ h3 {
     width: 100%;
 }
 
+.profile-ipad-max {
+    display: none;
+}
+
+@media (max-width: 1199px) {
+    .profile-buttons .btn.btn-md {
+        padding: .7rem 1rem;
+    }
+
+    .profile-card {
+        height: 500px;
+    }
+
+    .profile-label {
+        margin-top: 0;
+    }
+
+    .profile-card-deck .card {
+        font-size: 0.75em;
+    }
+
+    .profile-recipe-button-flex {
+        display: flex;
+    }
+}
+
+@media (max-width: 991px) {
+    .profile-ipad-max {
+        display: inherit;
+    }
+
+    .profile-max {
+        display: none;
+    }
+
+    .profile-card {
+        height: 350px;
+    }
+}
+
+
 /*-- browse page --*/
 
 .browse-card {
