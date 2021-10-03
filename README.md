@@ -909,6 +909,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Search function on members page only resets to browse - needs to go to browse and also search
 - Responsive DESIGN !! - Contact page to be created and home page responsiveness(after image cover)
 - Heroku: deployment not coming through - python issue
+- Open app.py goes to create recipe page - to open on index.html
 
 
 ### Notes to consider

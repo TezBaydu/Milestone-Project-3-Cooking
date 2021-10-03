@@ -18,6 +18,11 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+@app.route("/home")
+def home():
+    return render_template("index.html")
+
+
 @app.route("/")
 @app.route("/recipes", methods=["GET", "POST"])
 def recipes():
@@ -237,11 +242,6 @@ def logout():
     flash("You are now logged out")
     session.pop("member")
     return redirect(url_for("login"))
-
-
-@app.route("/home")
-def home():
-    return render_template("index.html")
 
 
 if __name__ == "__main__":
