@@ -907,7 +907,8 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Home page
 - Contact page
 - Search function on members page only resets to browse - needs to go to browse and also search
-- Responsive DESIGN !!
+- Responsive DESIGN !! - Contact page to be created and home page responsiveness(after image cover)
+- Heroku: deployment not coming through - python issue
 
 
 ### Notes to consider

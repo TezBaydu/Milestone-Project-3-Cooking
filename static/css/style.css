@@ -1258,3 +1258,44 @@ h3 {
         align-self: center;
     }
 }
+
+/*-- home page --*/
+
+.home-logo {
+    color: #ccfccb;
+    text-shadow: 2px 0 0 #464e47, -2px 0 0 #464e47, 0 2px 0 #464e47, 0 -2px 0 #464e47, 1px 1px #464e47, -1px -1px 0 #464e47, 1px -1px 0 #464e47, -1px 1px 13px #464e47;
+    text-align: center;
+}
+
+.tag-line {
+    padding-top: 0;
+    letter-spacing: 2px;
+    margin-bottom: 5em;
+}
+
+.home-para-text {
+    letter-spacing: 1px;
+    font-size: 24px;
+}
+
+.home-text-logo {
+    color: #ccfccb;
+    text-shadow: 2px 0 0 #464e47, -2px 0 0 #464e47, 0 2px 0 #464e47, 0 -2px 0 #464e47, 1px 1px #464e47, -1px -1px 0 #464e47, 1px -1px 0 #464e47, -1px 1px 13px #464e47;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 2em;
+    margin-right: 0;
+}
+
+.here-to-help {
+    align-self: flex-end;
+}
+
+.home-bottom-filler {
+    margin-bottom: 10em;
+}
+
+.home-image {
+    background-image: url(/assets/images/vegan-boxed.jpg);
+    background-size: cover;
+}
