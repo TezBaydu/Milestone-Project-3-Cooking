@@ -221,10 +221,6 @@ a.text-light:hover {
 
 /*-- footer --*/
 
-footer {
-    margin-top: 6em;
-}
-
 .page-footer {
     background-color: #464e47;
     box-shadow: 0 0 30px -10px black;
@@ -1263,7 +1259,7 @@ h3 {
 
 .home-logo {
     color: #ccfccb;
-    text-shadow: 2px 0 0 #464e47, -2px 0 0 #464e47, 0 2px 0 #464e47, 0 -2px 0 #464e47, 1px 1px #464e47, -1px -1px 0 #464e47, 1px -1px 0 #464e47, -1px 1px 13px #464e47;
+    text-shadow: 1px 4px 0 #464e47, -1px 0 0 #464e47, 0 1px 0 #464e47, 0 -1px 0 #464e47, 1px 1px #464e47, -1px -1px 0 #464e47, 1px -1px 0px #464e47, -1px 1px 8px #464e47;
     text-align: center;
 }
 
@@ -1276,12 +1272,12 @@ h3 {
 .home-para-text {
     letter-spacing: 1px;
     font-size: 24px;
+    font-weight: 400;
 }
 
 .home-text-logo {
     color: #ccfccb;
-    text-shadow: 2px 0 0 #464e47, -2px 0 0 #464e47, 0 2px 0 #464e47, 0 -2px 0 #464e47, 1px 1px #464e47, -1px -1px 0 #464e47, 1px -1px 0 #464e47, -1px 1px 13px #464e47;
-    text-align: center;
+    text-shadow: 1px 4px 0 #464e47, -1px 0 0 #464e47, 0 1px 0 #464e47, 0 -1px 0 #464e47, 1px 1px #464e47, -1px -1px 0 #464e47, 1px -1px 0px #464e47, -1px 1px 8px #464e47;
     text-decoration: none;
     margin-left: 2em;
     margin-right: 0;
@@ -1296,6 +1292,31 @@ h3 {
 }
 
 .home-image {
-    background-image: url(/assets/images/vegan-boxed.jpg);
+    background: url(../images/vegan-boxed.jpg);
     background-size: cover;
+    background-position: center;
+}
+
+.home-padding {
+    padding: 10px;
+}
+
+@media (max-width: 1199px) {
+    .home-text-logo {
+        margin-left: 1em;
+    }
+}
+
+@media (max-width: 991px) {
+    .tag-line {
+        margin-bottom: 2em;
+    }
+
+    .home-logo {
+        padding-top: 2em;
+    }
+
+    .here-to-help {
+        font-weight: 700;
+    }
 }
