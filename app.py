@@ -23,6 +23,15 @@ def home():
     return render_template("index.html")
 
 
+@app.route("/contact")
+def contact():
+    if request.method == "POST":
+
+        flash("Thanks for getting in touch, we will contact you soon.")
+        return redirect(url_for('contact'))
+    return render_template("contact.html")
+
+
 @app.route("/")
 @app.route("/recipes", methods=["GET", "POST"])
 def recipes():

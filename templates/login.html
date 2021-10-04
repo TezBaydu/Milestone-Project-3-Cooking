@@ -1,19 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
+<section class="login-image">
+
     <h2 class="logo">Eatin</h2>
 
-    <h3 class="text-center header">Login</h3>
+    <h3 class="text-center header login-header">Login</h3>
 
     <div class="card login-card-width row">
-        <form class="card-body" method="POST" action="{{ url_for('login') }}">
+        <form class="card-body login-body" method="POST" action="{{ url_for('login') }}">
             <div class="card-title card-panel">
                 <!-- email -->
                 <div class="row">
                     <div class="col s-12 input-with-pre-icon">
                         <i class="fas fa-user-cog prefix"></i>
                         <label for="email" data-error="wrong" data-success="right">Email </label>
-                        <input type="email" id="email" name="email" class="form-control validate" minlength="5" required>
+                        <input type="email" id="email" name="email" class="form-control validate" minlength="5"
+                            required>
                     </div>
                 </div>
                 <!-- password  -->
@@ -37,12 +40,13 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <p class="login-reg-text">Not already a member? Click 
+                <p class="login-reg-text">Not already a member? Click
                     <a class="login" href="{{ url_for('register') }}">Register</a>
                 </p>
             </div>
         </div>
     </div>
 
-{% endblock %}
+</section>
 
+{% endblock %}

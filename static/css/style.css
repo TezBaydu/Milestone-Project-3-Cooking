@@ -815,6 +815,18 @@ h3 {
 
 /*-- login page --*/
 
+.login-image {
+    background: url(../images/pan-with-olive-oil-light.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+.login-header {
+    color: #f1fffa;
+    text-shadow: 1px 2px 0 #464e47, -1px 0 0 #464e47, 0 1px 0 #464e47, 0 -1px 0 #464e47, 1px 1px #464e47, -1px -1px 0 #464e47, 1px -1px 0px #464e47, -1px 1px 8px #464e47;
+    text-decoration: none;
+}
+
 #login-image img {
     background-size: cover;
     width: 100%;
@@ -831,6 +843,25 @@ h3 {
 .login-reg-text {
     text-align: center;
     font-size: 24px;
+    margin-bottom: 7em;
+    border-style: double;
+    background-color: #f1fffa;
+}
+
+.login-body {
+    background-color: #f1fffab7;
+}
+
+@media (max-width: 1199px) {
+    .login-reg-text {
+        margin-bottom: 21em;
+    }
+}
+
+@media (max-width: 991px) {
+    .login-reg-text {
+        margin-bottom: 7em;
+    }
 }
 
 @media (max-width: 767px) {
@@ -840,7 +871,7 @@ h3 {
 
     .login-reg-text {
         text-align: center;
-        font-size: 18px;
+        font-size: 12px;
     }
 
     .login-card-width {
@@ -1342,6 +1373,13 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
+    .home-image {
+        background: url(../images/vegan-boxed-light.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
     .home-para-text {
         font-size: 12px;
     }
@@ -1355,15 +1393,45 @@ h3 {
         margin-bottom: 0;
     }
 
-    .home-back-color {
-        background-color: rgba(255, 255, 255, 0.692);
-    }
-
     .here-to-help {
         margin-bottom: 0;
     }
 
     .home-bottom-filler {
         margin-bottom: 0;
+    }
+}
+
+/*-- contact page --*/
+
+.contact-image {
+    background: url(../images/iron-chef-light.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#contact_message {
+    height: 7em;
+}
+
+.contact-reg-text {
+    margin-bottom: 7em;
+}
+
+@media (max-width: 1199px) {
+    .contact-reg-text {
+        margin-bottom: 17em;
+    }
+}
+
+@media (max-width: 991px) {
+    .contact-reg-text {
+        margin-bottom: 5em;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-reg-text {
+        margin-bottom: 1em;
     }
 }

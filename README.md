@@ -895,21 +895,23 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Recipe pages: number fields to accept decimals - Done
 - background image not showing - Done adjusted images into static folder
 - Home page - Done
+- Contact page - Done
+- Responsive DESIGN !! - Contact page to be created and home page responsiveness(after image cover) - Done
+- Col classes have padding right 15px and will not fill page - not an issue anymore
+- iphone 5 nav menu items not listed correctly - Done
 
 ### To Do
-- Edit profile url not connecting to edit profile page
-- Ready In Time: issue with calc when adding more than 30 mins - Mentor
-- Search on Browse works but only for name, to update for other search features
-    * Have tried searches on several sites and tutor support, searches found wereall voted down and didn not provide the correct concept. Tutor support tried to advise in several scenarios including a $match but after spending 2 days on trying to resolve I've sadly decided to abandon this option for now.   
-- Profile: Text to add create in accordion but fails on both when 1 recipe is applied to one or the other
-- Profile: on delete a warning to open to confirm
-- Col classes have padding right 15px and will not fill page
-- iphone 5 nav menu items not listed correctly
-- Contact page
-- Search function on members page only resets to browse - needs to go to browse and also search
-- Responsive DESIGN !! - Contact page to be created and home page responsiveness(after image cover)
-- Heroku: deployment not coming through - python issue
+- Heroku: deployment not coming through - python issue - Mentor
+- Contact - Email sent correctly but redirect method is invalid - Mentor
+- Edit profile url not connecting to edit profile page - Mentor
+- Ready In Time: issue with calc when adding more than 30 mins - Mentor 
+- Profile: Text to add create in accordion but fails on both when 1 recipe is applied to one or the other - Mentor
+- Profile: on delete a warning to open to confirm - Mentor
+- Search function on members page only resets to browse - needs to go to browse and also search - Mentor
 - Open app.py goes to create recipe page - to open on index.html - Mentor
+
+- Search on Browse works but only for name, to update for other search features
+    * Have tried searches on several sites and tutor support, searches found wereall voted down and didn not provide the correct concept. Tutor support tried to advise in several scenarios including a $match but after spending 2 days on trying to resolve I've sadly decided to abandon this option for now.  
 
 
 ### Notes to consider
