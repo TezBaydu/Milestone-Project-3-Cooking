@@ -893,6 +893,8 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Profile: view recipe button applied but link required to recipe card - Done and new template created associated to member so private recipes can be viewed too
 - Profile: add logout button in profile card
 - Recipe pages: number fields to accept decimals - Done
+- background image not showing - Done adjusted images into static folder
+- Home page - Done
 
 ### To Do
 - Edit profile url not connecting to edit profile page
@@ -903,8 +905,6 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Profile: on delete a warning to open to confirm
 - Col classes have padding right 15px and will not fill page
 - iphone 5 nav menu items not listed correctly
-- background image not showing
-- Home page
 - Contact page
 - Search function on members page only resets to browse - needs to go to browse and also search
 - Responsive DESIGN !! - Contact page to be created and home page responsiveness(after image cover)

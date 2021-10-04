@@ -1320,3 +1320,30 @@ h3 {
         font-weight: 700;
     }
 }
+
+@media (max-width: 767px) {
+    .home-para-text {
+        font-size: 12px;
+    }
+
+    .home-mob-col {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+
+    .tag-line {
+        margin-bottom: 0;
+    }
+
+    .home-back-color {
+        background-color: rgba(255, 255, 255, 0.692);
+    }
+
+    .here-to-help {
+        margin-bottom: 0;
+    }
+
+    .home-bottom-filler {
+        margin-bottom: 0;
+    }
+}
