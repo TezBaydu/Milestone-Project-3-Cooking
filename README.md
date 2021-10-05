@@ -900,15 +900,18 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Col classes have padding right 15px and will not fill page - not an issue anymore
 - iphone 5 nav menu items not listed correctly - Done
 - Heroku: deployment not coming through - pymongo - 3.12.0 version wasn't saved previously, potentially page wasn't saved when "pip3 freeze --local > requirements.txt" action taken in console - Done
+- Open app.py goes to create recipe page - to open on index.html - Done updated app.py and placed @app.route("/") above @app.route("/home")
+- Edit profile url not connecting to edit profile page - Done
 
 ### To Do
-- Contact - Email sent correctly but redirect method is invalid - Mentor
-- Edit profile url not connecting to edit profile page - Mentor
+- Edit profile - details updated but redirect errors based on line 217 of app.py first_name = member["firstName"] - Mentor
+- Contact - Email sent correctly but redirect method is invalid, Error: "POST /contact HTTP/1.1" 405 - Mentor
 - Ready In Time: issue with calc when adding more than 30 mins - Mentor 
 - Profile: Text to add create in accordion but fails on both when 1 recipe is applied to one or the other - Mentor
 - Profile: on delete a warning to open to confirm - Mentor
 - Search function on members page only resets to browse - needs to go to browse and also search - Mentor
-- Open app.py goes to create recipe page - to open on index.html - Mentor
+- Search - limit amount of images to view - Mentor
+- Redirect on error? - Mentor
 
 - Search on Browse works but only for name, to update for other search features
     * Have tried searches on several sites and tutor support, searches found wereall voted down and didn not provide the correct concept. Tutor support tried to advise in several scenarios including a $match but after spending 2 days on trying to resolve I've sadly decided to abandon this option for now.  

@@ -18,6 +18,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+@app.route("/")
 @app.route("/home")
 def home():
     return render_template("index.html")
@@ -26,13 +27,12 @@ def home():
 @app.route("/contact")
 def contact():
     if request.method == "POST":
-
         flash("Thanks for getting in touch, we will contact you soon.")
-        return redirect(url_for('contact'))
+        return redirect(url_for("home"))
+
     return render_template("contact.html")
 
 
-@app.route("/")
 @app.route("/recipes", methods=["GET", "POST"])
 def recipes():
     if request.method == "POST":
@@ -114,24 +114,27 @@ def edit_recipes(member_recipe_id):
         "edit_recipe.html", member_recipe=member_recipe)
 
 
-@app.route("/edit_profile/<member>", methods=["GET", "POST"])
-def edit_profile(member):
+@app.route("/edit_profile/<member_id>", methods=["GET", "POST"])
+def edit_profile(member_id):
+    member = mongo.db.members.find_one(
+        {"email": session["member"]})
     if request.method == "POST":
         profile_edit = {
             "firstName": request.form.get("firstName"),
             "lastName": request.form.get("lastName"),
-            "password": request.form.get("password"),
-            "email": session["member"]
+            "password": generate_password_hash(request.form.get("password")),
+            "email": request.form.get("email")
         }
 
         mongo.db.members.update({
-            "_id": ObjectId(member)}, profile_edit)
+            "_id": ObjectId(member_id)}, profile_edit)
         flash("Profile Successfully Updated")
+        return redirect(url_for("profile"))
 
-    members = mongo.db.members.find_one({
-        "_id": ObjectId(member)})
+    member = mongo.db.members.find_one({
+        "_id": ObjectId(member_id)})
     return render_template(
-        "edit_profile.html", members=members)
+        "edit_profile.html", member=member)
 
 
 @app.route("/browse", methods=["GET", "POST"])
@@ -221,7 +224,7 @@ def profile():
         return render_template(
             "profile.html", first_name=first_name,
             last_name=last_name, email=email,
-            member_recipes=member_recipes)
+            member_recipes=member_recipes, member=member)
 
     return redirect(url_for("login"))
 
