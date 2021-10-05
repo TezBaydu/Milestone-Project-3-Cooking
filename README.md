@@ -916,6 +916,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 - login forgotten password? - Mentor
 - Profile delete but diesn't delete public recipes from view...should it? - Mentor
 - Input and textareas patterns still allow some characters? - Mentor 
+- Create recipe in heroku app doesn't work on mobile...?! - Mentor
 
 - Search on Browse works but only for name, to update for other search features
     * Have tried searches on several sites and tutor support, searches found wereall voted down and didn not provide the correct concept. Tutor support tried to advise in several scenarios including a $match but after spending 2 days on trying to resolve I've sadly decided to abandon this option for now.  
