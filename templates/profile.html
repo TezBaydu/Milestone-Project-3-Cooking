@@ -51,10 +51,11 @@
               </a>
             </div>
             <div class="col-6">
-              <button class="btn btn-rd btn-md" type="button">
+              <a class="btn btn-rd btn-md" type="button"
+                href="{{ url_for('delete_profile', member_id=member._id) }}">
                 Delete account
                 <i class="fas fa-user-times"></i>
-              </button>
+              </a>
             </div>
           </div>
           <div class="row">
@@ -272,10 +273,11 @@
                 </a>
               </div>
               <div class="col-6 center-align">
-                <button class="btn btn-rd btn-md margin-top-zero" type="button">
+                <a class="btn btn-rd btn-md margin-top-zero" type="button"
+                  href="{{ url_for('delete_profile', member_id=member._id) }}">
                   Delete account
                   <i class="fas fa-user-times"></i>
-                </button>
+                </a>
               </div>
             </div>
             <div class="row">

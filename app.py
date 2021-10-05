@@ -18,12 +18,14 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# initial start home page
 @app.route("/")
 @app.route("/home")
 def home():
     return render_template("index.html")
 
 
+# contact page
 @app.route("/contact")
 def contact():
     if request.method == "POST":
@@ -33,6 +35,7 @@ def contact():
     return render_template("contact.html")
 
 
+# members create recipes page
 @app.route("/recipes", methods=["GET", "POST"])
 def recipes():
     if request.method == "POST":
@@ -69,6 +72,7 @@ def recipes():
         "recipes.html", recipes=recipes)
 
 
+# search function
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -77,6 +81,7 @@ def search():
     return render_template("browse.html", recipes=recipes)
 
 
+# members edit recipes page
 @app.route("/edit_recipes/<member_recipe_id>", methods=["GET", "POST"])
 def edit_recipes(member_recipe_id):
     if request.method == "POST":
@@ -114,6 +119,7 @@ def edit_recipes(member_recipe_id):
         "edit_recipe.html", member_recipe=member_recipe)
 
 
+# members edit profile page
 @app.route("/edit_profile/<member_id>", methods=["GET", "POST"])
 def edit_profile(member_id):
     member = mongo.db.members.find_one(
@@ -137,6 +143,7 @@ def edit_profile(member_id):
         "edit_profile.html", member=member)
 
 
+# browse page
 @app.route("/browse", methods=["GET", "POST"])
 def browse():
     recipes = list(mongo.db.recipes.find())
@@ -144,6 +151,7 @@ def browse():
         "browse.html", recipes=recipes)
 
 
+# view recipe card
 @app.route("/view_recipe/<recipe_id>", methods=["GET", "POST"])
 def view_recipe(recipe_id):
     recipe_card = mongo.db.recipes.find(
@@ -154,6 +162,7 @@ def view_recipe(recipe_id):
         "view_recipe.html", recipe_card=recipe_card, recipes=recipes)
 
 
+# register page
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -181,6 +190,7 @@ def register():
     return render_template("register.html")
 
 
+# login page
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -209,6 +219,7 @@ def login():
     return render_template("login.html")
 
 
+# members profile page
 @app.route("/profile/", methods=["GET", "POST"])
 def profile():
     # Obtain members details from the database
@@ -229,6 +240,7 @@ def profile():
     return redirect(url_for("login"))
 
 
+# members view recipe card
 @app.route("/view_member_recipe/<recipe_id>", methods=["GET", "POST"])
 def view_member_recipe(recipe_id):
     recipe_card = mongo.db.recipes.find(
@@ -240,6 +252,7 @@ def view_member_recipe(recipe_id):
         recipe_card=recipe_card, member_recipes=member_recipes)
 
 
+# delete recipes function
 @app.route("/delete_recipes/<member_recipe_id>")
 def delete_recipes(member_recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(member_recipe_id)})
@@ -248,6 +261,17 @@ def delete_recipes(member_recipe_id):
     return redirect(url_for("profile"))
 
 
+# delete profile function
+@app.route("/delete_profile/<member_id>")
+def delete_profile(member_id):
+    mongo.db.members.remove({"member": member_id.lower()})
+    flash("Account Successfully deleted")
+    session.pop("member")
+
+    return redirect(url_for("home"))
+
+
+# logout function
 @app.route("/logout")
 def logout():
     # remove member from session cookies

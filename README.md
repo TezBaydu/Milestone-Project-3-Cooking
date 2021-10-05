@@ -902,6 +902,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Heroku: deployment not coming through - pymongo - 3.12.0 version wasn't saved previously, potentially page wasn't saved when "pip3 freeze --local > requirements.txt" action taken in console - Done
 - Open app.py goes to create recipe page - to open on index.html - Done updated app.py and placed @app.route("/") above @app.route("/home")
 - Edit profile url not connecting to edit profile page - Done
+- Delete profile - Done
 
 ### To Do
 - Edit profile - details updated but redirect errors based on line 217 of app.py first_name = member["firstName"] - Mentor
@@ -911,7 +912,10 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Profile: on delete a warning to open to confirm - Mentor
 - Search function on members page only resets to browse - needs to go to browse and also search - Mentor
 - Search - limit amount of images to view - Mentor
-- Redirect on error? - Mentor
+- Redirect on error?: first_name = member["firstName"] TypeError: 'NoneType' object is not subscriptable, done when  - Mentor
+- login forgotten password? - Mentor
+- Profile delete but diesn't delete public recipes from view...should it? - Mentor
+- Input and textareas patterns still allow some characters? - Mentor 
 
 - Search on Browse works but only for name, to update for other search features
     * Have tried searches on several sites and tutor support, searches found wereall voted down and didn not provide the correct concept. Tutor support tried to advise in several scenarios including a $match but after spending 2 days on trying to resolve I've sadly decided to abandon this option for now.  

@@ -17,13 +17,13 @@
                         <i class="fas fa-user input-prefix"></i>
                         <label for="contact_firstName">First Name </label>
                         <input type="text" id="contact_firstName" name="contact_firstName" class="form-control validate" minlength="2"
-                            maxlength="15" required>
+                            maxlength="15" pattern="^[a-zA-Z]{2,15}$" required>
                     </div>
                     <div class="col s-12 input-with-pre-icon">
                         <i class="fas fa-user input-prefix"></i>
                         <label for="contact_lastName">Last Name </label>
                         <input type="text" id="contact_lastName" name="contact_lastName" class="form-control validate" minlength="2"
-                            maxlength="15" required>
+                            maxlength="15"  pattern="^[a-zA-Z]{2,15}$" required>
                     </div>
                 </div>
                 <!-- email -->
