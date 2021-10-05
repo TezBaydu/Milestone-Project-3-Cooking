@@ -899,9 +899,9 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Responsive DESIGN !! - Contact page to be created and home page responsiveness(after image cover) - Done
 - Col classes have padding right 15px and will not fill page - not an issue anymore
 - iphone 5 nav menu items not listed correctly - Done
+- Heroku: deployment not coming through - pymongo - 3.12.0 version wasn't saved previously, potentially page wasn't saved when "pip3 freeze --local > requirements.txt" action taken in console - Done
 
 ### To Do
-- Heroku: deployment not coming through - python issue - Mentor
 - Contact - Email sent correctly but redirect method is invalid - Mentor
 - Edit profile url not connecting to edit profile page - Mentor
 - Ready In Time: issue with calc when adding more than 30 mins - Mentor 
