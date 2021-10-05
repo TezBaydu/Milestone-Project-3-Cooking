@@ -881,7 +881,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Create recipe: delete on ingredients deleting parent but sibling deletion not working... - done, added container div
 - Create recipe: method step adding and deleting but placeholder not showing and unable to resize added fields - done missing closing '"' in JS script
 - Browse: Search bar started but needs refining - Done
-- Browse: App.py update to pull in public recipes only from all members, currently pulling in recipes from members - Done and pulling in only PUBLIC shared recipes
+- Browse: app.py update to pull in public recipes only from all members, currently pulling in recipes from members - Done and pulling in only PUBLIC shared recipes
 - Profile: Delete recipe option: Done
 - Create recipe: Ready in sum | Event listeners in prep and cook to publish sum in ready time - Done with max time not over 24 hours
 - Edit recipe: ready in sum | Event listener not working in ready time - Done, changed from var to let
@@ -916,6 +916,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 
 ### Notes to consider
 - Message in GitPod stating Python extension loading and is constant. Info found in Slack and Gitpod community advising of installing an older version. Had changed from pymongo 3.12.0 to 3.5.1 but the Python extension loading message still appeared and I was unable to run app.py so have changed back to 3.12.0.
+    * requirements.txt python pymongo version is 3.5.1 but this had been changed and saved as 3.12.0...unsure what has happened here but could be cause why heroku is not loading.
 - Search: "[dict]" elements in app.py removed as mongoDB had applied double Arrays causing confusion between create and Edit - is good now
 
 
