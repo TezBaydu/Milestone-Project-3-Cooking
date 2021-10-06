@@ -285,7 +285,7 @@ def delete_recipes(member_recipe_id):
 # delete profile function
 @app.route("/delete_profile/<member_id>")
 def delete_profile(member_id):
-    mongo.db.members.remove({"member": member_id.lower()})
+    mongo.db.members.remove({"_id": ObjectId(member_id)})
     flash("Account Successfully deleted")
     session.pop("member")
 

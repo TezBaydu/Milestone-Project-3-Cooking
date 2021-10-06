@@ -51,9 +51,8 @@
               </a>
             </div>
             <div class="col-6">
-              <a class="btn btn-rd btn-md" type="button"
-                href="{{ url_for('delete_profile', member_id=member._id) }}">
-                Delete account
+              <a class="btn btn-rd btn-md" type="button" href="{{ url_for('delete_profile', member_id=member._id) }}" 
+                  onclick="return confirm('Are you sure you want to delete your account?');">Delete Account
                 <i class="fas fa-user-times"></i>
               </a>
             </div>
@@ -124,9 +123,9 @@
                             Edit Recipe
                             <i class="fas fa-edit"></i>
                           </a>
-                          <a class="btn btn-rd btn-md" type="button"
-                            href="{{ url_for('delete_recipes', member_recipe_id=member_recipe._id) }}">
-                            Delete Recipe
+                          <a class="btn btn-rd btn-md" type="button" href="{{ url_for('delete_recipes', member_recipe_id=member_recipe._id) }}"
+                              onclick="return confirm('Are you sure you want to delete your recipe?');">
+                              Delete Recipe
                             <i class="far fa-calendar-times"></i>
                           </a>
                         </div>
@@ -200,8 +199,8 @@
                           Edit Recipe
                           <i class="fas fa-edit"></i>
                         </a>
-                        <a class="btn btn-rd btn-md" type="button"
-                          href="{{ url_for('delete_recipes', member_recipe_id=member_recipe._id)}}">
+                        <a class="btn btn-rd btn-md" type="button" href="{{ url_for('delete_recipes', member_recipe_id=member_recipe._id) }}"
+                          onclick="return confirm('Are you sure you want to delete your recipe?');">
                           Delete Recipe
                           <i class="far fa-calendar-times"></i>
                         </a>
@@ -273,9 +272,9 @@
                 </a>
               </div>
               <div class="col-6 center-align">
-                <a class="btn btn-rd btn-md margin-top-zero" type="button"
-                  href="{{ url_for('delete_profile', member_id=member._id) }}">
-                  Delete account
+                <a class="btn btn-rd btn-md margin-top-zero" type="button" href="{{ url_for('delete_profile', member_id=member._id) }}"
+                    onclick="return confirm('Are you sure you want to delete your account?');">
+                  Delete Account
                   <i class="fas fa-user-times"></i>
                 </a>
               </div>
@@ -359,9 +358,9 @@
                             Edit Recipe
                             <i class="fas fa-edit"></i>
                           </a>
-                          <a class="btn btn-rd btn-md" type="button"
-                            href="{{ url_for('delete_recipes', member_recipe_id=member_recipe._id) }}">
-                            Delete Recipe
+                          <a class="btn btn-rd btn-md" type="button" href="{{ url_for('delete_recipes', member_recipe_id=member_recipe._id) }}"
+                              onclick="return confirm('Are you sure you want to delete your recipe?');">
+                              Delete Recipe
                             <i class="far fa-calendar-times"></i>
                           </a>
                         </div>
@@ -435,9 +434,9 @@
                           Edit Recipe
                           <i class="fas fa-edit"></i>
                         </a>
-                        <a class="btn btn-rd btn-md" type="button"
-                          href="{{ url_for('delete_recipes', member_recipe_id=member_recipe._id)}}">
-                          Delete Recipe
+                        <a class="btn btn-rd btn-md" type="button" href="{{ url_for('delete_recipes', member_recipe_id=member_recipe._id) }}"
+                            onclick="return confirm('Are you sure you want to delete your recipe?');">
+                            Delete Recipe
                           <i class="far fa-calendar-times"></i>
                         </a>
                       </div>
