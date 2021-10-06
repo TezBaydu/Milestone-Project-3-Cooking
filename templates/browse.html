@@ -16,47 +16,65 @@
         <div class="row">
           <div class="col search-section">
             <form class="form-inline mr-auto justify-content-center" action="{{ url_for('search') }}" method="post">
-              <div class="input-group md-form form-sm form-2 pl-0">
-                <input class="py-1 search-border validate" type="text" name="query" id="query" minlength="2" maxlength="15"
-                  placeholder="Search for recipes..." pattern="^[a-zA-Z0-9]{2,15}$" aria-label="Search" spellcheck="true">
-                <div class="input-group-append">
-                  <span class="input-group-text" id="basic-text1"><i class="fas fa-search text-grey"
-                      aria-hidden="true"></i></span>
+              <div class="container">
+                <div class="row">
+                  <div class="input-group md-form form-sm form-2 pl-0">
+                    <input class="py-1 search-border validate" type="text" name="query" id="query" minlength="2" maxlength="15"
+                      placeholder="Search for recipes..." pattern="^[a-zA-Z0-9 ]{2,15}$" aria-label="Search" 
+                      spellcheck="true">
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="basic-text1"><i class="fas fa-search text-grey"
+                          aria-hidden="true"></i></span>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col card-panel browse-recipe">
-                <h5 class="recipe-header"><em>Or Browse by Recipe Type (Potential to remove card)</em></h5>
-                <!-- Breakfast checkbox -->
-                <div class="custom-control custom-checkbox custom-control-inline">
-                  <input type="checkbox" class="custom-control-input" id="recipe_type1" name="recipe_category_selected" value="breakfast">
-                  <label class="custom-control-label" for="recipe_type1">Breakfast</label>
+              <div class="container">
+                <div class="row margin-width-auto justify-content-between">
+                  <div class="col">
+                    <h5 class="recipe-header center-align"><em>And Browse by Recipe Type?</em></h5>
+                  </div>
                 </div>
               </div>
-              <!-- Lunch checkbox -->
-            <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="custom-control-input" id="recipe_type2" name="recipe_category_selected" value="lunch">
-              <label class="custom-control-label" for="recipe_type2">Lunch</label>
-            </div>
+                <div class="row margin-width-auto justify-content-between">
+                  <div class="col card-panel browse-recipe">
+                    <!-- Breakfast checkbox -->
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" class="custom-control-input" id="recipe_type1" name="recipe_category_selected" value="breakfast">
+                      <label class="custom-control-label" for="recipe_type1">Breakfast</label>
+                    </div>
 
-            <!-- Dinner checkbox -->
-            <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="custom-control-input" id="recipe_type3" name="recipe_category_selected" value="dinner">
-              <label class="custom-control-label" for="recipe_type3">Dinner</label>
-            </div>
-            <!-- Dessert checkbox -->
-            <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="custom-control-input" id="recipe_type4" name="recipe_category_selected" value="dessert">
-              <label class="custom-control-label" for="recipe_type4">Dessert</label>
-            </div>
-            <!-- Snack checkbox -->
-            <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="custom-control-input" id="recipe_type5" name="recipe_category_selected" value="snack">
-              <label class="custom-control-label" for="recipe_type5">Snack</label>
-            </div>
-              <div class="row center-align">
-                <div class="col browse-button">
-                  <a href="{{ url_for('browse') }}" class="red btn btn-red btn-rounded btn-md my-0 ml-sm-2">Reset</a>
-                  <button class="btn btn-grn btn-rounded btn-md my-0 ml-sm-2" type="submit">Search</button>
+                    <!-- Lunch checkbox -->
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" class="custom-control-input" id="recipe_type2" name="recipe_category_selected" value="lunch">
+                      <label class="custom-control-label" for="recipe_type2">Lunch</label>
+                    </div>
+
+                    <!-- Dinner checkbox -->
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" class="custom-control-input" id="recipe_type3" name="recipe_category_selected" value="dinner">
+                      <label class="custom-control-label" for="recipe_type3">Dinner</label>
+                    </div>
+
+                    <!-- Dessert checkbox -->
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" class="custom-control-input" id="recipe_type4" name="recipe_category_selected" value="dessert">
+                      <label class="custom-control-label" for="recipe_type4">Dessert</label>
+                    </div>
+
+                    <!-- Snack checkbox -->
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" class="custom-control-input" id="recipe_type5" name="recipe_category_selected" value="snack">
+                      <label class="custom-control-label" for="recipe_type5">Snack</label>
+                    </div>
+                  </div>
+                </div>
+              <div class="container">
+                <div class="row center-align">
+                  <div class="col browse-button">
+                    <a href="{{ url_for('browse') }}" class="red btn btn-red btn-rounded btn-md my-0 ml-sm-2">Reset</a>
+                    <button class="btn btn-grn btn-rounded btn-md my-0 ml-sm-2" type="submit">Search</button>
+                  </div>
                 </div>
               </div>
             </form>
@@ -66,45 +84,6 @@
     </div>
   </div>
 
-  <!-- search recipe-type bar -->
-  <div class="container justify-content-center">
-    <div class="card z-depth-0 bordered browse-card">
-      <div class="card-body">
-        <div class="row margin-width-auto justify-content-between">
-          <div class="col card-panel browse-recipe">
-            <h5 class="recipe-header"><em>Or Browse by Recipe Type (Potential to remove card)</em></h5>
-            <!-- Breakfast checkbox -->
-            <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="custom-control-input" id="recipe_type1" name="query" value="breakfast">
-              <label class="custom-control-label" for="recipe_type1">Breakfast</label>
-            </div>
-
-            <!-- Lunch checkbox -->
-            <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="custom-control-input" id="recipe_type2" name="lunch">
-              <label class="custom-control-label" for="recipe_type2">Lunch</label>
-            </div>
-
-            <!-- Dinner checkbox -->
-            <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="custom-control-input" id="recipe_type3" name="dinner">
-              <label class="custom-control-label" for="recipe_type3">Dinner</label>
-            </div>
-            <!-- Dessert checkbox -->
-            <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="custom-control-input" id="recipe_type4" name="dessert">
-              <label class="custom-control-label" for="recipe_type4">Dessert</label>
-            </div>
-            <!-- Snack checkbox -->
-            <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="custom-control-input" id="recipe_type5" name="snack">
-              <label class="custom-control-label" for="recipe_type5">Snack</label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <!-- Recipe cards -->
   <div class="container-fluid">
     <div class="row">

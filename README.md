@@ -903,9 +903,10 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Open app.py goes to create recipe page - to open on index.html - Done updated app.py and placed @app.route("/") above @app.route("/home")
 - Edit profile url not connecting to edit profile page - Done
 - Delete profile - Done
+- Edit profile - details updated but redirect errors based on line 217 of app.py first_name = member["firstName"] - make email readonly as doesn't recognise email as session member once changed
 
 ### To Do
-- Edit profile - details updated but redirect errors based on line 217 of app.py first_name = member["firstName"] - Mentor
+
 - Contact - Email sent correctly but redirect method is invalid, Error: "POST /contact HTTP/1.1" 405 - Mentor
 - Ready In Time: issue with calc when adding more than 30 mins - Mentor 
 - Profile: Text to add create in accordion but fails on both when 1 recipe is applied to one or the other - Mentor
@@ -926,6 +927,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Message in GitPod stating Python extension loading and is constant. Info found in Slack and Gitpod community advising of installing an older version. Had changed from pymongo 3.12.0 to 3.5.1 but the Python extension loading message still appeared and I was unable to run app.py so have changed back to 3.12.0.
     * requirements.txt python pymongo version is 3.5.1 but this had been changed and saved as 3.12.0...unsure what has happened here but could be cause why heroku is not loading.
 - Search: "[dict]" elements in app.py removed as mongoDB had applied double Arrays causing confusion between create and Edit - is good now
+- ^[a-zA-Z0-9]{1,30}$ changed to ^[a-zA-Z0-9 -]{1,30}$ to accept spaces and dashes
 
 
 

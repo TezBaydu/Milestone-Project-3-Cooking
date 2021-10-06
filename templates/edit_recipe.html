@@ -146,7 +146,7 @@
                             <p>Size (Large, Small, etc)</p>
                         </div>
                         <div class="col-sm-1 rec-head">
-                            <p>Weight<br>(kg)</p>
+                            <p>Weight<br>(g)</p>
                         </div>
                         <div class="col-sm-1 rec-head">
                             <p>Volume<br>(lb)</p>
@@ -163,7 +163,7 @@
                         <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[0] != null %}
                             <input value="{{ member_recipe.food[0] }}" id="food" name="food" type="text"
-                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9]{1,30}$" placeholder="Food" required>
+                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required>
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -177,7 +177,7 @@
                         <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[0] != null %}
                             <input value="{{ member_recipe.size[0] }}" id="size" name="size" type="text"
-                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9]{0,15}$" placeholder="Size">
+                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9 -]{0,15}$" placeholder="Size">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -212,7 +212,7 @@
                         <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[1] != null %}
                             <input value="{{ member_recipe.food[1] }}" id="food" name="food" type="text"
-                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9]{1,30}$" placeholder="Food" required>
+                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required>
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -226,7 +226,7 @@
                         <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[1] != null %}
                             <input value="{{ member_recipe.size[1] }}" id="size" name="size" type="text"
-                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9]{0,15}$" placeholder="Size">
+                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9 -]{0,15}$" placeholder="Size">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -261,7 +261,7 @@
                         <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[2] != null %}
                             <input value="{{ member_recipe.food[2] }}" id="food" name="food" type="text"
-                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9]{1,30}$" placeholder="Food" required>
+                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required>
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -275,7 +275,7 @@
                         <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[2] != null %}
                             <input value="{{ member_recipe.size[2] }}" id="size" name="size" type="text"
-                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9]{0,15}$" placeholder="Size">
+                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9 -]{0,15}$" placeholder="Size">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -310,7 +310,7 @@
                         <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[3] != null %}
                             <input value="{{ member_recipe.food[0][3] }}" id="food" name="food" type="text"
-                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9]{1,30}$" placeholder="Food" required>
+                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required>
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -324,7 +324,7 @@
                         <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[3] != null %}
                             <input value="{{ member_recipe.size[3] }}" id="size" name="size" type="text"
-                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9]{0,15}$" placeholder="Size">
+                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9 -]{0,15}$" placeholder="Size">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -359,7 +359,7 @@
                         <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[4] != null %}
                             <input value="{{ member_recipe.food[4] }}" id="food" name="food" type="text"
-                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9]{1,30}$" placeholder="Food" required>
+                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required>
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -373,7 +373,7 @@
                         <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[4] != null %}
                             <input value="{{ member_recipe.size[4] }}" id="size" name="size" type="text"
-                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9]{0,15}$" placeholder="Size">
+                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9 -]{0,15}$" placeholder="Size">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -408,7 +408,7 @@
                         <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[5] != null %}
                             <input value="{{ member_recipe.food[5] }}" id="food" name="food" type="text"
-                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9]{1,30}$" placeholder="Food" required>
+                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required>
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -422,7 +422,7 @@
                         <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[5] != null %}
                             <input value="{{ member_recipe.size[5] }}" id="size" name="size" type="text"
-                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9]{0,15}$" placeholder="Size">
+                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9 -]{0,15}$" placeholder="Size">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -457,7 +457,7 @@
                         <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[6] != null %}
                             <input value="{{ member_recipe.food[6] }}" id="food" name="food" type="text"
-                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9]{1,30}$" placeholder="Food" required>
+                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required>
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -471,7 +471,7 @@
                         <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[6] != null %}
                             <input value="{{ member_recipe.size[6] }}" id="size" name="size" type="text"
-                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9]{0,15}$" placeholder="Size">
+                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9 -]{0,15}$" placeholder="Size">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -506,7 +506,7 @@
                         <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[7] != null %}
                             <input value="{{ member_recipe.food[7] }}" id="food" name="food" type="text"
-                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9]{1,30}$" placeholder="Food" required>
+                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required>
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -520,7 +520,7 @@
                         <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[7] != null %}
                             <input value="{{ member_recipe.size[7] }}" id="size" name="size" type="text"
-                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9]{0,15}$" placeholder="Size">
+                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9 -]{0,15}$" placeholder="Size">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -555,7 +555,7 @@
                         <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[8] != null %}
                             <input value="{{ member_recipe.food[8] }}" id="food" name="food" type="text"
-                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9]{1,30}$" placeholder="Food" required>
+                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required>
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -569,7 +569,7 @@
                         <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[8] != null %}
                             <input value="{{ member_recipe.size[8] }}" id="size" name="size" type="text"
-                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9]{0,15}$" placeholder="Size">
+                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9 -]{0,15}$" placeholder="Size">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -604,7 +604,7 @@
                         <div class="ingredient-field col-md-5 food-field">
                             {% if member_recipe.food[9] != null %}
                             <input value="{{ member_recipe.food[9] }}" id="food" name="food" type="text"
-                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9]{1,30}$" placeholder="Food" required>
+                                class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required>
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -618,7 +618,7 @@
                         <div class="ingredient-field col-lg-2 size-field">
                             {% if member_recipe.size[9] != null %}
                             <input value="{{ member_recipe.size[9] }}" id="size" name="size" type="text"
-                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9]{0,15}$" placeholder="Size">
+                                class="form-control validate" maxlength="15" pattern="^[a-zA-Z0-9 -]{0,15}$" placeholder="Size">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
@@ -668,7 +668,7 @@
                             <div class="input-field col-10 method-input">
                         {% if member_recipe.recipe_method[0] != null %}
                             <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
-                                placeholder="Method Step" minlength="2" maxlength="400"pattern="^[a-zA-Z0-9]{2,400}$" required>{{ member_recipe.recipe_method[0] }}
+                                placeholder="Method Step" minlength="2" maxlength="400"pattern="^[a-zA-Z0-9 -]{2,400}$" required>{{ member_recipe.recipe_method[0] }}
                             </textarea>
                         {% endif %}
                             </div>
@@ -688,7 +688,7 @@
                         <div class="input-field col-10 method-input">
                     {% if member_recipe.recipe_method[1] != null %}
                         <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
-                            placeholder="Method Step" minlength ="2" maxlength="400"pattern="^[a-zA-Z0-9]{2,400}$" required>{{ member_recipe.recipe_method[1] }}
+                            placeholder="Method Step" minlength ="2" maxlength="400"pattern="^[a-zA-Z0-9 -]{2,400}$" required>{{ member_recipe.recipe_method[1] }}
                         </textarea>
                     {% endif %}
                         </div>
@@ -708,7 +708,7 @@
                         <div class="input-field col-10 method-input">
                     {% if member_recipe.recipe_method[2] != null %}
                         <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
-                            placeholder="Method Step" minlength ="2" maxlength="400"pattern="^[a-zA-Z0-9]{2,400}$" required>{{ member_recipe.recipe_method[2] }}
+                            placeholder="Method Step" minlength ="2" maxlength="400"pattern="^[a-zA-Z0-9 -]{2,400}$" required>{{ member_recipe.recipe_method[2] }}
                         </textarea>
                     {% endif %}
                         </div>
@@ -728,7 +728,7 @@
                         <div class="input-field col-10 method-input">
                     {% if member_recipe.recipe_method[3] != null %}
                         <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
-                            placeholder="Method Step" minlength ="2" maxlength="400"pattern="^[a-zA-Z0-9]{2,400}$" required>{{ member_recipe.recipe_method[3] }}
+                            placeholder="Method Step" minlength ="2" maxlength="400"pattern="^[a-zA-Z0-9 -]{2,400}$" required>{{ member_recipe.recipe_method[3] }}
                         </textarea>
                     {% endif %}
                         </div>
@@ -748,7 +748,7 @@
                         <div class="input-field col-10 method-input">
                     {% if member_recipe.recipe_method[4] != null %}
                         <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate"
-                            placeholder="Method Step" minlength ="2" maxlength="400"pattern="^[a-zA-Z0-9]{2,400}$" required>{{ member_recipe.recipe_method[4] }}
+                            placeholder="Method Step" minlength ="2" maxlength="400"pattern="^[a-zA-Z0-9 -]{2,400}$" required>{{ member_recipe.recipe_method[4] }}
                         </textarea>
                     {% endif %}
                         </div>
