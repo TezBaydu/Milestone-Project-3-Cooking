@@ -26,7 +26,7 @@ def home():
 
 
 # contact page
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
         flash("Thanks for getting in touch, we will contact you soon.")
