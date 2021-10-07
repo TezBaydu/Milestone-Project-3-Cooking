@@ -910,10 +910,12 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Flash: pushes content down - Done Image placed outside of jinja base block
 - Recipe: on delete a warning to open to confirm - Done
 - Profile: on delete a warning to open to confirm - Done _id call updated
+- Ready In Time: issue with calc when adding more than 30 mins - asked in Slack - Done
+
 
 ### To Do
-- Ready In Time: issue with calc when adding more than 30 mins - asked in Slack
 
+- Add row recipes and methods JS: Update with inital html code pattern, etc
 - Profile: Text to add create in accordion but fails on both when 1 recipe is applied to one or the other
 - Search function on members page only resets to browse - needs to go to browse and also search
 - Search - limit amount of images to view

@@ -113,19 +113,19 @@
                             pattern="^[0-9]{0,2}$" required>
                     </div>
                     <div class="col-3 md-form">
-                        <label for="prep_time">Prep time</label>
+                        <label for="prep_time">Prep time<br><span class = "optional">(max time 12:00)</span></label>
                         <input value="{{ member_recipe.prep_time }}" type="time" class="form-control time" id="prep_time"
-                            name="prep_time" min="0" required>
+                            name="prep_time" min="00:00" max="12:00" required>
                     </div>
                     <div class="col-3 md-form">
-                        <label for="cook_time">Cook time</label>
+                        <label for="cook_time">Cook time<br><span class = "optional">(max time 11:59)</span></label>
                         <input value="{{ member_recipe.cook_time }}" type="time" class="form-control time" id="cook_time"
-                            name="cook_time" min="0" required>
+                            name="cook_time" min="0:00" max="11:59" required>
                     </div>
                     <div class="col-3 md-form">
-                        <label for="ready_time">Ready in</label>
+                        <label for="ready_time">Ready in<br><span><span class = "optional">(max time 23:59)</span></label>
                         <input value="{{ member_recipe.ready_time }}" type="time" class="form-control time" id="ready_time"
-                            name="ready_time" min="0" required readonly>
+                            name="ready_time" readonly>
                     </div>
                 </div>
                 <!-- ingredients header -->

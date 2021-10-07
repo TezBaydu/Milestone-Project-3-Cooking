@@ -78,28 +78,66 @@ let prep_time = document.getElementById('prep_time');
 let cook_time = document.getElementById('cook_time');
 let ready_time = document.getElementById('ready_time');
 
-prep_time.addEventListener('change', () =>
+
 cook_time.addEventListener('change', () =>  {
     let prep_hours = parseInt(prep_time.value.split(':')[0]);
     let prep_minutes = parseInt(prep_time.value.split(':')[1]);
     // if an hour is exceeded, add it to hours instead
     if (prep_minutes >= 60) {
-        prep_hours = prep_hours % 24;
+        prep_hours = prep_hours + 1;
         prep_minutes -= 60;
     }
 	let cook_hours = parseInt(cook_time.value.split(':')[0]);
     let cook_minutes = parseInt(cook_time.value.split(':')[1]);
     // if an hour is exceeded, add it to hours instead
     if (cook_minutes >= 60) {
-        cook_hours = cook_hours % 24;
+        cook_hours = cook_hours + 1;
         cook_minutes -= 60;
     }
 
-	hours = prep_hours + cook_hours
 	minutes = prep_minutes + cook_minutes
+	hours = prep_hours + cook_hours
+
+	if (minutes >= 60) {
+		hours += 1;
+		minutes -= 60;
+	}
 
     hours = (hours < 10 ? `0${hours}` : `${hours}`);
     minutes = (minutes < 10 ? `0${minutes}` : `${minutes}`);
 
     ready_time.value = `${hours}:${minutes}`;
-}))
+})
+
+prep_time.addEventListener('change', () => {
+	let prep_hours = parseInt(prep_time.value.split(':')[0]);
+    let prep_minutes = parseInt(prep_time.value.split(':')[1]);
+    // if an hour is exceeded, add it to hours instead
+    if (prep_minutes >= 60) {
+        prep_hours = prep_hours + 1;
+        prep_minutes -= 60;
+    }
+	let cook_hours = parseInt(cook_time.value.split(':')[0]);
+    let cook_minutes = parseInt(cook_time.value.split(':')[1]);
+    // if an hour is exceeded, add it to hours instead
+    if (cook_minutes >= 60) {
+        cook_hours = cook_hours + 1;
+        cook_minutes -= 60;
+    }
+
+	minutes = prep_minutes + cook_minutes
+	hours = prep_hours + cook_hours
+
+	if (minutes >= 60) {
+		hours += 1;
+		minutes -= 60;
+	}
+
+    hours = (hours < 10 ? `0${hours}` : `${hours}`);
+    minutes = (minutes < 10 ? `0${minutes}` : `${minutes}`);
+
+    ready_time.value = `${hours}:${minutes}`;
+})
+
+	
+
