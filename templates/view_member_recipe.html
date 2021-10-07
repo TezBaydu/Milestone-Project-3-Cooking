@@ -30,53 +30,11 @@
                 </div>
               </div>
               <div class="container">
-                <div class="row margin-width-auto justify-content-between">
-                  <div class="col">
-                    <h5 class="recipe-header center-align"><em>And Browse by Recipe Type?</em></h5>
-                  </div>
-                </div>
-              </div>
-              <div class="row margin-width-auto justify-content-between">
-                <div class="col card-panel browse-recipe">
-                  <!-- Breakfast checkbox -->
-                  <div class="custom-control custom-checkbox custom-control-inline">
-                    <input type="checkbox" class="custom-control-input" id="recipe_type1" name="recipe_category_selected" value="breakfast">
-                    <label class="custom-control-label" for="recipe_type1">Breakfast</label>
-                  </div>
-
-                  <!-- Lunch checkbox -->
-                  <div class="custom-control custom-checkbox custom-control-inline">
-                    <input type="checkbox" class="custom-control-input" id="recipe_type2" name="recipe_category_selected" value="lunch">
-                    <label class="custom-control-label" for="recipe_type2">Lunch</label>
-                  </div>
-
-                  <!-- Dinner checkbox -->
-                  <div class="custom-control custom-checkbox custom-control-inline">
-                    <input type="checkbox" class="custom-control-input" id="recipe_type3" name="recipe_category_selected" value="dinner">
-                    <label class="custom-control-label" for="recipe_type3">Dinner</label>
-                  </div>
-
-                  <!-- Dessert checkbox -->
-                  <div class="custom-control custom-checkbox custom-control-inline">
-                    <input type="checkbox" class="custom-control-input" id="recipe_type4" name="recipe_category_selected" value="dessert">
-                    <label class="custom-control-label" for="recipe_type4">Dessert</label>
-                  </div>
-
-                  <!-- Snack checkbox -->
-                  <div class="custom-control custom-checkbox custom-control-inline">
-                    <input type="checkbox" class="custom-control-input" id="recipe_type5" name="recipe_category_selected" value="snack">
-                    <label class="custom-control-label" for="recipe_type5">Snack</label>
-                  </div>
-                </div>
-              </div>
-              <div class="container">
                 <div class="row center-align">
                   <div class="col browse-button">
                     <a href="{{ url_for('browse') }}" class="red btn btn-red btn-rounded btn-md my-0 ml-sm-2">
                       Reset</a>
-                    <a href="{{ url_for('browse') }}" class="btn btn-grn btn-rounded btn-md my-0 ml-sm-2"
-                      type="submit">
-                      Search</a>
+                      <button class="btn btn-grn btn-rounded btn-md my-0 ml-sm-2" type="submit">Search</button>
                   </div>
                 </div>
               </div>

@@ -78,27 +78,7 @@ def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find(
         {"$text": {"$search": query}}))
-    recipe_category_selected = request.form.get("recipe_category_selected")
-    if recipe_category_selected == "breakfast":
-        recipes = list(mongo.db.recipes.find(
-            {"$text": {"$search": query}, "breakfast": "on"}
-        ))
-    if recipe_category_selected == "breakfast":
-        recipes = list(mongo.db.recipes.find(
-            {"$text": {"$search": query}, "lunch": "on"}
-        ))
-    if recipe_category_selected == "breakfast":
-        recipes = list(mongo.db.recipes.find(
-            {"$text": {"$search": query}, "dinner": "on"}
-        ))
-    if recipe_category_selected == "breakfast":
-        recipes = list(mongo.db.recipes.find(
-            {"$text": {"$search": query}, "dessert": "on"}
-        ))
-    if recipe_category_selected == "breakfast":
-        recipes = list(mongo.db.recipes.find(
-            {"$text": {"$search": query}, "snack": "on"}
-        ))
+
     return render_template("browse.html", recipes=recipes)
 
 
