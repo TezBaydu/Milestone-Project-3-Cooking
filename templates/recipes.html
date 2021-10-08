@@ -184,9 +184,10 @@
                     <button type="submit" class="btn btn-grn btn-lg">Create
                         <i class="fas fa-sign-in-alt"></i>
                     </button>
-                    <button type="button" class="btn btn-rd btn-lg">Cancel
+                    <a type="button" class="btn btn-rd btn-lg" href="{{ url_for('profile', first_name=session['member']) }}"
+                        onclick="return confirm('Are you sure you want to cancel your recipe?');">Cancel
                         <i class="fas fa-trash"></i>
-                    </button>
+                    </a>
                 </div>
             </div>
         </form>
