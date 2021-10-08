@@ -10,7 +10,7 @@
       <div class="card-body">
         <div class="row center-align">
           <div class="col">
-            <h4 class="recipe-header center-align">Search for Recipes here !</h4>
+            <h4 class="recipe-header center-align">Search for Recipes</h4>
           </div>
         </div>
         <div class="row">
@@ -43,14 +43,16 @@
       </div>
     </div>
   </div>
+  <!-- Search category bar -->
   <div class="container justify-content-center">
     <div class="card z-depth-0 bordered browse-card">
       <div class="card-body">
-          <div class="row center-align">
-            <div class="col">
-              <h4 class="recipe-header center-align">or select by Recipe Category here !</h4>
-            </div>
+        <div class="row center-align">
+          <div class="col">
+            <h4 class="recipe-header center-align">Select by Recipe Category</h4>
           </div>
+        </div>
+        <div class="container justify-content-center recipe-browse-container">
           <div class="row center-align recipe-search">
             <div class="col browse-button">
               <a href="{{ url_for('show_breakfast') }}" class="btn purple-gradient btn-rounded btn-md my-0 ml-sm-2"
@@ -60,6 +62,8 @@
               <a href="{{ url_for('show_lunch') }}" class="btn peach-gradient btn-rounded btn-md my-0 ml-sm-2"
                 type="button">Lunches</a>
             </div>
+          </div>
+          <div class="row center-align recipe-search">
             <div class="col browse-button">
               <a href="{{ url_for('show_dinner') }}" class="btn aqua-gradient btn-rounded btn-md my-0 ml-sm-2"
                 type="button">Dinners</a>
@@ -68,12 +72,26 @@
               <a href="{{ url_for('show_dessert') }}" class="btn blue-gradient btn-rounded btn-md my-0 ml-sm-2"
                 type="button">Desserts</a>
             </div>
-            <div class="col browse-button">
-              <a href="{{ url_for('show_snack') }}" class="btn pink-gradient btn-rounded btn-md my-0 ml-sm-2"
-                type="button">Snacks</a>
-            </div>
+          </div>
+          <div class="row center-align recipe-search">
+          <div class="col browse-button">
+            <a href="{{ url_for('show_snack') }}" class="btn btn-pink btn-rounded btn-md my-0 ml-sm-2"
+              type="button">Snacks</a>
+          </div>
         </div>
       </div>
+      <div class="row center-align">
+        <div class="col browse-button">
+          <a href="{{ url_for('browse') }}" class="red btn btn-red btn-rounded btn-md my-0 ml-sm-2">Reset</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col center-align">
+      <h2 class="browse-header">All Recipes</h2>
     </div>
   </div>
 

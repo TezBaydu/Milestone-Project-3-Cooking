@@ -1139,6 +1139,15 @@ h3 {
     margin-top: 50px;
 }
 
+.browse-header {
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+.recipe-browse-container {
+    display: inline-flex;
+}
+
 @media (max-width: 1199px) {
     .recipe-browse-cards .card-deck .card {
         max-width: 17em;
@@ -1181,6 +1190,27 @@ h3 {
     .recipe-browse-cards .card-deck .card {
         max-width: 15em;
         min-width: 15em;
+    }
+
+    .recipe-browse-container {
+        flex-direction: column;
+        margin-top: 25px;
+    }
+
+    .recipe-search {
+        margin-top: 0;
+    }
+
+    .browse-button {
+        padding-left: 0;
+    }
+
+    .browse-button .btn-md {
+        font-size: 0.6rem;
+    }
+
+    .browse-card a {
+        width: 110px;
     }
 }
 

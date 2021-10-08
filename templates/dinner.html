@@ -10,7 +10,7 @@
       <div class="card-body">
         <div class="row center-align">
           <div class="col">
-            <h4 class="recipe-header center-align">Search for Recipes here !</h4>
+            <h4 class="recipe-header center-align">Search for Recipes</h4>
           </div>
         </div>
         <div class="row">
@@ -19,9 +19,9 @@
               <div class="container">
                 <div class="row">
                   <div class="input-group md-form form-sm form-2 pl-0">
-                    <input class="py-1 search-border validate" type="text" name="query" id="query" minlength="2" maxlength="15"
-                      placeholder="Search for recipes..." pattern="^[a-zA-Z0-9 ]{2,15}$" aria-label="Search" 
-                      spellcheck="true">
+                    <input class="py-1 search-border validate" type="text" name="query" id="query" minlength="2"
+                      maxlength="15" placeholder="Search for recipes..." pattern="^[a-zA-Z0-9 ]{2,15}$"
+                      aria-label="Search" spellcheck="true">
                     <div class="input-group-append">
                       <span class="input-group-text" id="basic-text1"><i class="fas fa-search text-grey"
                           aria-hidden="true"></i></span>
@@ -43,14 +43,16 @@
       </div>
     </div>
   </div>
+  <!-- Search category bar -->
   <div class="container justify-content-center">
     <div class="card z-depth-0 bordered browse-card">
       <div class="card-body">
-          <div class="row center-align">
-            <div class="col">
-              <h4 class="recipe-header center-align">or select by Recipe Category here !</h4>
-            </div>
+        <div class="row center-align">
+          <div class="col">
+            <h4 class="recipe-header center-align">Select by Recipe Category</h4>
           </div>
+        </div>
+        <div class="container justify-content-center recipe-browse-container">
           <div class="row center-align recipe-search">
             <div class="col browse-button">
               <a href="{{ url_for('show_breakfast') }}" class="btn purple-gradient btn-rounded btn-md my-0 ml-sm-2"
@@ -60,6 +62,8 @@
               <a href="{{ url_for('show_lunch') }}" class="btn peach-gradient btn-rounded btn-md my-0 ml-sm-2"
                 type="button">Lunches</a>
             </div>
+          </div>
+          <div class="row center-align recipe-search">
             <div class="col browse-button">
               <a href="{{ url_for('show_dinner') }}" class="btn aqua-gradient btn-rounded btn-md my-0 ml-sm-2"
                 type="button">Dinners</a>
@@ -68,63 +72,78 @@
               <a href="{{ url_for('show_dessert') }}" class="btn blue-gradient btn-rounded btn-md my-0 ml-sm-2"
                 type="button">Desserts</a>
             </div>
+          </div>
+          <div class="row center-align recipe-search">
             <div class="col browse-button">
-              <a href="{{ url_for('show_snack') }}" class="btn pink-gradient btn-rounded btn-md my-0 ml-sm-2"
+              <a href="{{ url_for('show_snack') }}" class="btn btn-pink btn-rounded btn-md my-0 ml-sm-2"
                 type="button">Snacks</a>
             </div>
+          </div>
+        </div>
+        <div class="row center-align">
+          <div class="col browse-button">
+            <a href="{{ url_for('browse') }}" class="red btn btn-red btn-rounded btn-md my-0 ml-sm-2">Reset</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Recipe cards -->
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <div class="card z-depth-0 bordered">
-          <div class="card-body">
-            <div class="mt-3 recipe-browse-cards">
-              <div class="card-deck">
-                {% for recipe in recipes %}
-                {% if recipe.dinner == "on" %}
-                {% if recipe.private_switch is none %}
-                <div class="card mb-4">
-                  <div class="view overlay">
-                    {% if recipe.recipe_image == "" %}
-                    <img class="card-img-top"
-                      src="https://www.moregreenenergy.com.au/MoreGreen/Client-Admin/uploads/NoImage.jpg"
-                      alt="No Recipe image uploaded" />
-                    <a href="#!">
-                      <div class="mask rgba-white-slight"></div>
-                    </a>
-                    {% else %}
-                    <img class="card-img-top" src="{{ recipe.recipe_image }}" alt="Recipe image" />
-                    <a href="#!">
-                      <div class="mask rgba-white-slight"></div>
-                    </a>
-                    {% endif %}
+
+    <div class="row justify-content-center">
+      <div class="col center-align">
+        <h2 class="browse-header">Dinner Recipes</h2>
+      </div>
+    </div>
+
+    <!-- Recipe cards -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <div class="card z-depth-0 bordered">
+            <div class="card-body">
+              <div class="mt-3 recipe-browse-cards">
+                <div class="card-deck">
+                  {% for recipe in recipes %}
+                  {% if recipe.dinner == "on" %}
+                  {% if recipe.private_switch is none %}
+                  <div class="card mb-4">
+                    <div class="view overlay">
+                      {% if recipe.recipe_image == "" %}
+                      <img class="card-img-top"
+                        src="https://www.moregreenenergy.com.au/MoreGreen/Client-Admin/uploads/NoImage.jpg"
+                        alt="No Recipe image uploaded" />
+                      <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                      {% else %}
+                      <img class="card-img-top" src="{{ recipe.recipe_image }}" alt="Recipe image" />
+                      <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                      {% endif %}
+                    </div>
+                    <div class="card-body">
+                      <h4 class="card-title">{{ recipe.recipe_name }}</h4>
+                      <p class="card-text">{{ recipe.recipe_description }}</p>
+                      <span>{{ recipe.ready_time }} h/mins</span>
+                    </div>
+                    <div>
+                      <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn peach-gradient"
+                        type="button">
+                        View Recipe
+                        <i class="fas fa-clipboard-list"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div class="card-body">
-                    <h4 class="card-title">{{ recipe.recipe_name }}</h4>
-                    <p class="card-text">{{ recipe.recipe_description }}</p>
-                    <span>{{ recipe.ready_time }} h/mins</span>
-                  </div>
-                  <div>
-                    <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn peach-gradient" type="button">
-                      View Recipe
-                      <i class="fas fa-clipboard-list"></i>
-                    </a>
-                  </div>
+                  {% endif %}
+                  {% endif %}
+                  {% endfor %}
                 </div>
-                {% endif %}
-                {% endif %}
-                {% endfor %}
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 </section>
 
 
