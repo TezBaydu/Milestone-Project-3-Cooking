@@ -1,3 +1,24 @@
+// scroll Back to top
+var mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+            mybutton.style.display = "block";
+        } else {
+                mybutton.style.display = "none";
+        }
+    }
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+
 // menu nav click toggle
 
 $('#featureDiscovery').click(function () {
@@ -138,6 +159,3 @@ prep_time.addEventListener('change', () => {
 
     ready_time.value = `${hours}:${minutes}`;
 })
-
-	
-

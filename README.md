@@ -860,6 +860,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 ## Potential issues
 
 ### Done
+- Scroll to top button - Done
 - last_name variable to be defined in profile - done
 - email variable to be defined in profile - done
 - recipe creation to database success but unable to display details in profile - done, did not call the name "member_recipe"
@@ -911,20 +912,15 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Recipe: on delete a warning to open to confirm - Done
 - Profile: on delete a warning to open to confirm - Done _id call updated
 - Ready In Time: issue with calc when adding more than 30 mins - asked in Slack - Done
+- Profile: Text to add create in accordion but fails on both when 1 recipe is applied to one or the other - not necessary
+- Profile delete but doesn't delete public recipes from view - Done to ensure this data is stored if the user wants to come back at any stage
+- Search function on members page only resets to browse - needs to go to browse and also search - Done
 
 
 ### To Do
-
 - Add row recipes and methods JS: Update with inital html code pattern, etc
-- Profile: Text to add create in accordion but fails on both when 1 recipe is applied to one or the other
-- Search function on members page only resets to browse - needs to go to browse and also search
 - Search - limit amount of images to view
-
 - Create recipe in heroku app doesn't work on mobile...?!
-- Profile delete but doesn't delete public recipes from view...should it?
-- login forgotten password....necessary?
-
-
 
 ### Notes to consider
 - Message in GitPod stating Python extension loading and is constant. Info found in Slack and Gitpod community advising of installing an older version. Had changed from pymongo 3.12.0 to 3.5.1 but the Python extension loading message still appeared and I was unable to run app.py so have changed back to 3.12.0.
@@ -932,7 +928,9 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Search: "[dict]" elements in app.py removed as mongoDB had applied double Arrays causing confusion between create and Edit - is good now
 - ^[a-zA-Z0-9]{1,30}$ changed to ^[a-zA-Z0-9 -]{1,30}$ to accept spaces and dashes
 - Search on Browse works for name and description, to update for other search features
-    * Have tried searches on several sites and tutor support, searches found where all voted down and did not provide the correct concept. Tutor support tried to advise in several scenarios including a $match but after spending 2 days on trying to resolve I've sadly decided to abandon this option for now.  
+    * Have tried searches on several sites and tutor support, searches found where all voted down and did not provide the correct concept. Tutor support tried to advise in several scenarios including a $match but after spending 2 days on trying to resolve I've sadly decided to abandon this option for now.
+    * If there was enough time I would have created separate buttons atttributed to @app.routes to filter relevant associated recipt type.
+- Login forgot password - This would be a nice to have but is not necessary for this project
 
 
 
