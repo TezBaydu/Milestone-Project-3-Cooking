@@ -65,7 +65,7 @@ Main requirements are to build a full stack site to help users manage a common d
 6. [Credits and Acknowledgements](#Credits-and-Acknowledgements)
 
 ***
-![Responsiveness](assets/readme-files/responsive-image.JPG) --- ?!
+![Responsiveness](assets/readme/readme-images/eatinResponsive.JPG)
 ***
 
 ## UX
@@ -196,7 +196,7 @@ Below are areas considered for levels of importance and viability
 1. Learning to personally cook at home.
 2. A great wife who is a fanatastic cook with some education in the art of cooking.  
 3. Image of food:
-    * ![Grilled Salmon Steak](assets/readme/readme-images/EatinLandingPage.JPG)
+    * ![Grilled Salmon Steak](assets/readme/readme-images/grilled-salmon-steak.jpg)
 
 #### Imagery
 1. Colours
