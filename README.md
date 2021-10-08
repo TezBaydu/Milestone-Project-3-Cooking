@@ -1,10 +1,10 @@
 <h1 align="center" id = "introduction">
-     <a href="" target="_blank"><img src="" alt="Blank!"/></a>
+     <a href="https://eatin-project.herokuapp.com/" target="_blank"><img src="assets/readme/readme-images/EatinLandingPage.JPG" alt="Blank!"/></a>
      Project Eatin
 </h1>
 
 <h2 align="center">
-    <a href=""target="_blank">Eatin Website</a>
+    <a href="https://eatin-project.herokuapp.com/" target="_blank">Eatin Website</a>
 </h2>
 
 <div>
