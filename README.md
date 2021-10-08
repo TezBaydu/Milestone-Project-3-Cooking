@@ -102,10 +102,9 @@ The user is wanting to find, store and share dining ideas
 *   This user wants to:
 1. Be able to navigate through the website easily.
 2. Learn about various recipes.
-3. Have the opportunity to save their favourite recipes.
-4. Be able to navigate to relevant social links.
-5. Be able to make contact for queries, technical issues and newsletter sign up.
-6. Be able to create, read, update and delete their profile and recipe data.
+3. Be able to navigate to relevant social links.
+4. Be able to make contact for queries, technical issues and newsletter sign up.
+5. Be able to create, read, update and delete their profile and recipe data.
 
 #### Web Developer
 This user is looking for imagery or influence for another project.
@@ -174,7 +173,6 @@ Below are areas considered for levels of importance and viability
     * Links to social sites.
 3. Low
     * Sales
-    * Favourites bookmark
 
 <u>Viability</u>
 1. High
@@ -189,7 +187,6 @@ Below are areas considered for levels of importance and viability
     * Sales
     * Search function.
     * Online presence.
-    * Favourites listing.
 
 [Back to top ⇧](#introduction)
 
@@ -199,7 +196,7 @@ Below are areas considered for levels of importance and viability
 1. Learning to personally cook at home.
 2. A great wife who is a fanatastic cook with some education in the art of cooking.  
 3. Image of food:
-    * ![]()
+    * ![Grilled Salmon Steak](assets/readme/readme-images/EatinLandingPage.JPG)
 
 #### Imagery
 1. Colours
@@ -218,9 +215,9 @@ Below are areas considered for levels of importance and viability
 4. Profile
 5. Recipe Creation / Edit
 6. Contact
-7. Browse
-8. Recipe read from browsed
-9. Recipe owners from profile
+7. Browse: Breakfast / Lunch / Dinner / Dessert / Snack
+8. Recipe read from browse
+9. Recipe read from profile
 *  Potential pages to develop
     1. Merchandise sales
 
@@ -229,7 +226,7 @@ Below are areas considered for levels of importance and viability
 
 Hierarchical structure design for simpler user navigation:
 
-![Eatin Site Structure]()
+![Eatin Site Structure](assets/readme/readme-images/Eatin hierarchical structure.JPG)
 
 [Back to top ⇧](#introduction)
 
@@ -504,11 +501,9 @@ This site has several pages for user to easily identify section associated. Menu
         * Slider to adjust when meals can be cooked and prepared in for user in case they want a quick meal
     - Search button - once selections have been made
         * Otherwise suggestions are provided
-    - Favourites
-        * Where a user has bookmarked favourites, these can also be listed by pressing this button <--- may not be used ---> ?!
 
 2. Recipe summary cards.
-    - Several recipes listed either based on search, favourites or suggestions.
+    - Several recipes listed either based on search or categories.
     - Details to show:
         * Image
         * Name of recipe
@@ -544,12 +539,9 @@ This site has several pages for user to easily identify section associated. Menu
         * Slider to adjust when meals can be cooked and prepared in for user in case they want a quick meal
     - Search button - once selections have been made
         * Otherwise suggestions are provided
-    - Favourites
-        * Where a user has bookmarked favourites, these can also be listed by pressing this button <--- may not be used ---> ?!
 
 2. Recipe selection - Details provided by members who have shared publicly or via recipe shared database.
     - Name
-    - Favourite bookmark
     - Image
     - Description
     - Serves
@@ -596,12 +588,9 @@ This site has several pages for user to easily identify section associated. Menu
         * Slider to adjust when meals can be cooked and prepared in for member in case they want a quick meal
     - Search button - once selections have been made
         * Otherwise suggestions are provided
-    - Favourites
-        * Where a member has bookmarked favourites, these can also be listed by pressing this button <--- may not be used ---> ?!
 
 3. Recipe selection - Details provided by members who have shared publicly or via recipe shared database.
     - Name
-    - Favourite bookmark
     - Image
     - Description
     - Serves
@@ -918,7 +907,8 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Search on Browse works for name and description, to update for other search features
     * Have tried searches on several sites and tutor support, searches found where all voted down and did not provide the correct concept. Tutor support tried to advise in several scenarios including a $match but after spending 2 days on trying to resolve I've sadly decided to abandon this option for now.
     * If there was enough time I would have created separate buttons atttributed to @app.routes to filter relevant associated recipt type. - Done decided to lose sleep and do this...
-- Add row recipes and methods JS: Update with inital html code pattern, etc
+- Add row recipes and methods JS: Update with inital html code pattern, etc - Done
+- View recipe and View Memner recipe: adjust ingredients to only pick up numbers and measurements - Done
 
 ### To Do
 

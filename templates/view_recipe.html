@@ -106,7 +106,6 @@
               <div class="recipe_view overlay row">
                 <div class="col-2 middle">
                   <h6>Created: {{ recipe.date }}</h6>
-                  <p>{{ recipe.breakfast }} ? to remove</p>
                   <a href="{{ url_for('browse') }}" class="back-to">Back to Search</a>
                 </div>
                 {% if recipe.recipe_image == "" %}
@@ -160,43 +159,103 @@
                       <h3>Ingredients <i class="fas fa-shopping-basket"></i></h3>
                       <ul>
                         {% if recipe.food[0] != null %}
-                        <li>{{ recipe.count[0] }} {{ recipe.size[0] }} {{ recipe.weight[0] }}g {{ recipe.weight[0] }}lb
+                        <li>{{ recipe.count[0] }} {{ recipe.size[0] }} 
+                            {% if recipe.weight[0] != "" %}
+                            {{ recipe.weight[0] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[0] != "" %}
+                            {{ recipe.volume[0] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[0] }}</li>
                         {% endif %}
                         {% if recipe.food[1] != null %}
-                        <li>{{ recipe.count[1] }} {{ recipe.size[1] }} {{ recipe.weight[1] }}g {{ recipe.weight[1] }}lb
+                        <li>{{ recipe.count[1] }} {{ recipe.size[1] }} 
+                            {% if recipe.weight[1] != "" %}
+                            {{ recipe.weight[1] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[1] != "" %}
+                            {{ recipe.volume[1] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[1] }}</li>
                         {% endif %}
                         {% if recipe.food[2] != null %}
-                        <li>{{ recipe.count[2] }} {{ recipe.size[2] }} {{ recipe.weight[2] }}g {{ recipe.weight[2] }}lb
+                        <li>{{ recipe.count[2] }} {{ recipe.size[2] }} 
+                            {% if recipe.weight[2] != "" %}
+                            {{ recipe.weight[2] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[2] != "" %}
+                            {{ recipe.volume[2] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[2] }}</li>
                         {% endif %}
                         {% if recipe.food[3] != null %}
-                        <li>{{ recipe.count[3] }} {{ recipe.size[3] }} {{ recipe.weight[3] }}g {{ recipe.weight[3] }}lb
+                        <li>{{ recipe.count[3] }} {{ recipe.size[3] }} 
+                            {% if recipe.weight[3] != "" %}
+                            {{ recipe.weight[3] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[3] != "" %}
+                            {{ recipe.volume[3] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[3] }}</li>
                         {% endif %}
                         {% if recipe.food[4] != null %}
-                        <li>{{ recipe.count[4] }} {{ recipe.size[4] }} {{ recipe.weight[4] }}g {{ recipe.weight[4] }}lb
+                        <li>{{ recipe.count[4] }} {{ recipe.size[4] }} 
+                            {% if recipe.weight[4] != "" %}
+                            {{ recipe.weight[4] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[4] != "" %}
+                            {{ recipe.volume[4] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[4] }}</li>
                         {% endif %}
                         {% if recipe.food[5] != null %}
-                        <li>{{ recipe.count[5] }} {{ recipe.size[5] }} {{ recipe.weight[5] }}g {{ recipe.weight[5] }}lb
+                        <li>{{ recipe.count[5] }} {{ recipe.size[5] }} 
+                            {% if recipe.weight[5] != "" %}
+                            {{ recipe.weight[5] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[5] != "" %}
+                            {{ recipe.volume[5] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[5] }}</li>
                         {% endif %}
                         {% if recipe.food[6] != null %}
-                        <li>{{ recipe.count[6] }} {{ recipe.size[6] }} {{ recipe.weight[6] }}g {{ recipe.weight[6] }}lb
+                        <li>{{ recipe.count[6] }} {{ recipe.size[6] }} 
+                            {% if recipe.weight[6] != "" %}
+                            {{ recipe.weight[6] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[6] != "" %}
+                            {{ recipe.volume[6] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[6] }}</li>
                         {% endif %}
                         {% if recipe.food[7] != null %}
-                        <li>{{ recipe.count[7] }} {{ recipe.size[7] }} {{ recipe.weight[7] }}g {{ recipe.weight[7] }}lb
+                        <li>{{ recipe.count[7] }} {{ recipe.size[7] }} 
+                            {% if recipe.weight[7] != "" %}
+                            {{ recipe.weight[7] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[7] != "" %}
+                            {{ recipe.volume[7] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[7] }}</li>
                         {% endif %}
                         {% if recipe.food[8] != null %}
-                        <li>{{ recipe.count[8] }} {{ recipe.size[8] }} {{ recipe.weight[8] }}g {{ recipe.weight[8] }}lb
+                        <li>{{ recipe.count[8] }} {{ recipe.size[8] }} 
+                            {% if recipe.weight[8] != "" %}
+                            {{ recipe.weight[8] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[8] != "" %}
+                            {{ recipe.volume[8] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[8] }}</li>
                         {% endif %}
                         {% if recipe.food[9] != null %}
-                        <li>{{ recipe.count[9] }} {{ recipe.size[9] }} {{ recipe.weight[9] }}g {{ recipe.weight[9] }}lb
+                        <li>{{ recipe.count[9] }} {{ recipe.size[9] }} 
+                            {% if recipe.weight[9] != "" %}
+                            {{ recipe.weight[9] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[9] != "" %}
+                            {{ recipe.volume[9] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[9] }}</li>
                         {% endif %}
                       </ul>
@@ -310,43 +369,103 @@
                       <h3 class="center-align view-recipe-ingred-header">Ingredients <i class="fas fa-shopping-basket"></i></h3>
                       <ul>
                         {% if recipe.food[0] != null %}
-                        <li>{{ recipe.count[0] }} {{ recipe.size[0] }} {{ recipe.weight[0] }}g {{ recipe.weight[0] }}lb
+                        <li>{{ recipe.count[0] }} {{ recipe.size[0] }} 
+                            {% if recipe.weight[0] != "" %}
+                            {{ recipe.weight[0] }}<em>g</em> 
+                            {% endif %}
+                            {% if recipe.volume[0] != "" %}
+                            {{ recipe.volume[0] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[0] }}</li>
                         {% endif %}
                         {% if recipe.food[1] != null %}
-                        <li>{{ recipe.count[1] }} {{ recipe.size[1] }} {{ recipe.weight[1] }}g {{ recipe.weight[1] }}lb
+                        <li>{{ recipe.count[1] }} {{ recipe.size[1] }} 
+                            {% if recipe.weight[1] != "" %}
+                            {{ recipe.weight[1] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[1] != "" %}
+                            {{ recipe.volume[1] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[1] }}</li>
                         {% endif %}
                         {% if recipe.food[2] != null %}
-                        <li>{{ recipe.count[2] }} {{ recipe.size[2] }} {{ recipe.weight[2] }}g {{ recipe.weight[2] }}lb
+                        <li>{{ recipe.count[2] }} {{ recipe.size[2] }} 
+                            {% if recipe.weight[2] != "" %}
+                            {{ recipe.weight[2] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[2] != "" %}
+                            {{ recipe.volume[2] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[2] }}</li>
                         {% endif %}
                         {% if recipe.food[3] != null %}
-                        <li>{{ recipe.count[3] }} {{ recipe.size[3] }} {{ recipe.weight[3] }}g {{ recipe.weight[3] }}lb
+                        <li>{{ recipe.count[3] }} {{ recipe.size[3] }} 
+                            {% if recipe.weight[3] != "" %}
+                            {{ recipe.weight[3] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[3] != "" %}
+                            {{ recipe.volume[3] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[3] }}</li>
                         {% endif %}
                         {% if recipe.food[4] != null %}
-                        <li>{{ recipe.count[4] }} {{ recipe.size[4] }} {{ recipe.weight[4] }}g {{ recipe.weight[4] }}lb
+                        <li>{{ recipe.count[4] }} {{ recipe.size[4] }} 
+                            {% if recipe.weight[4] != "" %}
+                            {{ recipe.weight[4] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[4] != "" %}
+                            {{ recipe.volume[4] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[4] }}</li>
                         {% endif %}
                         {% if recipe.food[5] != null %}
-                        <li>{{ recipe.count[5] }} {{ recipe.size[5] }} {{ recipe.weight[5] }}g {{ recipe.weight[5] }}lb
+                        <li>{{ recipe.count[5] }} {{ recipe.size[5] }} 
+                            {% if recipe.weight[5] != "" %}
+                            {{ recipe.weight[5] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[5] != "" %}
+                            {{ recipe.volume[5] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[5] }}</li>
                         {% endif %}
                         {% if recipe.food[6] != null %}
-                        <li>{{ recipe.count[6] }} {{ recipe.size[6] }} {{ recipe.weight[6] }}g {{ recipe.weight[6] }}lb
+                        <li>{{ recipe.count[6] }} {{ recipe.size[6] }} 
+                            {% if recipe.weight[6] != "" %}
+                            {{ recipe.weight[6] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[6] != "" %}
+                            {{ recipe.volume[6] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[6] }}</li>
                         {% endif %}
                         {% if recipe.food[7] != null %}
-                        <li>{{ recipe.count[7] }} {{ recipe.size[7] }} {{ recipe.weight[7] }}g {{ recipe.weight[7] }}lb
+                        <li>{{ recipe.count[7] }} {{ recipe.size[7] }} 
+                            {% if recipe.weight[7] != "" %}
+                            {{ recipe.weight[7] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[7] != "" %}
+                            {{ recipe.volume[7] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[7] }}</li>
                         {% endif %}
                         {% if recipe.food[8] != null %}
-                        <li>{{ recipe.count[8] }} {{ recipe.size[8] }} {{ recipe.weight[8] }}g {{ recipe.weight[8] }}lb
+                        <li>{{ recipe.count[8] }} {{ recipe.size[8] }} 
+                            {% if recipe.weight[8] != "" %}
+                            {{ recipe.weight[8] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[8] != "" %}
+                            {{ recipe.volume[8] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[8] }}</li>
                         {% endif %}
                         {% if recipe.food[9] != null %}
-                        <li>{{ recipe.count[9] }} {{ recipe.size[9] }} {{ recipe.weight[9] }}g {{ recipe.weight[9] }}lb
+                        <li>{{ recipe.count[9] }} {{ recipe.size[9] }} 
+                            {% if recipe.weight[9] != "" %}
+                            {{ recipe.weight[9] }}<em>g</em>
+                            {% endif %}
+                            {% if recipe.volume[9] != "" %}
+                            {{ recipe.volume[9] }}<em>lb</em>
+                            {% endif %}
                           {{ recipe.food[9] }}</li>
                         {% endif %}
                       </ul>
