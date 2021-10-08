@@ -21,7 +21,7 @@ body {
     transform: scale(.01);
     opacity: 0;
     transition: all .4s ease;
-    border: 1ps solid black;
+    border: 1px solid black;
     box-shadow: 0 0 20px -10px black;
     margin-top: -17%;
     margin-left: -20%;
