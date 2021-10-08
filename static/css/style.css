@@ -1135,6 +1135,10 @@ h3 {
     min-width: 20em;
 }
 
+.recipe-search {
+    margin-top: 50px;
+}
+
 @media (max-width: 1199px) {
     .recipe-browse-cards .card-deck .card {
         max-width: 17em;

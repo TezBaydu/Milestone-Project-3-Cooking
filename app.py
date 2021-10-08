@@ -152,6 +152,46 @@ def browse():
         "browse.html", recipes=recipes)
 
 
+# Show breakfast page
+@app.route("/show_breakfast")
+def show_breakfast():
+    recipes = list(mongo.db.recipes.find())
+    print(recipes)
+    return render_template("breakfast.html", recipes=recipes)
+
+
+# Show lunch page
+@app.route("/show_lunch")
+def show_lunch():
+    recipes = list(mongo.db.recipes.find())
+    print(recipes)
+    return render_template("lunch.html", recipes=recipes)
+
+
+# Show dinner page
+@app.route("/show_dinner")
+def show_dinner():
+    recipes = list(mongo.db.recipes.find())
+    print(recipes)
+    return render_template("dinner.html", recipes=recipes)
+
+
+# Show dessert page
+@app.route("/show_dessert")
+def show_dessert():
+    recipes = list(mongo.db.recipes.find())
+    print(recipes)
+    return render_template("dessert.html", recipes=recipes)
+
+
+# Show snack page
+@app.route("/show_snack")
+def show_snack():
+    recipes = list(mongo.db.recipes.find())
+    print(recipes)
+    return render_template("snack.html", recipes=recipes)
+
+
 # view recipe card
 @app.route("/view_recipe/<recipe_id>", methods=["GET", "POST"])
 def view_recipe(recipe_id):

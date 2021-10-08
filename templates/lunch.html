@@ -19,9 +19,9 @@
               <div class="container">
                 <div class="row">
                   <div class="input-group md-form form-sm form-2 pl-0">
-                    <input class="py-1 search-border validate" type="text" name="query" id="query" minlength="2"
-                      maxlength="15" placeholder="Search for recipes..." pattern="^[a-zA-Z0-9 ]{2,15}$"
-                      aria-label="Search" spellcheck="true">
+                    <input class="py-1 search-border validate" type="text" name="query" id="query" minlength="2" maxlength="15"
+                      placeholder="Search for recipes..." pattern="^[a-zA-Z0-9 ]{2,15}$" aria-label="Search" 
+                      spellcheck="true">
                     <div class="input-group-append">
                       <span class="input-group-text" id="basic-text1"><i class="fas fa-search text-grey"
                           aria-hidden="true"></i></span>
@@ -76,7 +76,6 @@
       </div>
     </div>
   </div>
-
   <!-- Recipe cards -->
   <div class="container-fluid">
     <div class="row">
@@ -86,6 +85,7 @@
             <div class="mt-3 recipe-browse-cards">
               <div class="card-deck">
                 {% for recipe in recipes %}
+                {% if recipe.lunch == "on" %}
                 {% if recipe.private_switch is none %}
                 <div class="card mb-4">
                   <div class="view overlay">
@@ -109,13 +109,13 @@
                     <span>{{ recipe.ready_time }} h/mins</span>
                   </div>
                   <div>
-                    <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn peach-gradient"
-                      type="button">
+                    <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn peach-gradient" type="button">
                       View Recipe
                       <i class="fas fa-clipboard-list"></i>
                     </a>
                   </div>
                 </div>
+                {% endif %}
                 {% endif %}
                 {% endfor %}
               </div>
