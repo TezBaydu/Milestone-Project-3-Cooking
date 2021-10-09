@@ -180,6 +180,18 @@ prep_time.addEventListener('change', () => {
 });
 
 // numbers only
-$(".number").keyup(function() {
-    $(".number").val(this.value.match(/[0-9]*/));
+$(".serves").keyup(function() {
+    $(".serves").val(this.value.match(/[0-9]*/));
+});
+
+$(".count").keyup(function() {
+    $(".count").val(this.value.match(/[0-9]*/));
+});
+
+$(".weight").keyup(function() {
+    $(".weight").val(this.value.match(/[0-9.]*/));
+});
+
+$(".volume").keyup(function() {
+    $(".volume").val(this.value.match(/[0-9.]*/));
 });

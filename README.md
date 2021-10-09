@@ -934,6 +934,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 - All Recipes: limit of cards but not enough time but is a nice to have
 - Heroku maximum slug size is 500MB
     * Removing Gifs and going with images instead
+- Input Type = "number" can be an issue with patterns especially with other formats. JS updated with a Jquery logic to help and input types changes to "text"
 
 
 
