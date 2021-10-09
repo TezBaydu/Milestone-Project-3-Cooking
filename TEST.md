@@ -111,30 +111,60 @@ This user is looking for imagery or influence for another project.
 ### HTML5
 - [HTML code checker](https://validator.w3.org/)
      
-    - Test date 11/07/2021
-        - HTML5 Home page test
-            * Test 1
-        - ![HTML5 test1](assets/test-files/code-files/htmltest-1.JPG)
-            * Adjustments:
-                * Move script to within Body.
-                * Adjust "Body" so Footer sticks to bottom.
-                * Close "a" tag so "a" tag is not placed within another.
-            * Test 2 post adjustments
-        - ![HTML5 test2](assets/test-files/code-files/htmltest-2.JPG)
+    - Test date 09/10/2021
+        - HTML5 test
+            * Home
+                - ![HTML5 test](assets/test-files/html/EatinHome HTML error 081021.JPG)
+                    * Adjustments:
+                        * Created block in base.html to capture image classes in templates and still cover page sources.
+                    * Post adjustments
+                - ![HTML5 test](assets/test-files/html/EatinHome HTML success 091021.JPG)
+            * Browse
+                - ![HTML5 test](assets/test-files/html/EatinBrowse HTML error 091021.JPG)
+                    * Adjustments:
+                        * Type=button removed from <a> tags and type=textfrom <textare> tags
+                - ![HTML5 test](assets/test-files/html/EatinBrowse HTML Success 091021.JPG)
+            * Contact
+                - ![HTML5 test](assets/test-files/html/EatinContact HTML error 091021.JPG)
+                    * Adjustments:
+                        * label and value applied to first option
+                - ![HTML5 test](assets/test-files/html/EatinContact HTML Success 091021.JPG)
+            * Edit Recipe
+                - ![HTML5 test](assets/test-files/html/EatinEditRecipe HTML error 091021.JPG)
+                    * Adjustments:
+                        * id's not required removed, applied initially with view to styling...
+                - ![HTML5 test](assets/test-files/html/EatinEditRecipe HTML success 091021.JPG)
+            
+            * Profile
+                - ![HTML5 test](assets/test-files/html/EatinProfile HTML error 091021.JPG)
+                    * Adjustments:
+                        * Attempted to use validation section of validator but did not recognise user. Investigated online too and unable to find appropriate form of testing, however is working in current format.
+            * Create Recipe
+                - ![HTML5 test](assets/test-files/html/EatinRecipe HTML error 091021.JPG)
+                    * Adjustments:
+                        * type=number did not need pattern attribute and adjusted maxlength to max
+                - ![HTML5 test](assets/test-files/html/EatinRecipe HTML success 091021.JPG)
+            * Show Breakfast, Lunch, Dinner, Dessert and Snack pages
+                - ![HTML5 test](assets/test-files/html/EatinShowLunch HTML Error 091021.JPG)
+                    * Adjustments:
+                        * Minor div removals and adjustments
+                - ![HTML5 test](assets/test-files/html/EatinShowBreakfast HTML success 091021.JPG)
+
 
 ### CSS3
 - [CSS code checker](https://jigsaw.w3.org/css-validator/)
-    - Test date 11/07/2021
+    - Test date 09/10/2021
         - CSS3 code test
-            - ![CSS3 code test](assets/test-files/code-files/css-1.JPG)
-            - ![CSS3 code test](assets/test-files/code-files/css-2.JPG)
+            - ![CSS3 code test](assets/test-files/css/Eatin CSS error 081021.JPG)
+                * Adjustment of typo from ps to px
+            - ![CSS3 code test](assets/test-files/css/Eatin CSS Success 091021.JPG)
         - Bootstrap errors not directly code related
 
                 
 ### JavaScript
 - [JS Hint JavaScript validator](https://jshint.com/)
 
-    - Test date 11/07/2021
+    - Test date 09/10/2021
         - Javascript code test
             * Error with => and template literal syntax
                 * created a file eversion.jshintrc and applied eversion: 6 as advised
