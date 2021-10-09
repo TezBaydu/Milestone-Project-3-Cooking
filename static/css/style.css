@@ -1432,7 +1432,7 @@ h3 {
     .home-image {
         background: url(../images/vegan-boxed-light.jpg);
         background-size: cover;
-        background-position: center;
+        background-position: top;
     }
 
     .home-para-text {

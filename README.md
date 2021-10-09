@@ -913,10 +913,19 @@ For further help and info you can select [Cloning and Forking repositories](http
     * If there was enough time I would have created separate buttons atttributed to @app.routes to filter relevant associated recipt type. - Done decided to lose sleep and do this...
 - Add row recipes and methods JS: Update with inital html code pattern, etc - Done
 - View recipe and View Memner recipe: adjust ingredients to only pick up numbers and measurements - Done
+- Create recipe in heroku app doesn't work on mobile - now working ... ?!
+- limit adding igredient and method rows but to also change dependent on screen size - Done
 
 ### To Do
+- Test JS
+- test PEP8
+- Test colour blindness
+- Test different UI's
+- Update Read Me
+- Update Test
+- Ensure to debug to False
 
-- Create recipe in heroku app doesn't work on mobile...?!
+
 
 ### Notes to consider
 - Message in GitPod stating Python extension loading and is constant. Info found in Slack and Gitpod community advising of installing an older version. Had changed from pymongo 3.12.0 to 3.5.1 but the Python extension loading message still appeared and I was unable to run app.py so have changed back to 3.12.0.
