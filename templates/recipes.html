@@ -79,7 +79,7 @@
                         <label for="serves">Serves</label>
                         <input type="number"
                             oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
-                            class="form-control time no-spinner" id="serves" name="serves" max="2" required>
+                            class="form-control time no-spinner" id="serves" name="serves" max="99" required>
                     </div>
                     <div class="col-3 md-form">
                         <label for="prep_time">Prep time<br><span class="optional">(max time 12:00)</span></label>
@@ -134,7 +134,7 @@
                         <div class="ingredient-field col-sm-1">
                             <input name="count" type="number"
                                 oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
-                                class="form-control no-spinner validate" max="4" step="0.01" placeholder="Quantity">
+                                class="form-control no-spinner validate" max="99" step="0.01" placeholder="Quantity">
                         </div>
                         <div class="ingredient-field col-lg-2 size-field">
                             <input name="size" type="text" class="form-control validate" maxlength="20"
@@ -143,12 +143,12 @@
                         <div class="ingredient-field col-sm-1">
                             <input name="weight" type="number"
                                 oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
-                                class="form-control no-spinner validate" max="4" step="0.01" placeholder="Weight">
+                                class="form-control no-spinner validate" max="999" step="0.01" placeholder="Weight">
                         </div>
                         <div class="ingredient-field col-sm-1">
                             <input name="volume" type="number"
                                 oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
-                                class="form-control no-spinner validate" max="4" step="0.01" placeholder="Volume">
+                                class="form-control no-spinner validate" max="999" step="0.01" placeholder="Volume">
                         </div>
                         <div class="ingredient-field col-sm-1 center-align">
 
