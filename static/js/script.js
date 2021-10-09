@@ -67,12 +67,12 @@ $(document).ready(function() {
 		e.preventDefault();
 		if(window.screen.width > 768) {
 			meth++; 
-			$(wrapper_meth).append('<div class="row ingredients"><div class="col-1"><p id="meth-number"><i class="fas fa-haykal"></i></p></div><div class="input-field col-10 method-input"><textarea id="recipe_method" name="recipe_method" class="form-control validate" placeholder="Method Step" minlength="2" maxlength="400" required></textarea></div></textarea><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div></div>');
+			$(wrapper_meth).append('<div class="row ingredients"><div class="col-1"><p><i class="fas fa-haykal"></i></p></div><div class="input-field col-10 method-input"><textarea name="recipe_method" class="form-control validate" placeholder="Method Step" minlength="2" maxlength="400" required></textarea></div></textarea><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div></div>');
 		}
 
 		if (window.screen.width <= 768) {
 			meth++; 
-			$(wrapper_meth).append('<div class="row ingredients"><div class="input-field col-10 method-input"><textarea id="recipe_method" name="recipe_method" class="form-control validate" placeholder="Method Step" minlength="2" maxlength="400" required></textarea></div></textarea><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div></div>');
+			$(wrapper_meth).append('<div class="row ingredients"><div class="input-field col-10 method-input"><textarea name="recipe_method" class="form-control validate" placeholder="Method Step" minlength="2" maxlength="400" required></textarea></div></textarea><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div></div>');
 		}
 	});
 	
