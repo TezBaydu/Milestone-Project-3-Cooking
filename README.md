@@ -653,8 +653,6 @@ This site has several pages for user to easily identify section associated. Menu
 
 - [MDBootstrap version 4](https://mdbootstrap.com)
 
-- [Materialize](https://materializecss.com) ---?!
-
 - [Google fonts](https://fonts.google.com)
 
 - [Figma]() --- ?!
@@ -934,6 +932,8 @@ For further help and info you can select [Cloning and Forking repositories](http
 - ^[a-zA-Z0-9]{1,30}$ changed to ^[a-zA-Z0-9 -]{1,30}$ to accept spaces and dashes
 - Login forgot password - This would be a nice to have but is not necessary for this project
 - All Recipes: limit of cards but not enough time but is a nice to have
+- Heroku maximum slug size is 500MB
+    * Removing Gifs and going with images instead
 
 
 

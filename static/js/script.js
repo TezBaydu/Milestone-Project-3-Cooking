@@ -180,6 +180,6 @@ prep_time.addEventListener('change', () => {
 });
 
 // numbers only
-$("#serves").keyup(function() {
-    $("#serves").val(this.value.match(/[0-9]*/));
+$(".number").keyup(function() {
+    $(".number").val(this.value.match(/[0-9]*/));
 });
