@@ -14,6 +14,7 @@ The site design is to help the user be able to search recipes with ease and to d
 
 This is the third project of a four module Full Stack Developer course provided by the [Code Institute](https://codeinstitute.net/).
 Main requirements are to build a full stack site to help users manage a common dataset using HTML, CSS, JavaScript, JQuery, Python+Flask, MongoDB, Additional Libraries and external API's.
+To note the focus of this project is on the data rather than any business logic.
 </div>
 
 ## Contents
@@ -49,7 +50,7 @@ Main requirements are to build a full stack site to help users manage a common d
     - [Recipe view from browse page](#Recipe-view-from-browse-page)
     - [Recipe view from profile page](#Recipe-view-from-profile-page)
 3. [Technologies Used](#Technologies-Used)
-4. [Testing](#Testing) / [Test detail file]() ---- ?!
+4. [Testing](#Testing) / [Test detail file](https://github.com/TezBaydu/Milestone-Project-3-Cooking/TEST.md)
     - [Commits](#Commits)
     - [Code testing](#Code-testing)
     - [Element testing](#Element-testing)
@@ -621,15 +622,16 @@ This site has several pages for user to easily identify section associated. Menu
     * Code used to style content
 
 - Javascript
-    * Code used to provide more interactive attributes
+    * Code used to provide interactive attributes
 
 - [JQuery](https://code.jquery.com)
+    * Code used to provide interactive attributes
 
 - [Python](https://www.python.org)
-    * When coding to ensure script is PEP8 compliant
+    * Code used to provide interactive attributes
 
 - Flask
-    * Mainly for Jinja templating
+    * Micro web framework written in Python
 
 - [MongoDB](https://www.mongodb.com)
 
@@ -680,6 +682,8 @@ This site has several pages for user to easily identify section associated. Menu
 
 - [JS Hint JavaScript validator](https://jshint.com/)
 
+- [PEP8](http://pep8online.com/)
+
 - [Gif Compessor](https://www.freeconvert.com/gif-compressor)
 
 - [Browser site testing - BrowserStack](http://browserstack.com)
@@ -692,7 +696,7 @@ This site has several pages for user to easily identify section associated. Menu
 
 
 ## Testing 
--   ### View [TEST.md file]() --- ?!
+-   ### View [TEST.md file](https://github.com/TezBaydu/Milestone-Project-3-Cooking/TEST.md)
 
 ### Commits
 
