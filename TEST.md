@@ -191,7 +191,7 @@ This user is looking for imagery or influence for another project.
 - Test 
     * Responsive hover on click.
     * Links.
-![Navbar test](assets/test-files/element-files/Nav.mp4)
+![Navbar test](assets/test-files/element-files/nav.gif)
 
 ### Scroll Top button
 - Test 
