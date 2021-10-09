@@ -55,28 +55,28 @@
         <div class="container justify-content-center recipe-browse-container">
           <div class="row center-align recipe-search">
             <div class="col browse-button">
-              <a href="{{ url_for('show_breakfast') }}" class="btn purple-gradient btn-rounded btn-md my-0 ml-sm-2"
-                type="button">Breakfasts</a>
+              <a href="{{ url_for('show_breakfast') }}"
+                class="btn purple-gradient btn-rounded btn-md my-0 ml-sm-2">Breakfasts</a>
             </div>
             <div class="col browse-button">
-              <a href="{{ url_for('show_lunch') }}" class="btn peach-gradient btn-rounded btn-md my-0 ml-sm-2"
-                type="button">Lunches</a>
-            </div>
-          </div>
-          <div class="row center-align recipe-search">
-            <div class="col browse-button">
-              <a href="{{ url_for('show_dinner') }}" class="btn aqua-gradient btn-rounded btn-md my-0 ml-sm-2"
-                type="button">Dinners</a>
-            </div>
-            <div class="col browse-button">
-              <a href="{{ url_for('show_dessert') }}" class="btn blue-gradient btn-rounded btn-md my-0 ml-sm-2"
-                type="button">Desserts</a>
+              <a href="{{ url_for('show_lunch') }}"
+                class="btn peach-gradient btn-rounded btn-md my-0 ml-sm-2">Lunches</a>
             </div>
           </div>
           <div class="row center-align recipe-search">
             <div class="col browse-button">
-              <a href="{{ url_for('show_snack') }}" class="btn btn-pink btn-rounded btn-md my-0 ml-sm-2"
-                type="button">Snacks</a>
+              <a href="{{ url_for('show_dinner') }}"
+                class="btn aqua-gradient btn-rounded btn-md my-0 ml-sm-2">Dinners</a>
+            </div>
+            <div class="col browse-button">
+              <a href="{{ url_for('show_dessert') }}"
+                class="btn blue-gradient btn-rounded btn-md my-0 ml-sm-2">Desserts</a>
+            </div>
+          </div>
+          <div class="row center-align recipe-search">
+            <div class="col browse-button">
+              <a href="{{ url_for('show_snack') }}"
+                class="btn btn-pink btn-rounded btn-md my-0 ml-sm-2">Snacks</a>
             </div>
           </div>
         </div>
@@ -129,8 +129,7 @@
                     <span>{{ recipe.ready_time }} h/mins</span>
                   </div>
                   <div>
-                    <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn peach-gradient"
-                      type="button">
+                    <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn peach-gradient">
                       View Recipe
                       <i class="fas fa-clipboard-list"></i>
                     </a>
