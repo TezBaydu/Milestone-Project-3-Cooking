@@ -46,7 +46,28 @@
 
 ## User Story testing
 
-### British Travellers
+### Browsers
+The user is currently in Britain and not wanting to book any trips abroad.
+
+* This user wants to:
+1. Be able to navigate through the website easily.
+    - Fixed top Nav bar showing sections to navigate to.
+    - Fixed site logo on top left of nav bar for user to navigate to home section.
+2. Understand what site is providing (at this stage).
+    - Synopsis on Home section.
+3. To be able to see and be aware of recommended locations and various elements associated with them.
+    - Interest recommendations of Activities, Restaurants and Hotels.
+    - More Info buttons directing user to associated sites.
+4. To be able to navigate and interact with map to get better understanding of location.
+    - Map markers showing several recommended locations.
+    - Interactive google map which can be zoomed in and expanded for larger devices.
+5. Be able to navigate to relevant social links.
+    - Footer at bottom with buttons directing to social sites.
+6. Be able to contact site company and be part of newsletter/e-mail contact list.
+    - Contact section has a form which has required fields to make contact.
+    - Notification both on site and direct email to ensure response has been recieved.
+
+### Members
 The user is currently in Britain and not wanting to book any trips abroad.
 
 * This user wants to:

@@ -60,10 +60,10 @@
                         <!-- Lunch checkbox -->
                         <div class="custom-control custom-checkbox custom-control-inline">
                             {% if member_recipe.lunch == "on" %}
-                            <input value="{{ member_recipe.lunch }}" type="checkbox" class="custom-control-input"
+                            <input type="checkbox" class="custom-control-input"
                                 id="recipe_type2" name="lunch" checked>
                             {% else %}
-                            <input value="{{ member_recipe.lunch }}" type="checkbox" class="custom-control-input"
+                            <input type="checkbox" class="custom-control-input"
                                 id="recipe_type2" name="lunch">
                             {% endif %}
                             <label class="custom-control-label" for="recipe_type2">Lunch</label>
@@ -72,10 +72,10 @@
                         <!-- Dinner checkbox -->
                         <div class="custom-control custom-checkbox custom-control-inline">
                             {% if member_recipe.dinner == "on" %}
-                            <input value="{{ member_recipe.dinner }}" type="checkbox" class="custom-control-input"
+                            <input type="checkbox" class="custom-control-input"
                                 id="recipe_type3" name="dinner" checked>
                             {% else %}
-                            <input value="{{ member_recipe.dinner }}" type="checkbox" class="custom-control-input"
+                            <input type="checkbox" class="custom-control-input"
                                 id="recipe_type3" name="dinner">
                             {% endif %}
                             <label class="custom-control-label" for="recipe_type3">Dinner</label>
@@ -83,10 +83,10 @@
                         <!-- Dessert checkbox -->
                         <div class="custom-control custom-checkbox custom-control-inline">
                             {% if member_recipe.dessert == "on" %}
-                            <input value="{{ member_recipe.dessert }}" type="checkbox" class="custom-control-input"
+                            <input type="checkbox" class="custom-control-input"
                                 id="recipe_type4" name="dessert" checked>
                             {% else %}
-                            <input value="{{ member_recipe.dessert }}" type="checkbox" class="custom-control-input"
+                            <input type="checkbox" class="custom-control-input"
                                 id="recipe_type4" name="dessert">
                             {% endif %}
                             <label class="custom-control-label" for="recipe_type4">Dessert</label>
@@ -152,7 +152,7 @@
                             <p>Weight<br>(g)</p>
                         </div>
                         <div class="col-sm-1 rec-head">
-                            <p>Volume<br>(lb)</p>
+                            <p>Volume<br>(ml)</p>
                         </div>
                     </div>
 
