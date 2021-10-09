@@ -787,6 +787,10 @@ h3 {
     padding-left: 2.75rem;
 }
 
+.input_meth_wrap .ingredients .method-input .method-text {
+    height: 200px;
+}
+
 @media (max-width: 1199px) {
     .register-reg-text {
         margin-bottom: 17em;

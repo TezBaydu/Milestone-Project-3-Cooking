@@ -28,14 +28,14 @@
                 <div class="row">
                     <div class="col">
                         <label for="recipe_name" class="recipe-name-label">Name</label>
-                        <textarea id="recipe_name" name="recipe_name" class="form-control" minlength="2" maxlength="25"
+                        <textarea id="recipe_name" name="recipe_name" class="form-control" minlength="2" maxlength="50"
                             spellcheck="true" required>{{ member_recipe.recipe_name }}</textarea>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="recipe_description">Description</label>
                     <textarea class="form-control description" id="recipe_description" name="recipe_description"
-                        maxlength="100" required>{{ member_recipe.recipe_description }}</textarea>
+                        maxlength="200" required>{{ member_recipe.recipe_description }}</textarea>
                 </div>
                 <!-- image upload and recipe type -->
                 <div class="card-body row">
@@ -1039,7 +1039,7 @@
                         </div>
                         <div class="input-field col-10 method-input">
                             {% if member_recipe.recipe_method[0] != null %}
-                            <textarea name="recipe_method" class="form-control validate" placeholder="Method Step"
+                            <textarea name="recipe_method" class="form-control validate method-text method-text" placeholder="Method Step"
                                 minlength="2" maxlength="400" required>{{ member_recipe.recipe_method[0] }}
                             </textarea>
                             {% endif %}
@@ -1059,7 +1059,7 @@
                         </div>
                         <div class="input-field col-10 method-input">
                             {% if member_recipe.recipe_method[1] != null %}
-                            <textarea name="recipe_method" class="form-control validate" placeholder="Method Step"
+                            <textarea name="recipe_method" class="form-control validate method-text" placeholder="Method Step"
                                 minlength="2" maxlength="400" required>{{ member_recipe.recipe_method[1] }}
                         </textarea>
                             {% endif %}
@@ -1079,7 +1079,7 @@
                         </div>
                         <div class="input-field col-10 method-input">
                             {% if member_recipe.recipe_method[2] != null %}
-                            <textarea name="recipe_method" class="form-control validate" placeholder="Method Step"
+                            <textarea name="recipe_method" class="form-control validate method-text" placeholder="Method Step"
                                 minlength="2" maxlength="400" required>{{ member_recipe.recipe_method[2] }}
                         </textarea>
                             {% endif %}
@@ -1099,7 +1099,7 @@
                         </div>
                         <div class="input-field col-10 method-input">
                             {% if member_recipe.recipe_method[3] != null %}
-                            <textarea name="recipe_method" class="form-control validate" placeholder="Method Step"
+                            <textarea name="recipe_method" class="form-control validate method-text" placeholder="Method Step"
                                 minlength="2" maxlength="400" required>{{ member_recipe.recipe_method[3] }}
                         </textarea>
                             {% endif %}
@@ -1119,7 +1119,7 @@
                         </div>
                         <div class="input-field col-10 method-input">
                             {% if member_recipe.recipe_method[4] != null %}
-                            <textarea name="recipe_method" class="form-control validate" placeholder="Method Step"
+                            <textarea name="recipe_method" class="form-control validate method-text" placeholder="Method Step"
                                 minlength="2" maxlength="400" required>{{ member_recipe.recipe_method[4] }}
                         </textarea>
                             {% endif %}
@@ -1139,7 +1139,7 @@
                         </div>
                         <div class="input-field col-10 method-input">
                             {% if member_recipe.recipe_method[5] != null %}
-                            <textarea name="recipe_method" class="form-control validate" placeholder="Method Step"
+                            <textarea name="recipe_method" class="form-control validate method-text" placeholder="Method Step"
                                 minlength="2" maxlength="400" required>{{ member_recipe.recipe_method[5] }}
                         </textarea>
                             {% endif %}
@@ -1159,7 +1159,7 @@
                         </div>
                         <div class="input-field col-10 method-input">
                             {% if member_recipe.recipe_method[6] != null %}
-                            <textarea name="recipe_method" class="form-control validate" placeholder="Method Step"
+                            <textarea name="recipe_method" class="form-control validate method-text" placeholder="Method Step"
                                 minlength="2" maxlength="400" required>{{ member_recipe.recipe_method[6] }}
                         </textarea>
                             {% endif %}
@@ -1179,7 +1179,7 @@
                         </div>
                         <div class="input-field col-10 method-input">
                             {% if member_recipe.recipe_method[7] != null %}
-                            <textarea name="recipe_method" class="form-control validate" placeholder="Method Step"
+                            <textarea name="recipe_method" class="form-control validate method-text" placeholder="Method Step"
                                 minlength="2" maxlength="400" required>{{ member_recipe.recipe_method[7] }}
                         </textarea>
                             {% endif %}
@@ -1199,7 +1199,7 @@
                         </div>
                         <div class="input-field col-10 method-input">
                             {% if member_recipe.recipe_method[8] != null %}
-                            <textarea name="recipe_method" class="form-control validate" placeholder="Method Step"
+                            <textarea name="recipe_method" class="form-control validate method-text" placeholder="Method Step"
                                 minlength="2" maxlength="400" required>{{ member_recipe.recipe_method[8] }}
                         </textarea>
                             {% endif %}

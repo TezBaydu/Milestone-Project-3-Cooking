@@ -43,7 +43,7 @@ $(document).ready(function () {
 		if (window.screen.width >= 768) {
 			if (add < max_add) {
 				add++;
-				$(ingredient_wrapper).append('<div class="row ingredients"><div class="col-1"><p><i class="fas fa-haykal"></i></p></div><div class="ingredient-field col-md-5 food-field"><input name="food" type="text" class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="count" type="number" oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);" class="form-control no-spinner validate" max="99" step="0.01" placeholder="Quantity"></div><div class="ingredient-field col-lg-2 size-field input_ing_wrap"><input name="size" type="text" class="form-control validate" maxlength="20" pattern="^[a-zA-Z0-9 -]{0,20}$" placeholder="Size"></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="weight" type="number" oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);" class="form-control no-spinner validate" max="99" step="0.01" placeholder="Weight"></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="volume" type="number" oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);" class="form-control no-spinner validate" max="999" step="0.01" placeholder="Volume"></div><div class="ingredient-field col-sm-1 center-align"><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div></div></div>');
+				$(ingredient_wrapper).append('<div class="row ingredients"><div class="col-1"><p><i class="fas fa-haykal"></i></p></div><div class="ingredient-field col-md-5 food-field"><input name="food" type="text" class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="count" type="number" oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);" class="form-control no-spinner validate" max="99" step="0.01" placeholder="Quantity"></div><div class="ingredient-field col-lg-2 size-field input_ing_wrap"><input name="size" type="text" class="form-control validate" maxlength="20" pattern="^[a-zA-Z0-9 -]{0,20}$" placeholder="Size"></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="weight" type="number" oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);" class="form-control no-spinner validate" max="999" step="0.01" placeholder="Weight"></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="volume" type="number" oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);" class="form-control no-spinner validate" max="999" step="0.01" placeholder="Volume"></div><div class="ingredient-field col-sm-1 center-align"><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div></div></div>');
 			}
 		}
 
@@ -79,14 +79,14 @@ $(document).ready(function () {
 		if (window.screen.width >= 768) {
 			if (meth < max_meth) {
 				meth++;
-				$(wrapper_meth).append('<div class="row ingredients"><div class="col-1"><p><i class="fas fa-haykal"></i></p></div><div class="input-field col-10 method-input"><textarea name="recipe_method" class="form-control validate" placeholder="Method Step" minlength="2" maxlength="400" required></textarea></div></textarea><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div></div>');
+				$(wrapper_meth).append('<div class="row ingredients"><div class="col-1"><p><i class="fas fa-haykal"></i></p></div><div class="input-field col-10 method-input"><textarea name="recipe_method" class="form-control validate method-text" placeholder="Method Step" minlength="2" maxlength="400" required></textarea></div></textarea><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div></div>');
 			}
 		}
 
 		if (window.screen.width < 768) {
 			if (meth < max_meth) {
 				meth++;
-				$(wrapper_meth).append('<div class="row ingredients"><div class="input-field col-10 method-input"><textarea name="recipe_method" class="form-control validate" placeholder="Method Step" minlength="2" maxlength="400" required></textarea></div></textarea><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div></div>');
+				$(wrapper_meth).append('<div class="row ingredients"><div class="input-field col-10 method-input"><textarea name="recipe_method" class="form-control validate method-text" placeholder="Method Step" minlength="2" maxlength="400" required></textarea></div></textarea><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div></div>');
 			}
 		}
 	});
