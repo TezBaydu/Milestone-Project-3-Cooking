@@ -76,7 +76,7 @@
                 <div class="row recipe-time-row">
                     <div class="col-3 md-form">
                         <label for="serves">Serves</label>
-                        <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control time no-spinner" id="serves" name="serves" minlength="0" maxlength="2" pattern="^[0-9]{0,2}$" required>
+                        <input type="number" oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);" class="form-control time no-spinner" id="serves" name="serves" max="2" pattern="^[0-9]{0,2}$" required>
                     </div>
                     <div class="col-3 md-form">
                         <label for="prep_time">Prep time<br><span class = "optional">(max time 12:00)</span></label>
@@ -84,7 +84,7 @@
                     </div>
                     <div class="col-3 md-form">
                         <label for="cook_time">Cook time<br><span class = "optional">(max time 11:59)</span></label>
-                        <input type="time" class="form-control time" id="cook_time" name="cook_time" min="0:00" max="11:59" required>
+                        <input type="time" class="form-control time" id="cook_time" name="cook_time" min="00:00" max="11:59" required>
                     </div>
                     <div class="col-3 md-form">
                         <label for="ready_time">Ready in<br><span><span class = "optional">(max time 23:59)</span></span></label>
@@ -125,16 +125,16 @@
                             <input id="food" name="food" type="text" class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required>
                         </div>
                         <div class="ingredient-field col-sm-1">
-                            <input id="count" name="count" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" placeholder="Quantity">
+                            <input id="count" name="count" type="number" oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);" class="form-control no-spinner validate" max="4" step="0.01" placeholder="Quantity">
                         </div>
                         <div class="ingredient-field col-lg-2 size-field">
                             <input id="size" name="size" type="text" class="form-control validate" maxlength="20" pattern="^[a-zA-Z0-9 -]{0,20}$" placeholder="Size">
                         </div>
                         <div class="ingredient-field col-sm-1">
-                            <input id="weight" name="weight" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" placeholder="Weight">
+                            <input id="weight" name="weight" type="number" oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);" class="form-control no-spinner validate" max="4" step="0.01" placeholder="Weight">
                         </div>
                         <div class="ingredient-field col-sm-1">
-                            <input id="volume" name="volume" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control no-spinner validate" minlength="0" maxlength="4" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" placeholder="Volume">
+                            <input id="volume" name="volume" type="number" oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);" class="form-control no-spinner validate" max="4" step="0.01" placeholder="Volume">
                         </div>
                         <div class="ingredient-field col-sm-1 center-align">
 
@@ -159,7 +159,7 @@
                             <p id="meth-number"><i class="fas fa-haykal"></i></p>
                         </div>
                         <div class="input-field col-10 method-input">
-                        <textarea id="recipe_method" name="recipe_method" type="text" class="form-control validate" 
+                        <textarea id="recipe_method" name="recipe_method" class="form-control validate" 
                             placeholder="Method Step" minlength="2" maxlength="400" required></textarea>
                         </div>
                     </div>
