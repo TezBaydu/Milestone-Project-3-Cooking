@@ -165,19 +165,24 @@ This user is looking for imagery or influence for another project.
 - [JS Hint JavaScript validator](https://jshint.com/)
 
     - Test date 09/10/2021
-        - Javascript code test
-            * Error with => and template literal syntax
-                * created a file eversion.jshintrc and applied eversion: 6 as advised
-                * This wasn't needed. Changed to use JSHint as code validator and reconfigured to capture ES6:
-        ![JSHint configure to ES6](assets/test-files/JSHint-ES6.JPG)
         * Code issues
-        ![JSHint warnings](assets/test-files/JSHint-warnings.JPG)
+        ![JSHint warnings](assets/test-files/js/JSScripttestErrors091021.JPG)
         * Warnings
-            * Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (currentInfoWindow, maps, locationPlace, marker)
-                * google.maps.event.addListener(marker, 'click', function () {
-                * Code relies on two variables 'marker' and 'infoWindow' and they are dependant so they can't be defined outside the loop.
-            * google
-                * Goole maps defined and is reliant for google maps to work
+            * missing semicolon minor errors
+        ![JSHint update](assets/test-files/js/JSScripttestunusedvariables091021.JPG)
+            * Updated semicolon errors
+            * When attempting to update and rmeoval of unused variables various elements of code stop working like the menu feature.
+                - After researching online have decided these are to be kept to ensure other functions can be enabled
+        ![JSHint Email](assets/test-files/js/JSemailScripttest091021.JPG)
+            * 1 Unused and 1 undefined variable but these are accepted with post through to email after online investigation
+
+### PEP8
+- [PEP8 requirement check](http://pep8online.com/)
+
+    - Test date 09/10/2021
+        * Code issues
+        ![PEP8 Test](assets/test-files/PEP8/PEP8app.pyTest091021.JPG)
+            * No Errors
 
 [Back to top ⇧](#top)
 
