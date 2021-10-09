@@ -189,10 +189,9 @@ This user is looking for imagery or influence for another project.
 ## Element testing
 ### Navigation bar
 - Test 
-    * Responsive hover on menu.
+    * Responsive hover on click.
     * Links.
-    * Menu disappears on scroll down and appears on scroll up.
-![Navbar test](assets/test-files/element-files/Menu-element-test.gif)
+![Navbar test](assets/test-files/element-files/Nav.mp4)
 
 ### Scroll Top button
 - Test 
