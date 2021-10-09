@@ -195,94 +195,133 @@ This user is looking for imagery or influence for another project.
 
 ### Scroll Top button
 - Test 
-    * Button pressed scrolls user to top
-    * Button changes format on hover
-![Scroll Top button test](assets/test-files/element-files/scroll-button-test.gif)
+    * Button appears on scroll down and when pressed scrolls user to top
+![Scroll Top button test](assets/test-files/element-files/scrollTopButton.gif)
 
 ### Footer
 - Test 
     * Social links change on hover
     * Social links lead to associated sites
-![Footer social links test](assets/test-files/element-files/footer-test.gif)
+![Footer social links test](assets/test-files/element-files/socialLinks.gif)
 
 [Back to top ⇧](#top)
 
-### Locations section
-#### Read More
-- Test
-    * Format change on hover.
-    * Card text opens on click and closes on click.
-    * Button changes text on click
-![Read More Button test](assets/test-files/element-files/read-button-test.gif)
+### Page tests
+#### Home
+- Image
+    * Nav links to other pages
+    ![Home Page test](assets/test-files/element-files/nav.gif)
 
 [Back to top ⇧](#top)
 
-#### Card text links
-- Test links work on card text
-    * Brighton
-    - ![Brighton text links test](assets/test-files/element-files/brighton-card-link-test.gif)
+#### Register
+- Image
+    * Appealing
+- Inputs
+    * First Name
+    * Last Name
+    * Email validation
+    * Password hidden
+    * Link to login if already registered
+    ![Register Page test](assets/test-files/element-files/registerPage.gif)
 
-    * Newquay
-    - ![Newquay text links test](assets/test-files/element-files/newquay-card-link-test.gif)
 
-    * Cardigan
-    - ![Cardigan text links test](assets/test-files/element-files/cardigan-card-link-test.gif)
-
-    * Skye
-    - ![Skye text links test](assets/test-files/element-files/skye-card-link-test.gif)
-
-[Back to top ⇧](#top)
-
-#### Map Markers
-- Test 
-    * Markers appear in map when buttons are pressed 
-    * Marker notifications appear when markers a re pressed
-    * Disappear when other markers are pressed
-
-    * Brighton
-    - ![Brighton Map Marker test](assets/test-files/element-files/brighton-map-marker-test.gif)
-    
-    * Newquay
-    - ![Newquay Map Marker test](assets/test-files/element-files/newquay-map-marker-test.gif)
-
-    * Cardigan
-    - ![Cardigan Map Marker test](assets/test-files/element-files/cardigan-map-marker-test.gif)
-
-    * Skye
-    - ![Skye Map Marker test](assets/test-files/element-files/skye-map-marker-test.gif)
+#### Login
+- Image
+    * Appealing
+- Inputs
+    * Email
+    * Password hidden
+    * Flash to display if incorrect
+    * Link to Register if not a member
+    ![Login Page test](assets/test-files/element-files/loginPage.gif)
 
 [Back to top ⇧](#top)
 
-#### Interest Cards
-- Test
-    * Cards appear on interest buttons press
-    * Alternate cards appear on other buttons being pressed
-    * More info buttons work and push user to site and a new window
+#### Login
+- Image
+    * Appealing
+- Inputs
+    * Email
+    * Password hidden
+    * Flash to display if incorrect
+    * Link to Register if not a member
+    ![Login Page test](assets/test-files/element-files/loginPage.gif)
 
-    * Brighton
-    - ![Brighton interest card test](assets/test-files/element-files/brighton-card-interest-test.gif)
-
-    * Newquay
-    - ![Newquay interest card test](assets/test-files/element-files/newquay-card-interest-test.gif)
-
-    * Cardigan
-    - ![Cardigan interest card test](assets/test-files/element-files/cardigan-card-interest-test.gif)
-
-    * Skye
-    - ![Skye interest card test](assets/test-files/element-files/skye-card-interest-test.gif)
+#### Browse
+- Card images and text
+    * Button to view recipe cards on each card
+    * Search bar with text
+    * Filter by recipe category
+    ![Browse Page test](assets/test-files/element-files/browsePage.gif)
 
 [Back to top ⇧](#top)
 
-### Contact section
-- Test
+#### Profile
+- Profile details
+    * First name
+    * Last name
+    * Email
+    * Edit account button
+    * Delete Account button - with warning if selected
+_ Recipe details
+    * Public Recipes
+        - View, Edit and Delete Options. Delete to have warning.
+    * Private Recipes
+        - View, Edit and Delete Options. Delete to have warning.
+    ![Profile Page test](assets/test-files/element-files/profilePage.gif)
+
+#### Edit Profile
+- Ability to amend profile details
+    * Cannot amend email as this is used as a username.
+        - This can be deleted however
+    ![Edit Profile Page test](assets/test-files/element-files/EditProfilePage.gif)
+
+[Back to top ⇧](#top)
+
+#### Create Recipe
+- Recipe fields
+    * Name
+    * Description
+    * Image (url image address)
+    * Recipe type
+    * Serves
+    * Prep time
+    * Cook time
+    * Ready time (sum of pre and cook times)
+    * Ingredients
+        - Food
+        - Quantity
+        - Size
+        - Weight (g)
+        - Volume (lb)
+    * Method steps
+    * Public / Privcy switch
+    * Save button
+    * Cancel button
+        - Warning if cancelling updates will be lost
+    ![Create Recipe Page test](assets/test-files/element-files/createRecipePage.gif)
+
+#### Edit Recipe
+- Recipe fields update with data previously entered
+    * Update of info updates relevant fields
+    ![Edit Recipe Page test](assets/test-files/element-files/editRecipePage.gif)
+
+
+[Back to top ⇧](#top)
+
+#### Contact Page
+- Image
+    * Appealing
+- Fields
     * Contact fields are editable
     * All fields are required
     * Email field requires email format
     * Submit button works
     * Pop up appears to show success
     * Contact fields text is removed
-    * Position returns to contact after submission
-    - ![Contact section test](assets/test-files/element-files/contact-field-test.gif)
+    * Position returns to Home after submission
+    - ![Contact Page test](assets/test-files/element-files/contactPage.gif)
 
 [Back to top ⇧](#top)
 
@@ -291,48 +330,33 @@ This user is looking for imagery or influence for another project.
     * When email is submitted an email is sent to the developer with message from user
     * Auto reply to user stating an email has been received and they will be contacted
     * Email to have a link to the site
-    - ![Email format test](assets/test-files/element-files/email-send-receipt-test.gif)
+    - ![Email format test](assets/test-files/element-files/contactEmailLink.gif)
 
 [Back to top ⇧](#top)
 
 ### Device testing
-- Test
-    * Device styles and responsiveness for
-    - Mobile
-    - ![Mobile device test](assets/test-files/element-files/mobile-device-test.gif)
-
-    - Tablet
-    - ![Tablet device test](assets/test-files/element-files/tablet-device-test.gif)
-
-    - Am I Responsive design checker
-    - ![Am I Responsive design test](assets/test-files/element-files/am-i-responsive-test.gif)
+- [amiresponsive](http://ami.responsivedesign.is/)
+    * Device styles and responsiveness for Mobile, Tablet and Desktop
+    ![Device responsive test](assets/test-files/element-files/responsiveDesignTest.gif)
 
 [Back to top ⇧](#top)
 
 ### Colour blindness testing
-- Test
-    * Contrasting colours
-    * Format style is viewable
-    * Elements work
-        - On Test found the scroll to top button was no longer in a fixed position
-        - Have investigated online, on Slack and through tutor support and there is no documentation to understand why this occurs.
-        - Have also tested on LMS site on intercom container which is also floating and this loses it's fixed position too.
-        - Potentially one to investigate however is worked around as the menu appears on scroll up and the scroll top button is fixed at the bottom
 
 #### Protanopia
-- ![Protanopia test](assets/test-files/colour-blindness-files/protanopia-test.gif)
+- ![Protanopia test](assets/test-files/element-files/Protanopia.gif)
 
 #### Deuteranopia
-- ![Deuteranopia test](assets/test-files/colour-blindness-files/deuteranopia-test.gif)
-
-#### LMS Site intercom container colour blindness test
-- ![LMS Site colour blindness check](assets/test-files/colour-blindness-files/lms-colour-test.gif)
+- ![Deuteranopia test](assets/test-files/element-files/Deuteranopia.gif)
 
 [Back to top ⇧](#top)
 
 ### Browser testing
 - Microsoft Edge browser testing
-    * ![Microsoft Edge browser test](assets/test-files/browser-files/edge-browser-test.gif)
+    * Error with Input="number"
+        * Online fix suggested placing a min and this will work
+
+    * ![Microsoft Edge browser test]()
 
 - Firefox browser testing
     * ![Firefox browser test](assets/test-files/browser-files/firefox-browser-test.gif)
