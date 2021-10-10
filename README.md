@@ -227,7 +227,7 @@ Below are areas considered for levels of importance and viability
 
 Hierarchical structure design for simpler user navigation:
 
-![Eatin Site Structure](assets/readme/readme-images/Eatin hierarchical structure.JPG)
+![Eatin Site Structure](assets/readme/readme-images/Eatinhierarchicalstructure.JPG)
 
 [Back to top ⇧](#introduction)
 
@@ -913,12 +913,14 @@ For further help and info you can select [Cloning and Forking repositories](http
 - View recipe and View Memner recipe: adjust ingredients to only pick up numbers and measurements - Done
 - Create recipe in heroku app doesn't work on mobile - now working ... ?!
 - limit adding igredient and method rows but to also change dependent on screen size - Done
+- Test JS - Done
+- test PEP8 - Done
+- Test colour blindness - Done
+- Test different UI's - Done
+
+
 
 ### To Do
-- Test JS
-- test PEP8
-- Test colour blindness
-- Test different UI's
 - Update Read Me
 - Update Test
 - Ensure to debug to False

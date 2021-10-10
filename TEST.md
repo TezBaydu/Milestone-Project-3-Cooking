@@ -47,54 +47,29 @@
 ## User Story testing
 
 ### Browsers
-The user is currently in Britain and not wanting to book any trips abroad.
+The user is wanting to find dining ideas
 
 * This user wants to:
 1. Be able to navigate through the website easily.
-    - Fixed top Nav bar showing sections to navigate to.
-    - Fixed site logo on top left of nav bar for user to navigate to home section.
-2. Understand what site is providing (at this stage).
-    - Synopsis on Home section.
-3. To be able to see and be aware of recommended locations and various elements associated with them.
-    - Interest recommendations of Activities, Restaurants and Hotels.
-    - More Info buttons directing user to associated sites.
-4. To be able to navigate and interact with map to get better understanding of location.
-    - Map markers showing several recommended locations.
-    - Interactive google map which can be zoomed in and expanded for larger devices.
-5. Be able to navigate to relevant social links.
-    - Footer at bottom with buttons directing to social sites.
-6. Be able to contact site company and be part of newsletter/e-mail contact list.
-    - Contact section has a form which has required fields to make contact.
-    - Notification both on site and direct email to ensure response has been recieved.
+2. Learn about various recipes.
+3. Be able to navigate to relevant social links.
+4. Be able to make contact for queries and newsletter sign up.
 
 ### Members
-The user is currently in Britain and not wanting to book any trips abroad.
-
-* This user wants to:
+The user is wanting to find, store and share dining ideas
+*   This user wants to:
 1. Be able to navigate through the website easily.
-    - Fixed top Nav bar showing sections to navigate to.
-    - Fixed site logo on top left of nav bar for user to navigate to home section.
-2. Understand what site is providing (at this stage).
-    - Synopsis on Home section.
-3. To be able to see and be aware of recommended locations and various elements associated with them.
-    - Interest recommendations of Activities, Restaurants and Hotels.
-    - More Info buttons directing user to associated sites.
-4. To be able to navigate and interact with map to get better understanding of location.
-    - Map markers showing several recommended locations.
-    - Interactive google map which can be zoomed in and expanded for larger devices.
-5. Be able to navigate to relevant social links.
-    - Footer at bottom with buttons directing to social sites.
-6. Be able to contact site company and be part of newsletter/e-mail contact list.
-    - Contact section has a form which has required fields to make contact.
-    - Notification both on site and direct email to ensure response has been recieved.
+2. Learn about various recipes.
+3. Be able to navigate to relevant social links.
+4. Be able to make contact for queries, technical issues and newsletter sign up.
+5. Be able to create, read, update and delete their profile and recipe data.
 
 ### Web Developer
 This user is looking for imagery or influence for another project.
 
 * They want to be able to:
 1. Have easy navigation.
-    - Fixed top Nav bar..
-    - Fixed logo on top left of nav bar for user to navigate to home page.
+
 2. Find how the website was created.
     - [README.md](https://github.com/TezBaydu/Milestone-Project-3-cooking#introduction) file created detailing why and how website was created.
     - Contact form can also be used for General enquiries.
@@ -356,10 +331,11 @@ _ Recipe details
     * ![Microsoft Edge browser test](assets/test-files/element-files/Edge.gif)
 
 - Firefox browser testing
-    * ![Firefox browser test](assets/test-files/browser-files/firefox-browser-test.gif)
+    * ![Firefox browser test](assets/test-files/element-files/Firefox.gif)
     * Nav design circle issue
         - identified d-block was the problem and have isolated in css
-        ![Firefox d-block](assets/test-files/element-files/FirefoxNavError.JPG)
+        ![Firefox error](assets/test-files/element-files/FirefoxNavError.JPG)
+        ![Firefox fix](assets/test-files/element-files/FirefoxNavFix.JPG)
 
 - Safari browser testing
     * Unable to test without making a purchase
@@ -371,61 +347,6 @@ _ Recipe details
 - Friends
 - Family
 - Website Designers
-
-#### Bugs and Issues
-
-- Google Fonts
-    * @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-        * Applied to top of style.css but font not changing.
-    * link rel="preconnect" href="https://fonts.gstatic.com"
-        link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"
-        * Applied to index.html to overwrite font but font not changing.
-    * Solution: Body font-family css is to also be updated (...it's late...)
-    
-    * As a result of finding reason for why font was not showing have decided to use different fonts Source Serif Pro and Dance Script for Hero text and titles.
-
-- Google Maps
-    * Applied two google maps to Index.html (Commit 14). When page is re-loaded only one of them is interactive.
-        * A potential solution found in stackoverflow to show multiple maps per page: https://stackoverflow.com/questions/4074520/how-to-display-multiple-google-maps-per-page-with-api-v3
-            * This has worked but just need to amend location focus for each map, to be done in commit 15
-    *Solution: simply creating an additional empty variable :)
-
-- Font awesome 5.15.3 cdn from Bootstrap not working
-    * Solution: Found another 5.15.3 version at cdnjs website: https://cdnjs.com/libraries/font-awesome
-
-- Card collapse on load as opposed to pressing the Read more button
-    * Solution: Bootstrap has a class = "collapse in" which collapses the div on page load
-
-- Button collapse not working with Bootstrap cdn.com link.
-    * Solution: Bootstrap site Get Bootstrap.com has recommended links for javascript and jquery: https://getbootstrap.com/docs/4.4/getting-started/introduction/
-
-
-- Nav bar to collapse when link is pressed for toggler width versions only.
-    * JQuery code written but affected menu also for wider versions
-    * Solution: Updated so when scrolling down Nav Bar collapses and scroll up navbar appears
-
-- Alignment to left? 
-    * Solution: picture tile margin too large, reduced and alignment works ok now.
-
-- Nav Links to highlight at associated locations
-    * Solution: Javascipt updated to highlight at particular sections of page with the help of giving id's to menu links.
-
-- Project published, fixed images missing
-    * Solution: style.css images have to be relative '..' replaced '/assets' in url.
-
-- Read More Read Less buttons text updating all buttons when pressed.
-    * Solution: Adjusted JavaScript identifying the Card-text and Read more buttons identified by the Div ID and duplicated for each location
-
-- Contact background Teddy as landscape not looking good on less than desktop versions and having to use "contain" style
-    * Solution: Changed to beach people and looks much better as is a larger spacious image with smaller elements
-
-- Navbar toggler button for mobile versions making navigation confusing
-    * Solution: As there are only 3 selections, toggler button removed and sizes adjusted. Also removed Home button for Mobile as this is selectable by pressing Eatin logo.
-
-- remote: warning: File assets/test-files/element-files/email-send-receipt-test.gif is 64.05 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
-    * Email test gif too big
-        * Solution: Gif compressed using online compressor https://www.freeconvert.com/gif-compressor
-        * Converted from 64.05 MB to 24.30 MB
 
 [Back to top ⇧](#top)
 
