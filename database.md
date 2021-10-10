@@ -38,7 +38,7 @@ You can utilise two factor authentication in MongoDB for further secure data acc
 - To test if database is connected to gitpod you can do this by using a connection string:
     1. In Databases section of MongoDB select Connect
     2. Select "Connect with the MongoDB Shell"
-    3. If you don;t have MongoDB Shell, ensure the section "I do not have the MongoDB shell installed" is highlighted
+    3. If you don't have MongoDB Shell, ensure the section "I do not have the MongoDB shell installed" is highlighted
     4. In section 3(Run your connection string in your command line), copy  connection string which holds the cluster name and the username.
     5. Paste the string into the command terminal replacing the Database name (after it states mongodb.net/) in this case eatinDB.
     6. You may also need to replace mongosh with mongo as this refers to shell which you may not have.
@@ -46,6 +46,7 @@ You can utilise two factor authentication in MongoDB for further secure data acc
     8. There will be no string appearing when typing password, this is normal, you just need to ensure it's typed correctly.
     9. You should see a long message in the terminal including a line "Welcome to the MongoDB shell". This means you've successfully connected to the database.
 
+[Back to top ⇧](#database-introduction)
 
 ### Python-Mongo library test
 - To connect Pymongo library
@@ -67,6 +68,8 @@ You can utilise two factor authentication in MongoDB for further secure data acc
     In this instance it is the env.py file and will hold a SECRET KEY hence for it to not be pushed to GitHub or it could be manipulated unwantingly.
     3. Within the applications python file (app.py) ensure Flask is imported, i.e. "from Flask import Flask"
 
+[Back to top ⇧](#database-introduction)
+
 ### Connect database to Flask
 - Required to ensure Flask library communicates effectively to the database. Note when library's are connected ensure requirements.txt file is update so deployment sites know to run the app.
     1. Connect library flask-pymongo via the code terminal
@@ -80,18 +83,20 @@ You can utilise two factor authentication in MongoDB for further secure data acc
 - members
     * Used to store members profile details
 
-- recipe 
+- recipes
     * Used to store recipe detail updated by members
 
-#### members
-- active
-    * indicator to show whether user field"active" is "true" and therefore members or non-members and therefore "false"
+- Types
+    * All stored as Strings unless otherwise stated
 
+[Back to top ⇧](#database-introduction)
+
+### members
 - email
     * Used as the unique username identifier.
     * To also be used for password resets.
 
-- password <-- UPDATE WITH TECHNOLOGY TO HIDE PASSWORD -->
+- password <-- UPDATE WITH WERKZEUG TECHNOLOGY TO HIDE PASSWORD -->
     * Passwords to not be stored in database but via users local interface.
 
 - firstName
@@ -102,13 +107,34 @@ You can utilise two factor authentication in MongoDB for further secure data acc
     * Members last name
     * Can be editable
 
-#### recipe <-- to be updated -->
-- Public
-    * Recipes to be shared with Public and is browseable
-        * Where field "public" is "true"
-- Private
-    * Recipes to not be shared and is non browseable but can only be viewed in members profile section.
-        * Where field "public" is "false"
+### recipes
+- date
+- recipe_name
+- recipe_description
+- recipe_image
+- breakfast
+- lunch
+- dinner
+- dessert
+- snack
+- serves
+- prep_time
+- cook_time
+- ready_time
+- food (Array)
+- count (Array)
+- size (Array)
+- weight (Array)
+- volume (Array)
+- recipe_method (Array)
+- private_switch
+    * null
+        * Recipes to be shared with Public and is browseable
+    * on
+        * Recipes to not be shared and is non browseable but can only be viewed in members profile section.
+
+- email
+    * used to associate recipes to members as key
 
 
 

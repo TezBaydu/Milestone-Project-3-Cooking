@@ -184,9 +184,9 @@ Below are areas considered for levels of importance and viability
     * Contact portal.
     * Recipe creation, edit and delete function.
     * Profile registration and logging.
+    * Search function.
 3. Low
     * Sales
-    * Search function.
     * Online presence.
 
 [Back to top ⇧](#introduction)
@@ -235,16 +235,23 @@ Hierarchical structure design for simpler user navigation:
 
 ### Wireframe
 
-- Designed in [Figma]()
+- Designed in [Figma](https://www.figma.com/file/IADuVbH1W00VbiRkhlDqdY/milestone-project-3-eatin?node-id=0%3A1)
+    * Initial designs differ from final production mainly due to differences in complexity between design features.
+    * Have used Prototypes in Figma to help design and a realistic feel.
+        * This however took up some time and since then have had to play catch up and could not finish mobile designs.
+        * These were handled during development.
 
 - Desktop version
-![Desktop wireframe]()
+![Desktop wireframe](assets/readme/readme-images/figmaDesktop.JPG)
+
+- Protoype view
+![Prototype view](assets/readme/readme-images/figmaDesktopPrototype.JPG)
 
 - Tablet version
-![Tablet wireframe]()
+![Tablet wireframe](assets/readme/readme-images/figmaTablet.JPG)
 
 - Mobile version
-![Mobile wireframe]()
+![Mobile wireframe](assets/readme/readme-images/figmaMobile.JPG)
 
 
 
@@ -257,7 +264,8 @@ This site has several pages for user to easily identify section associated. Menu
 - MongoDB used to store data under database name "eatinDB"
     * Collections to store specific data:
         * members
-        * recipe
+        * recipes
+
 
 ### Consistency
 
@@ -323,25 +331,23 @@ This site has several pages for user to easily identify section associated. Menu
     - Data read by database and if correct allows user access
     - If incorrect a warning is flashed to state email or password is incorrect
 
-4. Password reset option.
-    - To make active member false and produce email providing alternative password to reactivate (make member true) account
+4. If in wrong section, description to direct to registration.
 
-5. If in wrong section, description to direct to registration.
+5. If already logged in this option is to not be available in Menu.
 
-6. If already logged in this option is to not be available in Menu.
-
-7. Menu
+6. Menu
     - Leading non-member to
         * Home
         * Register
         * Browse
         * Contact
+        * Login
     - Leading member to
         * Home
         * Browse
         * Contact
-        * View profile
-        * Create new recipe
+        * Profile
+        * Logout
 
 [Back to top ⇧](#introduction)
 
@@ -356,7 +362,7 @@ This site has several pages for user to easily identify section associated. Menu
     - Password
 
 3. Register button if details correct.
-    - Data is passed through to MongoDB and member is made true
+    - Data is passed through to MongoDB
 
 4. Warning if detail format incorrect.
 
@@ -365,15 +371,16 @@ This site has several pages for user to easily identify section associated. Menu
 6. Menu
     - Leading non-member to
         * Home
-        * Login
+        * Register
         * Browse
         * Contact
+        * Login
     - Leading member to
         * Home
         * Browse
         * Contact
-        * View profile
-        * Create new recipe
+        * Profile
+        * Logout
 
 ### Profile page
 1. For members logged in only, non members will not be able to view.
@@ -381,21 +388,21 @@ This site has several pages for user to easily identify section associated. Menu
 2. Welcome flash description.
 
 3. Profile details - associated to database under members collection.
-    - Edit function
-    - Save function
+    - Edit account function
     - Delete account function
 
 4. Recipes - associated to database under recipe collection.
     - Saved public recipes
     - Saved private recipes
         - to be used in case member wants to save as a draft prior to pushing into Public Search database
-    - Ability to add a new recipe
+    - Ability to create a new recipe
 
 5. Menu.
-    - Home
-    - New Recipe
-    - Browse
-    - Contact
+    * Home
+    * Browse
+    * Contact
+    * Profile
+    * Logout
 
 [Back to top ⇧](#introduction)
 
@@ -406,20 +413,28 @@ This site has several pages for user to easily identify section associated. Menu
 
 3. Editable Recipe input fields.
     - Name
+        * Max length requirement
     - Description
         * Max length requirement
     - Image upload
+        * image url
     - Serves
+        * Max number
     - Preperation time
     - Cooking time
+    - Ready time
+        * Sum of Prep time and cook time
     - Food
+        * Max length
     - Count
+        * Max number
     - Size
+        * Max length
     - Weight
+        * Max number
     - Volume
+        8 Max number
     - Step by step instructions
-        * Max length requirement
-    - Additional or Tips
         * Max length requirement
 
 
@@ -427,7 +442,6 @@ This site has several pages for user to easily identify section associated. Menu
     - Ready in Time
         * sum of Preperation and cooking time
     Recipe Types
-        * Radio selections
         * Breakfast
         * Lunch
         * Dinner
@@ -451,15 +465,13 @@ This site has several pages for user to easily identify section associated. Menu
 
 6. Links
     - Back to profile link.
-        * Warning to save any updates if any have been made
 
 7. Menu.
-    * Warning to save any updates if any have been made
-    - Home
-    - New Recipe
-    - Profile
-    - Browse
-    - Contact
+    * Home
+    * Browse
+    * Contact
+    * Profile
+    * Logout
 
 [Back to top ⇧](#introduction)
     
@@ -478,68 +490,64 @@ This site has several pages for user to easily identify section associated. Menu
 4. Menu
     - Leading non-member to
         * Home
-        * Login
-        * Registration
+        * Register
         * Browse
+        * Contact
+        * Login
     - Leading member to
         * Home
         * Browse
-        * View profile
-        * Create new recipe
+        * Contact
+        * Profile
+        * Logout
 
 ### Browse page
 1. Search function.
     - Search bar for particular foods
-        * To have ability to find several foods and ignore anything that is not alphabetical
-    - Filter - more than one can be selected
+        * To have ability to find foods using text
+    - Filter buttons for particular recipe types as associated by recipe creators(Memebers)
         * Recipe Types
             * Breakfast
             * Lunch
             * Dinner
             * Dessert
             * Snack
-    - Ready in Time slider
-        * Slider to adjust when meals can be cooked and prepared in for user in case they want a quick meal
-    - Search button - once selections have been made
-        * Otherwise suggestions are provided
 
 2. Recipe summary cards.
     - Several recipes listed either based on search or categories.
     - Details to show:
         * Image
         * Name of recipe
+        * Recipe Description
         * Ready time
-    - Amount of recipe summaries shown dependant on screen size.
 
 3. Menu
     - Leading non-member to
         * Home
-        * Login
-        * Registration
+        * Register
+        * Browse
         * Contact
+        * Login
     - Leading member to
         * Home
+        * Browse
         * Contact
-        * View profile
-        * Create new recipe
+        * Profile
+        * Logout
 
 [Back to top ⇧](#introduction)
 
 ### Recipe view from browse page
 1. Search function - This so the user can re-search at current page.
     - Search bar for particular foods
-        * To have ability to find several foods and ignore anything that is not alphabetical
-    - Filter - more than one can be selected
+        * To have ability to find foods using text
+    - Filter buttons for particular recipe types as associated by recipe creators(Memebers)
         * Recipe Types
             * Breakfast
             * Lunch
             * Dinner
             * Dessert
             * Snack
-    - Ready in Time slider
-        * Slider to adjust when meals can be cooked and prepared in for user in case they want a quick meal
-    - Search button - once selections have been made
-        * Otherwise suggestions are provided
 
 2. Recipe selection - Details provided by members who have shared publicly or via recipe shared database.
     - Name
@@ -551,24 +559,22 @@ This site has several pages for user to easily identify section associated. Menu
     - Prep Time
     - Ingredients
     - Method
-    - Additional Tips
 
-3. Back to Search links
+3. Back to Search link
 
 4. Menu
-    - Menu
     - Leading non-member to
         * Home
-        * Login
-        * Registration
-        * Contact
+        * Register
         * Browse
+        * Contact
+        * Login
     - Leading member to
         * Home
-        * Contact
-        * View profile
-        * Create new recipe
         * Browse
+        * Contact
+        * Profile
+        * Logout
 
 [Back to top ⇧](#introduction)
 
@@ -577,18 +583,14 @@ This site has several pages for user to easily identify section associated. Menu
 
 2. Search function - This so the member can re-search at current page.
     - Search bar for particular foods
-        * To have ability to find several foods and ignore anything that is not alphabetical
-    - Filter - more than one can be selected
+        * To have ability to find foods using text
+    - Filter buttons for particular recipe types as associated by recipe creators(Memebers)
         * Recipe Types
             * Breakfast
             * Lunch
             * Dinner
             * Dessert
             * Snack
-    - Ready in Time slider
-        * Slider to adjust when meals can be cooked and prepared in for member in case they want a quick meal
-    - Search button - once selections have been made
-        * Otherwise suggestions are provided
 
 3. Recipe selection - Details provided by members who have shared publicly or via recipe shared database.
     - Name
@@ -600,16 +602,15 @@ This site has several pages for user to easily identify section associated. Menu
     - Prep Time
     - Ingredients
     - Method
-    - Additional Tips
 
-4. Back to Profile links
+4. Back to Profile link
 
 5. Menu
     * Home
-    * Contact
-    * View profile
-    * Create new recipe
     * Browse
+    * Contact
+    * Profile
+    * Logout
 
 [Back to top ⇧](#introduction)
 
@@ -655,7 +656,7 @@ This site has several pages for user to easily identify section associated. Menu
 
 - [Google fonts](https://fonts.google.com)
 
-- [Figma]() --- ?!
+- [Figma](https://www.figma.com/file/IADuVbH1W00VbiRkhlDqdY/milestone-project-3-eatin?node-id=0%3A1)
     * [project wireframe]
 
 - [Random Key Generator](https://randomkeygen.com)
@@ -694,11 +695,11 @@ This site has several pages for user to easily identify section associated. Menu
 
 
 ## Testing 
--   ### View [TEST.md file](https://github.com/TezBaydu/Milestone-Project-3-Cooking/TEST.md)
+-   ### View [TEST.md file](https://github.com/TezBaydu/Milestone-Project-3-Cooking/blob/main/TEST.md)
 
 ### Commits
 
-- Over 130 commits --- ?!
+- Over 130 commits
 
 ### Code Testing
 - HTML 
@@ -751,7 +752,7 @@ Once you are able to view the repository in Gitpod this is done by:
 6. Log into GitHub
     - Locate repository
     - You should be able to see the latest and history of commits in code section at top right of table of files list.
-    * ![git-commits]() --- ?!
+    * ![git-commits](assets/readme/readme-images/githubCommits.JPG)
     
 
 ### Deploying via GitHub Pages / Heroku
@@ -787,6 +788,9 @@ Once you are able to view the repository in Gitpod this is done by:
 
 #### DEBUG
 - Ensure within app.py change "debug=True" to "debug=False"
+
+### GitHub deployment
+- Not attempted for this site but referenced here in case required in future
 
 1. Log into GitHub and look for [https://github.com/TezBaydu/Milestone-Project-3-Cooking] or create an account.
 2. Click on settings and ensure repository name is selected to Milestone-Project-3-Cooking.
@@ -829,7 +833,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 ## Credits and Acknowledgements
 
 - [Code Institute](https://codeinstitute.net/)
-    * Tutor Support have been amazing
+    * Tutor Support have been amazing !!
     * Seun Owoni Koko for her enthusiasm, guidance and support
     * Slack channel
 
@@ -848,97 +852,7 @@ For further help and info you can select [Cloning and Forking repositories](http
 [Back to top ⇧](#introduction)
 
 
-## Potential issues
-
-### Done
-- Scroll to top button - Done
-- last_name variable to be defined in profile - done
-- email variable to be defined in profile - done
-- recipe creation to database success but unable to display details in profile - done, did not call the name "member_recipe"
-- Profile image card sizing, due to it being a URL as email from Code advised... how to limit or max image size? - done
-- Input number in recipe form accepts --9879798798 even when limiting maxlengths...? - done
-- Steps section js not activated - should it match table above for ingredients? - No - Updated to self styles row inputs
-- Profile UX adjustment, profile card on left, recipes on right - done
-- Profile: button to take user to create recipe - done
-- Profile: Public and Private recipes to alternaelty show upon selection - done through using accordion collapse
-- Recipe: recipe image text box had 1.02 container - Done - had to move end textarea to same line....?!
-- Profile: Line 81: {% if member_recipe.private-switch == "off" %} section not recognised?! - Done Python does not like "-" hyphens !!!
-- Recipe: Dict applied and Array in MongoDB but is not listing - Done Getlist applied after Slack search
-- Menu nav blocking other actions due to it being fixed and extends whole width - Done - Row positoin made absolute and adjusted position of feature
-- Profile: Recipe card body to be adjusted so is responsive including image size - Done
-- Recipe: repeat field showing but value is null - Done
-- Profile: Edit and delete buttons on recipe cards - Done and Edit action working
-- Create recipe: change upload to accept URL as source - Almost done but has content within... - Done
-- Create recipe: add button underneath - done
-- Create recipe: delete on ingredients deleting parent but sibling deletion not working... - done, added container div
-- Create recipe: method step adding and deleting but placeholder not showing and unable to resize added fields - done missing closing '"' in JS script
-- Browse: Search bar started but needs refining - Done
-- Browse: app.py update to pull in public recipes only from all members, currently pulling in recipes from members - Done and pulling in only PUBLIC shared recipes
-- Profile: Delete recipe option: Done
-- Create recipe: Ready in sum | Event listeners in prep and cook to publish sum in ready time - Done with max time not over 24 hours
-- Edit recipe: ready in sum | Event listener not working in ready time - Done, changed from var to let
-- View Recipe page created - Done and jinja applied so only associated data applied
-- Edit recipe: array values to populate separate divs rows - Done
-- Edit recipe: quantity values not populating value, however is an issue with array still - Done
-- Ready In Time: this field not pulling into MongoDB - Done, changed from disabled to readonly
-- Recipe: current date applied but doesn't apply to MongoDB - Done changed to input and readonly
-- Profile: view recipe button applied but link required to recipe card - Done and new template created associated to member so private recipes can be viewed too
-- Profile: add logout button in profile card
-- Recipe pages: number fields to accept decimals - Done
-- background image not showing - Done adjusted images into static folder
-- Home page - Done
-- Contact page - Done
-- Responsive DESIGN !! - Contact page to be created and home page responsiveness(after image cover) - Done
-- Col classes have padding right 15px and will not fill page - not an issue anymore
-- iphone 5 nav menu items not listed correctly - Done
-- Heroku: deployment not coming through - pymongo - 3.12.0 version wasn't saved previously, potentially page wasn't saved when "pip3 freeze --local > requirements.txt" action taken in console - Done
-- Open app.py goes to create recipe page - to open on index.html - Done updated app.py and placed @app.route("/") above @app.route("/home")
-- Edit profile url not connecting to edit profile page - Done
-- Delete profile - Done
-- Edit profile - details updated but redirect errors based on line 217 of app.py first_name = member["firstName"] - make email readonly as doesn't recognise email as session member once changed
-- Input and textareas patterns still allow some characters? - Done 
-- Redirect on error?: first_name = member["firstName"] TypeError: 'NoneType' object is not subscriptable - Done edit email non editable
-- Contact - Email sent correctly but redirect method is invalid, Error: "POST /contact HTTP/1.1" 405 - Done needed mthod POST applied to app.route
-- Flash: pushes content down - Done Image placed outside of jinja base block
-- Recipe: on delete a warning to open to confirm - Done
-- Profile: on delete a warning to open to confirm - Done _id call updated
-- Ready In Time: issue with calc when adding more than 30 mins - asked in Slack - Done
-- Profile: Text to add create in accordion but fails on both when 1 recipe is applied to one or the other - not necessary
-- Profile delete but doesn't delete public recipes from view - Done to ensure this data is stored if the user wants to come back at any stage
-- Search function on members page only resets to browse - needs to go to browse and also search - Done
-- Search on Browse works for name and description, to update for other search features
-    * Have tried searches on several sites and tutor support, searches found where all voted down and did not provide the correct concept. Tutor support tried to advise in several scenarios including a $match but after spending 2 days on trying to resolve I've sadly decided to abandon this option for now.
-    * If there was enough time I would have created separate buttons atttributed to @app.routes to filter relevant associated recipt type. - Done decided to lose sleep and do this...
-- Add row recipes and methods JS: Update with inital html code pattern, etc - Done
-- View recipe and View Memner recipe: adjust ingredients to only pick up numbers and measurements - Done
-- Create recipe in heroku app doesn't work on mobile - now working ... ?!
-- limit adding igredient and method rows but to also change dependent on screen size - Done
-- Test JS - Done
-- test PEP8 - Done
-- Test colour blindness - Done
-- Test different UI's - Done
-
-
-
-### To Do
-- Update Read Me
-- Update Test
-- Ensure to debug to False
-
-
-
-### Notes to consider
-- Message in GitPod stating Python extension loading and is constant. Info found in Slack and Gitpod community advising of installing an older version. Had changed from pymongo 3.12.0 to 3.5.1 but the Python extension loading message still appeared and I was unable to run app.py so have changed back to 3.12.0.
-    * requirements.txt python pymongo version is 3.5.1 but this had been changed and saved as 3.12.0...unsure what has happened here but could be cause why heroku is not loading.
-- Search: "[dict]" elements in app.py removed as mongoDB had applied double Arrays causing confusion between create and Edit - is good now
-- ^[a-zA-Z0-9]{1,30}$ changed to ^[a-zA-Z0-9 -]{1,30}$ to accept spaces and dashes
-- Login forgot password - This would be a nice to have but is not necessary for this project
-- All Recipes: limit of cards but not enough time but is a nice to have
-- Heroku maximum slug size is 500MB
-    * Removing Gifs and going with images instead
-- Input Type = "number" can be an issue with patterns especially with other formats. JS updated with a Jquery logic to help and input types changes to "text"
-    * This query encountered it's own issues as it would require updating every elemenet with it's own ID, however this would also need to be done through the javascript when a new row is added and I don't have enough time to investigate this further.
-        * By having input as type=number values cannot be saved and error displays on submit
+#
 
 
 
