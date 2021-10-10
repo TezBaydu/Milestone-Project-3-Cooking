@@ -353,10 +353,7 @@ _ Recipe details
 
 ### Browser testing
 - Microsoft Edge browser testing
-    * Error with Input="number"
-        * Online fix suggested placing a min and this will work
-
-    * ![Microsoft Edge browser test]()
+    * ![Microsoft Edge browser test](assets/test-files/element-files/Edge.gif)
 
 - Firefox browser testing
     * ![Firefox browser test](assets/test-files/browser-files/firefox-browser-test.gif)
