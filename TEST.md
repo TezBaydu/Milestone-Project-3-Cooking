@@ -357,8 +357,9 @@ _ Recipe details
 
 - Firefox browser testing
     * ![Firefox browser test](assets/test-files/browser-files/firefox-browser-test.gif)
-    * Images on Recommended interest cards stretched cards too long.
-        * Standardised size of images to 500px x 300px
+    * Nav design circle issue
+        - identified d-block was the problem and have isolated in css
+        ![Firefox d-block](assets/test-files/element-files/FirefoxNavError.JPG)
 
 - Safari browser testing
     * Unable to test without making a purchase

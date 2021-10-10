@@ -1498,7 +1498,7 @@ h3 {
 /*-- Firefox nav adjustment --*/
 @supports (-moz-appearance:none) {
     .d-block {
-        display: inherit !important;
+        display: inline-block !important;
     }
 }
 
