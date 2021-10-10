@@ -3,7 +3,7 @@
 </h1>
 
 <h2 align="center">
-    <a href=""target="_blank">Eatin Website</a>
+    <a href="https://eatin-project.herokuapp.com/"target="_blank">Eatin Website</a>
 </h2>
 
 <div align="center">
@@ -18,7 +18,7 @@ This section is to help developers understand database utilisation
     - [Access](#Access)
     - [Connecting to gitpod](#Connecting-to-gitpod)
         * [Terminal Test](#Terminal-Test)
-        * [Python-Mongo library test](Python-Mongo-library-test)
+        * [Python Mongo library test](Python-Mongo-library-test)
     - [Flask](#Flask)
     - [Developer](#Developer)
     - [Collections](#collections)
@@ -48,7 +48,7 @@ You can utilise two factor authentication in MongoDB for further secure data acc
 
 [Back to top ⇧](#database-introduction)
 
-### Python-Mongo library test
+### Python Mongo library test
 - To connect Pymongo library
     1. In terminal type "pip3 install dnspython" and press enter
     2. Now to install pymongo by typing "pip3 install pymongo" and press enter
@@ -136,5 +136,5 @@ You can utilise two factor authentication in MongoDB for further secure data acc
 - email
     * used to associate recipes to members as key
 
-
+[Back to top ⇧](#database-introduction)
 

@@ -103,7 +103,7 @@ This user is looking for imagery or influence for another project.
     - Contact form can also be used for General enquiries.
 3. Be able to make contact with Developer.
     - Contact form can be used for general enquiries.
-    - [README.md Deployment](https://github.com/TezBaydu/Milestone-Project-3-cooking#Deploying-via-GitHub-Pages) has description of cloning and forking and therefore contact can be made via GitHub.
+    - [README.md Deployment](https://github.com/TezBaydu/Milestone-Project-3-cooking#Deployment) has description of cloning and forking and therefore contact can be made via GitHub.
 4. Have an opportunity to clone site if wanting to use content.
     - [README.md Cloning](https://github.com/TezBaydu/Milestone-Project-3-cooking#Cloning-a-repository) has description of cloning.
 
@@ -117,50 +117,50 @@ This user is looking for imagery or influence for another project.
     - Test date 09/10/2021
         - HTML5 test
             * Home
-                - ![HTML5 test](assets/test-files/html/EatinHome HTML error 081021.JPG)
+                - ![HTML5 test](assets/test-files/html/EatinHomeHTMLerror081021.JPG)
                     * Adjustments:
                         * Created block in base.html to capture image classes in templates and still cover page sources.
                     * Post adjustments
-                - ![HTML5 test](assets/test-files/html/EatinHome HTML success 091021.JPG)
+                - ![HTML5 test](assets/test-files/html/EatinHomeHTMLsuccess091021.JPG)
             * Browse
-                - ![HTML5 test](assets/test-files/html/EatinBrowse HTML error 091021.JPG)
+                - ![HTML5 test](assets/test-files/html/EatinBrowseHTMLerror091021.JPG)
                     * Adjustments:
                         * Type=button removed from <a> tags and type=textfrom <textare> tags
-                - ![HTML5 test](assets/test-files/html/EatinBrowse HTML Success 091021.JPG)
+                - ![HTML5 test](assets/test-files/html/EatinBrowseHTMLSuccess091021.JPG)
             * Contact
-                - ![HTML5 test](assets/test-files/html/EatinContact HTML error 091021.JPG)
+                - ![HTML5 test](assets/test-files/html/EatinContactHTMLerror091021.JPG)
                     * Adjustments:
                         * label and value applied to first option
-                - ![HTML5 test](assets/test-files/html/EatinContact HTML Success 091021.JPG)
+                - ![HTML5 test](assets/test-files/html/EatinContactHTMLSuccess091021.JPG)
             * Edit Recipe
-                - ![HTML5 test](assets/test-files/html/EatinEditRecipe HTML error 091021.JPG)
+                - ![HTML5 test](assets/test-files/html/EatinEditRecipeHTMLerror091021.JPG)
                     * Adjustments:
                         * id's not required removed, applied initially with view to styling...
-                - ![HTML5 test](assets/test-files/html/EatinEditRecipe HTML success 091021.JPG)
+                - ![HTML5 test](assets/test-files/html/EatinEditRecipeHTMLsuccess091021.JPG)
             
             * Profile
-                - ![HTML5 test](assets/test-files/html/EatinProfile HTML error 091021.JPG)
+                - ![HTML5 test](assets/test-files/html/EatinProfileHTMLerror091021.JPG)
                     * Adjustments:
                         * Attempted to use validation section of validator but did not recognise user. Investigated online too and unable to find appropriate form of testing, however is working in current format.
             * Create Recipe
-                - ![HTML5 test](assets/test-files/html/EatinRecipe HTML error 091021.JPG)
+                - ![HTML5 test](assets/test-files/html/EatinRecipeHTMLerror091021.JPG)
                     * Adjustments:
                         * type=number did not need pattern attribute and adjusted maxlength to max
-                - ![HTML5 test](assets/test-files/html/EatinRecipe HTML success 091021.JPG)
+                - ![HTML5 test](assets/test-files/html/EatinRecipeHTMLsuccess091021.JPG)
             * Show Breakfast, Lunch, Dinner, Dessert and Snack pages
-                - ![HTML5 test](assets/test-files/html/EatinShowLunch HTML Error 091021.JPG)
+                - ![HTML5 test](assets/test-files/html/EatinShowLunchHTMLError091021.JPG)
                     * Adjustments:
                         * Minor div removals and adjustments
-                - ![HTML5 test](assets/test-files/html/EatinShowBreakfast HTML success 091021.JPG)
+                - ![HTML5 test](assets/test-files/html/EatinShowBreakfastHTMLsuccess091021.JPG)
 
 
 ### CSS3
 - [CSS code checker](https://jigsaw.w3.org/css-validator/)
     - Test date 09/10/2021
         - CSS3 code test
-            - ![CSS3 code test](assets/test-files/css/Eatin CSS error 081021.JPG)
+            - ![CSS3 code test](assets/test-files/css/EatinCSSerror081021.JPG)
                 * Adjustment of typo from ps to px
-            - ![CSS3 code test](assets/test-files/css/Eatin CSS Success 091021.JPG)
+            - ![CSS3 code test](assets/test-files/css/EatinCSSSuccess091021.JPG)
         - Bootstrap errors not directly code related
 
                 
@@ -448,12 +448,14 @@ _ Recipe details
 - Test colour blindness - Done
 - Test different UI's - Done
 - Figma update - Done
+- Update Read Me
+- Update Test
+- Update Databse.md
 
 
 
 ### To Do
-- Update Read Me
-- Update Test
+
 - Ensure to debug to False
 
 
