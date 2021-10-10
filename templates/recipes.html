@@ -77,7 +77,8 @@
                 <div class="row recipe-time-row">
                     <div class="col-3 md-form">
                         <label for="serves">Serves</label>
-                        <input type="text" class="form-control time no-spinner serves" id="serves" name="serves" maxlength="2" required>
+                        <input type="number"
+                            class="form-control time no-spinner" id="serves" name="serves" min="0" max="99" required>
                     </div>
                     <div class="col-3 md-form">
                         <label for="prep_time">Prep time<br><span class="optional">(max time 12:00)</span></label>
@@ -130,20 +131,20 @@
                                 pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required>
                         </div>
                         <div class="ingredient-field col-sm-1">
-                            <input name="count" type="text"
-                                class="form-control no-spinner validate count" maxlength="2" step="0.01" placeholder="Quantity">
+                            <input name="count" type="number"
+                                class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                         </div>
                         <div class="ingredient-field col-lg-2 size-field">
                             <input name="size" type="text" class="form-control validate" maxlength="20"
                                 pattern="^[a-zA-Z0-9 -]{0,20}$" placeholder="Size">
                         </div>
                         <div class="ingredient-field col-sm-1">
-                            <input name="weight" type="text"
-                                class="form-control no-spinner validate weight" maxlength="5" step="0.01" placeholder="Weight">
+                            <input name="weight" type="number"
+                                class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                         </div>
                         <div class="ingredient-field col-sm-1">
-                            <input name="volume" type="text"
-                                class="form-control no-spinner validate volume" maxlength="5" step="0.01" placeholder="Volume">
+                            <input name="volume" type="number"
+                                class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                         </div>
                         <div class="ingredient-field col-sm-1 center-align">
 

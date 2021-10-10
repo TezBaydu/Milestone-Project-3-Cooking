@@ -935,6 +935,10 @@ For further help and info you can select [Cloning and Forking repositories](http
 - Heroku maximum slug size is 500MB
     * Removing Gifs and going with images instead
 - Input Type = "number" can be an issue with patterns especially with other formats. JS updated with a Jquery logic to help and input types changes to "text"
+    * This query encountered it's own issues as it would require updating every elemenet with it's own ID, however this would also need to be done through the javascript when a new row is added and I don't have enough time to investigate this further.
+        * By having input as type=number values cannot be saved and error displays on submit
+
+
 
 
 

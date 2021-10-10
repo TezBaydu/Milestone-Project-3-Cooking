@@ -106,8 +106,8 @@
                 <div class="row recipe-time-row">
                     <div class="col-3 md-form">
                         <label for="serves">Serves</label>
-                        <input value="{{ member_recipe.serves }}" type="text"
-                            class="form-control time no-spinner" id="serves" name="serves" maxlength="2" required>
+                        <input value="{{ member_recipe.serves }}" type="number"
+                            class="form-control time no-spinner" id="serves" name="serves" min="0" max="99" required>
                     </div>
                     <div class="col-3 md-form">
                         <label for="prep_time">Prep time<br><span class="optional">(max time 12:00)</span></label>
@@ -167,7 +167,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[0] != null %}
                             <input value="{{ member_recipe.count[0] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -181,14 +180,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[0] != null %}
                             <input value="{{ member_recipe.weight[0] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[0] != null %}
                             <input value="{{ member_recipe.volume[0] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -215,7 +212,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[1] != null %}
                             <input value="{{ member_recipe.count[1] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -229,14 +225,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[1] != null %}
                             <input value="{{ member_recipe.weight[1] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[1] != null %}
                             <input value="{{ member_recipe.volume[0][1] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -263,7 +257,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[2] != null %}
                             <input value="{{ member_recipe.count[2] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -277,14 +270,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[2] != null %}
                             <input value="{{ member_recipe.weight[2] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[2] != null %}
                             <input value="{{ member_recipe.volume[2] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -311,7 +302,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[3] != null %}
                             <input value="{{ member_recipe.count[3] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -325,14 +315,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[3] != null %}
                             <input value="{{ member_recipe.weight[3] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[3] != null %}
                             <input value="{{ member_recipe.volume[3] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -359,7 +347,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[4] != null %}
                             <input value="{{ member_recipe.count[4] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -373,14 +360,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[4] != null %}
                             <input value="{{ member_recipe.weight[4] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[4] != null %}
                             <input value="{{ member_recipe.volume[4] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -407,7 +392,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[5] != null %}
                             <input value="{{ member_recipe.count[5] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -421,14 +405,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[5] != null %}
                             <input value="{{ member_recipe.weight[5] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[5] != null %}
                             <input value="{{ member_recipe.volume[5] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -455,7 +437,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[6] != null %}
                             <input value="{{ member_recipe.count[6] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -469,14 +450,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[6] != null %}
                             <input value="{{ member_recipe.weight[6] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[6] != null %}
                             <input value="{{ member_recipe.volume[6] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -503,7 +482,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[7] != null %}
                             <input value="{{ member_recipe.count[7] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -517,14 +495,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[7] != null %}
                             <input value="{{ member_recipe.weight[7] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[7] != null %}
                             <input value="{{ member_recipe.volume[7] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -551,7 +527,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[8] != null %}
                             <input value="{{ member_recipe.count[8] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -565,14 +540,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[8] != null %}
                             <input value="{{ member_recipe.weight[8] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[8] != null %}
                             <input value="{{ member_recipe.volume[8] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -599,7 +572,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[9] != null %}
                             <input value="{{ member_recipe.count[9] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -613,14 +585,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[9] != null %}
                             <input value="{{ member_recipe.weight[9] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[9] != null %}
                             <input value="{{ member_recipe.volume[9] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -647,7 +617,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[10] != null %}
                             <input value="{{ member_recipe.count[10] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -661,14 +630,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[10] != null %}
                             <input value="{{ member_recipe.weight[10] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[10] != null %}
                             <input value="{{ member_recipe.volume[10] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -695,7 +662,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[11] != null %}
                             <input value="{{ member_recipe.count[11] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -709,14 +675,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[11] != null %}
                             <input value="{{ member_recipe.weight[11] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[11] != null %}
                             <input value="{{ member_recipe.volume[11] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -743,7 +707,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[12] != null %}
                             <input value="{{ member_recipe.count[12] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -757,14 +720,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[12] != null %}
                             <input value="{{ member_recipe.weight[12] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[12] != null %}
                             <input value="{{ member_recipe.volume[12] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -791,7 +752,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[13] != null %}
                             <input value="{{ member_recipe.count[13] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -805,14 +765,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[13] != null %}
                             <input value="{{ member_recipe.weight[13] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[13] != null %}
                             <input value="{{ member_recipe.volume[13] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -839,7 +797,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[14] != null %}
                             <input value="{{ member_recipe.count[14] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -853,14 +810,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[14] != null %}
                             <input value="{{ member_recipe.weight[14] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[14] != null %}
                             <input value="{{ member_recipe.volume[14] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -887,7 +842,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[15] != null %}
                             <input value="{{ member_recipe.count[15] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -901,14 +855,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[15] != null %}
                             <input value="{{ member_recipe.weight[15] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[15] != null %}
                             <input value="{{ member_recipe.volume[15] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -935,7 +887,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[16] != null %}
                             <input value="{{ member_recipe.count[16] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -949,14 +900,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[16] != null %}
                             <input value="{{ member_recipe.weight[16] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[16] != null %}
                             <input value="{{ member_recipe.volume[16] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -983,7 +932,6 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.count[17] != null %}
                             <input value="{{ member_recipe.count[17] }}" name="count" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity">
                             {% endif %}
                         </div>
@@ -997,14 +945,12 @@
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.weight[17] != null %}
                             <input value="{{ member_recipe.weight[17] }}" name="weight" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight">
                             {% endif %}
                         </div>
                         <div class="ingredient-field col-sm-1">
                             {% if member_recipe.volume[17] != null %}
                             <input value="{{ member_recipe.volume[17] }}" name="volume" type="number"
-                                oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);"
                                 class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume">
                             {% endif %}
                         </div>
@@ -1038,7 +984,7 @@
                         </div>
                         <div class="input-field col-10 method-input">
                             {% if member_recipe.recipe_method[0] != null %}
-                            <textarea name="recipe_method" class="form-control validate method-text method-text" placeholder="Method Step"
+                            <textarea name="recipe_method" class="form-control validate method-text" placeholder="Method Step"
                                 minlength="2" maxlength="400" required>{{ member_recipe.recipe_method[0] }}
                             </textarea>
                             {% endif %}

@@ -43,14 +43,14 @@ $(document).ready(function () {
 		if (window.screen.width >= 768) {
 			if (add < max_add) {
 				add++;
-				$(ingredient_wrapper).append('<div class="row ingredients"><div class="col-1"><p><i class="fas fa-haykal"></i></p></div><div class="ingredient-field col-md-5 food-field"><input name="food" type="text" class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="count" type="number" oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);" class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity"></div><div class="ingredient-field col-lg-2 size-field input_ing_wrap"><input name="size" type="text" class="form-control validate" maxlength="20" pattern="^[a-zA-Z0-9 -]{0,20}$" placeholder="Size"></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="weight" type="number" oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);" class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight"></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="volume" type="number" oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);" class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Volume"></div><div class="ingredient-field col-sm-1 center-align"><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div></div></div>');
+				$(ingredient_wrapper).append('<div class="row ingredients"><div class="col-1"><p><i class="fas fa-haykal"></i></p></div><div class="ingredient-field col-md-5 food-field"><input name="food" type="text" class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="count" type="number" class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity"></div><div class="ingredient-field col-lg-2 size-field input_ing_wrap"><input name="size" type="text" class="form-control validate" maxlength="20" pattern="^[a-zA-Z0-9 -]{0,20}$" placeholder="Size"></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="weight" type="number" class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight"></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="volume" type="number" class="form-control no-spinner validate" min="0"max="999" step="0.01" placeholder="Volume"></div><div class="ingredient-field col-sm-1 center-align"><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div></div></div>');
 			}
 		}
 
 		if ((add < max_add), (window.screen.width < 768)) {
 			if (add < max_add) {
 				add++;
-				$(ingredient_wrapper).append('<div class="row ingredients"><div class="ingredient-field col-md-5 food-field"><input name="food" type="text" class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="count" type="number" oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);" class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity"></div><div class="ingredient-field col-lg-2 size-field input_ing_wrap"><input name="size" type="text" class="form-control validate" maxlength="20" pattern="^[a-zA-Z0-9 -]{0,20}$" placeholder="Size"></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="weight" type="number" oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);" class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight"></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="volume" type="number" oninput="javascript: if (this.value.length > this.max) this.value = this.value.slice(0, this.max);" class="form-control no-spinner validate" min="0" max="999" placeholder="Volume"></div><div class="ingredient-field col-sm-1 center-align"><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div></div></div>');
+				$(ingredient_wrapper).append('<div class="row ingredients"><div class="ingredient-field col-md-5 food-field"><input name="food" type="text" class="form-control validate" minlength ="1" maxlength="30" pattern="^[a-zA-Z0-9 -]{1,30}$" placeholder="Food" required></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="count" type="number" class="form-control no-spinner validate" min="0" max="99" step="0.01" placeholder="Quantity"></div><div class="ingredient-field col-lg-2 size-field input_ing_wrap"><input name="size" type="text" class="form-control validate" maxlength="20" pattern="^[a-zA-Z0-9 -]{0,20}$" placeholder="Size"></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="weight" type="number" class="form-control no-spinner validate" min="0" max="999" step="0.01" placeholder="Weight"></div><div class="ingredient-field col-sm-1 input_ing_wrap"><input name="volume" type="number" class="form-control no-spinner validate" min="0" max="999" placeholder="Volume"></div><div class="ingredient-field col-sm-1 center-align"><a href="#" class="remove_field"><i class="fas fa-trash-alt"></i></a></div></div></div>');
 			}
 		}
 	});
@@ -177,21 +177,4 @@ prep_time.addEventListener('change', () => {
 	minutes = (minutes < 10 ? `0${minutes}` : `${minutes}`);
 
 	ready_time.value = `${hours}:${minutes}`;
-});
-
-// numbers only
-$(".serves").keyup(function() {
-    $(".serves").val(this.value.match(/[0-9]*/));
-});
-
-$(".count").keyup(function() {
-    $(".count").val(this.value.match(/[0-9]*/));
-});
-
-$(".weight").keyup(function() {
-    $(".weight").val(this.value.match(/[0-9.]*/));
-});
-
-$(".volume").keyup(function() {
-    $(".volume").val(this.value.match(/[0-9.]*/));
 });
